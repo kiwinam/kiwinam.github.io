@@ -1738,7 +1738,7 @@ compile &#39;com.android.support:design:26.+&#39;
 
 <p>영구 바닥 시트</p>
 
-<p><img src="/18/18-1.png" alt="모달 바텀 시트" /></p>
+<p><img src="/18/18-2.png" alt="모달 바텀 시트" /></p>
 
 <p>모달 바텀 시트 (우)</p>
 
@@ -3793,7 +3793,7 @@ package charlie.myapplication; import android.support.v7.app.AppCompatActivity; 
 
 <h6 id="result">Result</h6>
 
-<p><img src="/170418-and/time-1.png" alt="" /></p>
+<p><img src="/6/time-1.png" alt="" /></p>
 
 <p><br/></p>
 
@@ -3917,7 +3917,7 @@ Working Directory 에서 깃으로 관리 안되고 있는 파일들을 관리�
 
 <h5 id="0-git-이란">0. Git 이란?</h5>
 
-<p><img src="/170307-git/git-1.png" alt="" /></p>
+<p><img src="/5/git-1.png" alt="" /></p>
 
 <p>개략적인 깃의 동작입니다.</p>
 
@@ -3937,7 +3937,7 @@ Working Directory 에서 깃으로 관리 안되고 있는 파일들을 관리�
 
 <p><a href="https://git-scm.com/downloads">https://git-scm.com/downloads</a>  (Git 다운로드 url)</p>
 
-<p><img src="/170307-git/git-2.png" alt="" /></p>
+<p><img src="/5/git-2.png" alt="" /></p>
 
 <p>링크를 통해 접속하게 되면 위와 같은 화면이 나옵니다.</p>
 
@@ -3947,13 +3947,13 @@ Working Directory 에서 깃으로 관리 안되고 있는 파일들을 관리�
 
 <p>설치가 정상적으로 완료되면 CMD 창 (OS X는 터미널) 에서 git 이라는 명령어에 아래와 같은 출력이 나오면 정상적으로 설치 된 것입니다.</p>
 
-<p><img src="/170307-git/git-3.png" alt="" /></p>
+<p><img src="/5/git-3.png" alt="" /></p>
 
 <h5 id="2-github-계정-생성">2.  GitHub 계정 생성</h5>
 
 <p><a href="https://github.com/join?source=header-home">https://github.com/join?source=header-home</a>   (깃 허브 계정 생성 url)</p>
 
-<p><img src="/170307-git/git-4.png" alt="" /></p>
+<p><img src="/5/git-4.png" alt="" /></p>
 
 <p>더블클릭을 하시면 이미지를 수정할 수 있습니다</p>
 
@@ -3971,21 +3971,21 @@ Working Directory 에서 깃으로 관리 안되고 있는 파일들을 관리�
 
 <p>그리고 메뉴 중 <code>[ VCS ] &gt;&gt; [ Import into Version Control ] &gt;&gt; [ Create Git Repository ]</code>  를 선택해 줍니다.</p>
 
-<p><img src="/170307-git/git-5.png" alt="" /></p>
+<p><img src="/5/git-5.png" alt="" /></p>
 
 <p>그러면 아래와 같은 화면이 나옵니다.</p>
 
 <p>자신의 프로젝트가 있는 폴더를 선택해 줍니다. ( AndroidStudioProjects &gt; &ldquo;ProjectName&rdquo; )</p>
 
-<p><img src="/170307-git/git-6.png" alt="" /></p>
+<p><img src="/5/git-6.png" alt="" /></p>
 
-<p><img src="/170307-git/git-7.png" alt="" /></p>
+<p><img src="/5/git-7.png" alt="" /></p>
 
 <p>그 다음 새로운 VCS Root 를 생성할거냐는 질문에 당연히 Yes를 눌러주세요.</p>
 
 <p>방금 작업이 끝난 후에 안드로이드 프로젝트에 있는 파일 이름들이 전부다 <em>빨강색</em>  으로 변한 것을 알 수 있습니다.</p>
 
-<p><img src="/170307-git/git-8.png" alt="" /></p>
+<p><img src="/5/git-8.png" alt="" /></p>
 
 <p>이유는 아직 로컬 깃 저장소 (방금 지정한 깃 저장소) 에 저 파일들이 Add 되어 있지 않기 때문입니다.</p>
 
@@ -4001,11 +4001,11 @@ Working Directory 에서 깃으로 관리 안되고 있는 파일들을 관리�
 
 <p>안드로이드 스튜디오 설정으로 들어갑니다. (OS X 는 Preferences 입니다. Window는 안본지 오래되서..아마 Setting..?)</p>
 
-<p><img src="/170307-git/git-9.png" alt="" /></p>
+<p><img src="/5/git-9.png" alt="" /></p>
 
 <p>설정에서 [ Version Control ] &gt;&gt; [ GitHub ] 로 이동하면</p>
 
-<p><img src="/170307-git/git-10.png" alt="" /></p>
+<p><img src="/5/git-10.png" alt="" /></p>
 
 <p>GitHub 의 아이디와 비밀번호를 요구합니다.</p>
 
@@ -4013,11 +4013,11 @@ Working Directory 에서 깃으로 관리 안되고 있는 파일들을 관리�
 
 <p>Test Button Click!</p>
 
-<p><img src="/170307-git/git-11.png" alt="" /></p>
+<p><img src="/5/git-11.png" alt="" /></p>
 
 <p>테스트 성공한 다음 OK 눌러서 빠져나가게 되면</p>
 
-<p><img src="/170307-git/git-12.png" alt="" /></p>
+<p><img src="/5/git-12.png" alt="" /></p>
 
 <p>이렇게 이 GitHub 레포지터리의 마스터 (관리자) 비밀번호를 설정하라 합니다.</p>
 
@@ -4029,7 +4029,7 @@ Working Directory 에서 깃으로 관리 안되고 있는 파일들을 관리�
 
 <p>바꾼 뒤 프로젝트 전체 파일을 우클릭 &gt;&gt; Git &gt;&gt; Add</p>
 
-<p><img src="/170307-git/git-13.png" alt="" /></p>
+<p><img src="/5/git-13.png" alt="" /></p>
 
 <p>프로젝트의 모든 파일을 Add 하게 되면 Stage area (준비 영역) 으로 이동됩니다.</p>
 
@@ -4037,21 +4037,21 @@ Working Directory 에서 깃으로 관리 안되고 있는 파일들을 관리�
 
 <p>Add 하게 되면 빨강색이였던 이름들이 초록색으로 바뀝니다.</p>
 
-<p><img src="/170307-git/git-14.png" alt="" /></p>
+<p><img src="/5/git-14.png" alt="" /></p>
 
 <p>그 다음 메뉴에서 [ VCS ] &gt;&gt; [ Import into Version Control ] &gt;&gt; [ Share Project on GitHub ]  를 선택해서 깃 허브에 프로젝트를 연동합니다.</p>
 
-<p><img src="/170307-git/git-15.png" alt="" /></p>
+<p><img src="/5/git-15.png" alt="" /></p>
 
 <p>레포지터리 이름과 리모트 이름도 설정해줍니다.</p>
 
 <p>전 그냥 디폴트 값으로 했습니다.</p>
 
-<p><img src="/170307-git/git-16.png" alt="" /></p>
+<p><img src="/5/git-16.png" alt="" /></p>
 
 <p>그 다음 메뉴에 있는 VCS Commit 버튼을 눌러줍니다.</p>
 
-<p><img src="/170307-git/git-17.png" alt="" /></p>
+<p><img src="/5/git-17.png" alt="" /></p>
 
 <p>아래와 같이 파일들이 모두 올라온 것을 확인하고</p>
 
@@ -4059,13 +4059,13 @@ Working Directory 에서 깃으로 관리 안되고 있는 파일들을 관리�
 
 <p>Commit 만 할 경우 로컬 저장소에만 저장되고 Push 를 해줘야 GitHub에 발행됩니다.</p>
 
-<p><img src="/170307-git/git-18.png" alt="" /></p>
+<p><img src="/5/git-18.png" alt="" /></p>
 
-<p><img src="/170307-git/git-19.png" alt="" /></p>
+<p><img src="/5/git-19.png" alt="" /></p>
 
 <p>깃허브에 성공적으로 공유되었다는 메시지를 확인하고</p>
 
-<p><img src="/170307-git/git-20.png" alt="" /></p>
+<p><img src="/5/git-20.png" alt="" /></p>
 
 <p>마지막으로 깃허브 홈페이지에서 방금 Push 한 파일을 확인해주시면 됩니다.!</p>
 ]]></content>
@@ -4102,7 +4102,7 @@ Mac Keynote 에서도 객체를 이미지로 추출할 수 있습니다 :)
 
 <p>(전 포스팅 하면서 만든 이미지를 사용했어요)</p>
 
-<p><img src="/170227-mac/mac-1.png" alt="key note image" /></p>
+<p><img src="/4/mac-1.png" alt="key note image" /></p>
 
 <p>이렇게 키노트에서 필요한 객체를 만들어주고</p>
 
@@ -4114,7 +4114,7 @@ Mac Keynote 에서도 객체를 이미지로 추출할 수 있습니다 :)
 
 <p>Spotlight 에서 &lsquo;미리보기&rsquo; 를 검색해서 실행 시켜줍니다.</p>
 
-<p><img src="/170227-mac/mac-2.png" alt="맥 미리보기" /></p>
+<p><img src="/4/mac-2.png" alt="맥 미리보기" /></p>
 
 <p>미리보기에서</p>
 
@@ -4122,11 +4122,11 @@ Mac Keynote 에서도 객체를 이미지로 추출할 수 있습니다 :)
 
 <p>입력하게 되면 아까 복사해 두었던 객체가 올라옵니다.</p>
 
-<p><img src="/170227-mac/mac-3.jpeg" alt="맥 미리보기" /></p>
+<p><img src="/4/mac-3.jpeg" alt="맥 미리보기" /></p>
 
 <p>이렇게 올라오면 <code>Command + S</code> 로 저장해주시면 됩니다 :)</p>
 
-<p><img src="/170227-mac/mac-4.png" alt="맥 미리보기" /></p>
+<p><img src="/4/mac-4.png" alt="맥 미리보기" /></p>
 ]]></content>
         </item>
         
