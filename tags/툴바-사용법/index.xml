@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>툴바 사용법 on Kiwinam</title>
+    <link>https://kiwinam.com/tags/%ED%88%B4%EB%B0%94-%EC%82%AC%EC%9A%A9%EB%B2%95/</link>
+    <description>Recent content in 툴바 사용법 on Kiwinam</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ko-kr</language>
+    <lastBuildDate>Wed, 26 Dec 2018 10:35:56 +0900</lastBuildDate>
+    
+	<atom:link href="https://kiwinam.com/tags/%ED%88%B4%EB%B0%94-%EC%82%AC%EC%9A%A9%EB%B2%95/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>[안드로이드] 툴바 사용법 (버튼 추가) - add button to tool bar</title>
+      <link>https://kiwinam.com/posts/25/</link>
+      <pubDate>Wed, 26 Dec 2018 10:35:56 +0900</pubDate>
+      
+      <guid>https://kiwinam.com/posts/25/</guid>
+      <description>[안드로이드] 툴바 사용법 (버튼 추가) - add button to tool bar
+
+안드로이드 API 21 (롤리팝 5.0) 버전부터 기존 Action bar 를 대체할 tool bar 라는 앱 상단에 표시되는 뷰가 추가되었습니다.
+안드로이드 개발자 뿐만 아니라 일반 사용자들에게도 상당히 익숙한 뷰입니다.
+머티리얼 디자인 가이드 공식 문서 중 Top App bars
+
+기존 액션바에서 있던 높이 변경 제약, 액션바 내부 뷰 추가 불가능 등의 문제점을
+툴바에서는 유연하게 대처할 수 있습니다.
+그럼 이제 기본적인 툴바 사용법과 어떻게 툴바에 버튼을 추가하는지 알려드리겠습니다.</description>
+    </item>
+    
+  </channel>
+</rss>

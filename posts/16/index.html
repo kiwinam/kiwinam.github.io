@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="author"
+    content="키위남">
+<meta name="description"
+    content="[안드로이드] 커스텀 다이얼로그 [2] - ClickListener, Callback
+지난 포스팅에선 커스텀 다이얼로그를 생성하고 보여주는 것을 해보았습니다.
+이번엔 커스텀 다이얼로그 안에서의 클릭 이벤트 (ClickListener) 를 어떻게 다루는지에 대해 설명해드리도록 하겠습니다.
+일단 쉽게 생각하면 다이얼로그도 View 에 속하는 컴포넌트로
+다루는 방법이 크게 다르지 않다는 점입니다.
+먼저 간단하게 CustomDialog 에서 ClickListener 를 등록해보도록 하겠습니다.
+그 이후에 Activity -&amp;gt; Dialog -&amp;gt; Activity 로 파라미터를 넘기는 것을 구현하겠습니다.
+
+먼저 결과입니다.
+1. Result 2. Step by Step 2-1." />
+<meta name="keywords" content="" />
+<meta name="robots" content="noodp" />
+<link rel="canonical" href="https://kiwinam.com/posts/16/" />
+
+
+<title>
+    
+    [안드로이드] 커스텀 다이얼로그 [2] - ClickListener, Callback :: Kiwinam  — Just code it
+    
+</title>
+
+
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.2.1/css/flag-icon.min.css" rel="stylesheet"
+    type="text/css">
+
+
+
+<link rel="stylesheet" href="/main.min.2f0d18b84270567c723bff340b09ab08db3a7634237cd9667d052eb6b14669b8.css">
+
+
+
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#252627">
+<link rel="shortcut icon" href="/favicon.ico">
+<meta name="theme-color" content="#252627"><meta itemprop="name" content="[안드로이드] 커스텀 다이얼로그 [2] - ClickListener, Callback">
+<meta itemprop="description" content="커스텀 다이얼로그의 클릭 리스너와 콜백 메소드를 호출하는 방법">
+
+
+<meta itemprop="datePublished" content="2017-10-15T10:35:56&#43;09:00" />
+<meta itemprop="dateModified" content="2017-10-15T10:35:56&#43;09:00" />
+<meta itemprop="wordCount" content="397">
+
+
+
+<meta itemprop="keywords" content="clickListener,dialog,다이얼로그,안드로이드,커스텀 다이얼로그,custom dialog," />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="[안드로이드] 커스텀 다이얼로그 [2] - ClickListener, Callback"/>
+<meta name="twitter:description" content="커스텀 다이얼로그의 클릭 리스너와 콜백 메소드를 호출하는 방법"/>
+
+
+
+<meta property="article:section" content="Android" />
+
+<meta property="article:published_time" content="2017-10-15 10:35:56 &#43;0900 KST" />
+
+
+
+
+
+
+
+    </head>
+
+    <body class="dark-theme">
+        <div class="container">
+            <header class="header">
+    <span class="header__inner">
+        <a href="/" style="text-decoration: none;">
+    <div class="logo">
+        
+            <span class="logo__mark">></span>
+            <span class="logo__text">cd /home/kiwinam</span>
+            <span class="logo__cursor" style=""></span>
+        
+    </div>
+</a>
+
+
+        <span class="header__right">
+            
+                <nav class="menu">
+    <ul class="menu__inner"><li><a href="https://kiwinam.com/about">About</a></li><li><a href="https://kiwinam.com/posts">posts</a></li>
+    </ul>
+</nav>
+
+                <span class="menu-trigger">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M0 0h24v24H0z" fill="none"/>
+                        <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+                    </svg>
+                </span>
+            
+
+            <span class="theme-toggle unselectable"><svg class="theme-toggler" width="24" height="24" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M22 41C32.4934 41 41 32.4934 41 22C41 11.5066 32.4934 3 22
+  3C11.5066 3 3 11.5066 3 22C3 32.4934 11.5066 41 22 41ZM7 22C7
+  13.7157 13.7157 7 22 7V37C13.7157 37 7 30.2843 7 22Z"/>
+</svg>
+</span>
+        </span>
+    </span>
+</header>
+
+
+            <div class="content">
+                
+    <main class="post">
+
+        <div class="post-info">
+            <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-clock"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>2 minutes
+
+            
+
+            </p>
+        </div>
+
+        <article>
+            <h1 class="post-title"><a href="https://kiwinam.com/posts/16/">[안드로이드] 커스텀 다이얼로그 [2] - ClickListener, Callback</a></h1>
+
+            
+
+            <div class="post-content">
+                
+
+<hr />
+
+<p>[안드로이드] 커스텀 다이얼로그 [2] - ClickListener, Callback</p>
+
+<hr />
+
+<p>지난 포스팅에선 커스텀 다이얼로그를 생성하고 보여주는 것을 해보았습니다.</p>
+
+<p>이번엔 커스텀 다이얼로그 안에서의 클릭 이벤트 (ClickListener) 를 어떻게 다루는지에 대해 설명해드리도록 하겠습니다.</p>
+
+<p>일단 쉽게 생각하면 다이얼로그도 View 에 속하는 컴포넌트로</p>
+
+<p>다루는 방법이 크게 다르지 않다는 점입니다.</p>
+
+<p>먼저 간단하게 CustomDialog 에서 ClickListener 를 등록해보도록 하겠습니다.</p>
+
+<p>그 이후에 Activity -&gt; Dialog -&gt; Activity 로 파라미터를 넘기는 것을 구현하겠습니다.</p>
+
+<p><br/></p>
+
+<p>먼저 결과입니다.</p>
+
+<h3 id="1-result">1. Result</h3>
+
+<p><img src="/16/16-1.png" alt="" /></p>
+
+<p><img src="/16/16-2.png" alt="" /></p>
+
+<p><img src="/16/16-3.png" alt="" /></p>
+
+<p><img src="/16/16-4.png" alt="" /></p>
+
+<h3 id="2-step-by-step">2. Step by Step</h3>
+
+<h4 id="2-1-clicklistener-등록">2-1. ClickListener 등록</h4>
+
+<ul>
+<li><p>먼저 다이얼로그에 있는 컴포넌트들 (TextView) 에 Id 를 통해 TextView 객체를 가져왔었습니다. 그 객체에 setOnClickListener  를 설정하겠습니다.</p>
+
+<pre><code class="language-java">cancelTv = (TextView) findViewById(R.id.findPwDialogCancelTv);
+searchTv = (TextView) findViewById(R.id.findPwDialogFindTv);
+
+cancelTv.setOnClickListener(this);
+searchTv.setOnClickListener(this);
+</code></pre></li>
+</ul>
+
+<h4 id="2-2-onclick-메소드-구현">2-2. onClick 메소드 구현</h4>
+
+<ul>
+<li><p>class 를 정의해준 부분에 클릭 리스너를 implements 합니다.</p>
+
+<pre><code class="language-java">public class CustomDialog extends Dialog implements View.OnClickListener{
+</code></pre></li>
+
+<li><p><code>onClick</code> 메소드를 Override 해줍니다.</p>
+
+<pre><code class="language-java">@Override
+public void onClick(View v) {
+switch (v.getId()){
+    case R.id.findPwDialogCancelTv:
+        cancel();
+        break;
+    case R.id.findPwDialogFindTv:
+        String email = emailEt.getText().toString();
+        String name = nameEt.getText().toString();
+        dialogListener.onPositiveClicked(email,name);
+        dismiss();
+        break;
+}
+}
+</code></pre></li>
+
+<li><p>onClick 메소드 안에서 각자가 원하는 기능을 구현하면됩니다.</p></li>
+</ul>
+
+<p><br/></p>
+
+<hr />
+
+<p><br/></p>
+
+<h3 id="추가">추가</h3>
+
+<p>위 부분까지 하셨다면 클릭 이벤트 처리까지 완료됩니다.</p>
+
+<p>하지만 다이얼로그의 결과 값이나</p>
+
+<p>Dialog 를 호출한 Activity ( 혹은 Fragment) 에 리턴해주고 싶은 경우 아래 사항을 진행합니다.</p>
+
+<p><br/></p>
+
+<h4 id="2-4-dialoglistener-작성">2-4 DialogListener 작성</h4>
+
+<ul>
+<li><p>인터페이스인 DialogListener (이름은 편한걸로 하셔도 됩니다.) 를 작성합니다. 여기에선 Activity에서 어떤 메소드로 어떤 변수의 형태로 결과 값을 전달 받을지 정합니다.</p></li>
+
+<li><p>이번 예제에선 다이얼로그에서 입력한 email 과 name 를 MainActivity 에서 다시 가공하고 싶어 매개 변수를 문자열로 하였습니다.</p>
+
+<pre><code class="language-java">public interface MyDialogListener {
+public void onPositiveClicked(String email,String name);
+public void onNegativeClicked();
+}
+</code></pre></li>
+</ul>
+
+<p><br/></p>
+
+<h4 id="2-5-customdialog-에서-선언">2-5. CustomDialog 에서 선언</h4>
+
+<ul>
+<li><p>CustomDialog 에서 인터페이스를 멤버 변수로 선언해줍니다.</p>
+
+<pre><code class="language-java">public class CustomDialog extends Dialog implements View.OnClickListener{
+
+private MyDialogListener dialogListener;
+</code></pre></li>
+
+<li><p>선언해준 MyDialogListener 를 초기화 해줄 메소드를 작성해줍니다.</p>
+
+<pre><code class="language-java">public void setDialogListener(MyDialogListener dialogListener){
+this.dialogListener = dialogListener;
+}
+</code></pre></li>
+
+<li><p>마지막으로 인터페이스의 메소드를 호출해 값을 MainActivity 로 넘겨줍니다.</p>
+
+<pre><code class="language-java">case R.id.findPwDialogFindTv:
+String email = emailEt.getText().toString();
+String name = nameEt.getText().toString();
+dialogListener.onPositiveClicked(email,name);  // 인터페이스의 메소드를 호출 
+dismiss();
+break;
+</code></pre></li>
+</ul>
+
+<h4 id="2-6-mainactivity-에서-선언">2-6. MainActivity 에서 선언</h4>
+
+<ul>
+<li><p>메인 액티비티에선 다이얼로그를 show() 하기 전에 리스너를 등록해주기만 하면 됩니다.</p>
+
+<pre><code class="language-java">requestName = nameEt.getText().toString();
+CustomDialog dialog = new CustomDialog(this,requestName);
+dialog.setDialogListener(new MyDialogListener() {  // MyDialogListener 를 구현
+@Override
+public void onPositiveClicked(String email, String name) {
+    setResult(email,name);
+}
+
+@Override
+public void onNegativeClicked() {
+    Log.d(&quot;MyDialogListener&quot;,&quot;onNegativeClicked&quot;);
+}
+});
+dialog.show();
+break;
+</code></pre></li>
+
+<li><p><code>MyDialogListener()</code> 를 구현하고 onPositivieClicked 메소드가 호출될 때 사용할 메소드를 정의합니다.</p></li>
+</ul>
+
+<p>이메일과 이름을 TextView 에 보여주는 기능입니다.</p>
+
+<pre><code class="language-java">private void setResult(String email,String name){
+    resultEmailTv.setText(email);
+    resultNameTv.setText(name);
+}
+</code></pre>
+
+<h3 id="3-source-code">3. Source Code</h3>
+
+<p>전체 소스 코드는 <a href="https://github.com/kiwinam/CustomDialogExample" target="_blank">Github</a> 에 연동해놨습니다.</p>
+
+<p><br/></p>
+
+<hr />
+
+<p><em>[Custom dialog 시리즈]</em></p>
+
+<ol>
+<li><a href="kiwinam.com/posts/15" target="_blank">[안드로이드] 커스텀 다이얼로그 [1] - 생성</a></li>
+<li><a href="kiwinam.com/posts/16" target="_blank">[안드로이드] 커스텀 다이얼로그 [2] - ClickListener, Callback</a> - 현재 글</li>
+</ol>
+
+            </div>
+        </article>
+
+        <hr />
+
+        <div class="post-info">
+                <p>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-tag meta-icon"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7" y2="7"></line></svg><span class="tag"><a href="https://kiwinam.com/tags/clicklistener">clickListener</a></span><span class="tag"><a href="https://kiwinam.com/tags/dialog">dialog</a></span><span class="tag"><a href="https://kiwinam.com/tags/%EB%8B%A4%EC%9D%B4%EC%96%BC%EB%A1%9C%EA%B7%B8">다이얼로그</a></span><span class="tag"><a href="https://kiwinam.com/tags/%EC%95%88%EB%93%9C%EB%A1%9C%EC%9D%B4%EB%93%9C">안드로이드</a></span><span class="tag"><a href="https://kiwinam.com/tags/%EC%BB%A4%EC%8A%A4%ED%85%80-%EB%8B%A4%EC%9D%B4%EC%96%BC%EB%A1%9C%EA%B7%B8">커스텀 다이얼로그</a></span><span class="tag"><a href="https://kiwinam.com/tags/custom-dialog">custom dialog</a></span>
+                </p>
+
+            <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>397 Words</p>
+
+            <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-calendar"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>2017-10-15 10:35 &#43;0900</p>
+        </div>
+
+        
+            <div class="pagination">
+                <div class="pagination__title">
+                    <span class="pagination__title-h">Read other posts</span>
+                    <hr />
+                </div>
+
+                <div class="pagination__buttons">
+                    
+                        <span class="button previous">
+                            <a href="https://kiwinam.com/posts/17/">
+                                <span class="button__icon">←</span>
+                                <span class="button__text">[안드로이드] EditText 화폐 단위 표시 (세자리 콤마)</span>
+                            </a>
+                        </span>
+                    
+
+                    
+                        <span class="button next">
+                            <a href="https://kiwinam.com/posts/15/">
+                                <span class="button__text">[안드로이드] 커스텀 다이얼로그 [1] - 생성</span>
+                                <span class="button__icon">→</span>
+                            </a>
+                        </span>
+                    
+                </div>
+            </div>
+        
+
+        
+    </main>
+
+            </div>
+
+            
+                <footer class="footer">
+    <div class="footer__inner">
+        <div class="footer__content">
+            <span>&copy; 2019</span>
+            
+            <span></span>
+            <span> <a href="https://kiwinam.com/posts/index.xml" target="_blank" title="rss"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-rss"><path d="M4 11a9 9 0 0 1 9 9"></path><path d="M4 4a16 16 0 0 1 16 16"></path><circle cx="5" cy="19" r="1"></circle></svg></a></span>
+        </div>
+    </div>
+    <div class="footer__inner">
+        <div class="footer__content">
+
+        </div>
+    </div>
+    <div class="footer__inner">
+        <div class="footer__content">
+            <span>Powered by <a href="http://gohugo.io">Hugo</a></span>
+            <span>Made with &#10084; by <a href="https://github.com/rhazdon">rhazdon</a></span>
+        </div>
+    </div>
+</footer>
+
+            
+        </div>
+
+        
+
+
+
+
+<script type="text/javascript" src="/bundle.min.4c3fb12a087ceed4a52cb5d57068a9795c7069617a01ca70f788052ad66e1791779e6c72686e1dc0ca13dc03b0203204b6566bb0dd1ee80de2b7ff4d8fe53db2.js" integrity="sha512-TD&#43;xKgh87tSlLLXVcGipeVxwaWF6Acpw94gFKtZuF5F3nmxyaG4dwMoT3AOwIDIEtlZrsN0e6A3it/9Nj&#43;U9sg=="></script>
+
+
+
+    </body>
+</html>

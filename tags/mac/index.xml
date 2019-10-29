@@ -6,10 +6,29 @@
     <description>Recent content in Mac on Kiwinam</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ko-kr</language>
-    <lastBuildDate>Mon, 27 Feb 2017 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 30 Jan 2018 10:35:56 +0900</lastBuildDate>
     
 	<atom:link href="https://kiwinam.com/tags/mac/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>[Mac] OS X 기능, 맥북 화면 녹화하기</title>
+      <link>https://kiwinam.com/posts/22/</link>
+      <pubDate>Tue, 30 Jan 2018 10:35:56 +0900</pubDate>
+      
+      <guid>https://kiwinam.com/posts/22/</guid>
+      <description>[Mac] OS X 기능, 맥북 화면 녹화하기
+OS X 에서 모니터 화면을 캡쳐하고 싶은 경우가 있습니다.
+그럴 때 윈도우에선 화면 녹화 툴이 많이 있어서 편하게 했었는데요.
+Mac 에선 자체 어플리케이션으로 제공해 줘서 더 편하게 화면 녹화가 가능합니다.
+사용할 어플리케이션 이름은 Quick time player 입니다.
+
+이렇게 생긴 녀석입니다.
+Finder에서 Application 으로 찾으셔도 되고, 저같은 경우 런치패드 -&amp;gt; 기타에 있더군요.
+그럼 이제 화면 녹화를 시작해보겠습니다.
+
+1. 파일 -&amp;gt; 새로운 화면 기록</description>
+    </item>
     
     <item>
       <title>[Mac] 키노트 이미지 저장하기 (이미지 추출)</title>

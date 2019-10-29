@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>머티리얼 디자인 on Kiwinam</title>
+    <link>https://kiwinam.com/tags/%EB%A8%B8%ED%8B%B0%EB%A6%AC%EC%96%BC-%EB%94%94%EC%9E%90%EC%9D%B8/</link>
+    <description>Recent content in 머티리얼 디자인 on Kiwinam</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ko-kr</language>
+    <lastBuildDate>Wed, 22 Nov 2017 10:35:56 +0900</lastBuildDate>
+    
+	<atom:link href="https://kiwinam.com/tags/%EB%A8%B8%ED%8B%B0%EB%A6%AC%EC%96%BC-%EB%94%94%EC%9E%90%EC%9D%B8/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>[안드로이드] Bottom sheet dialog 사용하기</title>
+      <link>https://kiwinam.com/posts/18/</link>
+      <pubDate>Wed, 22 Nov 2017 10:35:56 +0900</pubDate>
+      
+      <guid>https://kiwinam.com/posts/18/</guid>
+      <description>[안드로이드] Bottom sheet dialog 사용하기
+머티리얼 디자인에서 바텀 시트는 두 가지의 종류가 있습니다
+영구 바닥 시트
+모달 바텀 시트 (우)
+
+이번 예제에서 만들어볼 것은 모달 바텀 시트입니다.
+모달 바텀 시트는 기존의 콘텐츠와 상호 작용 하거나 다이얼로그의 대체로 사용됩니다.
+먼저 결과물입니다.
+
+1. Result 
+2. Step by Step 2-1. 라이브러리 추가  BottomSheet 를 사용하기 위해선 Design 라이브러리가 필요합니다.  build.gradle (app)
+compile &#39;com.android.support:design:26.+&#39;  
+2-2. 바텀 시트 다이얼로그 레이아웃 생성  다이얼로그 레이아웃은 구성하기 나름입니다.</description>
+    </item>
+    
+  </channel>
+</rss>

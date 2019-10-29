@@ -6,10 +6,151 @@
     <description>Recent content in Android on Kiwinam</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ko-kr</language>
-    <lastBuildDate>Tue, 16 May 2017 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 29 Dec 2018 10:35:56 +0900</lastBuildDate>
     
 	<atom:link href="https://kiwinam.com/tags/android/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>[안드로이드] 네비게이션 드로어 (Navigation drawer) 사용법</title>
+      <link>https://kiwinam.com/posts/26/</link>
+      <pubDate>Sat, 29 Dec 2018 10:35:56 +0900</pubDate>
+      
+      <guid>https://kiwinam.com/posts/26/</guid>
+      <description>[안드로이드] 네비게이션 드로어 (Navigation drawer) 사용법
+
+구글 머티리얼 디자인 가이드 중 네비게이션 드로어
+네비게이션 드로어는 화면 왼쪽 가장자리에 위치해 있고 앱을 탐색할 수 있는 하나의 패널입니다.
+이걸 잘 활용한다면 특정 메뉴를 찾기 위해 클릭이 많이 일어나는 (Deep depth) 문제를 해결할 수 있습니다.
+평상시에는 화면 밖에 가려져 있지만 왼쪽 스와이프나 왼쪽 상단 메뉴 버튼을 클릭하면 위 사진처럼 나옵니다.
+그럼 네비게이션 드로어를 어떻게 구현하는지 알아보겠습니다.
+
+
+1. Result 이번 포스팅에서 진행한 네비게이션 드로어 결과 화면</description>
+    </item>
+    
+    <item>
+      <title>[안드로이드] 툴바 사용법 (버튼 추가) - add button to tool bar</title>
+      <link>https://kiwinam.com/posts/25/</link>
+      <pubDate>Wed, 26 Dec 2018 10:35:56 +0900</pubDate>
+      
+      <guid>https://kiwinam.com/posts/25/</guid>
+      <description>[안드로이드] 툴바 사용법 (버튼 추가) - add button to tool bar
+
+안드로이드 API 21 (롤리팝 5.0) 버전부터 기존 Action bar 를 대체할 tool bar 라는 앱 상단에 표시되는 뷰가 추가되었습니다.
+안드로이드 개발자 뿐만 아니라 일반 사용자들에게도 상당히 익숙한 뷰입니다.
+머티리얼 디자인 가이드 공식 문서 중 Top App bars
+
+기존 액션바에서 있던 높이 변경 제약, 액션바 내부 뷰 추가 불가능 등의 문제점을
+툴바에서는 유연하게 대처할 수 있습니다.
+그럼 이제 기본적인 툴바 사용법과 어떻게 툴바에 버튼을 추가하는지 알려드리겠습니다.</description>
+    </item>
+    
+    <item>
+      <title>[Android Studio 3.0 xml layout Preview 오류 해결 방법</title>
+      <link>https://kiwinam.com/posts/24/</link>
+      <pubDate>Sat, 10 Feb 2018 10:35:56 +0900</pubDate>
+      
+      <guid>https://kiwinam.com/posts/24/</guid>
+      <description>Android Studio 3.0 xml layout Preview 오류 해결 방법
+
+Android Studio 를 2.3.x 버전으로 사용하다 이번에 3.0 버전으로 업데이트 하였습니다.
+업데이트를 하니 Layout xml Preview 부분이 보이지 않고 아래와 같은 에러 메시지를 표시했습니다.
+Exception raised during rendering: Could not initialize class android.graphics.Typeface
+java.lang.NoClassDefFoundError: Could not initialize class android.graphics.Typeface
+
+이 에러의 원인은 Font.xml 파일을 변경해서 입니다.
+저희가 Android 2.x 버전을 사용하면서 Layout Preview 에 한글을 표시하기 위해
+Font.xml 파일을 수정한 적이 있을텐데요.</description>
+    </item>
+    
+    <item>
+      <title>[안드로이드] - android.content.res.Resources$NotFoundException: String resource ID #0x1</title>
+      <link>https://kiwinam.com/posts/19/</link>
+      <pubDate>Thu, 23 Nov 2017 10:35:56 +0900</pubDate>
+      
+      <guid>https://kiwinam.com/posts/19/</guid>
+      <description>[안드로이드] - android.content.res.Resources$NotFoundException: String resource ID #0x1
+FATAL EXCEPTION: main Process: , PID: 4012 android.content.res.Resources$NotFoundException: String resource ID #0x9  안드로이드 개발 중
+android.content.res.Resources$NotFoundException: String resource ID #0x1
+라는 에러를 보았습니다.
+
+TextView 에 setText 메소드를 사용할 때 Int 타입의 데이터를 넣어서 발생하는 에러입니다.
+보통 setText 메서드에 숫자를 바로 넣으면 바로 빨간색 밑줄이 생겨서 에러인 것을 알아보기 쉬운데,
+( Int type 을 바로 넣는 경우 빨간 줄이 보입니다.)</description>
+    </item>
+    
+    <item>
+      <title>[안드로이드] 카카오톡 공유 기능 , 카카오 링크 API 사용법</title>
+      <link>https://kiwinam.com/posts/20/</link>
+      <pubDate>Thu, 23 Nov 2017 10:35:56 +0900</pubDate>
+      
+      <guid>https://kiwinam.com/posts/20/</guid>
+      <description>[안드로이드] 카카오톡 공유 기능 , 카카오 링크 API 사용법
+어플리케이션 기획 중에 콘텐츠 공유 기능이 있는 경우가 많습니다.
+공유할 수 있는 수단이 다양하게 있지만 대한민국에서 카카오 플랫폼이 가장 넓은 플랫폼이라 할 수 있죠.
+그래서 카카오톡 링크 API 를 사용하여 아래 사진과 같이 공유 기능을 구현하는 경우가 많습니다.
+(사진 출처 : Kakao Developer , 카카오 서비스 API 소개 )
+
+Kakao Developer에 개발자 문서가 아주 상세히 기술 되어 있습니다.
+저도 카카오 개발자센터에서 제공하는 문서를 보고 구현 했었지만 참고하실 분들을 위해 카카오 링크 기능 구현하는 것을 진행해 보도록 하겠습니다.</description>
+    </item>
+    
+    <item>
+      <title>[안드로이드] Bottom sheet dialog 사용하기</title>
+      <link>https://kiwinam.com/posts/18/</link>
+      <pubDate>Wed, 22 Nov 2017 10:35:56 +0900</pubDate>
+      
+      <guid>https://kiwinam.com/posts/18/</guid>
+      <description>[안드로이드] Bottom sheet dialog 사용하기
+머티리얼 디자인에서 바텀 시트는 두 가지의 종류가 있습니다
+영구 바닥 시트
+모달 바텀 시트 (우)
+
+이번 예제에서 만들어볼 것은 모달 바텀 시트입니다.
+모달 바텀 시트는 기존의 콘텐츠와 상호 작용 하거나 다이얼로그의 대체로 사용됩니다.
+먼저 결과물입니다.
+
+1. Result 
+2. Step by Step 2-1. 라이브러리 추가  BottomSheet 를 사용하기 위해선 Design 라이브러리가 필요합니다.  build.gradle (app)
+compile &#39;com.android.support:design:26.+&#39;  
+2-2. 바텀 시트 다이얼로그 레이아웃 생성  다이얼로그 레이아웃은 구성하기 나름입니다.</description>
+    </item>
+    
+    <item>
+      <title>[안드로이드] 커스텀 다이얼로그 [1] - 생성</title>
+      <link>https://kiwinam.com/posts/15/</link>
+      <pubDate>Fri, 18 Aug 2017 10:25:38 +0900</pubDate>
+      
+      <guid>https://kiwinam.com/posts/15/</guid>
+      <description>[안드로이드] 커스텀 다이얼로그 [1] - 생성
+안드로이드 커스텀 다이얼로그 만드는 법.
+
+안드로이드에서 제공하는 AlertDialog 에선 단순하게 Title, Message 등 텍스트만 표시가 가능했었습니다.
+Custom Dialog 에서는 말 그대로 내가 원하는 다이얼로그 모양을 만들고 기능을 추가할 수 있습니다.
+Activity 에서 Dialog 로 값을 넘길 수도 있고
+Dialog 에서 Activity 로 결과 값을 넘겨줄 수도 있습니다.
+이번 포스팅에선 간단히 만드는법만 소개하고 다음 포스팅에서 더 자세히 다루겠습니다.
+
+먼저 결과입니다.
+1. Result</description>
+    </item>
+    
+    <item>
+      <title>[안드로이드] status bar 색상 변경하기, 아이콘 색상 변경하기</title>
+      <link>https://kiwinam.com/posts/14/</link>
+      <pubDate>Thu, 01 Jun 2017 09:56:28 +0900</pubDate>
+      
+      <guid>https://kiwinam.com/posts/14/</guid>
+      <description>[안드로이드] status bar 색상 변경하기
+안드로이드 status bar는 최상단에 위치한 기기의 상태를 표시해주는 Bar 입니다.
+API 21 버전 - 롤리팝 버전 이상부터 Status bar (상태바) 색상 변경이 가능하고
+API 23 버전 - 마시멜로우 부터는 상태바에 있는 아이콘 색상이 변경 가능합니다.
+먼저 상태바 색상 변경 해보겠습니다.
+
+상태바 색상 변경 방법 1. 자바 코드에서 적용하기 빌드 버전을 확인하고 v21 이상이면 상태바의 색상을 검정색으로 바꿨습니다.
+if (Build.VERSION.SDK_INT &amp;gt;= 21) { // 21 버전 이상일 때 getWindow().</description>
+    </item>
     
     <item>
       <title>[안드로이드] - Pull to refresh 당겨서 새로고침 (SwipeRefreshLayout)</title>

@@ -6,7 +6,7 @@
     <description>Recent content in Categories on Kiwinam</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ko-kr</language>
-    <lastBuildDate>Fri, 19 May 2017 16:54:00 +0900</lastBuildDate>
+    <lastBuildDate>Sat, 29 Dec 2018 10:35:56 +0900</lastBuildDate>
     
 	<atom:link href="https://kiwinam.com/categories/index.xml" rel="self" type="application/rss+xml" />
     
@@ -14,9 +14,18 @@
     <item>
       <title>Android</title>
       <link>https://kiwinam.com/categories/android/</link>
-      <pubDate>Fri, 19 May 2017 16:54:00 +0900</pubDate>
+      <pubDate>Sat, 29 Dec 2018 10:35:56 +0900</pubDate>
       
       <guid>https://kiwinam.com/categories/android/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Mac</title>
+      <link>https://kiwinam.com/categories/mac/</link>
+      <pubDate>Tue, 30 Jan 2018 10:35:56 +0900</pubDate>
+      
+      <guid>https://kiwinam.com/categories/mac/</guid>
       <description></description>
     </item>
     
@@ -35,15 +44,6 @@
       <pubDate>Tue, 07 Mar 2017 00:00:00 +0000</pubDate>
       
       <guid>https://kiwinam.com/categories/git/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Mac</title>
-      <link>https://kiwinam.com/categories/mac/</link>
-      <pubDate>Mon, 27 Feb 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://kiwinam.com/categories/mac/</guid>
       <description></description>
     </item>
     

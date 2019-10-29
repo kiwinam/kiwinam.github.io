@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Intent on Kiwinam</title>
+    <link>https://kiwinam.com/tags/intent/</link>
+    <description>Recent content in Intent on Kiwinam</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ko-kr</language>
+    <lastBuildDate>Fri, 09 Feb 2018 10:35:56 +0900</lastBuildDate>
+    
+	<atom:link href="https://kiwinam.com/tags/intent/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>[안드로이드] startActivityForResult ,onActivityResult 사용법</title>
+      <link>https://kiwinam.com/posts/23/</link>
+      <pubDate>Fri, 09 Feb 2018 10:35:56 +0900</pubDate>
+      
+      <guid>https://kiwinam.com/posts/23/</guid>
+      <description>[안드로이드] startActivityForResult ,onActivityResult 사용법
+
+안드로이드 개발을 진행하다 보면 단순히 액티비티를 전환하고 끝! 이 아니라
+후속 액티비티에서 작업한 결과물을
+호출한 액티비티에서 사용하고 싶은 경우가 왕왕 있습니다.
+
+예를 들자면 회원가입을 진행할 때 ,
+회원가입 액티비티에서 다이얼로그를 띄우고
+다이얼로그에서 주소를 입력하게 하고, 완료 버튼을 누르면 다시 액티비티로 가져오는 경우나,
+(이 경우는 CallBack 으로도 가능합니다.)
+
+자신의 앱에서 카메라 앱을 호출하고 그 결과를 다시 자신의 앱으로 가져오는 경우가 있습니다.
+이러한 경우 사용하는 방법이 startActivityForResult 입니다.</description>
+    </item>
+    
+  </channel>
+</rss>

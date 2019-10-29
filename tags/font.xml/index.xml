@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Font.xml on Kiwinam</title>
+    <link>https://kiwinam.com/tags/font.xml/</link>
+    <description>Recent content in Font.xml on Kiwinam</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ko-kr</language>
+    <lastBuildDate>Sat, 10 Feb 2018 10:35:56 +0900</lastBuildDate>
+    
+	<atom:link href="https://kiwinam.com/tags/font.xml/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>[Android Studio 3.0 xml layout Preview 오류 해결 방법</title>
+      <link>https://kiwinam.com/posts/24/</link>
+      <pubDate>Sat, 10 Feb 2018 10:35:56 +0900</pubDate>
+      
+      <guid>https://kiwinam.com/posts/24/</guid>
+      <description>Android Studio 3.0 xml layout Preview 오류 해결 방법
+
+Android Studio 를 2.3.x 버전으로 사용하다 이번에 3.0 버전으로 업데이트 하였습니다.
+업데이트를 하니 Layout xml Preview 부분이 보이지 않고 아래와 같은 에러 메시지를 표시했습니다.
+Exception raised during rendering: Could not initialize class android.graphics.Typeface
+java.lang.NoClassDefFoundError: Could not initialize class android.graphics.Typeface
+
+이 에러의 원인은 Font.xml 파일을 변경해서 입니다.
+저희가 Android 2.x 버전을 사용하면서 Layout Preview 에 한글을 표시하기 위해
+Font.xml 파일을 수정한 적이 있을텐데요.</description>
+    </item>
+    
+  </channel>
+</rss>
