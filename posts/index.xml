@@ -1,0 +1,1827 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Posts on Kiwinam</title>
+        <link>https://kiwinam.com/posts/</link>
+        <description>Recent content in Posts on Kiwinam</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>ko-kr</language>
+        <lastBuildDate>Tue, 16 May 2017 00:00:00 +0000</lastBuildDate>
+        <atom:link href="https://kiwinam.com/posts/index.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>[안드로이드] - Pull to refresh 당겨서 새로고침 (SwipeRefreshLayout)</title>
+            <link>https://kiwinam.com/posts/12/</link>
+            <pubDate>Tue, 16 May 2017 00:00:00 +0000</pubDate>
+            
+            <guid>https://kiwinam.com/posts/12/</guid>
+            <description>[안드로이드] - Pull to refresh 당겨서 새로고침 (SwipeRefreshLayout)
+당겨서 새로고침 (pull to refresh) 는 많은 APP에서 만날수 있는 친숙한 패턴입니다.
+&amp;lsquo;구글 가이드&amp;rsquo;에도 수동으로 동기화 하는 방법 중 제스처를 통해 내용물 갱신을 시작하도록 요구합니다.
+이 패턴을 구현한 수많은 라이브러리가 있지만 구글에서 제공하는 가장 간단한 라이브러리를 구현하는 방법에 대해 설명해드리겠습니다.
+1. Result 
+2. Step by Step 2-1. 라이브러리 추가 SwipeRefreshLayout 를 통해 당겨서 새로고침을 구현하기 위해 추가해야할 라이브러리는 &amp;lsquo;com.android.support:design&amp;rsquo; 라이브러리입니다. 예제에서 RecyclerView 위에서 &amp;lsquo; pull to refresh &amp;rsquo; 제스쳐를 실행할거라</description>
+            <content type="html"><![CDATA[
+
+<hr />
+
+<p>[안드로이드] - Pull to refresh 당겨서 새로고침 (SwipeRefreshLayout)</p>
+
+<hr />
+
+<p><img src="/12/12-1.gif" alt="" /></p>
+
+<p>당겨서 새로고침 (pull to refresh) 는 많은 APP에서 만날수 있는 친숙한 패턴입니다.</p>
+
+<p>&lsquo;구글 가이드&rsquo;에도 수동으로 동기화 하는 방법 중 제스처를 통해 내용물 갱신을 시작하도록 요구합니다.</p>
+
+<p>이 패턴을 구현한 수많은 라이브러리가 있지만 구글에서 제공하는 가장 간단한 라이브러리를 구현하는 방법에 대해 설명해드리겠습니다.</p>
+
+<h3 id="1-result">1. Result</h3>
+
+<p><img src="/12/12-1.png" alt="" /></p>
+
+<p><br/></p>
+
+<h3 id="2-step-by-step">2. Step by Step</h3>
+
+<h4 id="2-1-라이브러리-추가">2-1. 라이브러리 추가</h4>
+
+<p><code>SwipeRefreshLayout</code>  를 통해 당겨서 새로고침을 구현하기 위해 추가해야할 라이브러리는 &lsquo;com.android.support:design&rsquo; 라이브러리입니다. 예제에서 RecyclerView 위에서 &lsquo; pull to refresh &rsquo; 제스쳐를 실행할거라</p>
+
+<p>추가 라이브러리도 dependencies 에 넣어줬습니다.</p>
+
+<p>핵심 라이브러리는</p>
+
+<pre><code>compile 'com.android.support:design:25.3.1'
+</code></pre>
+
+<p>입니다.</p>
+
+<p><code>build.gradle (Module:app)</code></p>
+
+<pre><code>dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    compile 'com.android.support:appcompat-v7:25.3.1'
+    compile 'com.android.support:recyclerview-v7:25.3.1'
+    compile 'com.android.support.constraint:constraint-layout:1.0.2'
+    compile 'com.android.support:design:25.3.1'
+    testCompile 'junit:junit:4.12'
+}
+</code></pre>
+
+<p><br/></p>
+
+<h4 id="2-2-layout-componet">2-2. Layout componet</h4>
+
+<p>라이브러리 추가 후, Layout 에서 <code>android.support.v4.widget.SwipeRefreshLayout</code>  추가해줍니다.</p>
+
+<p>정말 사용법이 간단해서  <code>RecyclerView</code>를 담아주기만 하면 됩니다.</p>
+
+<p><code>activity_main.xml</code></p>
+
+<pre><code class="language-layout">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;
+&lt;layout xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;&gt;
+    &lt;RelativeLayout
+        android:layout_width=&quot;match_parent&quot;
+        android:layout_height=&quot;match_parent&quot;&gt;
+        &lt;android.support.v4.widget.SwipeRefreshLayout
+            android:id=&quot;@+id/swipeRefreshLo&quot;
+            android:layout_width=&quot;match_parent&quot;
+            android:layout_height=&quot;match_parent&quot;&gt;
+            &lt;android.support.v7.widget.RecyclerView
+                android:id=&quot;@+id/recyclerView&quot;
+                android:layout_marginTop=&quot;8dp&quot;
+                android:layout_width=&quot;match_parent&quot;
+                android:layout_height=&quot;match_parent&quot;/&gt;
+        &lt;/android.support.v4.widget.SwipeRefreshLayout&gt;
+    &lt;/RelativeLayout&gt;
+&lt;/layout&gt;
+</code></pre>
+
+<p><br/></p>
+
+<h4 id="2-3-java-code">2-3. Java code</h4>
+
+<p><code>SwipeRefreshLayout</code> 중 자바에서 처리해야할 부분은 OnRefreshListener 입니다. 구현 방법은 많지만 제가 편한 방법으로 소개해드리겠습니다.</p>
+
+<p>먼저 class 에 Listener 를 implements 해줍니다.</p>
+
+<pre><code class="language-Java">public class MainActivity extends AppCompatActivity implements SwipeRefreshLayout.OnRefreshListener
+</code></pre>
+
+<p><br/></p>
+
+<p>onRefresh() 메서드를 Override 합니다. 전 Refresh가 시작되면 SnakBar 를 표시해주고, 0.5 초후 Refresh가 완료되도록 하였습니다.</p>
+
+<p>setRefreshing(false) 메서드가 호출 되면 새로고침이 완료됩니다. 특정 작업이 완료되는 시점에 사용해주시면 됩니다.</p>
+
+<pre><code class="language-Java">@Override
+public void onRefresh() {
+    mainBinding.recyclerView.postDelayed(new Runnable() {
+        @Override
+        public void run() {
+            Snackbar.make(mainBinding.recyclerView,&quot;Refresh Success&quot;,Snackbar.LENGTH_SHORT).show();
+            mainBinding.swipeRefreshLo.setRefreshing(false);
+        }
+    },500);
+}
+</code></pre>
+
+<p><br/></p>
+
+<p>그 다음 layout 에 정의해둔 이름으로 <code>SwipeRefreshLayout</code> 를 호출하고 위에서 정의한 Listener 를 this를 통해 할당해줍니다.</p>
+
+<p>Refresh 할 때 돌아가는 progress circle의 색상도 바꿀수 있는데 2번 째 줄에 있는 setColorSchemeColors 메서드를 통해 바꿀수 있습니다.</p>
+
+<pre><code class="language-Java">private void setRefresh(){
+    mainBinding.swipeRefreshLo.setOnRefreshListener(this);
+    mainBinding.swipeRefreshLo.setColorSchemeColors(getResources().getIntArray(R.array.google_colors));
+}
+</code></pre>
+
+<p>색상 바꿀 때 사용하는 arrays.xml 은 values 폴더 아래 있습니다.</p>
+
+<p><img src="/12/12-3.jpg" alt="" /></p>
+]]></content>
+        </item>
+        
+        <item>
+            <title>[Java] JSP - JSON 데이터 주고 받기 - JSONParser</title>
+            <link>https://kiwinam.com/posts/11/</link>
+            <pubDate>Wed, 03 May 2017 00:00:00 +0000</pubDate>
+            
+            <guid>https://kiwinam.com/posts/11/</guid>
+            <description>[Java] JSP - JSON 데이터 주고 받기 - JSONParser
+
+json-simple 라이브러리를 이용하여
+Android - JSP - JAVA
+JSON 데이터 처리하는 방법입니다.
+
+Step1 . JSON 데이터 생성 (Android) JSONObject sendObject = new JSONObject(); JSONArray sendArray = new JSONArray(); // 각 정보마다 Object 로 만들어 Array 에 담는 반복문 try { for(int i = 0; i &amp;lt; 10; i++ ){ JSONObject informationObject = new JSONObject(); informationObject.put(&amp;quot;name&amp;quot;,&amp;quot;Charlie&amp;quot;+i); informationObject.put(&amp;quot;number&amp;quot;,i+1); sendArray.put(informationObject); } sendObject.</description>
+            <content type="html"><![CDATA[
+
+<hr />
+
+<p>[Java] JSP - JSON 데이터 주고 받기 - JSONParser</p>
+
+<hr />
+
+<p><br/></p>
+
+<p>json-simple 라이브러리를 이용하여</p>
+
+<p>Android - JSP - JAVA</p>
+
+<p>JSON 데이터 처리하는 방법입니다.</p>
+
+<p><br/></p>
+
+<h4 id="step1-json-데이터-생성-android">Step1 . JSON 데이터 생성  (Android)</h4>
+
+<pre><code class="language-Java">JSONObject sendObject = new JSONObject();
+JSONArray sendArray = new JSONArray();
+// 각 정보마다 Object 로 만들어 Array 에 담는 반복문
+try {
+    for(int i = 0; i &lt; 10; i++ ){
+        JSONObject informationObject = new JSONObject();
+        informationObject.put(&quot;name&quot;,&quot;Charlie&quot;+i);
+        informationObject.put(&quot;number&quot;,i+1);
+
+        sendArray.put(informationObject);
+    }
+    sendObject.put(&quot;list&quot;,sendArray);
+} catch (JSONException e) {
+    e.printStackTrace();
+}
+</code></pre>
+
+<p>실제 정보가 담겨있는 JSONObject를 JSONArray 에 담아주고</p>
+
+<p>담긴 Array를 다시 JSONObject에 담아줍니다.</p>
+
+<p>그렇게 되면 데이터 형식은 아래와 같습니다.</p>
+
+<p>{ &ldquo;list&rdquo;<br />
+    {
+        [ &ldquo;name&rdquo;:&ldquo;charlie0&rdquo; , &ldquo;number&rdquo;:&ldquo;0&rdquo; ] ,
+        [ &ldquo;name&rdquo;:&ldquo;charlie1&rdquo; , &ldquo;number&rdquo;:&ldquo;1&rdquo; ] ,
+        [ &ldquo;name&rdquo;:&ldquo;charlie2&rdquo; , &ldquo;number&rdquo;:&ldquo;2&rdquo; ] ,
+        &hellip;
+    }
+}</p>
+
+<p>이렇게 생성된 JSONObject 를 다양한 방법으로 JSP에 전달해주면됩니다.</p>
+
+<p>저의 경우에는 <code>HttpURLConnection</code> 를 이용해서 String 형식으로 전송했습니다.</p>
+
+<pre><code class="language-Java"> &quot;json=&quot;+sendObject.toString()
+</code></pre>
+
+<p>제가 만든 요청 Parameter 입니다.</p>
+
+<p>요청 URL 은 서버의 jsp 파일로 가도록 하였습니다.</p>
+
+<p><br/></p>
+
+<h4 id="step2-jsp-에서-데이터-받기-jsp">Step2 . JSP 에서 데이터 받기 (JSP)</h4>
+
+<p><em>init.Manage 는 java 파일 패키지 명입니다.</em></p>
+
+<pre><code class="language-JSP">&lt;%@ page language=&quot;java&quot; contentType=&quot;text/html; charset=UTF-8&quot;
+    page Encoding=&quot;UTF-8&quot;%&gt;
+
+&lt;%@ page import=&quot;init.Manage&quot;%&gt;
+
+&lt;%
+	request.setCharacterEncoding(&quot;UTF-8&quot;);
+
+	Manage manage = Manage.getInstance();
+
+	String json = request.getParameter(&quot;json&quot;);
+
+	String result = manage.method(json);
+
+	out.print(result);
+%&gt;
+</code></pre>
+
+<p>String으로 날린 데이터를 request 객체에서 post형식으로 받아줍니다.</p>
+
+<p>실제로 JSON 데이터를 처리하는 부분은 java 에서 진행할 것이기 때문에</p>
+
+<p>받은 데이터를 java 메소드에 매개변수로 전달만 해줍니다.</p>
+
+<p><br/></p>
+
+<h4 id="step3-json-데이터-처리하기-java">Step3 . JSON 데이터 처리하기 (Java)</h4>
+
+<pre><code class="language-Java">public String method(String data){
+
+	String result = &quot;&quot;;
+
+	try {
+		JSONParser jsonParser = new JSONParser();
+		JSONObject jsonObject = (JSONObject) jsonParser.parse(data);
+		JSONArray jsonArray = (JSONArray) jsonObject.get(&quot;list&quot;);
+
+		for(int i = 0; i &lt; jsonArray.size(); i++ ){
+			JSONObject jsonObject = (JSONObject) jsonArray.get(i);
+			String name = jsonObject.get(&quot;name&quot;).toString();
+			String number = jsonObject.get(&quot;number&quot;).toString();
+
+            //Do something..
+        }
+		result = &quot;ok&quot;;
+	} catch (Exception e) {
+		result = &quot;fail&quot;;
+}
+return result;
+}
+</code></pre>
+
+<p>Android 에서 JSON 데이터를 만든 순서대로 다시 풀어주면 됩니다.</p>
+
+<p>JSONObject { JSONArray ( JSONObjects&hellip;) }</p>
+
+<p>이런 형태의 JSONObject를 역순으로 풀어줍니다.</p>
+
+<p>JSONObject &gt;&gt; JSONArray &gt;&gt; JSONObject</p>
+
+<p>여기에서 사용하는 가장 중요한 부분은</p>
+
+<p>JSONParser 입니다.</p>
+
+<p>String 으로 되어 있는 데이터를 JSON 형태로 파싱 해주는 parse 메소드를 이용하여 JSONObject를 만듭니다.</p>
+
+<p>그 이후는 만든 순서대로 다시 가져오는 부분입니다.</p>
+
+<hr />
+
+<p><br/></p>
+
+<p><em>[JSON 관련 포스팅]</em></p>
+
+<ol>
+<li><a href="kiwinam.com/posts/7" target="_blank">[안드로이드] JSON 데이터 주고 받기</a></li>
+</ol>
+]]></content>
+        </item>
+        
+        <item>
+            <title>[안드로이드] RecyclerView [3] Divider 구분선 넣기</title>
+            <link>https://kiwinam.com/posts/10/</link>
+            <pubDate>Fri, 28 Apr 2017 00:00:00 +0000</pubDate>
+            
+            <guid>https://kiwinam.com/posts/10/</guid>
+            <description>[안드로이드] RecyclerView [3] Divider 구분선 넣기
+
+( Divider 가 적용된 RecyclerView 예제, 출저 Google Material Design Guide )
+
+RecyclerView 에서 구분선 혹은 구분자를 추가하는 방법은 다양하게 있습니다.
+하지만 ListView xml 처럼 간단하게 android:divider 로 지정할 수 있는 부분이 아니라 코드적으로 구현 할 수 있습니다.
+그 중 가장 간단한 방법에 대해 설명해드리겠습니다.
+
+1. Result 구분선 (Divider) 만 넣는 방법과 구분선 + 공백 넣는 방법에 대해 설명해드리겠습니다.</description>
+            <content type="html"><![CDATA[
+
+<hr />
+
+<p>[안드로이드] RecyclerView [3] Divider 구분선 넣기</p>
+
+<hr />
+
+<p><br/></p>
+
+<p><img src="/10/10-1.png" alt="" />
+( Divider 가 적용된 RecyclerView 예제,  출저 <a href="http://davidlab.net/google-design-ko/components/lists.html#lists-specs" target="">Google Material Design Guide</a> )</p>
+
+<p><br/></p>
+
+<p>RecyclerView 에서 구분선 혹은 구분자를 추가하는 방법은 다양하게 있습니다.</p>
+
+<p>하지만 ListView xml 처럼 간단하게 android:divider 로 지정할 수 있는 부분이 아니라 코드적으로 구현 할 수 있습니다.</p>
+
+<p>그 중 가장 간단한 방법에 대해 설명해드리겠습니다.</p>
+
+<p><br/></p>
+
+<h3 id="1-result">1. Result</h3>
+
+<p><img src="/10/10-2.png" alt="" /></p>
+
+<p>구분선 (Divider) 만 넣는 방법과 구분선 + 공백 넣는 방법에 대해 설명해드리겠습니다.</p>
+
+<p><br/></p>
+
+<h3 id="2-step-by-step">2. Step by Step</h3>
+
+<h4><b>2-1. 기본 구분선(Divider) 구현하기</b></h4>
+
+<p><code>MainActivity.java</code></p>
+
+<pre><code class="language-Java">DividerItemDecoration dividerItemDecoration =
+        new DividerItemDecoration(getApplicationContext(),new LinearLayoutManager(this).getOrientation());
+mainBinding.recyclerView.addItemDecoration(dividerItemDecoration);
+</code></pre>
+
+<p><br/></p>
+
+<h4><b>2-2. 공백 구분자 구현하기</b></h4>
+
+<p>클래스 파일을 새로 만들고 RecyclerView.ItemDecoration 을 상속받습니다.</p>
+
+<p><code>VerticalSpaceItemDecoration.java</code></p>
+
+<pre><code class="language-Java">public class VerticalSpaceItemDecoration extends RecyclerView.ItemDecoration {
+
+    private final int verticalSpaceHeight;
+
+    public VerticalSpaceItemDecoration(int verticalSpaceHeight){
+        this.verticalSpaceHeight = verticalSpaceHeight;
+    }
+
+    @Override
+    public void getItemOffsets(Rect outRect, View view, RecyclerView parent, RecyclerView.State state) {
+        // 마지막 아이템이 아닌 경우, 공백 추가
+        if(parent.getChildAdapterPosition(view) != parent.getAdapter().getItemCount() -1 ){
+            outRect.bottom = verticalSpaceHeight;
+        }
+    }
+}
+</code></pre>
+
+<p>Constructor 에서 공백의 높이를 설정해주고 getItemOffsets 메소드를 오버라이딩 하여 높이를 설정해줍니다.</p>
+
+<p>이 때 마지막 아이템일 경우 공백 높이를 주지 않습니다.</p>
+
+<p>이 후 기본 구분선을 구현 하는 것과 동일하게 MainActivity.java 에서 구현해줍니다.</p>
+
+<p><code>MainActivity.java</code></p>
+
+<pre><code class="language-Java">mainBinding.recyclerView.addItemDecoration(new VerticalSpaceItemDecoration(48));
+</code></pre>
+
+<p><br/></p>
+
+<h3 id="3-soruce-code">3. Soruce code</h3>
+
+<p>전체 소스 코드는 <a href="https://github.com/kiwinam/RecyclerExample" target="_blank">Github</a> 에 연동해놨습니다.</p>
+
+<p><br/></p>
+
+<hr />
+
+<p><br/></p>
+
+<p><em>[Recycler View 시리즈]</em></p>
+
+<ol>
+<li><a href="kiwinam.com/posts/8" target="_blank">[안드로이드] RecyclerView [1] 간단한 사용법</a></li>
+<li><a href="kiwinam.com/posts/9" target="_blank">[안드로이드] RecyclerView [2] OnItemClick 리스너 구현</a></li>
+<li><a href="kiwinam.com/posts/10" target="_blank">[안드로이드] RecyclerView [3] Divider 구분선 넣기</a></li>
+</ol>
+]]></content>
+        </item>
+        
+        <item>
+            <title>[안드로이드] RecyclerView [2] OnItemClick 리스너 구현</title>
+            <link>https://kiwinam.com/posts/9/</link>
+            <pubDate>Wed, 26 Apr 2017 00:00:00 +0000</pubDate>
+            
+            <guid>https://kiwinam.com/posts/9/</guid>
+            <description>[안드로이드] RecyclerView [2] OnItemClick 리스너 구현
+
+RecyclerView 에서는 ListView에서와는 다르게
+ClickListener 를 따로 구현해서 등록해줘야합니다.
+Adapter에서 OnClick 를 구현해줘도 되고 제가 구현한 방법 처럼 따로 클래스를 만들어서
+ItemTouchListener 를 구현해도 됩니다.
+
+1. Result 
+2. Step by Step 2-1. RecyclerView 구현 안드로이드 RecyclerView 의 간단한 구현 방법은 이전 포스팅 글로 대체 하겠습니다.
+[[안드로이드] RecyclerView 간단한 사용법]
+
+2-2. OnItemTouchListener RecyclerItemClickListener.java
+public class RecyclerItemClickListener implements RecyclerView.OnItemTouchListener { private OnItemClickListener mListener; public interface OnItemClickListener { void onItemClick(View view, int position); void onLongItemClick(View view, int position); } GestureDetector mGestureDetector; public RecyclerItemClickListener(Context context, final RecyclerView recyclerView, OnItemClickListener listener) { mListener = listener; mGestureDetector = new GestureDetector(context, new GestureDetector.</description>
+            <content type="html"><![CDATA[
+
+<hr />
+
+<p>[안드로이드] RecyclerView [2] OnItemClick 리스너 구현</p>
+
+<hr />
+
+<p><br/></p>
+
+<p>RecyclerView 에서는 ListView에서와는 다르게</p>
+
+<p>ClickListener 를 따로 구현해서 등록해줘야합니다.</p>
+
+<p>Adapter에서 OnClick 를 구현해줘도 되고 제가 구현한 방법 처럼 따로 클래스를 만들어서</p>
+
+<p>ItemTouchListener 를 구현해도 됩니다.</p>
+
+<p><br/></p>
+
+<h3 id="1-result">1. Result</h3>
+
+<p><img src="/9/9-1.png" alt="" /></p>
+
+<p><img src="/9/9-2.png" alt="" /></p>
+
+<p><br/></p>
+
+<h3 id="2-step-by-step">2. Step by Step</h3>
+
+<h4><b>2-1. RecyclerView 구현</b></h4>
+
+<p>안드로이드 RecyclerView 의 간단한 구현 방법은 이전 포스팅 글로 대체 하겠습니다.</p>
+
+<p><a href="http://kiwinam.com/posts/8/" target="_blank">[[안드로이드] RecyclerView 간단한 사용법]</a></p>
+
+<p><br/></p>
+
+<h4><b>2-2. OnItemTouchListener</b></h4>
+
+<p><code>RecyclerItemClickListener.java</code></p>
+
+<pre><code class="language-Java">public class RecyclerItemClickListener implements RecyclerView.OnItemTouchListener {
+    private OnItemClickListener mListener;
+
+    public interface OnItemClickListener {
+        void onItemClick(View view, int position);
+
+        void onLongItemClick(View view, int position);
+    }
+
+    GestureDetector mGestureDetector;
+
+    public RecyclerItemClickListener(Context context, final RecyclerView recyclerView, OnItemClickListener listener) {
+        mListener = listener;
+        mGestureDetector = new GestureDetector(context, new GestureDetector.SimpleOnGestureListener() {
+            @Override
+            public boolean onSingleTapUp(MotionEvent e) {
+                return true;
+            }
+
+            @Override
+            public void onLongPress(MotionEvent e) {
+                View child = recyclerView.findChildViewUnder(e.getX(), e.getY());
+                if (child != null &amp;&amp; mListener != null) {
+                    Log.d(&quot;long&quot;,&quot;press&quot;);
+                    mListener.onLongItemClick(child, recyclerView.getChildAdapterPosition(child));
+                }
+            }
+        });
+    }
+
+    @Override public boolean onInterceptTouchEvent(RecyclerView view, MotionEvent e) {
+        View childView = view.findChildViewUnder(e.getX(), e.getY());
+        if (childView != null &amp;&amp; mListener != null &amp;&amp; mGestureDetector.onTouchEvent(e)) {
+            mListener.onItemClick(childView, view.getChildAdapterPosition(childView));
+            return true;
+        }
+        return false;
+    }
+
+    @Override public void onTouchEvent(RecyclerView view, MotionEvent motionEvent) { }
+
+    @Override public void onRequestDisallowInterceptTouchEvent (boolean disallowIntercept){}
+}
+</code></pre>
+
+<p><br/></p>
+
+<h4><b>2-3. addOnItemTouchListener</b></h4>
+
+<pre><code class="language-Java">mainBinding.recyclerView.addOnItemTouchListener(
+        new RecyclerItemClickListener(getApplicationContext(), mainBinding.recyclerView, new RecyclerItemClickListener.OnItemClickListener() {
+            @Override
+            public void onItemClick(View view, int position) {
+                Toast.makeText(getApplicationContext(),position+&quot;번 째 아이템 클릭&quot;,Toast.LENGTH_SHORT).show();
+            }
+
+            @Override
+            public void onLongItemClick(View view, int position) {
+                Toast.makeText(getApplicationContext(),position+&quot;번 째 아이템 롱 클릭&quot;,Toast.LENGTH_SHORT).show();
+            }
+        }));
+</code></pre>
+
+<p><br/></p>
+
+<h3 id="3-soruce-code">3. Soruce code</h3>
+
+<p>전체 소스 코드는 <a href="https://github.com/kiwinam/RecyclerExample" target="_blank">Github</a> 에 연동해놨습니다.</p>
+
+<p>MainActivity에서 Data Binding을 사용하였습니다.</p>
+
+<p><br/></p>
+
+<hr />
+
+<p><br/></p>
+
+<p><em>[Recycler View 시리즈]</em></p>
+
+<ol>
+<li><a href="kiwinam.com/posts/8" target="_blank">[안드로이드] RecyclerView [1] 간단한 사용법</a></li>
+<li><a href="kiwinam.com/posts/9" target="_blank">[안드로이드] RecyclerView [2] OnItemClick 리스너 구현</a></li>
+<li><a href="kiwinam.com/posts/10" target="_blank">[안드로이드] RecyclerView [3] Divider 구분선 넣기</a></li>
+</ol>
+]]></content>
+        </item>
+        
+        <item>
+            <title>[안드로이드] RecyclerView [1] 간단한 사용법</title>
+            <link>https://kiwinam.com/posts/8/</link>
+            <pubDate>Tue, 25 Apr 2017 00:00:00 +0000</pubDate>
+            
+            <guid>https://kiwinam.com/posts/8/</guid>
+            <description>[안드로이드] RecyclerView 간단한 사용법
+
+안드로이드에서 Recycler View 를 간단하게 사용하는 방법에 대해 포스팅 하겠습니다!
+안드로이드를 배우다 보면 리사이클러 뷰, recycler view, list view 에 관해 상당히 많이 보고 듣게 되는데요&amp;hellip;
+도대체 저 리사이클러뷰가 어떤 녀석이길래 저렇게 많이 언급 되는지 가볍게 알아보고 가도록 하겠습니다.
+먼저 프로 앱등이인 전 앱스토어의 사진을 하나 가져 왔습니다
+(코쓱)
+
+위 사진을 보면 빨간 테두리에 있는 내용들은
+큰 틀은 (포맷) 변하지 않고 콘텐츠 (앱 로고와 이름, 카테고리) 만 변하는 것을 알 수 있습니다.</description>
+            <content type="html"><![CDATA[
+
+<hr />
+
+<p><br/></p>
+
+<p>[안드로이드] RecyclerView 간단한 사용법</p>
+
+<hr />
+
+<p><br/></p>
+
+<p>안드로이드에서 Recycler View 를 간단하게 사용하는 방법에 대해 포스팅 하겠습니다!</p>
+
+<p>안드로이드를 배우다 보면 리사이클러 뷰, recycler view, list view 에 관해 상당히 많이 보고 듣게 되는데요&hellip;</p>
+
+<p>도대체 저 리사이클러뷰가 어떤 녀석이길래 저렇게 많이 언급 되는지 가볍게 알아보고 가도록 하겠습니다.</p>
+
+<p>먼저 프로 앱등이인 전 앱스토어의 사진을 하나 가져 왔습니다</p>
+
+<p>(코쓱)</p>
+
+<p><br/></p>
+
+<p><img src="/8/8-1.jpg" alt="" /></p>
+
+<p>위 사진을 보면 빨간 테두리에 있는 내용들은</p>
+
+<p>큰 틀은 (포맷) 변하지 않고 콘텐츠 (앱 로고와 이름, 카테고리) 만 변하는 것을 알 수 있습니다.</p>
+
+<p>이런식으로 하나의 아이템 (View) 를 반복적으로 보여주는 것이 Recycler View 입니다.</p>
+
+<p>그럼 먼저 결과물 먼저 보여드리겠습니다.</p>
+
+<h3 id="1-result">1. Result</h3>
+
+<p><img src="/8/8-2.png" alt="" /></p>
+
+<p>사람 모양의 아이콘이 나오고, 그 다음에 이름이 나옵니다.</p>
+
+<p>큰 틀은 유지한 채 이름 데이터만 바뀌는 것을 볼 수 있습니다.</p>
+
+<p>그럼 천천히 만들어 볼까요?</p>
+
+<p><br/></p>
+
+<h3 id="2-step-by-step">2. Step by step</h3>
+
+<p>2-1. 라이브러리 추가</p>
+
+<pre><code>compile 'com.android.support:recyclerview-v7:25.3.1'
+</code></pre>
+
+<pre><code>- 먼저 recyclerview 는 라이브러리가 필요합니다. 서포트 라이브러리에서 recyclerview 를 추가해주세요.
+</code></pre>
+
+<p><br/></p>
+
+<p>2-2. 아이템이 담길 객체 생성</p>
+
+<pre><code>- 이번엔 반복적으로 나오는 아이템 객체를 만들어 보겠습니다. 여기에서 아이템이란 리사이클러 뷰에서 'Charlie Park' 하나의 아이템을 말합니다.
+
+
+- 먼저 아이템이 가지고 있어야 하는 변수를 만들겠습니다.
+
+- 저희가 만들 recycler view 에선 변경되는 부분이 이름 뿐이니 String 형 변수 하나만 만들겠습니다.
+</code></pre>
+
+<p><br/></p>
+
+<p><code>RecyclerItem.java</code></p>
+
+<pre><code class="language-Java">public class RecyclerItem {
+    private String name;
+
+    public RecyclerItem (String name){
+        this.name = name;
+    }
+
+    public String getName() {
+        return name;
+    }
+}
+</code></pre>
+
+<p><br/></p>
+
+<ul>
+<li>이번에는 아이템을 보여줄 레이아웃을 그려보겠습니다.</li>
+</ul>
+
+<p><code>item_recycler_view.xml</code></p>
+
+<pre><code class="language-xml">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;
+&lt;RelativeLayout xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;
+    android:orientation=&quot;vertical&quot;
+    android:background=&quot;#fff&quot;
+    android:layout_width=&quot;match_parent&quot;
+    android:layout_height=&quot;56dp&quot;&gt;
+    &lt;ImageView
+        android:src=&quot;@drawable/ic_account_circle&quot;
+        android:layout_marginStart=&quot;16dp&quot;
+        android:layout_centerVertical=&quot;true&quot;
+        android:layout_width=&quot;40dp&quot;
+        android:layout_height=&quot;40dp&quot; /&gt;
+    &lt;TextView
+        android:id=&quot;@+id/itemNameTv&quot;
+        android:layout_centerVertical=&quot;true&quot;
+        android:layout_marginStart=&quot;72dp&quot;
+        android:textSize=&quot;18sp&quot;
+        android:layout_width=&quot;wrap_content&quot;
+        android:layout_height=&quot;wrap_content&quot; /&gt;
+&lt;/RelativeLayout&gt;
+</code></pre>
+
+<pre><code>- 위의 레이아웃 xml 파일은 아래와 같이 보여집니다.
+
+![](/8/8-3.png)
+
+&lt;br/&gt;
+
+
+
+전 항상 Material Design Guide 를 준수하려 하는 편이라
+
+
+
+아래 가이드에 맞게 Item Layout 를 작성하였습니다.
+
+![](/8/8-4.png)
+(출처 : http://davidlab.net/google-design-ko/components/lists.html#lists-behavior)
+
+&lt;br/&gt;
+</code></pre>
+
+<p>2-3. Adapter 생성</p>
+
+<pre><code class="language-Java">package charlie.recyclerexample;
+
+import android.support.v7.widget.RecyclerView;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.TextView;
+
+import java.util.ArrayList;
+
+/**
+ * Created by charlie on 2017. 4. 24..
+ */
+
+public class RecyclerAdapter extends RecyclerView.Adapter&lt;RecyclerAdapter.ItemViewHolder&gt; {
+    ArrayList&lt;RecyclerItem&gt; mItems;
+
+    public RecyclerAdapter(ArrayList&lt;RecyclerItem&gt; items){
+        mItems = items;
+    }
+
+
+    // 새로운 뷰 홀더 생성
+    @Override
+    public ItemViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_recycler_view,parent,false);
+        return new ItemViewHolder(view);
+    }
+
+
+    // View 의 내용을 해당 포지션의 데이터로 바꿉니다.
+    @Override
+    public void onBindViewHolder(ItemViewHolder holder, int position) {
+        holder.mNameTv.setText(mItems.get(position).getName());
+    }
+
+    // 데이터 셋의 크기를 리턴해줍니다.
+    @Override
+    public int getItemCount() {
+        return mItems.size();
+    }
+
+    // 커스텀 뷰홀더
+    // item layout 에 존재하는 위젯들을 바인딩합니다.
+    class ItemViewHolder extends RecyclerView.ViewHolder{
+    private TextView mNameTv;
+        public ItemViewHolder(View itemView) {
+            super(itemView);
+            mNameTv = (TextView) itemView.findViewById(R.id.itemNameTv);
+        }
+    }
+}
+</code></pre>
+
+<p><br/></p>
+
+<p>2-4. MainActivity 작성</p>
+
+<pre><code class="language-Java">package charlie.recyclerexample;
+
+import android.databinding.DataBindingUtil;
+import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
+
+import java.util.ArrayList;
+
+import charlie.recyclerexample.databinding.ActivityMainBinding;
+
+public class MainActivity extends AppCompatActivity {
+    private String[] names = {&quot;Charlie&quot;,&quot;Andrew&quot;,&quot;Han&quot;,&quot;Liz&quot;,&quot;Thomas&quot;,&quot;Sky&quot;,&quot;Andy&quot;,&quot;Lee&quot;,&quot;Park&quot;};
+    private static final int LAYOUT = R.layout.activity_main;
+    private ActivityMainBinding mainBinding;
+    private RecyclerView.Adapter adapter;
+
+    private ArrayList&lt;RecyclerItem&gt; mItems = new ArrayList&lt;&gt;();
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        mainBinding = DataBindingUtil.setContentView(this,LAYOUT);
+
+        setRecyclerView();
+
+    }
+
+    private void setRecyclerView(){
+        // 각 Item 들이 RecyclerView 의 전체 크기를 변경하지 않는 다면
+        // setHasFixedSize() 함수를 사용해서 성능을 개선할 수 있습니다.
+        // 변경될 가능성이 있다면 false 로 , 없다면 true를 설정해주세요.
+        mainBinding.recyclerView.setHasFixedSize(true);
+
+        // RecyclerView에 Adapter를 설정해줍니다.
+        adapter = new RecyclerAdapter(mItems);
+        mainBinding.recyclerView.setAdapter(adapter);
+
+        // 다양한 LayoutManager 가 있습니다. 원하시는 방법을 선택해주세요.
+        // 지그재그형의 그리드 형식
+        //mainBinding.recyclerView.setLayoutManager(new StaggeredGridLayoutManager(2,StaggeredGridLayoutManager.VERTICAL));
+        // 그리드 형식
+        //mainBinding.recyclerView.setLayoutManager(new GridLayoutManager(this,4));
+        // 가로 또는 세로 스크롤 목록 형식
+        mainBinding.recyclerView.setLayoutManager(new LinearLayoutManager(this));
+
+        setData();
+    }
+
+    private void setData(){
+        mItems.clear();
+        // RecyclerView 에 들어갈 데이터를 추가합니다.
+        for(String name : names){
+            mItems.add(new RecyclerItem(name));
+            mItems.add(new RecyclerItem(name));
+        }
+        // 데이터 추가가 완료되었으면 notifyDataSetChanged() 메서드를 호출해 데이터 변경 체크를 실행합니다.
+        adapter.notifyDataSetChanged();
+    }
+}
+</code></pre>
+
+<hr />
+
+<h4 id="3-source-code">3. Source Code</h4>
+
+<p>전체 소스코드는 GitHub 에 연동해놓았습니다.</p>
+
+<p>MainActivity에서 Data Binding을 사용하였습니다.</p>
+
+<p>다음에는 RecyclerView에서 달라진 OnClickListener 구현 방법에 대해 알아보겠습니다.</p>
+
+<p>Link</p>
+
+<p>RecyclerView OnClickListener 구현 방법</p>
+]]></content>
+        </item>
+        
+        <item>
+            <title>[안드로이드] JSON 데이터 주고 받기</title>
+            <link>https://kiwinam.com/posts/7/</link>
+            <pubDate>Mon, 24 Apr 2017 00:00:00 +0000</pubDate>
+            
+            <guid>https://kiwinam.com/posts/7/</guid>
+            <description>[안드로이드] JSON 데이터 주고 받기 1. Result 
+2. Step by step 데이터를 JSON Obejct 로 보내고 받는 방법 2-1. Send Object private void sendObject(){ JSONObject jsonObject = new JSONObject(); try{ jsonObject.put(&amp;quot;nation&amp;quot;, mJsonNationEt.getText().toString()); jsonObject.put(&amp;quot;name&amp;quot;, mJsonNameEt.getText().toString()); jsonObject.put(&amp;quot;address&amp;quot;, mJsonAddressEt.getText().toString()); jsonObject.put(&amp;quot;age&amp;quot;, mJsonAgeEt.getText().toString()); }catch (JSONException e){ e.printStackTrace(); } receiveObject(jsonObject); }  
+2-2. Receive Object private void receiveObject(JSONObject data){ recyclerView.setVisibility(View.GONE); objectResultLo.setVisibility(View.VISIBLE); try{ mReceiveTv.setText(data.toString()); mReceiveNationTv.setText(&amp;quot;nation : &amp;quot;+data.getString(&amp;quot;nation&amp;quot;)); mReceiveNameTv.setText(&amp;quot;name : &amp;quot;+data.getString(&amp;quot;nation&amp;quot;)); mReceiveAddressTv.setText(&amp;quot;address : &amp;quot;+data.getString(&amp;quot;address&amp;quot;)); mReceiveAgeTv.</description>
+            <content type="html"><![CDATA[
+
+<hr />
+
+<p><br/></p>
+
+<h3 id="안드로이드-json-데이터-주고-받기">[안드로이드] JSON 데이터 주고 받기</h3>
+
+<h5 id="1-result">1. Result</h5>
+
+<p><img src="/7/7-1.png" alt="" /></p>
+
+<p><img src="/7/7-2.png" alt="" /></p>
+
+<p><img src="/7/7-2.png" alt="" /></p>
+
+<p><br/></p>
+
+<h5 id="2-step-by-step">2. Step by step</h5>
+
+<h3>데이터를 JSON Obejct 로 보내고 받는 방법</h3>
+
+<h5>2-1. Send Object</h5>
+
+<pre><code class="language-Java">private void sendObject(){
+    JSONObject jsonObject = new JSONObject();
+    try{
+        jsonObject.put(&quot;nation&quot;, mJsonNationEt.getText().toString());
+        jsonObject.put(&quot;name&quot;, mJsonNameEt.getText().toString());
+        jsonObject.put(&quot;address&quot;, mJsonAddressEt.getText().toString());
+        jsonObject.put(&quot;age&quot;, mJsonAgeEt.getText().toString());
+    }catch (JSONException e){
+        e.printStackTrace();
+    }
+    receiveObject(jsonObject);
+}
+</code></pre>
+
+<p><br/></p>
+
+<h5>2-2. Receive Object</h5>
+
+<pre><code class="language-Java">private void receiveObject(JSONObject data){
+    recyclerView.setVisibility(View.GONE);
+    objectResultLo.setVisibility(View.VISIBLE);
+    try{
+        mReceiveTv.setText(data.toString());
+        mReceiveNationTv.setText(&quot;nation : &quot;+data.getString(&quot;nation&quot;));
+        mReceiveNameTv.setText(&quot;name : &quot;+data.getString(&quot;nation&quot;));
+        mReceiveAddressTv.setText(&quot;address : &quot;+data.getString(&quot;address&quot;));
+        mReceiveAgeTv.setText(&quot;age : &quot;+data.getString(&quot;age&quot;));
+    } catch (JSONException e){
+        e.printStackTrace();
+    }
+}
+</code></pre>
+
+<p><br/></p>
+
+<h3>데이터를 JSON Array 로 보내고 받는 방법</h3>
+
+<h5>2-3 Send Array</h5>
+
+<pre><code class="language-Java">// 서버로 배열 데이터 전송할 때
+private void sendArray(){
+    JSONObject wrapObject = new JSONObject();
+    JSONArray jsonArray = new JSONArray();
+    try{
+        for(int i = 0; i &lt; 10; i++){
+            JSONObject jsonObject = new JSONObject();
+            jsonObject.put(&quot;nation&quot;, mJsonNationEt.getText().toString());
+            jsonObject.put(&quot;name&quot;, mJsonNameEt.getText().toString());
+            jsonObject.put(&quot;address&quot;, mJsonAddressEt.getText().toString());
+            jsonObject.put(&quot;age&quot;, mJsonAgeEt.getText().toString());
+            jsonArray.put(jsonObject);
+        }
+        wrapObject.put(&quot;list&quot;,jsonArray);
+        
+        //실제 데이터 전송 메소드
+        receiveArray(wrapObject.toString());
+    }catch (JSONException e){
+        e.printStackTrace();
+    }
+}
+</code></pre>
+
+<h5>2-4 Receive Array</h5>
+
+<pre><code class="language-Java">// 서버에서 배열 데이터를 전송 받을 때
+private void receiveArray(String dataObject){
+    recyclerView.setVisibility(View.VISIBLE);
+    objectResultLo.setVisibility(View.GONE);
+    mItems.clear();
+    try {
+        // String 으로 들어온 값 JSONObject 로 1차 파싱
+        JSONObject wrapObject = new JSONObject(dataObject);
+
+        // JSONObject 의 키 &quot;list&quot; 의 값들을 JSONArray 형태로 변환
+        JSONArray jsonArray = new JSONArray(wrapObject.getString(&quot;list&quot;));
+        for(int i = 0; i &lt; jsonArray.length(); i++){
+            // Array 에서 하나의 JSONObject 를 추출
+            JSONObject dataJsonObject = jsonArray.getJSONObject(i);
+            // 추출한 Object 에서 필요한 데이터를 표시할 방법을 정해서 화면에 표시
+            // 필자는 RecyclerView 로 데이터를 표시 함
+            mItems.add(new Item(dataJsonObject.getString(&quot;nation&quot;)+i,dataJsonObject.getString(&quot;name&quot;)+i,
+                    dataJsonObject.getString(&quot;address&quot;)+i,dataJsonObject.getString(&quot;age&quot;)));
+        }
+        // Recycler Adapter 에서 데이터 변경 사항을 체크하라는 함수 호출
+        adapter.notifyDataSetChanged();
+    } catch (JSONException e) {
+        e.printStackTrace();
+    }
+}
+</code></pre>
+
+<p><br/></p>
+
+<h4>Main Code</h4>
+
+<pre><code class="language-Java">package charlie.JSONExample;
+
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.LinearLayout;
+import android.widget.TextView;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.util.ArrayList;
+
+public class MainActivity extends AppCompatActivity implements View.OnClickListener{
+    private static final int LAYOUT = R.layout.activity_main;
+    private ArrayList&lt;Item&gt; mItems = new ArrayList&lt;&gt;();
+    private RecyclerView.Adapter adapter;
+
+    private EditText mJsonNationEt;
+    private EditText mJsonNameEt;
+    private EditText mJsonAddressEt;
+    private EditText mJsonAgeEt;
+
+    private TextView mReceiveTv;
+    private TextView mReceiveNationTv;
+    private TextView mReceiveNameTv;
+    private TextView mReceiveAddressTv;
+    private TextView mReceiveAgeTv;
+
+    private Button mObjectBtn;
+    private Button mArrayBtn;
+
+    private RecyclerView recyclerView;
+
+    private LinearLayout objectResultLo;
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(LAYOUT);
+
+        bindView();
+    }
+
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()){
+            case R.id.objectBtn:
+                sendObject();
+                break;
+            case R.id.arrayBtn:
+                sendArray();
+                break;
+            default:
+                break;
+        }
+    }
+
+    private void bindView(){
+        //bind view
+        mJsonNameEt = (EditText) findViewById(R.id.jsonNameEt);
+        mJsonNationEt = (EditText) findViewById(R.id.jsonNationEt);
+        mJsonAddressEt = (EditText) findViewById(R.id.jsonAddressEt);
+        mJsonAgeEt = (EditText) findViewById(R.id.jsonAgeEt);
+
+        mReceiveTv = (TextView) findViewById(R.id.receiveTv);
+        mReceiveNationTv = (TextView) findViewById(R.id.receiveNationTv);
+        mReceiveNameTv = (TextView) findViewById(R.id.receiveNameTv);
+        mReceiveAddressTv = (TextView) findViewById(R.id.receiveAddressTv);
+        mReceiveAgeTv = (TextView) findViewById(R.id.receiveAgeTv);
+
+        mObjectBtn = (Button) findViewById(R.id.objectBtn);
+        mArrayBtn = (Button) findViewById(R.id.arrayBtn);
+
+        recyclerView = (RecyclerView) findViewById(R.id.resultRv);
+
+        objectResultLo = (LinearLayout) findViewById(R.id.objectResultLo);
+
+        recyclerView.setVisibility(View.GONE);
+        objectResultLo.setVisibility(View.GONE);
+        //set listener
+        mObjectBtn.setOnClickListener(this);
+        mArrayBtn.setOnClickListener(this);
+
+        //set Recycler View
+        adapter = new RecyclerAdapter(mItems);
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+        recyclerView.setAdapter(adapter);
+    }
+
+    private void sendObject(){
+        JSONObject jsonObject = new JSONObject();
+        try{
+            jsonObject.put(&quot;nation&quot;, mJsonNationEt.getText().toString());
+            jsonObject.put(&quot;name&quot;, mJsonNameEt.getText().toString());
+            jsonObject.put(&quot;address&quot;, mJsonAddressEt.getText().toString());
+            jsonObject.put(&quot;age&quot;, mJsonAgeEt.getText().toString());
+        }catch (JSONException e){
+            e.printStackTrace();
+        }
+        receiveObject(jsonObject);
+    }
+
+    private void receiveObject(JSONObject data){
+        recyclerView.setVisibility(View.GONE);
+        objectResultLo.setVisibility(View.VISIBLE);
+        try{
+            mReceiveTv.setText(data.toString());
+            mReceiveNationTv.setText(&quot;nation : &quot;+data.getString(&quot;nation&quot;));
+            mReceiveNameTv.setText(&quot;name : &quot;+data.getString(&quot;nation&quot;));
+            mReceiveAddressTv.setText(&quot;address : &quot;+data.getString(&quot;address&quot;));
+            mReceiveAgeTv.setText(&quot;age : &quot;+data.getString(&quot;age&quot;));
+        } catch (JSONException e){
+            e.printStackTrace();
+        }
+    }
+
+
+    // 서버로 배열 데이터 전송할 때
+    private void sendArray(){
+        JSONObject wrapObject = new JSONObject();
+        JSONArray jsonArray = new JSONArray();
+        try{
+            for(int i = 0; i &lt; 10; i++){
+                JSONObject jsonObject = new JSONObject();
+                jsonObject.put(&quot;nation&quot;, mJsonNationEt.getText().toString());
+                jsonObject.put(&quot;name&quot;, mJsonNameEt.getText().toString());
+                jsonObject.put(&quot;address&quot;, mJsonAddressEt.getText().toString());
+                jsonObject.put(&quot;age&quot;, mJsonAgeEt.getText().toString());
+                jsonArray.put(jsonObject);
+            }
+            wrapObject.put(&quot;list&quot;,jsonArray);
+
+            //실제 데이터 전송 메소드
+            receiveArray(wrapObject.toString());
+        }catch (JSONException e){
+            e.printStackTrace();
+        }
+    }
+
+    // 서버에서 배열 데이터를 전송 받을 때
+    private void receiveArray(String dataObject){
+        recyclerView.setVisibility(View.VISIBLE);
+        objectResultLo.setVisibility(View.GONE);
+        mItems.clear();
+        try {
+            // String 으로 들어온 값 JSONObject 로 1차 파싱
+            JSONObject wrapObject = new JSONObject(dataObject);
+
+            // JSONObject 의 키 &quot;list&quot; 의 값들을 JSONArray 형태로 변환
+            JSONArray jsonArray = new JSONArray(wrapObject.getString(&quot;list&quot;));
+            for(int i = 0; i &lt; jsonArray.length(); i++){
+                // Array 에서 하나의 JSONObject 를 추출
+                JSONObject dataJsonObject = jsonArray.getJSONObject(i);
+                // 추출한 Object 에서 필요한 데이터를 표시할 방법을 정해서 화면에 표시
+                // 필자는 RecyclerView 로 데이터를 표시 함
+                mItems.add(new Item(dataJsonObject.getString(&quot;nation&quot;)+i,dataJsonObject.getString(&quot;name&quot;)+i,
+                        dataJsonObject.getString(&quot;address&quot;)+i,dataJsonObject.getString(&quot;age&quot;)));
+            }
+            // Recycler Adapter 에서 데이터 변경 사항을 체크하라는 함수 호출
+            adapter.notifyDataSetChanged();
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+    }
+}
+</code></pre>
+
+<p>위의 방법을 응용해서 각자 어플리케이션에 적용해보시면 됩니다.</p>
+
+<p>본 주제와 무관하게 RecyclerView 를 사용하는 부분이 있어서 전체 코드는 GitHub에 공유해두도록 하겠습니다.</p>
+
+<p>서버와 JSON 통신은 아래 링크에서 확인해주세요</p>
+
+<p>2017/05/03 - [Java] - [Java] JSP - JSON 데이터 주고 받기 - JSONParser</p>
+]]></content>
+        </item>
+        
+        <item>
+            <title>[안드로이드] 현재 시간, 현재 날짜 구하기 (SimpleDateFormat)</title>
+            <link>https://kiwinam.com/posts/6/</link>
+            <pubDate>Tue, 18 Apr 2017 00:00:00 +0000</pubDate>
+            
+            <guid>https://kiwinam.com/posts/6/</guid>
+            <description>[안드로이드] 현재 시간, 현재 날짜 구하기 (SimpleDateFormat) Android 현재 시간, 현재 날짜 구하기
+SimpleDateFormat
+Preview  Step1. 현재 시간 가져오기.
+ long now = System.currentTimeMillis();   Step2. Date 생성하기
+ Date date = new Date(now);   Step3. 가져오고 싶은 형식으로 가져오기
+ SimpleDateFormat sdf = new SimpleDateFormat(&amp;ldquo;yyyy-MM-dd&amp;rdquo;);
+ String getTime = sdf.format(date);
+   
+Result 
+MainActivity.java
+package charlie.myapplication; import android.support.v7.app.AppCompatActivity; import android.os.Bundle; import android.view.View; import android.</description>
+            <content type="html"><![CDATA[
+
+<hr />
+
+<h3 id="안드로이드-현재-시간-현재-날짜-구하기-simpledateformat">[안드로이드] 현재 시간, 현재 날짜 구하기 (SimpleDateFormat)</h3>
+
+<p>Android 현재 시간, 현재 날짜 구하기</p>
+
+<p><code>SimpleDateFormat</code></p>
+
+<h5 id="preview">Preview</h5>
+
+<ul>
+<li><p>Step1. 현재 시간 가져오기.</p>
+
+<ul>
+<li>long now = System.currentTimeMillis();
+<br/></li>
+</ul></li>
+
+<li><p>Step2. Date 생성하기</p>
+
+<ul>
+<li>Date date = new Date(now);
+<br/></li>
+</ul></li>
+
+<li><p>Step3. 가져오고 싶은 형식으로 가져오기</p>
+
+<ul>
+<li><p>SimpleDateFormat sdf = new SimpleDateFormat(&ldquo;yyyy-MM-dd&rdquo;);</p></li>
+
+<li><p>String getTime = sdf.format(date);</p></li>
+</ul></li>
+</ul>
+
+<p><br/></p>
+
+<h6 id="result">Result</h6>
+
+<p><img src="/170418-and/time-1.png" alt="" /></p>
+
+<p><br/></p>
+
+<p><code>MainActivity.java</code></p>
+
+<pre><code class="language-java">
+package charlie.myapplication;
+
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.TextView;
+
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
+public class MainActivity extends AppCompatActivity implements View.OnClickListener{
+    long mNow;
+    Date mDate;
+    SimpleDateFormat mFormat = new SimpleDateFormat(&quot;yyyy-MM-dd hh:mm:ss&quot;);
+
+    TextView mTextView;
+    Button mRefreshBtn;
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+        //bind view
+        mTextView = (TextView) findViewById(R.id.textView);
+        mRefreshBtn = (Button) findViewById(R.id.refreshBtn);
+
+        //bind listener
+        mRefreshBtn.setOnClickListener(this);
+    }
+
+    private String getTime(){
+        mNow = System.currentTimeMillis();
+        mDate = new Date(mNow);
+        return mFormat.format(mDate);
+    }
+
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()){
+            case R.id.refreshBtn:
+                mTextView.setText(getTime());
+                break;
+            default:
+                break;
+        }
+    }
+}
+</code></pre>
+
+<p><br/></p>
+
+<p><code>activity_main.xml</code></p>
+
+<pre><code class="language-xml">&lt;LinearLayout xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;
+    xmlns:tools=&quot;http://schemas.android.com/tools&quot;
+    android:layout_width=&quot;match_parent&quot;
+    android:layout_height=&quot;match_parent&quot;
+    android:orientation=&quot;vertical&quot;
+    android:gravity=&quot;center&quot;
+    tools:context=&quot;charlie.myapplication.MainActivity&quot;&gt;
+
+    &lt;TextView
+        android:id=&quot;@+id/textView&quot;
+        android:layout_width=&quot;wrap_content&quot;
+        android:layout_height=&quot;wrap_content&quot;
+        android:text=&quot;Hello World!&quot;
+        android:textSize=&quot;18sp&quot;
+        android:layout_marginBottom=&quot;14dp&quot;
+        /&gt;
+    &lt;Button
+        android:id=&quot;@+id/refreshBtn&quot;
+        android:text=&quot;refresh&quot;
+        android:layout_width=&quot;wrap_content&quot;
+        android:layout_height=&quot;wrap_content&quot; /&gt;
+&lt;/LinearLayout&gt;
+</code></pre>
+]]></content>
+        </item>
+        
+        <item>
+            <title>안드로이드 스튜디오 - GitHub 연동과 add, commit, push 개념</title>
+            <link>https://kiwinam.com/posts/5/</link>
+            <pubDate>Tue, 07 Mar 2017 00:00:00 +0000</pubDate>
+            
+            <guid>https://kiwinam.com/posts/5/</guid>
+            <description>안드로이드 스튜디오 - GitHub 연동과 add, commit, push 개념 개발자라면 거역할 수 없는 운명
+GitHub
+자신의 소스코드를 관리하는 측면의 장점도 있지만
+전세계의 수많은 개발자들이 올리는 검증된 오픈 소스들을 브라우징 할 수 있는 좋은 툴입니다.
+안드로이드 스튜디오에서 GitHub 와 연동하는 방법을 설명해드리겠습니다.
+그 전에 짧게 깃에 대해 설명드립니다.
+0. Git 이란? 개략적인 깃의 동작입니다.
+Working Directory 에서 깃으로 관리 안되고 있는 파일들을 관리를 시작하려 합니다.
+관리 하려는 목록에 추가(Add) 하고,</description>
+            <content type="html"><![CDATA[
+
+<hr />
+
+<h3 id="안드로이드-스튜디오-github-연동과-add-commit-push-개념">안드로이드 스튜디오 - GitHub 연동과 add, commit, push 개념</h3>
+
+<p>개발자라면 거역할 수 없는 운명</p>
+
+<p><em>GitHub</em></p>
+
+<p>자신의 소스코드를 관리하는 측면의 장점도 있지만</p>
+
+<p>전세계의 수많은 개발자들이 올리는 검증된 오픈 소스들을 브라우징 할 수 있는 좋은 툴입니다.</p>
+
+<p>안드로이드 스튜디오에서 GitHub 와 연동하는 방법을 설명해드리겠습니다.</p>
+
+<p>그 전에 짧게 깃에 대해 설명드립니다.</p>
+
+<hr />
+
+<h5 id="0-git-이란">0. Git 이란?</h5>
+
+<p><img src="/170307-git/git-1.png" alt="" /></p>
+
+<p>개략적인 깃의 동작입니다.</p>
+
+<p>Working Directory 에서 깃으로 관리 안되고 있는 파일들을 관리를 시작하려 합니다.</p>
+
+<p>관리 하려는 목록에 추가(Add) 하고,</p>
+
+<p>이 관리할 파일들이 확정 (Commit) 되면 로컬 저장소(Head)에 저장이 되고</p>
+
+<p>이 로컬 저장소에 있는 파일을 원격 서버인 (Github) 에 발행(Push) 합니다.</p>
+
+<p>아직 정확히 이해 못하셔도 괜찮습니다. 일단 이런 프로세스를 가진 형상관리 프로그램이라는 것만 감 잡으시면 됩니다!.</p>
+
+<h3 id="안드로이드-github-연동하기">안드로이드 - GitHub 연동하기.</h3>
+
+<h5 id="1-git-다운로드">1. Git 다운로드</h5>
+
+<p><a href="https://git-scm.com/downloads">https://git-scm.com/downloads</a>  (Git 다운로드 url)</p>
+
+<p><img src="/170307-git/git-2.png" alt="" /></p>
+
+<p>링크를 통해 접속하게 되면 위와 같은 화면이 나옵니다.</p>
+
+<p>여기서 여러분이 <em>사용하는 OS 에 맞춰</em> Git를 설치해주세요.</p>
+
+<p>설치에는 특별한 사항은 없고 NEXT만 눌러주시면 됩니다. (OS X는 Xcode 설치시 git이 자동으로 설치됩니다.)</p>
+
+<p>설치가 정상적으로 완료되면 CMD 창 (OS X는 터미널) 에서 git 이라는 명령어에 아래와 같은 출력이 나오면 정상적으로 설치 된 것입니다.</p>
+
+<p><img src="/170307-git/git-3.png" alt="" /></p>
+
+<h5 id="2-github-계정-생성">2.  GitHub 계정 생성</h5>
+
+<p><a href="https://github.com/join?source=header-home">https://github.com/join?source=header-home</a>   (깃 허브 계정 생성 url)</p>
+
+<p><img src="/170307-git/git-4.png" alt="" /></p>
+
+<p>더블클릭을 하시면 이미지를 수정할 수 있습니다</p>
+
+<p>링크로 이동하시면 위와 같은 회원가입 양식이 나옵니다.</p>
+
+<p>모두 작성하고 회원 가입을 완료까지만 하시면 됩니다.</p>
+
+<p>안드로이드 스튜디오 내부 기능으로 GitHub와 연동을 하게 되면 자동으로 레포지터리가 생성되기 때문에 굳이 Github 홈페이지에서 따로 생성 안하셔도 됩니다!</p>
+
+<p><br/></p>
+
+<h5 id="3-안드로이드-스튜디오-설정">3. 안드로이드 스튜디오 설정</h5>
+
+<p>먼저 깃허브와 연동할 프로젝트를 열어줍니다.</p>
+
+<p>그리고 메뉴 중 <code>[ VCS ] &gt;&gt; [ Import into Version Control ] &gt;&gt; [ Create Git Repository ]</code>  를 선택해 줍니다.</p>
+
+<p><img src="/170307-git/git-5.png" alt="" /></p>
+
+<p>그러면 아래와 같은 화면이 나옵니다.</p>
+
+<p>자신의 프로젝트가 있는 폴더를 선택해 줍니다. ( AndroidStudioProjects &gt; &ldquo;ProjectName&rdquo; )</p>
+
+<p><img src="/170307-git/git-6.png" alt="" /></p>
+
+<p><img src="/170307-git/git-7.png" alt="" /></p>
+
+<p>그 다음 새로운 VCS Root 를 생성할거냐는 질문에 당연히 Yes를 눌러주세요.</p>
+
+<p>방금 작업이 끝난 후에 안드로이드 프로젝트에 있는 파일 이름들이 전부다 <em>빨강색</em>  으로 변한 것을 알 수 있습니다.</p>
+
+<p><img src="/170307-git/git-8.png" alt="" /></p>
+
+<p>이유는 아직 로컬 깃 저장소 (방금 지정한 깃 저장소) 에 저 파일들이 Add 되어 있지 않기 때문입니다.</p>
+
+<p>아직 깃으로 형상관리를 시작하지 않았다. &ldquo;파일 변경 사항을 추적 하지 않는 중이다~~~&rdquo; 라고 알려주는 것입니다.</p>
+
+<p>물론 Add와 Commit 하게 되면 색은 다시 돌아옵니다.</p>
+
+<p>여기까지는 자신의 컴퓨터 (로컬 저장소) 에 Git 를 설정하였고</p>
+
+<p>이제는 아까 회원가입한 GitHub 에 자신의 소스를 올려보도록 하겠습니다.</p>
+
+<h5 id="4-안드로이드-스튜디오-github-연동하기">4. 안드로이드 스튜디오 - GitHub 연동하기</h5>
+
+<p>안드로이드 스튜디오 설정으로 들어갑니다. (OS X 는 Preferences 입니다. Window는 안본지 오래되서..아마 Setting..?)</p>
+
+<p><img src="/170307-git/git-9.png" alt="" /></p>
+
+<p>설정에서 [ Version Control ] &gt;&gt; [ GitHub ] 로 이동하면</p>
+
+<p><img src="/170307-git/git-10.png" alt="" /></p>
+
+<p>GitHub 의 아이디와 비밀번호를 요구합니다.</p>
+
+<p>아까 가입한 정보를 입력하고 Test 버튼을 누르시면 됩니다.</p>
+
+<p>Test Button Click!</p>
+
+<p><img src="/170307-git/git-11.png" alt="" /></p>
+
+<p>테스트 성공한 다음 OK 눌러서 빠져나가게 되면</p>
+
+<p><img src="/170307-git/git-12.png" alt="" /></p>
+
+<p>이렇게 이 GitHub 레포지터리의 마스터 (관리자) 비밀번호를 설정하라 합니다.</p>
+
+<p>이 프로젝트가 다른 개발자와 협업을 해야하는 경우 개인적인 비밀번호가 아닌 회사 혹은 프로젝트 비밀번호를 설정해주시면 됩니다.</p>
+
+<p>마스터 비밀번호까지 설정하고 난 뒤,</p>
+
+<p>왼쪽 사이드바 상단 Android를 Project 로 바꿔주세요.</p>
+
+<p>바꾼 뒤 프로젝트 전체 파일을 우클릭 &gt;&gt; Git &gt;&gt; Add</p>
+
+<p><img src="/170307-git/git-13.png" alt="" /></p>
+
+<p>프로젝트의 모든 파일을 Add 하게 되면 Stage area (준비 영역) 으로 이동됩니다.</p>
+
+<p>아직 로컬 저장소에 저장 되진 않았지만 Commit 할 때 로컬 저장소에 저장될 것들 인거죠.</p>
+
+<p>Add 하게 되면 빨강색이였던 이름들이 초록색으로 바뀝니다.</p>
+
+<p><img src="/170307-git/git-14.png" alt="" /></p>
+
+<p>그 다음 메뉴에서 [ VCS ] &gt;&gt; [ Import into Version Control ] &gt;&gt; [ Share Project on GitHub ]  를 선택해서 깃 허브에 프로젝트를 연동합니다.</p>
+
+<p><img src="/170307-git/git-15.png" alt="" /></p>
+
+<p>레포지터리 이름과 리모트 이름도 설정해줍니다.</p>
+
+<p>전 그냥 디폴트 값으로 했습니다.</p>
+
+<p><img src="/170307-git/git-16.png" alt="" /></p>
+
+<p>그 다음 메뉴에 있는 VCS Commit 버튼을 눌러줍니다.</p>
+
+<p><img src="/170307-git/git-17.png" alt="" /></p>
+
+<p>아래와 같이 파일들이 모두 올라온 것을 확인하고</p>
+
+<p>우하단에 Commit (확정) and Push (발행) 을 눌러줍니다.</p>
+
+<p>Commit 만 할 경우 로컬 저장소에만 저장되고 Push 를 해줘야 GitHub에 발행됩니다.</p>
+
+<p><img src="/170307-git/git-18.png" alt="" /></p>
+
+<p><img src="/170307-git/git-19.png" alt="" /></p>
+
+<p>깃허브에 성공적으로 공유되었다는 메시지를 확인하고</p>
+
+<p><img src="/170307-git/git-20.png" alt="" /></p>
+
+<p>마지막으로 깃허브 홈페이지에서 방금 Push 한 파일을 확인해주시면 됩니다.!</p>
+]]></content>
+        </item>
+        
+        <item>
+            <title>[Mac] 키노트 이미지 저장하기 (이미지 추출)</title>
+            <link>https://kiwinam.com/posts/4/</link>
+            <pubDate>Mon, 27 Feb 2017 00:00:00 +0000</pubDate>
+            
+            <guid>https://kiwinam.com/posts/4/</guid>
+            <description>[Mac] 키노트 이미지 저장하기 (이미지 추출) Window OS 에 적응 하신 분이라면
+파워 포인트에서 이미지 만들어서 저장하는 방식 많이 사용 하셨을텐데요.
+Mac Keynote 에서도 객체를 이미지로 추출할 수 있습니다 :)
+먼저 키노트에서 객체를 만들어 줍니다.
+(전 포스팅 하면서 만든 이미지를 사용했어요)
+이렇게 키노트에서 필요한 객체를 만들어주고
+전체를 다 같이 잡아준 뒤 &amp;lsquo;그룹&amp;rsquo; 으로 만들어줍니다.
+그 다음 Command + C 으로 복사합니다.
+이젠 Spotlight 를 켜주세요 Command + space bar</description>
+            <content type="html"><![CDATA[
+
+<hr />
+
+<h3 id="mac-키노트-이미지-저장하기-이미지-추출">[Mac] 키노트 이미지 저장하기 (이미지 추출)</h3>
+
+<p>Window OS 에 적응 하신 분이라면</p>
+
+<p>파워 포인트에서 이미지 만들어서 저장하는 방식 많이 사용 하셨을텐데요.</p>
+
+<p>Mac Keynote 에서도 객체를 이미지로 추출할 수 있습니다 :)</p>
+
+<p>먼저 키노트에서 객체를 만들어 줍니다.</p>
+
+<p>(전 포스팅 하면서 만든 이미지를 사용했어요)</p>
+
+<p><img src="/170227-mac/mac-1.png" alt="key note image" /></p>
+
+<p>이렇게 키노트에서 필요한 객체를 만들어주고</p>
+
+<p>전체를 다 같이 잡아준 뒤 &lsquo;그룹&rsquo; 으로 만들어줍니다.</p>
+
+<p>그 다음 Command + C 으로 복사합니다.</p>
+
+<p>이젠 Spotlight 를 켜주세요 Command + space bar</p>
+
+<p>Spotlight 에서 &lsquo;미리보기&rsquo; 를 검색해서 실행 시켜줍니다.</p>
+
+<p><img src="/170227-mac/mac-2.png" alt="맥 미리보기" /></p>
+
+<p>미리보기에서</p>
+
+<p><code>Command + N</code></p>
+
+<p>입력하게 되면 아까 복사해 두었던 객체가 올라옵니다.</p>
+
+<p><img src="/170227-mac/mac-3.jpeg" alt="맥 미리보기" /></p>
+
+<p>이렇게 올라오면 <code>Command + S</code> 로 저장해주시면 됩니다 :)</p>
+
+<p><img src="/170227-mac/mac-4.png" alt="맥 미리보기" /></p>
+]]></content>
+        </item>
+        
+        <item>
+            <title>[안드로이드] 안드로이드 플랫폼의 특징</title>
+            <link>https://kiwinam.com/posts/3/</link>
+            <pubDate>Sun, 26 Feb 2017 00:00:00 +0000</pubDate>
+            
+            <guid>https://kiwinam.com/posts/3/</guid>
+            <description>안드로이드의 개념  - 안드로이드는 모바일 운영체제의 한 종류로, 어플리케이션이 실행할 때 필요한 자원을 공급해 주고 하드웨어에 대신 명령을 전달하고, 전체 시스템을 보호해주는 역할을 함.
+ 모바일 어플리케이션을 개발하는 유용한 미들웨어도 제공하는 소프트웨어.
+ 리눅스 커널과 모바일 플랫폼으로 구성.
+  안드로이드 플랫폼의 특징 
+ 어플리케이션 프레임웍
+ 안드로이드 어플리케이션의 기본 뼈대가 되는 주요 요소인 컴포넌트들과 다양한 모바일 기능을 활용할 수 있도록 다양한 API 를 제공한다.
+  달빅 가상 머신</description>
+            <content type="html"><![CDATA[
+
+<hr />
+
+<h3 id="안드로이드의-개념">안드로이드의 개념</h3>
+
+<p><br/>
+- 안드로이드는 모바일 운영체제의 한 종류로, 어플리케이션이 실행할 때 필요한 자원을 공급해 주고 하드웨어에 대신 명령을 전달하고, 전체 시스템을 보호해주는 역할을 함.</p>
+
+<ul>
+<li><p>모바일 어플리케이션을 개발하는 유용한 미들웨어도 제공하는 소프트웨어.</p></li>
+
+<li><p>리눅스 커널과 모바일 플랫폼으로 구성.</p></li>
+</ul>
+
+<h3 id="안드로이드-플랫폼의-특징">안드로이드 플랫폼의 특징</h3>
+
+<p><br/></p>
+
+<ol>
+<li><p>어플리케이션 프레임웍</p>
+
+<ul>
+<li><p>안드로이드 어플리케이션의 기본 뼈대가 되는 주요 요소인 컴포넌트들과 다양한 모바일 기능을 활용할 수 있도록 다양한 API 를 제공한다.</p></li>
+</ul></li>
+
+<li><p>달빅 가상 머신</p>
+
+<ul>
+<li><p>일반 자바 어플리케이션은 자바 가상 머신에서 실행되지만 안드로이드 어플리케이션은 달빅 가상 머신에서 실행됩니다.</p></li>
+
+<li><p>JVM에서는 자바 코드의 컴파일 결과인 Class 파일이 실행되지만, DVM 에서는 Dex 파일이 실행되는데, 이는 프로그램이 실행될 때 메모리 요구량을 적게 하는 등 모바일 환경에 최적화한 가상 머신입니다.</p></li>
+</ul></li>
+
+<li><p>통합 브라우저</p>
+
+<ul>
+<li>WebKit 엔진을 기반으로 한 브라우저를 제공하여 간단한 사용으로 웹 화면을 바로 실행할 수 있습니다.</li>
+</ul></li>
+
+<li><p>그래픽</p>
+
+<ul>
+<li>사용자가 원하는 디자인으로 2D, 3D 그래픽 처리가 가능합니다. 특히 3D 는 OpenGL ES 1.0을 기반으로 제공합니다.</li>
+</ul></li>
+
+<li><p>데이터베이스 시스템</p>
+
+<ul>
+<li>SQLite를 라이브러리로 포함하여 ㅣ소스가 부족한 모바일 환경에서도 데이터베이스 사용을 가능하게 합니다.</li>
+</ul></li>
+
+<li><p>멀티미디어</p></li>
+</ol>
+
+<ul>
+<li>다양한 포맷의 오디오, 비디오 파일을 재생할 수 있습니다.</li>
+</ul>
+]]></content>
+        </item>
+        
+        <item>
+            <title>[Android] Activity 생명주기 (Activity LifeCycle)</title>
+            <link>https://kiwinam.com/posts/2/</link>
+            <pubDate>Sat, 25 Feb 2017 00:00:00 +0000</pubDate>
+            
+            <guid>https://kiwinam.com/posts/2/</guid>
+            <description>액티비티 (Activity) 생명주기 액티비티는 액티브 상태, 포즈 상태, 스탑 상태 이렇게 3가지의 기본 상태를 가지는데요.
+간단하게 3가지의 기본 상태에 대해 설명해 드리겠습니다.
+ 액티브(Active) 상태
+ 화면 맨 앞으로 나와 사용자의 액션 (터치나 데이터 입력)과 상호 작용하는 액티비티.  포즈(Pause) 상태
+ 다른 액티비티로 가린 상태이지만 액티비티 일부가 사용자에게 여전히 보이는 상태.  스탑(Stop) 상태
+ 다른 액티비티에 완전히 가려져 사용자에게 안보이는 상태.
+ 이 상태도 살아 있는 상태로 액티비티를 유지하기 위한 정보를 유지.</description>
+            <content type="html"><![CDATA[
+
+<hr />
+
+<h3 id="액티비티-activity-생명주기">액티비티 (Activity) 생명주기</h3>
+
+<p>액티비티는 액티브 상태, 포즈 상태, 스탑 상태 이렇게 3가지의 기본 상태를 가지는데요.</p>
+
+<p>간단하게 3가지의 기본 상태에 대해 설명해 드리겠습니다.</p>
+
+<ol>
+<li><p>액티브(Active) 상태</p>
+
+<ul>
+<li>화면 맨 앞으로 나와 사용자의 액션 (터치나 데이터 입력)과 상호 작용하는 액티비티.</li>
+</ul></li>
+
+<li><p>포즈(Pause) 상태</p>
+
+<ul>
+<li>다른 액티비티로 가린 상태이지만 액티비티 일부가 사용자에게 여전히 보이는 상태.</li>
+</ul></li>
+
+<li><p>스탑(Stop) 상태</p>
+
+<ul>
+<li><p>다른 액티비티에 완전히 가려져 사용자에게 안보이는 상태.</p></li>
+
+<li><p>이 상태도 살아 있는 상태로 액티비티를 유지하기 위한 정보를 유지.</p></li>
+</ul></li>
+</ol>
+
+<p>포즈 상태와 스탑 상태는 메모리가 부족한 경우 시스템에 의해서 종료될 수 있고,</p>
+
+<p>포즈 상태보다 스탑 상태가 종료될 확률이 더 높습니다.</p>
+
+<p>만약 사용자 시스템에 의해서 종료된 액티비티를 다시 요청한다면 시스템은 액티비티의 이전 상태를 복원시켜 재 시작 합니다.</p>
+
+<p><img src="/2/activity_life_cycle.png" alt="Android activity life cycle" /></p>
+
+<ul>
+<li><p><code>onCreate()</code></p>
+
+<p>액티비티가 처음 생성될 때 호출됩니다. 보통 해당 메서드에서는 초기화 작업을 수행합니다.</p>
+
+<p>뷰 생성이나 리스트에 데이터를 바인딩하는 동작 등을 수행합니다.</p>
+
+<p>이 메서드는 Bundle 객체를 파라미터로 받는데, 객체는 액티비티의 이전 상태 정보를 갖습니다. 그래서 액티비티가 다른 액티비티에 가렸다가 다시 앞으로 나와도 이전 상태를 유지할 수 있습니다.</p></li>
+</ul>
+
+<p><br/></p>
+
+<ul>
+<li><p><code>onRestart()</code></p>
+
+<p>액티비티가 스탑(Stop) 되었다가 다시 시작될 때 호출됩니다.</p></li>
+</ul>
+
+<p><br/></p>
+
+<ul>
+<li><p><code>onStart()</code></p>
+
+<p>액티비티가 사용자에게 보여지기 전에 호출됩니다.</p></li>
+</ul>
+
+<p><br/></p>
+
+<ul>
+<li><p><code>onResume()</code></p>
+
+<p>사용자와 상호 작용하기 전에 호출됩니다. 이 시점은 액티비티가 화면의 가장 위로 올라온 상태입니다.</p></li>
+</ul>
+
+<p><br/></p>
+
+<ul>
+<li><p><code>onPause()</code></p>
+
+<p>시스템이 다른 액티비티를 실행시키려고 할 때 호출됩니다.</p>
+
+<p>이 메서드에서는 데이터 변화를 저장하거나 애니메이션과 같이 CPU가 지속적으로 일을 처리해야 하는 작업을 중단합니다.</p>
+
+<p>해당 메서드가 종료되어야 다음 액티비티가 실행되므로 처리 시간을 짧게 하는 것이 좋습니다.</p></li>
+</ul>
+
+<p><br/></p>
+
+<ul>
+<li><p><code>onStop()</code></p>
+
+<p>사용자에게 더 이상 액티비티가 보이지 않게 되었을 때 호출됩니다.</p>
+
+<p>액티비티가 종료되기 전이나 다른 액티비티에 의해 액티비티가 전부 가려질 때 호출됩니다.</p></li>
+</ul>
+
+<p><br/></p>
+
+<ul>
+<li><p><code>onDestroy()</code></p>
+
+<p>액티비티가 소멸되기 전에 호출됩니다. 액티비티 객체가 소멸되는 것은 액티비티가 종료되거나 시스템이 메모리 확보를 위해 일시적으로 객체를 소멸시킬 때 일어납니다.</p></li>
+</ul>
+
+<p><br/><br/></p>
+
+<p>이러한 메서드들 중에서 <code>onPause()</code>, <code>onStop()</code>, <code>onDestroy()</code> 는 <em>킬러블(Killable)</em> 메서드입니다.</p>
+
+<p>킬러블(Killable) 메서드는 메서드가 실행 중에 시스템의 자원이 부족한 상황이 되면 액티비티를 강제 종료 시킬 수 있는 상태의 메서입니다.</p>
+
+<p>물론, 실행중인 메서드는 끝까지 실행하고, 리턴 후에 액티비티를 종료시킬 수 있습니다.</p>
+
+<p>이 중 <code>onPause()</code> 메서드만 액티비티 종료 전 호출되는 것이 보장됩니다.</p>
+
+<p>이 세 개의 메서드를 제외한 나머지는 시스템이 액티비티를 강제 종료하는 것에 보호됩니다.</p>
+]]></content>
+        </item>
+        
+        <item>
+            <title>[안드로이드] 최초 실행 확인 법 - SharedPreferences</title>
+            <link>https://kiwinam.com/posts/1/</link>
+            <pubDate>Thu, 22 Sep 2016 00:00:00 +0000</pubDate>
+            
+            <guid>https://kiwinam.com/posts/1/</guid>
+            <description>안드로이드 최초 실행 확인 법  안드로이드 최초 실행을 확인하는 방법은
+SharedPreferences 를 사용 하는 것입니다.
+SharedPreferences 는 안드로이드에서 DB를 사용하지 않고 값을 저장할 때 사용합니다.
+예를 들어 문자열, boolean 값 등..
+SharedPreferences 는 파일 형태로 저장되며 App 을 삭제하기 전까지 유지가 되고, App 을 삭제하면 지워지고,
+앱에서 Data 지우기를 해도 지워집니다.
+[Activity]
+//최초 실행 여부 판단하는 구문 SharedPreferences pref = getSharedPreferences(&amp;quot;isFirst&amp;quot;, Activity.MODE_PRIVATE); boolean first = pref.getBoolean(&amp;quot;isFirst&amp;quot;, false); if(first==false){ Log.</description>
+            <content type="html"><![CDATA[
+
+<hr />
+
+<h2 id="안드로이드-최초-실행-확인-법">안드로이드 최초 실행 확인 법</h2>
+
+<p><br/>
+안드로이드 최초 실행을 확인하는 방법은</p>
+
+<p><code>SharedPreferences</code> 를 사용 하는 것입니다.</p>
+
+<p><code>SharedPreferences</code> 는 안드로이드에서 DB를 사용하지 않고 값을 저장할 때 사용합니다.</p>
+
+<p>예를 들어 문자열, boolean 값 등..</p>
+
+<p><code>SharedPreferences</code> 는 파일 형태로 저장되며 App 을 삭제하기 전까지 유지가 되고, App 을 삭제하면 지워지고,</p>
+
+<p>앱에서  Data 지우기를 해도 지워집니다.</p>
+
+<p><code>[Activity]</code></p>
+
+<pre><code class="language-java">//최초 실행 여부 판단하는 구문
+SharedPreferences pref = getSharedPreferences(&quot;isFirst&quot;, Activity.MODE_PRIVATE);
+boolean first = pref.getBoolean(&quot;isFirst&quot;, false);
+if(first==false){
+    Log.d(&quot;Is first Time?&quot;, &quot;first&quot;);
+    SharedPreferences.Editor editor = pref.edit();
+    editor.putBoolean(&quot;isFirst&quot;,true);
+    editor.commit();
+    //앱 최초 실행시 하고 싶은 작업
+}else{
+    Log.d(&quot;Is first Time?&quot;, &quot;not first&quot;);
+}
+</code></pre>
+]]></content>
+        </item>
+        
+    </channel>
+</rss>
