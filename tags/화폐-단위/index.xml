@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>화폐 단위 on Kiwinam</title>
+    <link>https://kiwinam.com/tags/%ED%99%94%ED%8F%90-%EB%8B%A8%EC%9C%84/</link>
+    <description>Recent content in 화폐 단위 on Kiwinam</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ko-kr</language>
+    <lastBuildDate>Tue, 21 Nov 2017 10:35:56 +0900</lastBuildDate>
+    
+	<atom:link href="https://kiwinam.com/tags/%ED%99%94%ED%8F%90-%EB%8B%A8%EC%9C%84/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>[안드로이드] EditText 화폐 단위 표시 (세자리 콤마)</title>
+      <link>https://kiwinam.com/posts/17/</link>
+      <pubDate>Tue, 21 Nov 2017 10:35:56 +0900</pubDate>
+      
+      <guid>https://kiwinam.com/posts/17/</guid>
+      <description>[안드로이드] EditText 화폐 단위 표시 (세자리 콤마)
+사용자에게 화폐를 입력 받아 표시해줄 경우가 종종 있습니다.
+이럴 때 입력 받은 숫자를 원화 단위 (1,000,000 과 같이 ) 로 바로 바꿔주는 방법입니다.
+
+1. Result 
+2. Step by Step 2-1 Layout 구성 &amp;lt;RelativeLayout xmlns:android=&amp;quot;http://schemas.android.com/apk/res/android&amp;quot; xmlns:app=&amp;quot;http://schemas.android.com/apk/res-auto&amp;quot; xmlns:tools=&amp;quot;http://schemas.android.com/tools&amp;quot; android:layout_width=&amp;quot;match_parent&amp;quot; android:layout_height=&amp;quot;match_parent&amp;quot; tools:context=&amp;quot;com.example.charlie.wontest.MainActivity&amp;quot;&amp;gt; &amp;lt;EditText android:id=&amp;quot;@+id/wonEt&amp;quot; android:hint=&amp;quot;금액을 입력해주세요.&amp;quot; android:paddingLeft=&amp;quot;8dp&amp;quot; android:textSize=&amp;quot;18sp&amp;quot; android:layout_width=&amp;quot;match_parent&amp;quot; android:layout_height=&amp;quot;wrap_content&amp;quot; android:layout_marginLeft=&amp;quot;8dp&amp;quot; android:layout_marginRight=&amp;quot;8dp&amp;quot; android:layout_marginTop=&amp;quot;8dp&amp;quot; android:layout_centerInParent=&amp;quot;true&amp;quot; android:inputType=&amp;quot;number&amp;quot; android:gravity=&amp;quot;end&amp;quot; /&amp;gt; &amp;lt;/RelativeLayout&amp;gt;   Layout 은 최대한 간단하게 구성해봤습니다.</description>
+    </item>
+    
+  </channel>
+</rss>

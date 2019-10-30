@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>ACTION_SEND on Kiwinam</title>
+    <link>https://kiwinam.com/tags/action_send/</link>
+    <description>Recent content in ACTION_SEND on Kiwinam</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ko-kr</language>
+    <lastBuildDate>Thu, 07 Dec 2017 10:35:56 +0900</lastBuildDate>
+    
+	<atom:link href="https://kiwinam.com/tags/action_send/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>[안드로이드] 엑셀 파일 생성, 내보내기</title>
+      <link>https://kiwinam.com/posts/21/</link>
+      <pubDate>Thu, 07 Dec 2017 10:35:56 +0900</pubDate>
+      
+      <guid>https://kiwinam.com/posts/21/</guid>
+      <description>[안드로이드] 엑셀 파일 생성, 내보내기
+어플리케이션을 만들다 보면 사용자가 저장한 데이터를 가공하여 내보내 주는 기능을 구현할 때가 있습니다.
+데이터 가공에 가장 적합한 엑셀 파일을 만들어 공유하는 것을 목표로 포스팅하겠습니다.
+
+1. Result 
+
+2. Step by Step 2-1. Apache POI 2-1-1. 라이브러리 다운로드  안드로이드 (자바) 에서 엑셀 파일을 바로 쓰고 읽고 수정 하는 일련의 작업들을 바로 수행할 수는 없습니다. 이러한 작업을 할 수 있도록 도와주는 라이브러리인 Apache 에서 제공하는 POI 라이브러리를 이용하여 엑셀을 다루도록 하겠습니다.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Series on Kiwinam</title>
+    <link>https://kiwinam.com/series/</link>
+    <description>Recent content in Series on Kiwinam</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ko-kr</language>
+    <lastBuildDate>Fri, 18 Aug 2017 10:25:38 +0900</lastBuildDate>
+    
+	<atom:link href="https://kiwinam.com/series/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>커스텀 다이얼로그</title>
+      <link>https://kiwinam.com/series/%EC%BB%A4%EC%8A%A4%ED%85%80-%EB%8B%A4%EC%9D%B4%EC%96%BC%EB%A1%9C%EA%B7%B8/</link>
+      <pubDate>Fri, 18 Aug 2017 10:25:38 +0900</pubDate>
+      
+      <guid>https://kiwinam.com/series/%EC%BB%A4%EC%8A%A4%ED%85%80-%EB%8B%A4%EC%9D%B4%EC%96%BC%EB%A1%9C%EA%B7%B8/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

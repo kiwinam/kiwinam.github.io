@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Swipe Refresh Layout on Kiwinam</title>
+    <link>https://kiwinam.com/tags/swipe-refresh-layout/</link>
+    <description>Recent content in Swipe Refresh Layout on Kiwinam</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ko-kr</language>
+    <lastBuildDate>Tue, 16 May 2017 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://kiwinam.com/tags/swipe-refresh-layout/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>[안드로이드] - Pull to refresh 당겨서 새로고침 (SwipeRefreshLayout)</title>
+      <link>https://kiwinam.com/posts/12/</link>
+      <pubDate>Tue, 16 May 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://kiwinam.com/posts/12/</guid>
+      <description>[안드로이드] - Pull to refresh 당겨서 새로고침 (SwipeRefreshLayout)
+당겨서 새로고침 (pull to refresh) 는 많은 APP에서 만날수 있는 친숙한 패턴입니다.
+&amp;lsquo;구글 가이드&amp;rsquo;에도 수동으로 동기화 하는 방법 중 제스처를 통해 내용물 갱신을 시작하도록 요구합니다.
+이 패턴을 구현한 수많은 라이브러리가 있지만 구글에서 제공하는 가장 간단한 라이브러리를 구현하는 방법에 대해 설명해드리겠습니다.
+1. Result 
+2. Step by Step 2-1. 라이브러리 추가 SwipeRefreshLayout 를 통해 당겨서 새로고침을 구현하기 위해 추가해야할 라이브러리는 &amp;lsquo;com.android.support:design&amp;rsquo; 라이브러리입니다. 예제에서 RecyclerView 위에서 &amp;lsquo; pull to refresh &amp;rsquo; 제스쳐를 실행할거라</description>
+    </item>
+    
+  </channel>
+</rss>

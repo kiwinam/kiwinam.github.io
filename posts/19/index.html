@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-99327236-2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-99327236-2');
+</script>
+
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="author"
+    content="키위남">
+<meta name="description"
+    content="[안드로이드] - android.content.res.Resources$NotFoundException: String resource ID #0x1
+FATAL EXCEPTION: main Process: , PID: 4012 android.content.res.Resources$NotFoundException: String resource ID #0x9  안드로이드 개발 중
+android.content.res.Resources$NotFoundException: String resource ID #0x1
+라는 에러를 보았습니다.
+
+TextView 에 setText 메소드를 사용할 때 Int 타입의 데이터를 넣어서 발생하는 에러입니다.
+보통 setText 메서드에 숫자를 바로 넣으면 바로 빨간색 밑줄이 생겨서 에러인 것을 알아보기 쉬운데,
+( Int type 을 바로 넣는 경우 빨간 줄이 보입니다.)" />
+<meta name="keywords" content="" />
+<meta name="robots" content="noodp" />
+<link rel="canonical" href="https://kiwinam.com/posts/19/" />
+
+
+<meta property="og:image" content="https://kiwinam.com/19/19-1.png">
+
+
+
+<meta property="og:image" content="https://kiwinam.com/19/19-1.png">
+
+
+
+<meta property="og:image" content="https://kiwinam.com/19/19-1.png">
+
+
+
+<title>
+    
+    [안드로이드] - android.content.res.Resources$NotFoundException: String resource ID #0x1 :: Kiwinam  — Just code it
+    
+</title>
+
+
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.2.1/css/flag-icon.min.css" rel="stylesheet"
+    type="text/css">
+
+
+
+<link rel="stylesheet" href="/main.min.2f0d18b84270567c723bff340b09ab08db3a7634237cd9667d052eb6b14669b8.css">
+
+
+
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#252627">
+<link rel="shortcut icon" href="/favicon.ico">
+<meta name="theme-color" content="#252627"><meta itemprop="name" content="[안드로이드] - android.content.res.Resources$NotFoundException: String resource ID #0x1">
+<meta itemprop="description" content="NotFoundException 처리 방법">
+
+
+<meta itemprop="datePublished" content="2017-11-23T10:35:56&#43;09:00" />
+<meta itemprop="dateModified" content="2017-11-23T10:35:56&#43;09:00" />
+<meta itemprop="wordCount" content="102">
+
+
+
+<meta itemprop="keywords" content="NotFoundException,android,안드로이드,에러," />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="[안드로이드] - android.content.res.Resources$NotFoundException: String resource ID #0x1"/>
+<meta name="twitter:description" content="NotFoundException 처리 방법"/>
+
+
+
+<meta property="article:section" content="Android" />
+
+<meta property="article:published_time" content="2017-11-23 10:35:56 &#43;0900 KST" />
+
+
+
+
+
+
+
+    </head>
+
+    <body class="dark-theme">
+        <div class="container">
+            <header class="header">
+    <span class="header__inner">
+        <a href="/" style="text-decoration: none;">
+    <div class="logo">
+        
+            <span class="logo__mark">></span>
+            <span class="logo__text">cd /home/kiwinam</span>
+            <span class="logo__cursor" style=""></span>
+        
+    </div>
+</a>
+
+
+        <span class="header__right">
+            
+                <nav class="menu">
+    <ul class="menu__inner"><li><a href="https://kiwinam.com/about">About</a></li><li><a href="https://kiwinam.com/posts">posts</a></li>
+    </ul>
+</nav>
+
+                <span class="menu-trigger">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M0 0h24v24H0z" fill="none"/>
+                        <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+                    </svg>
+                </span>
+            
+
+            <span class="theme-toggle unselectable"><svg class="theme-toggler" width="24" height="24" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M22 41C32.4934 41 41 32.4934 41 22C41 11.5066 32.4934 3 22
+  3C11.5066 3 3 11.5066 3 22C3 32.4934 11.5066 41 22 41ZM7 22C7
+  13.7157 13.7157 7 22 7V37C13.7157 37 7 30.2843 7 22Z"/>
+</svg>
+</span>
+        </span>
+    </span>
+</header>
+
+
+            <div class="content">
+                
+    <main class="post">
+
+        <div class="post-info">
+            <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-clock"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>One minute
+
+            
+
+            </p>
+        </div>
+
+        <article>
+            <h1 class="post-title"><a href="https://kiwinam.com/posts/19/">[안드로이드] - android.content.res.Resources$NotFoundException: String resource ID #0x1</a></h1>
+
+            
+
+            <div class="post-content">
+                
+
+<hr />
+
+<p>[안드로이드] - android.content.res.Resources$NotFoundException: String resource ID #0x1</p>
+
+<hr />
+
+<pre><code>FATAL EXCEPTION: main Process: , PID: 4012
+
+android.content.res.Resources$NotFoundException: String resource ID #0x9
+</code></pre>
+
+<p>안드로이드 개발 중</p>
+
+<p>android.content.res.Resources$NotFoundException: String resource ID #0x1</p>
+
+<p>라는 에러를 보았습니다.</p>
+
+<p><br/></p>
+
+<p>TextView 에 setText 메소드를 사용할 때 Int 타입의 데이터를 넣어서 발생하는 에러입니다.</p>
+
+<p>보통 setText 메서드에 숫자를 바로 넣으면 바로 빨간색 밑줄이 생겨서 에러인 것을 알아보기 쉬운데,</p>
+
+<p><img src="/19/19-1.png" alt="int type" /></p>
+
+<p><em>( Int type 을 바로 넣는 경우 빨간 줄이 보입니다.)</em></p>
+
+<p><br/></p>
+
+<p>다른 메서드에서 리턴되는 값이 안에 들어가 있는 경우는 빨간 줄이 보이지 않아 바로 에러라는 것을 알기 힘듭니다.</p>
+
+<p><img src="/19/19-2.png" alt="값을 리턴하는 메소드" /></p>
+
+<p><img src="/19/19-3.png" alt="리턴 메소드를 호출하면 보이지 않음" /></p>
+
+<p><em>( 리턴 값을 넣는 경우 빨간 줄이 보이지 않습니다.)</em></p>
+
+<p><br/></p>
+
+<h3 id="해결-방법은-간단합니다">해결 방법은 간단합니다.</h3>
+
+<p><strong>Int 값을 String 값으로 바꿔주면 됩니다.</strong></p>
+
+<pre><code class="language-java">navEmail.setText(String.valueOf(returnInt()));
+</code></pre>
+
+<p><br/></p>
+
+            </div>
+        </article>
+
+        <hr />
+
+        <div class="post-info">
+                <p>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-tag meta-icon"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7" y2="7"></line></svg><span class="tag"><a href="https://kiwinam.com/tags/notfoundexception">NotFoundException</a></span><span class="tag"><a href="https://kiwinam.com/tags/android">android</a></span><span class="tag"><a href="https://kiwinam.com/tags/%EC%95%88%EB%93%9C%EB%A1%9C%EC%9D%B4%EB%93%9C">안드로이드</a></span><span class="tag"><a href="https://kiwinam.com/tags/%EC%97%90%EB%9F%AC">에러</a></span>
+                </p>
+
+            <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>102 Words</p>
+
+            <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-calendar"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>2017-11-23 10:35 &#43;0900</p>
+        </div>
+
+        
+            <div class="pagination">
+                <div class="pagination__title">
+                    <span class="pagination__title-h">Read other posts</span>
+                    <hr />
+                </div>
+
+                <div class="pagination__buttons">
+                    
+                        <span class="button previous">
+                            <a href="https://kiwinam.com/posts/21/">
+                                <span class="button__icon">←</span>
+                                <span class="button__text">[안드로이드] 엑셀 파일 생성, 내보내기</span>
+                            </a>
+                        </span>
+                    
+
+                    
+                        <span class="button next">
+                            <a href="https://kiwinam.com/posts/20/">
+                                <span class="button__text">[안드로이드] 카카오톡 공유 기능 , 카카오 링크 API 사용법</span>
+                                <span class="button__icon">→</span>
+                            </a>
+                        </span>
+                    
+                </div>
+            </div>
+        
+
+        
+    </main>
+
+            </div>
+
+            
+                <footer class="footer">
+    <div class="footer__inner">
+        <div class="footer__content">
+            <span>&copy; 2019</span>
+            
+            <span></span>
+            <span> <a href="https://kiwinam.com/posts/index.xml" target="_blank" title="rss"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-rss"><path d="M4 11a9 9 0 0 1 9 9"></path><path d="M4 4a16 16 0 0 1 16 16"></path><circle cx="5" cy="19" r="1"></circle></svg></a></span>
+        </div>
+    </div>
+    <div class="footer__inner">
+        <div class="footer__content">
+
+        </div>
+    </div>
+    <div class="footer__inner">
+        <div class="footer__content">
+            <span>Powered by <a href="http://gohugo.io">Hugo</a></span>
+            <span>Made with &#10084; by <a href="https://github.com/rhazdon">rhazdon</a></span>
+        </div>
+    </div>
+</footer>
+
+            
+        </div>
+
+        
+
+
+
+
+<script type="text/javascript" src="/bundle.min.4c3fb12a087ceed4a52cb5d57068a9795c7069617a01ca70f788052ad66e1791779e6c72686e1dc0ca13dc03b0203204b6566bb0dd1ee80de2b7ff4d8fe53db2.js" integrity="sha512-TD&#43;xKgh87tSlLLXVcGipeVxwaWF6Acpw94gFKtZuF5F3nmxyaG4dwMoT3AOwIDIEtlZrsN0e6A3it/9Nj&#43;U9sg=="></script>
+
+
+
+    </body>
+</html>

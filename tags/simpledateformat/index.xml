@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>SimpleDateFormat on Kiwinam</title>
+    <link>https://kiwinam.com/tags/simpledateformat/</link>
+    <description>Recent content in SimpleDateFormat on Kiwinam</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ko-kr</language>
+    <lastBuildDate>Tue, 18 Apr 2017 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://kiwinam.com/tags/simpledateformat/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>[안드로이드] 현재 시간, 현재 날짜 구하기 (SimpleDateFormat)</title>
+      <link>https://kiwinam.com/posts/6/</link>
+      <pubDate>Tue, 18 Apr 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://kiwinam.com/posts/6/</guid>
+      <description>[안드로이드] 현재 시간, 현재 날짜 구하기 (SimpleDateFormat) Android 현재 시간, 현재 날짜 구하기
+SimpleDateFormat
+Preview  Step1. 현재 시간 가져오기.
+ long now = System.currentTimeMillis();   Step2. Date 생성하기
+ Date date = new Date(now);   Step3. 가져오고 싶은 형식으로 가져오기
+ SimpleDateFormat sdf = new SimpleDateFormat(&amp;ldquo;yyyy-MM-dd&amp;rdquo;);
+ String getTime = sdf.format(date);
+   
+Result 
+MainActivity.java
+package charlie.myapplication; import android.support.v7.app.AppCompatActivity; import android.os.Bundle; import android.view.View; import android.</description>
+    </item>
+    
+  </channel>
+</rss>

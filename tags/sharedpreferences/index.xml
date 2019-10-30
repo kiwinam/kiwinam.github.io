@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>SharedPreferences on Kiwinam</title>
+    <link>https://kiwinam.com/tags/sharedpreferences/</link>
+    <description>Recent content in SharedPreferences on Kiwinam</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ko-kr</language>
+    <lastBuildDate>Thu, 22 Sep 2016 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://kiwinam.com/tags/sharedpreferences/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>[안드로이드] 최초 실행 확인 법 - SharedPreferences</title>
+      <link>https://kiwinam.com/posts/1/</link>
+      <pubDate>Thu, 22 Sep 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://kiwinam.com/posts/1/</guid>
+      <description>안드로이드 최초 실행 확인 법  안드로이드 최초 실행을 확인하는 방법은
+SharedPreferences 를 사용 하는 것입니다.
+SharedPreferences 는 안드로이드에서 DB를 사용하지 않고 값을 저장할 때 사용합니다.
+예를 들어 문자열, boolean 값 등..
+SharedPreferences 는 파일 형태로 저장되며 App 을 삭제하기 전까지 유지가 되고, App 을 삭제하면 지워지고,
+앱에서 Data 지우기를 해도 지워집니다.
+[Activity]
+//최초 실행 여부 판단하는 구문 SharedPreferences pref = getSharedPreferences(&amp;quot;isFirst&amp;quot;, Activity.MODE_PRIVATE); boolean first = pref.getBoolean(&amp;quot;isFirst&amp;quot;, false); if(first==false){ Log.</description>
+    </item>
+    
+  </channel>
+</rss>

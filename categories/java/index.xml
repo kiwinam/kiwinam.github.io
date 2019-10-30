@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Java on Kiwinam</title>
+    <link>https://kiwinam.com/categories/java/</link>
+    <description>Recent content in Java on Kiwinam</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ko-kr</language>
+    <lastBuildDate>Wed, 03 May 2017 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://kiwinam.com/categories/java/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>[Java] JSP - JSON 데이터 주고 받기 - JSONParser</title>
+      <link>https://kiwinam.com/posts/11/</link>
+      <pubDate>Wed, 03 May 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://kiwinam.com/posts/11/</guid>
+      <description>[Java] JSP - JSON 데이터 주고 받기 - JSONParser
+
+json-simple 라이브러리를 이용하여
+Android - JSP - JAVA
+JSON 데이터 처리하는 방법입니다.
+
+Step1 . JSON 데이터 생성 (Android) JSONObject sendObject = new JSONObject(); JSONArray sendArray = new JSONArray(); // 각 정보마다 Object 로 만들어 Array 에 담는 반복문 try { for(int i = 0; i &amp;lt; 10; i++ ){ JSONObject informationObject = new JSONObject(); informationObject.put(&amp;quot;name&amp;quot;,&amp;quot;Charlie&amp;quot;+i); informationObject.put(&amp;quot;number&amp;quot;,i+1); sendArray.put(informationObject); } sendObject.</description>
+    </item>
+    
+  </channel>
+</rss>
