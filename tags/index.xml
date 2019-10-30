@@ -6,24 +6,15 @@
     <description>Recent content in Tags on Kiwinam</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ko-kr</language>
-    <lastBuildDate>Sat, 29 Dec 2018 10:35:56 +0900</lastBuildDate>
+    <lastBuildDate>Fri, 15 Feb 2019 10:35:56 +0900</lastBuildDate>
     
 	<atom:link href="https://kiwinam.com/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Android</title>
-      <link>https://kiwinam.com/tags/android/</link>
-      <pubDate>Sat, 29 Dec 2018 10:35:56 +0900</pubDate>
-      
-      <guid>https://kiwinam.com/tags/android/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>CRLF</title>
       <link>https://kiwinam.com/tags/crlf/</link>
-      <pubDate>Sat, 29 Dec 2018 10:35:56 +0900</pubDate>
+      <pubDate>Fri, 15 Feb 2019 10:35:56 +0900</pubDate>
       
       <guid>https://kiwinam.com/tags/crlf/</guid>
       <description></description>
@@ -32,7 +23,7 @@
     <item>
       <title>Git</title>
       <link>https://kiwinam.com/tags/git/</link>
-      <pubDate>Sat, 29 Dec 2018 10:35:56 +0900</pubDate>
+      <pubDate>Fri, 15 Feb 2019 10:35:56 +0900</pubDate>
       
       <guid>https://kiwinam.com/tags/git/</guid>
       <description></description>
@@ -41,9 +32,27 @@
     <item>
       <title>LF</title>
       <link>https://kiwinam.com/tags/lf/</link>
-      <pubDate>Sat, 29 Dec 2018 10:35:56 +0900</pubDate>
+      <pubDate>Fri, 15 Feb 2019 10:35:56 +0900</pubDate>
       
       <guid>https://kiwinam.com/tags/lf/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>warning</title>
+      <link>https://kiwinam.com/tags/warning/</link>
+      <pubDate>Fri, 15 Feb 2019 10:35:56 +0900</pubDate>
+      
+      <guid>https://kiwinam.com/tags/warning/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>android</title>
+      <link>https://kiwinam.com/tags/android/</link>
+      <pubDate>Sat, 29 Dec 2018 10:35:56 +0900</pubDate>
+      
+      <guid>https://kiwinam.com/tags/android/</guid>
       <description></description>
     </item>
     
@@ -53,15 +62,6 @@
       <pubDate>Sat, 29 Dec 2018 10:35:56 +0900</pubDate>
       
       <guid>https://kiwinam.com/tags/navigation-drawer/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>warning</title>
-      <link>https://kiwinam.com/tags/warning/</link>
-      <pubDate>Sat, 29 Dec 2018 10:35:56 +0900</pubDate>
-      
-      <guid>https://kiwinam.com/tags/warning/</guid>
       <description></description>
     </item>
     
@@ -165,7 +165,7 @@
     </item>
     
     <item>
-      <title>android studio</title>
+      <title>Android Studio</title>
       <link>https://kiwinam.com/tags/android-studio/</link>
       <pubDate>Sat, 10 Feb 2018 10:35:56 +0900</pubDate>
       
