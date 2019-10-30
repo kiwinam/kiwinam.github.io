@@ -12,11 +12,38 @@
     
     
     <item>
-      <title>android</title>
+      <title>Android</title>
       <link>https://kiwinam.com/tags/android/</link>
       <pubDate>Sat, 29 Dec 2018 10:35:56 +0900</pubDate>
       
       <guid>https://kiwinam.com/tags/android/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>CRLF</title>
+      <link>https://kiwinam.com/tags/crlf/</link>
+      <pubDate>Sat, 29 Dec 2018 10:35:56 +0900</pubDate>
+      
+      <guid>https://kiwinam.com/tags/crlf/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Git</title>
+      <link>https://kiwinam.com/tags/git/</link>
+      <pubDate>Sat, 29 Dec 2018 10:35:56 +0900</pubDate>
+      
+      <guid>https://kiwinam.com/tags/git/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>LF</title>
+      <link>https://kiwinam.com/tags/lf/</link>
+      <pubDate>Sat, 29 Dec 2018 10:35:56 +0900</pubDate>
+      
+      <guid>https://kiwinam.com/tags/lf/</guid>
       <description></description>
     </item>
     
@@ -26,6 +53,15 @@
       <pubDate>Sat, 29 Dec 2018 10:35:56 +0900</pubDate>
       
       <guid>https://kiwinam.com/tags/navigation-drawer/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>warning</title>
+      <link>https://kiwinam.com/tags/warning/</link>
+      <pubDate>Sat, 29 Dec 2018 10:35:56 +0900</pubDate>
+      
+      <guid>https://kiwinam.com/tags/warning/</guid>
       <description></description>
     </item>
     
@@ -129,7 +165,7 @@
     </item>
     
     <item>
-      <title>android studio</title>
+      <title>Android Studio</title>
       <link>https://kiwinam.com/tags/android-studio/</link>
       <pubDate>Sat, 10 Feb 2018 10:35:56 +0900</pubDate>
       
@@ -566,15 +602,6 @@
       <pubDate>Tue, 18 Apr 2017 00:00:00 +0000</pubDate>
       
       <guid>https://kiwinam.com/tags/simpledateformat/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Git</title>
-      <link>https://kiwinam.com/tags/git/</link>
-      <pubDate>Tue, 07 Mar 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://kiwinam.com/tags/git/</guid>
       <description></description>
     </item>
     

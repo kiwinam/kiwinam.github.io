@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>warning on Kiwinam</title>
+    <link>https://kiwinam.com/tags/warning/</link>
+    <description>Recent content in warning on Kiwinam</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ko-kr</language>
+    <lastBuildDate>Sat, 29 Dec 2018 10:35:56 +0900</lastBuildDate>
+    
+	<atom:link href="https://kiwinam.com/tags/warning/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>[Git] warning: LF will be CRLF</title>
+      <link>https://kiwinam.com/posts/27/</link>
+      <pubDate>Sat, 29 Dec 2018 10:35:56 +0900</pubDate>
+      
+      <guid>https://kiwinam.com/posts/27/</guid>
+      <description>[Git] warning: LF will be CRLF
+
+터미널 or CMD 에서 Git command 를 사용하는데 위 사진 같은 warning 이 나오는 경우가 있습니다.
+왜 이러는 것이고 또 어떻게 해결해야 할까요?
+
+Shutup and code Window user git config --global core.autocrlf true
+Mac user git config --global core.autocrlf true input
+
+
+해당 문제는 OS 별로 엔터키를 입력 했을 때, End line 의 표시 형태가 달라서 발생하는 문제입니다.
+
+윈도우 운영 체제는 줄 바꿈에 (New line)</description>
+    </item>
+    
+  </channel>
+</rss>

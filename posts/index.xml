@@ -9,345 +9,146 @@
         <atom:link href="https://kiwinam.com/posts/index.xml" rel="self" type="application/rss+xml" />
         
         <item>
-            <title>[안드로이드] 네비게이션 드로어 (Navigation drawer) 사용법</title>
-            <link>https://kiwinam.com/posts/26/</link>
+            <title>[Git] warning: LF will be CRLF</title>
+            <link>https://kiwinam.com/posts/27/</link>
             <pubDate>Sat, 29 Dec 2018 10:35:56 +0900</pubDate>
             
-            <guid>https://kiwinam.com/posts/26/</guid>
-            <description>[안드로이드] 네비게이션 드로어 (Navigation drawer) 사용법
+            <guid>https://kiwinam.com/posts/27/</guid>
+            <description>[Git] warning: LF will be CRLF
 
-구글 머티리얼 디자인 가이드 중 네비게이션 드로어
-네비게이션 드로어는 화면 왼쪽 가장자리에 위치해 있고 앱을 탐색할 수 있는 하나의 패널입니다.
-이걸 잘 활용한다면 특정 메뉴를 찾기 위해 클릭이 많이 일어나는 (Deep depth) 문제를 해결할 수 있습니다.
-평상시에는 화면 밖에 가려져 있지만 왼쪽 스와이프나 왼쪽 상단 메뉴 버튼을 클릭하면 위 사진처럼 나옵니다.
-그럼 네비게이션 드로어를 어떻게 구현하는지 알아보겠습니다.
+터미널 or CMD 에서 Git command 를 사용하는데 위 사진 같은 warning 이 나오는 경우가 있습니다.
+왜 이러는 것이고 또 어떻게 해결해야 할까요?
+
+Shutup and code Window user git config --global core.autocrlf true
+Mac user git config --global core.autocrlf true input
 
 
-1. Result  이번 포스팅에서 진행한 네비게이션 드로어 결과 화면</description>
+해당 문제는 OS 별로 엔터키를 입력 했을 때, End line 의 표시 형태가 달라서 발생하는 문제입니다.
+
+윈도우 운영 체제는 줄 바꿈에 (New line)</description>
             <content type="html"><![CDATA[
 
 <hr />
 
-<p>[안드로이드] 네비게이션 드로어 (Navigation drawer) 사용법</p>
+<p>[Git] warning: LF will be CRLF</p>
 
 <hr />
 
 <p><br/></p>
 
-<p><img src="/26/26-1.png" alt="google navigation drawer" />
-<a href="https://material.io/design/components/navigation-drawer.html" target="_blank">구글 머티리얼 디자인 가이드 중 네비게이션 드로어</a></p>
 
-<p>네비게이션 드로어는 화면 왼쪽 가장자리에 위치해 있고 앱을 탐색할 수 있는 하나의 패널입니다.</p>
+    <img src="/27/27-1.png"  alt="CRLF will be replaced"  class="left"  style="width: 600px"  />
 
-<p>이걸 잘 활용한다면 특정 메뉴를 찾기 위해 클릭이 많이 일어나는 (Deep depth)  문제를 해결할 수 있습니다.</p>
 
-<p>평상시에는 화면 밖에 가려져 있지만 왼쪽 스와이프나 왼쪽 상단 메뉴 버튼을 클릭하면 위 사진처럼 나옵니다.</p>
 
-<p>그럼 네비게이션 드로어를 어떻게 구현하는지 알아보겠습니다.</p>
+<p>터미널 or CMD 에서 Git command 를 사용하는데 위 사진 같은 warning 이 나오는 경우가 있습니다.</p>
+
+<p>왜 이러는 것이고 또 어떻게 해결해야 할까요?</p>
+
+<p><br/></p>
+
+<h2 id="shutup-and-code">Shutup and code</h2>
+
+<h3 id="window-user">Window user</h3>
+
+<p><code>git config --global core.autocrlf true</code></p>
+
+<h3 id="mac-user">Mac user</h3>
+
+<p><code>git config --global core.autocrlf true input</code></p>
 
 <p><br/></p>
 
 <p><br/></p>
 
-<h3 id="1-result">1. Result</h3>
+<hr />
 
-<!-- ![navigation drawer result](/26/26-2.gif){: width="100" height="100"} -->
-
-<p>
-    <img src="/26/26-2.gif"  alt="navigation drawer result"  class="left"  style="width: 400px"  />
-
-
-<em>이번 포스팅에서 진행한 네비게이션 드로어 결과 화면</em></p>
+<p>해당 문제는 OS 별로 엔터키를 입력 했을 때, End line 의 표시 형태가 달라서 발생하는 문제입니다.</p>
 
 <p><br/></p>
 
-<p><br/></p>
+<p>윈도우 운영 체제는 줄 바꿈에 (New line)</p>
 
-<h3 id="2-step-by-step">2. Step by Step</h3>
+<p>현재 라인에서 커서의 위치를 가장 앞으로 이동하는 Carriage Return (CR) 과</p>
 
-<h4 id="2-1-안드로이드-서포트-라이브러리-추가">2-1. 안드로이드 서포트 라이브러리 추가</h4>
-
-<ul>
-<li><p>진행에 앞서 네비게이션 드로어는 서포트 라이브러리에 포함되어 있기 때문에 App Gradle 에 의존성 라이브러리를 넣어줘야합니다.</p></li>
-
-<li><p>최근 안드로이드 스튜디오에서 새 프로젝트를 만들면 기본으로 서포트 라이브러리들이 들어가 있지만, 혹시 확인해보고 없으시다면 아래 라이브러리를 Gradle 에 추가해주세요.</p></li>
-</ul>
-
-<p><em>build.gradle (app)</em></p>
-
-<p><code>implementation 'com.android.support:design:27.1.1'</code></p>
+<p>커서를 그대로 두고 종이를 위로 한 칸 올리는 Line feed (LF)를 함께 사용합니다.</p>
 
 <p><br/></p>
 
-<h4 id="2-2-네비게이션-메뉴-추가">2-2. 네비게이션 메뉴 추가</h4>
+<p>반면 유닉스 운영 체제는 Line feed (LF) 만 사용하여 줄 바꿈을 합니다.</p>
 
-<p><img src="/26/26-3.png" alt="navigation menu" /></p>
+<p><br/></p>
 
-<ul>
-<li><p>네비게이션 드로어에서 보여줄 메뉴들을 추가합니다.</p></li>
+<p>예를 들자면</p>
 
-<li><p>메뉴들에 포함되는 아이콘은 미리 /res/drawable/ 에 준비해주세요. ( New &gt; Vector Asset 으로 추가하면 편합니다.)</p></li>
-</ul>
+<p><code>Window</code></p>
 
-<p>_/res/menu/main_navigation<em>menu.xml</em></p>
-
-<pre><code class="language-xml">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;
-&lt;menu xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;&gt;
-    &lt;group android:checkableBehavior=&quot;single&quot;&gt;
-        &lt;item
-                android:id=&quot;@+id/account&quot;
-                android:icon=&quot;@drawable/ic_account_circle_black_24dp&quot;
-                android:title=&quot;계정&quot;
-        /&gt;
-        &lt;item
-                android:id=&quot;@+id/star&quot;
-                android:icon=&quot;@drawable/ic_star_black_24dp&quot;
-                android:title=&quot;즐겨찾기&quot;
-        /&gt;
-        &lt;item
-                android:id=&quot;@+id/cart&quot;
-                android:icon=&quot;@drawable/ic_shopping_cart_black_24dp&quot;
-                android:title=&quot;장바구니&quot;
-        /&gt;
-    &lt;/group&gt;
-    &lt;group android:checkableBehavior=&quot;single&quot;&gt;
-        &lt;item
-                android:id=&quot;@+id/bug_report&quot;
-                android:icon=&quot;@drawable/ic_bug_report_black_24dp&quot;
-                android:title=&quot;버그 리포트&quot;
-        /&gt;
-        &lt;item
-                android:id=&quot;@+id/setting&quot;
-                android:icon=&quot;@drawable/ic_settings_black_24dp&quot;
-                android:title=&quot;설정&quot;
-        /&gt;
-        &lt;item
-                android:id=&quot;@+id/logout&quot;
-                android:icon=&quot;@drawable/ic_exit_to_app_white_24dp&quot;
-                android:title=&quot;로그아웃&quot;
-        /&gt;
-    &lt;/group&gt;
-&lt;/menu&gt;
+<pre><code>Hello. CRLF
+World.
 </code></pre>
 
-<p><br/></p>
+<p><code>Unix</code></p>
 
-<h4 id="2-3-네비게이션-헤더-추가-optional">2-3. 네비게이션 헤더 추가 (Optional)</h4>
-
-<p><img src="/26/26-4.png" alt="navigation header" /></p>
-
-<ul>
-<li><p>네비게이션 헤더 부분은 하셔도 되고, 내가 만들 앱에 필요 없으시면 굳이 안넣으셔도 됩니다.</p></li>
-
-<li><p>헤더는 레이아웃이기 때문에 /res/layout 에 파일을 만들어주시면됩니다.</p></li>
-
-<li><p>나중에 DrawerLayout 에서 헤더를 설정할 때 사용됩니다.</p></li>
-</ul>
-
-<p>_/res/layout/main_nav<em>header.xml</em></p>
-
-<pre><code class="language-xml">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;
-&lt;android.support.constraint.ConstraintLayout
-        xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;
-        xmlns:app=&quot;http://schemas.android.com/apk/res-auto&quot; xmlns:tools=&quot;http://schemas.android.com/tools&quot;
-        android:layout_width=&quot;match_parent&quot;
-        android:layout_height=&quot;230dp&quot;
-        android:background=&quot;@color/colorPrimary&quot;&gt;
-
-    &lt;ImageView
-            android:layout_width=&quot;wrap_content&quot;
-            android:layout_height=&quot;150dp&quot; tools:srcCompat=&quot;@tools:sample/avatars&quot;
-            android:id=&quot;@+id/imageView&quot;
-            app:layout_constraintStart_toStartOf=&quot;parent&quot; android:layout_marginStart=&quot;24dp&quot;
-            android:layout_marginTop=&quot;4dp&quot; app:layout_constraintTop_toTopOf=&quot;parent&quot;/&gt;
-    &lt;TextView
-            android:text=&quot;Charlie Park&quot;
-            android:layout_width=&quot;wrap_content&quot;
-            android:layout_height=&quot;0dp&quot;
-            android:id=&quot;@+id/textView&quot; app:layout_constraintStart_toStartOf=&quot;parent&quot; android:layout_marginStart=&quot;24dp&quot;
-            android:layout_marginTop=&quot;12dp&quot; app:layout_constraintTop_toBottomOf=&quot;@+id/imageView&quot;
-            android:textColor=&quot;#fff&quot;/&gt;
-    &lt;TextView
-            android:text=&quot;kiwinam@test.com&quot;
-            android:layout_width=&quot;wrap_content&quot;
-            android:layout_height=&quot;wrap_content&quot;
-            android:id=&quot;@+id/textView2&quot; android:textSize=&quot;10sp&quot;
-            android:layout_marginTop=&quot;8dp&quot; app:layout_constraintTop_toBottomOf=&quot;@+id/textView&quot;
-            android:layout_marginStart=&quot;24dp&quot; app:layout_constraintStart_toStartOf=&quot;parent&quot; android:textColor=&quot;#fff&quot;/&gt;
-&lt;/android.support.constraint.ConstraintLayout&gt;
+<pre><code>Hello. LF
+World.
 </code></pre>
 
-<p><br/></p>
+<p>이렇게 운영 체제 마다 개행 표시 (End line) 의 표기 방법이 다릅니다.</p>
 
-<h4 id="2-4-메인-레이아웃-수정">2-4. 메인 레이아웃 수정</h4>
+<p>이 다른 표기 방법으로 인해, 여러 개발자가 Git 를 통해 협업할 때 윈도우를 사용하는 개발자의 개행 문자와 맥(Unix) 를 사용하는 개발자의 개행 문자가 다르게 됩니다.</p>
 
-<p><img src="/26/26-5.png" alt="main layout" /></p>
+<p>Git 에서는 이런 다른 개행 방식 때문에 혼란이 있을 수 있고, 이를 개발자에게 경고해 주는 것 입니다.</p>
 
-<ul>
-<li><p>네비게이션 드로어를 사용할 메인 레이아웃을 수정합니다.</p></li>
+<p>그래서 유닉스 사용자는 <code>CRLF will be replaced by LF in ...</code> 라는 메세지를</p>
 
-<li><p>여기서 포인트는 메인 레이아웃의 최상단 레이아웃이 DrawerLayout 이여야 네비게이션 드로어 가 정상적으로 동작합니다.</p></li>
-
-<li><p>DrawerLayout 의 자식 레이아웃으로 NavigationView 를 설정해주시면 됩니다.</p></li>
-
-<li><p>NavigationView 에서 방금 만든 메뉴와 헤더를 설정합니다.</p></li>
-</ul>
-
-<p>_/res/layout/activity<em>main.xml</em></p>
-
-<pre><code class="language-xml">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;
-&lt;!--parent layout--&gt;
-&lt;android.support.v4.widget.DrawerLayout
-        xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;
-        xmlns:app=&quot;http://schemas.android.com/apk/res-auto&quot;
-        android:id=&quot;@+id/drawerLayout&quot;
-        android:layout_width=&quot;match_parent&quot;
-        android:layout_height=&quot;match_parent&quot;
-        android:fitsSystemWindows=&quot;true&quot;
-        &gt;
-    &lt;!-- main layout--&gt;
-    &lt;RelativeLayout
-            android:layout_width=&quot;match_parent&quot; android:layout_height=&quot;match_parent&quot;
-            android:background=&quot;#fff&quot;&gt;
-        &lt;android.support.v7.widget.Toolbar
-                android:id=&quot;@+id/toolbar&quot;
-                android:layout_width=&quot;match_parent&quot;
-                android:layout_height=&quot;wrap_content&quot;
-                android:background=&quot;@color/colorPrimary&quot;
-                app:contentInsetStart=&quot;0dp&quot;
-                android:theme=&quot;@style/ThemeOverlay.AppCompat.Dark.ActionBar&quot;
-                app:popupTheme=&quot;@style/ThemeOverlay.AppCompat.Dark.ActionBar&quot;
-        /&gt;
-        &lt;TextView
-                android:layout_width=&quot;wrap_content&quot;
-                android:layout_height=&quot;wrap_content&quot;
-                android:text=&quot;test&quot;
-                android:layout_centerInParent=&quot;true&quot;/&gt;
-    &lt;/RelativeLayout&gt;
-
-    &lt;!--navigation drawer--&gt;
-    &lt;android.support.design.widget.NavigationView
-            android:id=&quot;@+id/navigationView&quot;
-            android:layout_width=&quot;wrap_content&quot;
-            android:layout_height=&quot;match_parent&quot;
-            android:layout_gravity=&quot;start&quot;
-            app:headerLayout=&quot;@layout/main_nav_header&quot;
-            app:menu=&quot;@menu/main_navigation_menu&quot;
-    /&gt;
-
-&lt;/android.support.v4.widget.DrawerLayout&gt;
-</code></pre>
+<p>윈도우 사용자는 <code>LF will be replaced by CRLF in</code> 라는 경고 메세지를 받게 됩니다.</p>
 
 <p><br/></p>
 
-<h4 id="2-4-activity-수정">2-4. Activity 수정</h4>
+<p>그래서 Git 에서는 이 두 가지를 해결 하는 기능이 있습니다.</p>
 
-<ul>
-<li><p>네비게이션 드로어는 레이아웃 설정이 대부분이고 실제 코틀린이나 자바 코드는 많이 사용하지 않아도 구현 가능합니다.</p></li>
+<p><code>core.autocrlf</code> 라는 기능인데 이 기능의 사용 설정만 하면 해당 에러는 더 이상 나타나지 않습니다.</p>
 
-<li><p>이번 예제에서도 (1)메뉴 버튼을 눌렀을 때 네비게이션이 나오도록 처리하거나 (2)버튼 클릭 리스너를 설정해주는 코드만 넣어보겠습니다.</p></li>
-</ul>
+<p>이 기능은 코드를 추가하거나 하는 Output 의 동작에서는 CRLF -&gt; LF 로 자동 변환해주고,</p>
 
-<p>(1) 메뉴 버튼 클릭 시 네비게이션 드로어 열기</p>
-
-<p><em>MainActivity.kt</em></p>
-
-<pre><code class="language-java">// 툴바 메뉴 버튼이 클릭 됐을 때 콜백
-override fun onOptionsItemSelected(item: MenuItem?): Boolean {
-    // 클릭된 메뉴 아이템의 아이디 마다 when 구절로 클릭시 동작을 설정한다.
-    when(item!!.itemId){
-        android.R.id.home-&gt;{ // 메뉴 버튼
-            drawerLayout.openDrawer(GravityCompat.START)    // 네비게이션 드로어 열기
-        }
-        R.id.menu_search-&gt; Snackbar.make(toolbar,&quot;Search menu pressed&quot;,Snackbar.LENGTH_SHORT).show()
-        R.id.menu_account-&gt; Snackbar.make(toolbar,&quot;Account menu pressed&quot;,Snackbar.LENGTH_SHORT).show()
-        R.id.menu_logout-&gt; Snackbar.make(toolbar,&quot;Logout menu pressed&quot;,Snackbar.LENGTH_SHORT).show()
-    }
-    return super.onOptionsItemSelected(item)
-}
-</code></pre>
-
-<ul>
-<li>메뉴 버튼이 클릭되면  <code>drawerLayout.openDrawer(GravityCompat.START)</code>  를 호출하여 네비게이션 드로어를 열어줍니다.</li>
-</ul>
+<p>Pull 이나 Clone 같은 Input 의 동작에서는 LF -&gt; CRLF 로 자동 변환 해줍니다.</p>
 
 <p><br/></p>
 
-<p>(2) 네비게이션 메뉴 버튼 클릭 리스너 설정</p>
+<h4 id="윈도우-사용자-해결-방법">윈도우 사용자 해결 방법</h4>
 
-<ul>
-<li>먼저 네비게이션 메뉴 클릭 리스너를 클래스에 implement 하겠습니다.</li>
-</ul>
+<p><code>git config --global core.autocrlf true</code>
+<em>(global 은 모든 프로젝트에서 사용하겠다는 옵션입니다.)</em></p>
 
-<p><em>MainActivity.kt</em></p>
-
-<p><code>class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {</code></p>
-
-<ul>
-<li>그런 다음 onNavigationItemSelected 메서드를 오버라이드하여 클릭 시 어떤 처리를 해줄지 설정합니다.</li>
-</ul>
-
-<p><em>MainActivity.kt</em></p>
-
-<pre><code class="language-java">// 네비게이션 드로어 메뉴 클릭 리스너
-override fun onNavigationItemSelected(item: MenuItem): Boolean {
-    when(item.itemId){  // 네비게이션 메뉴가 클릭되면 스낵바가 나타난다.
-        R.id.account-&gt;Snackbar.make(toolbar,&quot;Navigation Account pressed&quot;,Snackbar.LENGTH_SHORT).show()
-        R.id.setting-&gt;Snackbar.make(toolbar,&quot;Navigation Setting pressed&quot;,Snackbar.LENGTH_SHORT).show()
-    }
-    drawerLayout.closeDrawers() // 기능을 수행하고 네비게이션을 닫아준다.
-    return false
-}
-</code></pre>
-
-<ul>
-<li><p>이번 예제에서는 스낵바만 표시하도록 하였습니다.</p></li>
-
-<li><p>스낵바를 표시한 다음 네비게이션 드로어를 닫아줌으로써 사용자 경험을 매끄럽게 해줍니다.</p></li>
-</ul>
-
-<p>여기까지 구현 하였으면 기본적인 네비게이션 드로어 사용법은 다 알수 있습니다.</p>
+<p>로 설정하여 코드를 내보낼 땐 LF 로 변환하고, 가져올 땐 CRLF 로 가져와서 윈도우 운영체제에서 사용하고 있는 개행 문자로 가져오게 합니다.</p>
 
 <p><br/></p>
 
-<h4 id="2-5-뒤로가기-클릭-시-네비게이션-닫기-optional">2-5. 뒤로가기 클릭 시 네비게이션 닫기 (Optional)</h4>
+<h4 id="unix-mac-사용자-해결-방법">Unix (Mac) 사용자 해결 방법</h4>
 
-<p><img src="/26/26-6.gif" alt="back click" /></p>
+<p>반대로 Unix (Mac) 를 사용하는 사용자들은 기본으로 개행 문자가 LF 로 설정 되기 때문에,</p>
 
-<p>보통 사용자들이 네비게이션 드로어가 열려있을 때 뒤로가기 버튼을 누르면 네비게이션이 닫힐 것을 기대하는데, 이대로 코드를 진행하면 그렇게 동작하지 않습니다.</p>
+<p>코드를 가져올 때 (Input 의 동작을 할 때)는 CRLF 로 변환할 필요가 없습니다.</p>
 
-<p>추가적으로 뒤로가기 버튼을 눌렀을 때 네비게이션 드로어를 닫아보겠습니다.</p>
+<p>그렇기 때문에 Unix (Mac) 사용자 분들은</p>
 
-<p><em>MainActivity.kt</em></p>
+<p><code>git config --global core.autocrlf true input</code></p>
 
-<pre><code class="language-java">/*
- * 뒤로가기 버튼으로 네비게이션 닫기
- *
- * 네비게이션 드로어가 열려 있을 때 뒤로가기 버튼을 누르면 네비게이션을 닫고,
- * 닫혀 있다면 기존 뒤로가기 버튼으로 작동한다.
- */
-override fun onBackPressed() {
-    if(drawerLayout.isDrawerOpen(GravityCompat.START)){
-        drawerLayout.closeDrawers()
-    }else{
-        super.onBackPressed()
-    }
-}
-</code></pre>
-
-<p>뒤로가기 버튼을 눌렀을 때 닫히는 네비게이션 드로어</p>
+<p>으로 설정하여 코드를 가져올 때 변환하지 않도록 설정해줍니다.</p>
 
 <p><br/></p>
 
+<p>만약에 이런 개행 문자의 자동 변환을 원치 않는 개발자 분들은</p>
+
+<p><code>git config --global core.safecrlf false</code></p>
+
+<p>로 설정하셔서 개행 자동 변환을 막을 수도 있습니다.</p>
+
 <p><br/></p>
-
-<h3 id="3-source-code">3. Source Code</h3>
-
-<p>전체 소스코드는 <a href="https://github.com/kiwinam/toolbar_test" target="_blank">GitHub</a> 에 연동해놓았습니다.</p>
 
 <p>읽어주셔서 감사합니다.</p>
 
-<p>제 글이 도움 되길 바랄게요.</p>
+<p>도움이 되길 바랄게요.</p>
 
 <p><br/></p>
 ]]></content>
@@ -355,10 +156,10 @@ override fun onBackPressed() {
         
         <item>
             <title>[안드로이드] 네비게이션 드로어 (Navigation drawer) 사용법</title>
-            <link>https://kiwinam.com/posts/27/</link>
+            <link>https://kiwinam.com/posts/26/</link>
             <pubDate>Sat, 29 Dec 2018 10:35:56 +0900</pubDate>
             
-            <guid>https://kiwinam.com/posts/27/</guid>
+            <guid>https://kiwinam.com/posts/26/</guid>
             <description>[안드로이드] 네비게이션 드로어 (Navigation drawer) 사용법
 
 구글 머티리얼 디자인 가이드 중 네비게이션 드로어
