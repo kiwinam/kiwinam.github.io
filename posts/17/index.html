@@ -24,21 +24,27 @@
 1. Result 
 2. Step by Step 2-1 Layout 구성 &amp;lt;RelativeLayout xmlns:android=&amp;quot;http://schemas.android.com/apk/res/android&amp;quot; xmlns:app=&amp;quot;http://schemas.android.com/apk/res-auto&amp;quot; xmlns:tools=&amp;quot;http://schemas.android.com/tools&amp;quot; android:layout_width=&amp;quot;match_parent&amp;quot; android:layout_height=&amp;quot;match_parent&amp;quot; tools:context=&amp;quot;com.example.charlie.wontest.MainActivity&amp;quot;&amp;gt; &amp;lt;EditText android:id=&amp;quot;@&#43;id/wonEt&amp;quot; android:hint=&amp;quot;금액을 입력해주세요.&amp;quot; android:paddingLeft=&amp;quot;8dp&amp;quot; android:textSize=&amp;quot;18sp&amp;quot; android:layout_width=&amp;quot;match_parent&amp;quot; android:layout_height=&amp;quot;wrap_content&amp;quot; android:layout_marginLeft=&amp;quot;8dp&amp;quot; android:layout_marginRight=&amp;quot;8dp&amp;quot; android:layout_marginTop=&amp;quot;8dp&amp;quot; android:layout_centerInParent=&amp;quot;true&amp;quot; android:inputType=&amp;quot;number&amp;quot; android:gravity=&amp;quot;end&amp;quot; /&amp;gt; &amp;lt;/RelativeLayout&amp;gt;   Layout 은 최대한 간단하게 구성해봤습니다." />
 <meta name="keywords" content="" />
-<meta name="robots" content="noodp" />
+<meta name="robots" content="index" />
+<meta name="robots" content="follow" />
 <link rel="canonical" href="https://kiwinam.com/posts/17/" />
 
 
-<meta property="og:image" content="https://kiwinam.com/17/17-1.gif">
+
+
+<meta property="og:title" content="[안드로이드] EditText 화폐 단위 표시 (세자리 콤마) :: Kiwinam  — Just code it">
 
 
 
 <meta property="og:image" content="https://kiwinam.com/17/17-1.gif">
 
 
+<meta name="og:description"
+    content="[안드로이드] EditText 화폐 단위 표시 (세자리 콤마)
+사용자에게 화폐를 입력 받아 표시해줄 경우가 종종 있습니다.
+이럴 때 입력 받은 숫자를 원화 단위 (1,000,000 과 같이 ) 로 바로 바꿔주는 방법입니다.
 
-<meta property="og:image" content="https://kiwinam.com/17/17-1.gif">
-
-
+1. Result 
+2. Step by Step 2-1 Layout 구성 &amp;lt;RelativeLayout xmlns:android=&amp;quot;http://schemas.android.com/apk/res/android&amp;quot; xmlns:app=&amp;quot;http://schemas.android.com/apk/res-auto&amp;quot; xmlns:tools=&amp;quot;http://schemas.android.com/tools&amp;quot; android:layout_width=&amp;quot;match_parent&amp;quot; android:layout_height=&amp;quot;match_parent&amp;quot; tools:context=&amp;quot;com.example.charlie.wontest.MainActivity&amp;quot;&amp;gt; &amp;lt;EditText android:id=&amp;quot;@&#43;id/wonEt&amp;quot; android:hint=&amp;quot;금액을 입력해주세요.&amp;quot; android:paddingLeft=&amp;quot;8dp&amp;quot; android:textSize=&amp;quot;18sp&amp;quot; android:layout_width=&amp;quot;match_parent&amp;quot; android:layout_height=&amp;quot;wrap_content&amp;quot; android:layout_marginLeft=&amp;quot;8dp&amp;quot; android:layout_marginRight=&amp;quot;8dp&amp;quot; android:layout_marginTop=&amp;quot;8dp&amp;quot; android:layout_centerInParent=&amp;quot;true&amp;quot; android:inputType=&amp;quot;number&amp;quot; android:gravity=&amp;quot;end&amp;quot; /&amp;gt; &amp;lt;/RelativeLayout&amp;gt;   Layout 은 최대한 간단하게 구성해봤습니다." />
 
 <title>
     
@@ -110,7 +116,7 @@
         <span class="header__right">
             
                 <nav class="menu">
-    <ul class="menu__inner"><li><a href="https://kiwinam.com/about">About</a></li><li><a href="https://kiwinam.com/posts">posts</a></li>
+    <ul class="menu__inner"><li><a href="https://kiwinam.com/about">About</a></li><li><a href="https://kiwinam.com/categories">categories</a></li><li><a href="https://kiwinam.com/posts">posts</a></li>
     </ul>
 </nav>
 

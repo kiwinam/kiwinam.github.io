@@ -1,0 +1,590 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>https://kiwinam.com/about/</loc>
+    <lastmod>2019-09-27T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kiwinam.com/</loc>
+    <lastmod>2019-09-27T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="ko-kr"
+                href="https://kiwinam.com/ko-kr/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://kiwinam.com/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://kiwinam.com/posts/27/</loc>
+    <lastmod>2019-02-15T10:35:56+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kiwinam.com/categories/</loc>
+    <lastmod>2019-02-15T10:35:56+09:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="ko-kr"
+                href="https://kiwinam.com/ko-kr/categories/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://kiwinam.com/categories/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://kiwinam.com/tags/crlf/</loc>
+    <lastmod>2019-02-15T10:35:56+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kiwinam.com/categories/git/</loc>
+    <lastmod>2019-02-15T10:35:56+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kiwinam.com/tags/git/</loc>
+    <lastmod>2019-02-15T10:35:56+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kiwinam.com/tags/lf/</loc>
+    <lastmod>2019-02-15T10:35:56+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kiwinam.com/posts/</loc>
+    <lastmod>2019-02-15T10:35:56+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kiwinam.com/tags/</loc>
+    <lastmod>2019-02-15T10:35:56+09:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="ko-kr"
+                href="https://kiwinam.com/ko-kr/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://kiwinam.com/tags/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://kiwinam.com/tags/warning/</loc>
+    <lastmod>2019-02-15T10:35:56+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kiwinam.com/posts/26/</loc>
+    <lastmod>2018-12-29T10:35:56+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kiwinam.com/tags/android/</loc>
+    <lastmod>2018-12-29T10:35:56+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kiwinam.com/categories/android/</loc>
+    <lastmod>2018-12-29T10:35:56+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kiwinam.com/tags/navigation-drawer/</loc>
+    <lastmod>2018-12-29T10:35:56+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kiwinam.com/tags/%EB%84%A4%EB%B9%84%EA%B2%8C%EC%9D%B4%EC%85%98/</loc>
+    <lastmod>2018-12-29T10:35:56+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kiwinam.com/tags/%EB%84%A4%EB%B9%84%EA%B2%8C%EC%9D%B4%EC%85%98-%EB%93%9C%EB%A1%9C4%EC%96%B4/</loc>
+    <lastmod>2018-12-29T10:35:56+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kiwinam.com/tags/%EC%95%88%EB%93%9C%EB%A1%9C%EC%9D%B4%EB%93%9C/</loc>
+    <lastmod>2018-12-29T10:35:56+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kiwinam.com/tags/%EC%95%88%EB%93%9C%EB%A1%9C%EC%9D%B4%EB%93%9C-%EB%84%A4%EB%B9%84%EA%B2%8C%EC%9D%B4%EC%85%98-%EB%93%9C%EB%A1%9C%EC%96%B4/</loc>
+    <lastmod>2018-12-29T10:35:56+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kiwinam.com/posts/25/</loc>
+    <lastmod>2018-12-26T10:35:56+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kiwinam.com/tags/action-bar/</loc>
+    <lastmod>2018-12-26T10:35:56+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kiwinam.com/tags/toolbar/</loc>
+    <lastmod>2018-12-26T10:35:56+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kiwinam.com/tags/%EC%95%88%EB%93%9C%EB%A1%9C%EC%9D%B4%EB%93%9C-%ED%88%B4%EB%B0%94/</loc>
+    <lastmod>2018-12-26T10:35:56+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kiwinam.com/tags/%EC%95%A1%EC%85%98%EB%B0%94/</loc>
+    <lastmod>2018-12-26T10:35:56+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kiwinam.com/tags/%ED%88%B4%EB%B0%94/</loc>
+    <lastmod>2018-12-26T10:35:56+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kiwinam.com/tags/%ED%88%B4%EB%B0%94-%EB%B2%84%ED%8A%BC-%EC%B6%94%EA%B0%80/</loc>
+    <lastmod>2018-12-26T10:35:56+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kiwinam.com/tags/%ED%88%B4%EB%B0%94-%EC%82%AC%EC%9A%A9%EB%B2%95/</loc>
+    <lastmod>2018-12-26T10:35:56+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kiwinam.com/posts/24/</loc>
+    <lastmod>2018-02-10T10:35:56+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kiwinam.com/tags/android-studio/</loc>
+    <lastmod>2018-02-10T10:35:56+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kiwinam.com/tags/font.xml/</loc>
+    <lastmod>2018-02-10T10:35:56+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kiwinam.com/tags/layout-preview/</loc>
+    <lastmod>2018-02-10T10:35:56+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kiwinam.com/tags/typeface/</loc>
+    <lastmod>2018-02-10T10:35:56+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kiwinam.com/posts/23/</loc>
+    <lastmod>2018-02-09T10:35:56+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kiwinam.com/tags/intent/</loc>
+    <lastmod>2018-02-09T10:35:56+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kiwinam.com/tags/onactivityresult/</loc>
+    <lastmod>2018-02-09T10:35:56+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kiwinam.com/tags/startactivityforresult/</loc>
+    <lastmod>2018-02-09T10:35:56+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kiwinam.com/tags/%EC%9D%B8%ED%85%90%ED%8A%B8/</loc>
+    <lastmod>2018-02-09T10:35:56+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kiwinam.com/posts/22/</loc>
+    <lastmod>2018-01-30T10:35:56+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kiwinam.com/categories/mac/</loc>
+    <lastmod>2018-01-30T10:35:56+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kiwinam.com/tags/mac/</loc>
+    <lastmod>2018-01-30T10:35:56+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kiwinam.com/tags/osx/</loc>
+    <lastmod>2018-01-30T10:35:56+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kiwinam.com/tags/quicktime-player/</loc>
+    <lastmod>2018-01-30T10:35:56+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kiwinam.com/tags/%EB%85%B9%ED%99%94/</loc>
+    <lastmod>2018-01-30T10:35:56+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kiwinam.com/tags/%EB%A7%A5%EB%B6%81/</loc>
+    <lastmod>2018-01-30T10:35:56+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kiwinam.com/tags/%ED%99%94%EB%A9%B4/</loc>
+    <lastmod>2018-01-30T10:35:56+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kiwinam.com/posts/21/</loc>
+    <lastmod>2017-12-07T10:35:56+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kiwinam.com/tags/action_send/</loc>
+    <lastmod>2017-12-07T10:35:56+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kiwinam.com/tags/excel/</loc>
+    <lastmod>2017-12-07T10:35:56+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kiwinam.com/tags/%EB%82%B4%EB%B3%B4%EB%82%B4%EA%B8%B0/</loc>
+    <lastmod>2017-12-07T10:35:56+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kiwinam.com/tags/%EC%83%9D%EC%84%B1/</loc>
+    <lastmod>2017-12-07T10:35:56+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kiwinam.com/tags/%EC%97%91%EC%85%80/</loc>
+    <lastmod>2017-12-07T10:35:56+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kiwinam.com/tags/%ED%8C%8C%EC%9D%BC-%EB%B3%B4%EB%82%B4%EA%B8%B0/</loc>
+    <lastmod>2017-12-07T10:35:56+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kiwinam.com/posts/19/</loc>
+    <lastmod>2017-11-23T10:35:56+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kiwinam.com/posts/20/</loc>
+    <lastmod>2017-11-23T10:35:56+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kiwinam.com/tags/notfoundexception/</loc>
+    <lastmod>2017-11-23T10:35:56+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kiwinam.com/tags/%EC%97%90%EB%9F%AC/</loc>
+    <lastmod>2017-11-23T10:35:56+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kiwinam.com/posts/18/</loc>
+    <lastmod>2017-11-22T10:35:56+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kiwinam.com/tags/bottom-sheet/</loc>
+    <lastmod>2017-11-22T10:35:56+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kiwinam.com/tags/bottom-sheet-dialog/</loc>
+    <lastmod>2017-11-22T10:35:56+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kiwinam.com/tags/%EB%A8%B8%ED%8B%B0%EB%A6%AC%EC%96%BC-%EB%94%94%EC%9E%90%EC%9D%B8/</loc>
+    <lastmod>2017-11-22T10:35:56+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kiwinam.com/tags/%EB%B0%94%ED%85%80-%EC%8B%9C%ED%8A%B8/</loc>
+    <lastmod>2017-11-22T10:35:56+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kiwinam.com/posts/17/</loc>
+    <lastmod>2017-11-21T10:35:56+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kiwinam.com/tags/textwatcher/</loc>
+    <lastmod>2017-11-21T10:35:56+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kiwinam.com/tags/%EC%84%B8%EC%9E%90%EB%A6%AC-%EC%BD%A4%EB%A7%88/</loc>
+    <lastmod>2017-11-21T10:35:56+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kiwinam.com/tags/%EC%9B%90%ED%99%94/</loc>
+    <lastmod>2017-11-21T10:35:56+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kiwinam.com/tags/%ED%99%94%ED%8F%90/</loc>
+    <lastmod>2017-11-21T10:35:56+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kiwinam.com/tags/%ED%99%94%ED%8F%90-%EB%8B%A8%EC%9C%84/</loc>
+    <lastmod>2017-11-21T10:35:56+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kiwinam.com/posts/16/</loc>
+    <lastmod>2017-10-15T10:35:56+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kiwinam.com/tags/clicklistener/</loc>
+    <lastmod>2017-10-15T10:35:56+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kiwinam.com/tags/custom-dialog/</loc>
+    <lastmod>2017-10-15T10:35:56+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kiwinam.com/tags/dialog/</loc>
+    <lastmod>2017-10-15T10:35:56+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kiwinam.com/tags/%EB%8B%A4%EC%9D%B4%EC%96%BC%EB%A1%9C%EA%B7%B8/</loc>
+    <lastmod>2017-10-15T10:35:56+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kiwinam.com/tags/%EC%BB%A4%EC%8A%A4%ED%85%80-%EB%8B%A4%EC%9D%B4%EC%96%BC%EB%A1%9C%EA%B7%B8/</loc>
+    <lastmod>2017-10-15T10:35:56+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kiwinam.com/posts/15/</loc>
+    <lastmod>2017-08-18T10:25:38+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kiwinam.com/series/</loc>
+    <lastmod>2017-08-18T10:25:38+09:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="ko-kr"
+                href="https://kiwinam.com/ko-kr/series/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://kiwinam.com/series/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://kiwinam.com/series/%EC%BB%A4%EC%8A%A4%ED%85%80-%EB%8B%A4%EC%9D%B4%EC%96%BC%EB%A1%9C%EA%B7%B8/</loc>
+    <lastmod>2017-08-18T10:25:38+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kiwinam.com/posts/14/</loc>
+    <lastmod>2017-06-01T09:56:28+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kiwinam.com/tags/statusbar/</loc>
+    <lastmod>2017-06-01T09:56:28+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kiwinam.com/tags/%EC%83%81%ED%83%9C%EB%B0%94/</loc>
+    <lastmod>2017-06-01T09:56:28+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kiwinam.com/tags/%EC%83%89%EC%83%81%EB%B3%80%EA%B2%BD/</loc>
+    <lastmod>2017-06-01T09:56:28+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kiwinam.com/posts/13/</loc>
+    <lastmod>2017-05-19T16:54:00+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kiwinam.com/tags/%EC%95%88%EB%93%9C%EB%A1%9C%EC%9D%B4%EB%93%9C-%EC%8A%A4%ED%8A%9C%EB%94%94%EC%98%A4/</loc>
+    <lastmod>2017-05-19T16:54:00+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kiwinam.com/tags/%ED%94%84%EB%A6%AC%EB%B7%B0/</loc>
+    <lastmod>2017-05-19T16:54:00+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kiwinam.com/posts/12/</loc>
+    <lastmod>2017-05-16T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kiwinam.com/tags/pull-to-refresh/</loc>
+    <lastmod>2017-05-16T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kiwinam.com/tags/swipe-refresh-layout/</loc>
+    <lastmod>2017-05-16T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kiwinam.com/posts/11/</loc>
+    <lastmod>2017-05-03T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kiwinam.com/tags/java/</loc>
+    <lastmod>2017-05-03T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kiwinam.com/categories/java/</loc>
+    <lastmod>2017-05-03T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kiwinam.com/tags/json/</loc>
+    <lastmod>2017-05-03T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kiwinam.com/tags/jsonparser/</loc>
+    <lastmod>2017-05-03T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kiwinam.com/tags/jsp/</loc>
+    <lastmod>2017-05-03T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kiwinam.com/posts/10/</loc>
+    <lastmod>2017-04-28T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kiwinam.com/tags/recyclerview/</loc>
+    <lastmod>2017-04-28T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kiwinam.com/posts/9/</loc>
+    <lastmod>2017-04-26T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kiwinam.com/posts/8/</loc>
+    <lastmod>2017-04-25T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kiwinam.com/posts/7/</loc>
+    <lastmod>2017-04-24T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kiwinam.com/posts/6/</loc>
+    <lastmod>2017-04-18T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kiwinam.com/tags/simpledateformat/</loc>
+    <lastmod>2017-04-18T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kiwinam.com/tags/github/</loc>
+    <lastmod>2017-03-07T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kiwinam.com/posts/5/</loc>
+    <lastmod>2017-03-07T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kiwinam.com/posts/4/</loc>
+    <lastmod>2017-02-27T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kiwinam.com/tags/keynote/</loc>
+    <lastmod>2017-02-27T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kiwinam.com/posts/3/</loc>
+    <lastmod>2017-02-26T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kiwinam.com/posts/2/</loc>
+    <lastmod>2017-02-25T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kiwinam.com/tags/activity/</loc>
+    <lastmod>2017-02-25T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kiwinam.com/tags/lifecycle/</loc>
+    <lastmod>2017-02-25T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kiwinam.com/posts/1/</loc>
+    <lastmod>2016-09-22T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kiwinam.com/tags/sharedpreferences/</loc>
+    <lastmod>2016-09-22T00:00:00+00:00</lastmod>
+  </url>
+  
+</urlset>

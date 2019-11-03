@@ -5,8 +5,154 @@
         <description>Recent content in Posts on Kiwinam</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>ko-kr</language>
-        <lastBuildDate>Sat, 29 Dec 2018 10:35:56 +0900</lastBuildDate>
+        <lastBuildDate>Fri, 15 Feb 2019 10:35:56 +0900</lastBuildDate>
         <atom:link href="https://kiwinam.com/posts/index.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>[Git] warning: LF will be CRLF</title>
+            <link>https://kiwinam.com/posts/27/</link>
+            <pubDate>Fri, 15 Feb 2019 10:35:56 +0900</pubDate>
+            
+            <guid>https://kiwinam.com/posts/27/</guid>
+            <description>[Git] warning: LF will be CRLF
+
+터미널 or CMD 에서 Git command 를 사용하는데 위 사진 같은 warning 이 나오는 경우가 있습니다.
+왜 이러는 것이고 또 어떻게 해결해야 할까요?
+
+Shutup and code Window user git config --global core.autocrlf true
+Mac user git config --global core.autocrlf true input
+
+
+해당 문제는 OS 별로 엔터키를 입력 했을 때, End line 의 표시 형태가 달라서 발생하는 문제입니다.
+
+윈도우 운영 체제는 줄 바꿈에 (New line)</description>
+            <content type="html"><![CDATA[
+
+<hr />
+
+<p>[Git] warning: LF will be CRLF</p>
+
+<hr />
+
+<p><br/></p>
+
+
+    <img src="/27/27-1.png"  alt="CRLF will be replaced"  class="left"  style="width: 600px"  />
+
+
+
+<p>터미널 or CMD 에서 Git command 를 사용하는데 위 사진 같은 warning 이 나오는 경우가 있습니다.</p>
+
+<p>왜 이러는 것이고 또 어떻게 해결해야 할까요?</p>
+
+<p><br/></p>
+
+<h2 id="shutup-and-code">Shutup and code</h2>
+
+<h3 id="window-user">Window user</h3>
+
+<p><code>git config --global core.autocrlf true</code></p>
+
+<h3 id="mac-user">Mac user</h3>
+
+<p><code>git config --global core.autocrlf true input</code></p>
+
+<p><br/></p>
+
+<p><br/></p>
+
+<hr />
+
+<p>해당 문제는 OS 별로 엔터키를 입력 했을 때, End line 의 표시 형태가 달라서 발생하는 문제입니다.</p>
+
+<p><br/></p>
+
+<p>윈도우 운영 체제는 줄 바꿈에 (New line)</p>
+
+<p>현재 라인에서 커서의 위치를 가장 앞으로 이동하는 Carriage Return (CR) 과</p>
+
+<p>커서를 그대로 두고 종이를 위로 한 칸 올리는 Line feed (LF)를 함께 사용합니다.</p>
+
+<p><br/></p>
+
+<p>반면 유닉스 운영 체제는 Line feed (LF) 만 사용하여 줄 바꿈을 합니다.</p>
+
+<p><br/></p>
+
+<p>예를 들자면</p>
+
+<p><code>Window</code></p>
+
+<pre><code>Hello. CRLF
+World.
+</code></pre>
+
+<p><code>Unix</code></p>
+
+<pre><code>Hello. LF
+World.
+</code></pre>
+
+<p>이렇게 운영 체제 마다 개행 표시 (End line) 의 표기 방법이 다릅니다.</p>
+
+<p>이 다른 표기 방법으로 인해, 여러 개발자가 Git 를 통해 협업할 때 윈도우를 사용하는 개발자의 개행 문자와 맥(Unix) 를 사용하는 개발자의 개행 문자가 다르게 됩니다.</p>
+
+<p>Git 에서는 이런 다른 개행 방식 때문에 혼란이 있을 수 있고, 이를 개발자에게 경고해 주는 것 입니다.</p>
+
+<p>그래서 유닉스 사용자는 <code>CRLF will be replaced by LF in ...</code> 라는 메세지를</p>
+
+<p>윈도우 사용자는 <code>LF will be replaced by CRLF in</code> 라는 경고 메세지를 받게 됩니다.</p>
+
+<p><br/></p>
+
+<p>그래서 Git 에서는 이 두 가지를 해결 하는 기능이 있습니다.</p>
+
+<p><code>core.autocrlf</code> 라는 기능인데 이 기능의 사용 설정만 하면 해당 에러는 더 이상 나타나지 않습니다.</p>
+
+<p>이 기능은 코드를 추가하거나 하는 Output 의 동작에서는 CRLF -&gt; LF 로 자동 변환해주고,</p>
+
+<p>Pull 이나 Clone 같은 Input 의 동작에서는 LF -&gt; CRLF 로 자동 변환 해줍니다.</p>
+
+<p><br/></p>
+
+<h4 id="윈도우-사용자-해결-방법">윈도우 사용자 해결 방법</h4>
+
+<p><code>git config --global core.autocrlf true</code>
+<em>(global 은 모든 프로젝트에서 사용하겠다는 옵션입니다.)</em></p>
+
+<p>로 설정하여 코드를 내보낼 땐 LF 로 변환하고, 가져올 땐 CRLF 로 가져와서 윈도우 운영체제에서 사용하고 있는 개행 문자로 가져오게 합니다.</p>
+
+<p><br/></p>
+
+<h4 id="unix-mac-사용자-해결-방법">Unix (Mac) 사용자 해결 방법</h4>
+
+<p>반대로 Unix (Mac) 를 사용하는 사용자들은 기본으로 개행 문자가 LF 로 설정 되기 때문에,</p>
+
+<p>코드를 가져올 때 (Input 의 동작을 할 때)는 CRLF 로 변환할 필요가 없습니다.</p>
+
+<p>그렇기 때문에 Unix (Mac) 사용자 분들은</p>
+
+<p><code>git config --global core.autocrlf true input</code></p>
+
+<p>으로 설정하여 코드를 가져올 때 변환하지 않도록 설정해줍니다.</p>
+
+<p><br/></p>
+
+<p>만약에 이런 개행 문자의 자동 변환을 원치 않는 개발자 분들은</p>
+
+<p><code>git config --global core.safecrlf false</code></p>
+
+<p>로 설정하셔서 개행 자동 변환을 막을 수도 있습니다.</p>
+
+<p><br/></p>
+
+<p>읽어주셔서 감사합니다.</p>
+
+<p>도움이 되길 바랄게요.</p>
+
+<p><br/></p>
+]]></content>
+        </item>
         
         <item>
             <title>[안드로이드] 네비게이션 드로어 (Navigation drawer) 사용법</title>

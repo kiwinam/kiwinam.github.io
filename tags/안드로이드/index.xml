@@ -186,21 +186,5 @@ Dialog 에서 Activity 로 결과 값을 넘겨줄 수도 있습니다.
 여기에서 family lang = &amp;ldquo;ko&amp;rdquo; 라고 되어있는 곳에 설정된 폰트를 아무 폰트로 바꿔주시면 됩니다.</description>
     </item>
     
-    <item>
-      <title>[안드로이드] 최초 실행 확인 법 - SharedPreferences</title>
-      <link>https://kiwinam.com/posts/1/</link>
-      <pubDate>Thu, 22 Sep 2016 00:00:00 +0000</pubDate>
-      
-      <guid>https://kiwinam.com/posts/1/</guid>
-      <description>안드로이드 최초 실행 확인 법  안드로이드 최초 실행을 확인하는 방법은
-SharedPreferences 를 사용 하는 것입니다.
-SharedPreferences 는 안드로이드에서 DB를 사용하지 않고 값을 저장할 때 사용합니다.
-예를 들어 문자열, boolean 값 등..
-SharedPreferences 는 파일 형태로 저장되며 App 을 삭제하기 전까지 유지가 되고, App 을 삭제하면 지워지고,
-앱에서 Data 지우기를 해도 지워집니다.
-[Activity]
-//최초 실행 여부 판단하는 구문 SharedPreferences pref = getSharedPreferences(&amp;quot;isFirst&amp;quot;, Activity.MODE_PRIVATE); boolean first = pref.getBoolean(&amp;quot;isFirst&amp;quot;, false); if(first==false){ Log.</description>
-    </item>
-    
   </channel>
 </rss>
