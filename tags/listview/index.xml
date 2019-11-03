@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>ListView on Kiwinam</title>
+    <link>https://kiwinam.com/tags/listview/</link>
+    <description>Recent content in ListView on Kiwinam</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ko</language>
+    <lastBuildDate>Tue, 25 Apr 2017 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://kiwinam.com/tags/listview/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>[안드로이드] RecyclerView [1] 간단한 사용법</title>
+      <link>https://kiwinam.com/posts/8/</link>
+      <pubDate>Tue, 25 Apr 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://kiwinam.com/posts/8/</guid>
+      <description>[안드로이드] RecyclerView 간단한 사용법
+
+안드로이드에서 Recycler View 를 간단하게 사용하는 방법에 대해 포스팅 하겠습니다!
+안드로이드를 배우다 보면 리사이클러 뷰, recycler view, list view 에 관해 상당히 많이 보고 듣게 되는데요&amp;hellip;
+도대체 저 리사이클러뷰가 어떤 녀석이길래 저렇게 많이 언급 되는지 가볍게 알아보고 가도록 하겠습니다.
+먼저 프로 앱등이인 전 앱스토어의 사진을 하나 가져 왔습니다
+(코쓱)
+
+위 사진을 보면 빨간 테두리에 있는 내용들은
+큰 틀은 (포맷) 변하지 않고 콘텐츠 (앱 로고와 이름, 카테고리) 만 변하는 것을 알 수 있습니다.</description>
+    </item>
+    
+  </channel>
+</rss>
