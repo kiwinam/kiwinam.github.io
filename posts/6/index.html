@@ -28,22 +28,39 @@ Preview  Step1. 현재 시간 가져오기.
 Result 
 MainActivity.java
 package charlie.myapplication; import android.support.v7.app.AppCompatActivity; import android.os.Bundle; import android.view.View; import android." />
-<meta name="keywords" content="" />
-<meta name="robots" content="noodp" />
+    <meta name="keywords" content="Android, SimpleDateFormat"/>
+
+<meta name="robots" content="index" />
+<meta name="robots" content="follow" />
 <link rel="canonical" href="https://kiwinam.com/posts/6/" />
 
 
-<meta property="og:image" content="https://kiwinam.com/6/time-1.png">
+
+
+<meta property="og:title" content="[안드로이드] 현재 시간, 현재 날짜 구하기 (SimpleDateFormat) :: Kiwinam  — Just code it">
 
 
 
 <meta property="og:image" content="https://kiwinam.com/6/time-1.png">
 
 
+<meta name="og:description"
+    content="[안드로이드] 현재 시간, 현재 날짜 구하기 (SimpleDateFormat) Android 현재 시간, 현재 날짜 구하기
+SimpleDateFormat
+Preview  Step1. 현재 시간 가져오기.
+ long now = System.currentTimeMillis();   Step2. Date 생성하기
+ Date date = new Date(now);   Step3. 가져오고 싶은 형식으로 가져오기
+ SimpleDateFormat sdf = new SimpleDateFormat(&amp;ldquo;yyyy-MM-dd&amp;rdquo;);
+ String getTime = sdf.format(date);
+   
+Result 
+MainActivity.java
+package charlie.myapplication; import android.support.v7.app.AppCompatActivity; import android.os.Bundle; import android.view.View; import android." />
 
-<meta property="og:image" content="https://kiwinam.com/6/time-1.png">
-
-
+<meta property="og:type" content="article">
+<meta property="og:url" content="http://kiwinam.com">
+<meta property="og:locale" content="ko_KR">
+<meta name="content-language" content="ko" />
 
 <title>
     
@@ -115,7 +132,7 @@ package charlie.myapplication; import android.support.v7.app.AppCompatActivity; 
         <span class="header__right">
             
                 <nav class="menu">
-    <ul class="menu__inner"><li><a href="https://kiwinam.com/about">About</a></li><li><a href="https://kiwinam.com/posts">posts</a></li>
+    <ul class="menu__inner"><li><a href="https://kiwinam.com/about">About</a></li><li><a href="https://kiwinam.com/categories">categories</a></li><li><a href="https://kiwinam.com/posts">posts</a></li>
     </ul>
 </nav>
 

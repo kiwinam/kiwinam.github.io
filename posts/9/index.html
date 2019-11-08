@@ -30,22 +30,41 @@ ItemTouchListener 를 구현해도 됩니다.
 
 2-2. OnItemTouchListener RecyclerItemClickListener.java
 public class RecyclerItemClickListener implements RecyclerView.OnItemTouchListener { private OnItemClickListener mListener; public interface OnItemClickListener { void onItemClick(View view, int position); void onLongItemClick(View view, int position); } GestureDetector mGestureDetector; public RecyclerItemClickListener(Context context, final RecyclerView recyclerView, OnItemClickListener listener) { mListener = listener; mGestureDetector = new GestureDetector(context, new GestureDetector." />
-<meta name="keywords" content="" />
-<meta name="robots" content="noodp" />
+    <meta name="keywords" content="Android, RecyclerView"/>
+
+<meta name="robots" content="index" />
+<meta name="robots" content="follow" />
 <link rel="canonical" href="https://kiwinam.com/posts/9/" />
 
 
-<meta property="og:image" content="https://kiwinam.com/9/9-1.png">
+
+
+<meta property="og:title" content="[안드로이드] RecyclerView [2] OnItemClick 리스너 구현 :: Kiwinam  — Just code it">
 
 
 
 <meta property="og:image" content="https://kiwinam.com/9/9-1.png">
 
 
+<meta name="og:description"
+    content="[안드로이드] RecyclerView [2] OnItemClick 리스너 구현
 
-<meta property="og:image" content="https://kiwinam.com/9/9-1.png">
+RecyclerView 에서는 ListView에서와는 다르게
+ClickListener 를 따로 구현해서 등록해줘야합니다.
+Adapter에서 OnClick 를 구현해줘도 되고 제가 구현한 방법 처럼 따로 클래스를 만들어서
+ItemTouchListener 를 구현해도 됩니다.
 
+1. Result 
+2. Step by Step 2-1. RecyclerView 구현 안드로이드 RecyclerView 의 간단한 구현 방법은 이전 포스팅 글로 대체 하겠습니다.
+[[안드로이드] RecyclerView 간단한 사용법]
 
+2-2. OnItemTouchListener RecyclerItemClickListener.java
+public class RecyclerItemClickListener implements RecyclerView.OnItemTouchListener { private OnItemClickListener mListener; public interface OnItemClickListener { void onItemClick(View view, int position); void onLongItemClick(View view, int position); } GestureDetector mGestureDetector; public RecyclerItemClickListener(Context context, final RecyclerView recyclerView, OnItemClickListener listener) { mListener = listener; mGestureDetector = new GestureDetector(context, new GestureDetector." />
+
+<meta property="og:type" content="article">
+<meta property="og:url" content="http://kiwinam.com">
+<meta property="og:locale" content="ko_KR">
+<meta name="content-language" content="ko" />
 
 <title>
     
@@ -117,7 +136,7 @@ public class RecyclerItemClickListener implements RecyclerView.OnItemTouchListen
         <span class="header__right">
             
                 <nav class="menu">
-    <ul class="menu__inner"><li><a href="https://kiwinam.com/about">About</a></li><li><a href="https://kiwinam.com/posts">posts</a></li>
+    <ul class="menu__inner"><li><a href="https://kiwinam.com/about">About</a></li><li><a href="https://kiwinam.com/categories">categories</a></li><li><a href="https://kiwinam.com/posts">posts</a></li>
     </ul>
 </nav>
 

@@ -20,22 +20,31 @@
     content="[안드로이드] JSON 데이터 주고 받기 1. Result 
 2. Step by step 데이터를 JSON Obejct 로 보내고 받는 방법 2-1. Send Object private void sendObject(){ JSONObject jsonObject = new JSONObject(); try{ jsonObject.put(&amp;quot;nation&amp;quot;, mJsonNationEt.getText().toString()); jsonObject.put(&amp;quot;name&amp;quot;, mJsonNameEt.getText().toString()); jsonObject.put(&amp;quot;address&amp;quot;, mJsonAddressEt.getText().toString()); jsonObject.put(&amp;quot;age&amp;quot;, mJsonAgeEt.getText().toString()); }catch (JSONException e){ e.printStackTrace(); } receiveObject(jsonObject); }  
 2-2. Receive Object private void receiveObject(JSONObject data){ recyclerView.setVisibility(View.GONE); objectResultLo.setVisibility(View.VISIBLE); try{ mReceiveTv.setText(data.toString()); mReceiveNationTv.setText(&amp;quot;nation : &amp;quot;&#43;data.getString(&amp;quot;nation&amp;quot;)); mReceiveNameTv.setText(&amp;quot;name : &amp;quot;&#43;data.getString(&amp;quot;nation&amp;quot;)); mReceiveAddressTv.setText(&amp;quot;address : &amp;quot;&#43;data.getString(&amp;quot;address&amp;quot;)); mReceiveAgeTv." />
-<meta name="keywords" content="" />
-<meta name="robots" content="noodp" />
+    <meta name="keywords" content="Android, JSON"/>
+
+<meta name="robots" content="index" />
+<meta name="robots" content="follow" />
 <link rel="canonical" href="https://kiwinam.com/posts/7/" />
 
 
-<meta property="og:image" content="https://kiwinam.com/7/7-1.png">
+
+
+<meta property="og:title" content="[안드로이드] JSON 데이터 주고 받기 :: Kiwinam  — Just code it">
 
 
 
 <meta property="og:image" content="https://kiwinam.com/7/7-1.png">
 
 
+<meta name="og:description"
+    content="[안드로이드] JSON 데이터 주고 받기 1. Result 
+2. Step by step 데이터를 JSON Obejct 로 보내고 받는 방법 2-1. Send Object private void sendObject(){ JSONObject jsonObject = new JSONObject(); try{ jsonObject.put(&amp;quot;nation&amp;quot;, mJsonNationEt.getText().toString()); jsonObject.put(&amp;quot;name&amp;quot;, mJsonNameEt.getText().toString()); jsonObject.put(&amp;quot;address&amp;quot;, mJsonAddressEt.getText().toString()); jsonObject.put(&amp;quot;age&amp;quot;, mJsonAgeEt.getText().toString()); }catch (JSONException e){ e.printStackTrace(); } receiveObject(jsonObject); }  
+2-2. Receive Object private void receiveObject(JSONObject data){ recyclerView.setVisibility(View.GONE); objectResultLo.setVisibility(View.VISIBLE); try{ mReceiveTv.setText(data.toString()); mReceiveNationTv.setText(&amp;quot;nation : &amp;quot;&#43;data.getString(&amp;quot;nation&amp;quot;)); mReceiveNameTv.setText(&amp;quot;name : &amp;quot;&#43;data.getString(&amp;quot;nation&amp;quot;)); mReceiveAddressTv.setText(&amp;quot;address : &amp;quot;&#43;data.getString(&amp;quot;address&amp;quot;)); mReceiveAgeTv." />
 
-<meta property="og:image" content="https://kiwinam.com/7/7-1.png">
-
-
+<meta property="og:type" content="article">
+<meta property="og:url" content="http://kiwinam.com">
+<meta property="og:locale" content="ko_KR">
+<meta name="content-language" content="ko" />
 
 <title>
     
@@ -107,7 +116,7 @@
         <span class="header__right">
             
                 <nav class="menu">
-    <ul class="menu__inner"><li><a href="https://kiwinam.com/about">About</a></li><li><a href="https://kiwinam.com/posts">posts</a></li>
+    <ul class="menu__inner"><li><a href="https://kiwinam.com/about">About</a></li><li><a href="https://kiwinam.com/categories">categories</a></li><li><a href="https://kiwinam.com/posts">posts</a></li>
     </ul>
 </nav>
 
@@ -481,7 +490,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
                     
                         <span class="button next">
-                            <a href="https://kiwinam.com/posts/6/">
+                            <a href="https://kiwinam.com/posts/%EC%95%88%EB%93%9C%EB%A1%9C%EC%9D%B4%EB%93%9C-%ED%98%84%EC%9E%AC-%EC%8B%9C%EA%B0%84-%ED%98%84%EC%9E%AC-%EB%82%A0%EC%A7%9C-%EA%B5%AC%ED%95%98%EA%B8%B0-simpledateformat/">
                                 <span class="button__text">[안드로이드] 현재 시간, 현재 날짜 구하기 (SimpleDateFormat)</span>
                                 <span class="button__icon">→</span>
                             </a>
