@@ -5,7 +5,7 @@
     <link>https://kiwinam.com/tags/json/</link>
     <description>Recent content in JSON on Kiwinam</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>ko-kr</language>
+    <language>ko</language>
     <lastBuildDate>Wed, 03 May 2017 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://kiwinam.com/tags/json/index.xml" rel="self" type="application/rss+xml" />
@@ -13,10 +13,10 @@
     
     <item>
       <title>[Java] JSP - JSON 데이터 주고 받기 - JSONParser</title>
-      <link>https://kiwinam.com/posts/11/</link>
+      <link>https://kiwinam.com/posts/jsp-json-%EB%8D%B0%EC%9D%B4%ED%84%B0-%EC%A3%BC%EA%B3%A0-%EB%B0%9B%EA%B8%B0-jsonparser/</link>
       <pubDate>Wed, 03 May 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://kiwinam.com/posts/11/</guid>
+      <guid>https://kiwinam.com/posts/jsp-json-%EB%8D%B0%EC%9D%B4%ED%84%B0-%EC%A3%BC%EA%B3%A0-%EB%B0%9B%EA%B8%B0-jsonparser/</guid>
       <description>[Java] JSP - JSON 데이터 주고 받기 - JSONParser
 
 json-simple 라이브러리를 이용하여
@@ -28,10 +28,10 @@ Step1 . JSON 데이터 생성 (Android) JSONObject sendObject = new JSONObject()
     
     <item>
       <title>[안드로이드] JSON 데이터 주고 받기</title>
-      <link>https://kiwinam.com/posts/7/</link>
+      <link>https://kiwinam.com/posts/%EC%95%88%EB%93%9C%EB%A1%9C%EC%9D%B4%EB%93%9C-json-%EB%8D%B0%EC%9D%B4%ED%84%B0-%EC%A3%BC%EA%B3%A0-%EB%B0%9B%EA%B8%B0/</link>
       <pubDate>Mon, 24 Apr 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://kiwinam.com/posts/7/</guid>
+      <guid>https://kiwinam.com/posts/%EC%95%88%EB%93%9C%EB%A1%9C%EC%9D%B4%EB%93%9C-json-%EB%8D%B0%EC%9D%B4%ED%84%B0-%EC%A3%BC%EA%B3%A0-%EB%B0%9B%EA%B8%B0/</guid>
       <description>[안드로이드] JSON 데이터 주고 받기 1. Result 
 2. Step by step 데이터를 JSON Obejct 로 보내고 받는 방법 2-1. Send Object private void sendObject(){ JSONObject jsonObject = new JSONObject(); try{ jsonObject.put(&amp;quot;nation&amp;quot;, mJsonNationEt.getText().toString()); jsonObject.put(&amp;quot;name&amp;quot;, mJsonNameEt.getText().toString()); jsonObject.put(&amp;quot;address&amp;quot;, mJsonAddressEt.getText().toString()); jsonObject.put(&amp;quot;age&amp;quot;, mJsonAgeEt.getText().toString()); }catch (JSONException e){ e.printStackTrace(); } receiveObject(jsonObject); }  
 2-2. Receive Object private void receiveObject(JSONObject data){ recyclerView.setVisibility(View.GONE); objectResultLo.setVisibility(View.VISIBLE); try{ mReceiveTv.setText(data.toString()); mReceiveNationTv.setText(&amp;quot;nation : &amp;quot;+data.getString(&amp;quot;nation&amp;quot;)); mReceiveNameTv.setText(&amp;quot;name : &amp;quot;+data.getString(&amp;quot;nation&amp;quot;)); mReceiveAddressTv.setText(&amp;quot;address : &amp;quot;+data.getString(&amp;quot;address&amp;quot;)); mReceiveAgeTv.</description>

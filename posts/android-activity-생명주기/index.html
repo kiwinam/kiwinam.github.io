@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-99327236-2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-99327236-2');
+</script>
+
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="author"
+    content="키위남">
+<meta name="description"
+    content="액티비티 (Activity) 생명주기 액티비티는 액티브 상태, 포즈 상태, 스탑 상태 이렇게 3가지의 기본 상태를 가지는데요.
+간단하게 3가지의 기본 상태에 대해 설명해 드리겠습니다.
+ 액티브(Active) 상태
+ 화면 맨 앞으로 나와 사용자의 액션 (터치나 데이터 입력)과 상호 작용하는 액티비티.  포즈(Pause) 상태
+ 다른 액티비티로 가린 상태이지만 액티비티 일부가 사용자에게 여전히 보이는 상태.  스탑(Stop) 상태
+ 다른 액티비티에 완전히 가려져 사용자에게 안보이는 상태.
+ 이 상태도 살아 있는 상태로 액티비티를 유지하기 위한 정보를 유지." />
+    <meta name="keywords" content="Android, Activity, LifeCycle"/>
+
+<meta name="robots" content="index" />
+<meta name="robots" content="follow" />
+<link rel="canonical" href="https://kiwinam.com/posts/android-activity-%EC%83%9D%EB%AA%85%EC%A3%BC%EA%B8%B0/" />
+
+
+
+
+<meta property="og:title" content="[Android] Activity 생명주기 (Activity LifeCycle) :: Kiwinam  — Just code it">
+
+
+
+<meta property="og:image" content="https://kiwinam.com/img/2/activity_life_cycle.png">
+
+
+<meta name="og:description"
+    content="액티비티 (Activity) 생명주기 액티비티는 액티브 상태, 포즈 상태, 스탑 상태 이렇게 3가지의 기본 상태를 가지는데요.
+간단하게 3가지의 기본 상태에 대해 설명해 드리겠습니다.
+ 액티브(Active) 상태
+ 화면 맨 앞으로 나와 사용자의 액션 (터치나 데이터 입력)과 상호 작용하는 액티비티.  포즈(Pause) 상태
+ 다른 액티비티로 가린 상태이지만 액티비티 일부가 사용자에게 여전히 보이는 상태.  스탑(Stop) 상태
+ 다른 액티비티에 완전히 가려져 사용자에게 안보이는 상태.
+ 이 상태도 살아 있는 상태로 액티비티를 유지하기 위한 정보를 유지." />
+
+<meta property="og:type" content="article">
+<meta property="og:url" content="http://kiwinam.com">
+<meta property="og:locale" content="ko_KR">
+<meta name="content-language" content="ko" />
+
+<title>
+    
+    [Android] Activity 생명주기 (Activity LifeCycle) :: Kiwinam  — Just code it
+    
+</title>
+
+
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.2.1/css/flag-icon.min.css" rel="stylesheet"
+    type="text/css">
+
+
+
+<link rel="stylesheet" href="/main.min.2f0d18b84270567c723bff340b09ab08db3a7634237cd9667d052eb6b14669b8.css">
+
+
+
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#252627">
+<link rel="shortcut icon" href="/favicon.ico">
+<meta name="theme-color" content="#252627"><meta itemprop="name" content="[Android] Activity 생명주기 (Activity LifeCycle)">
+<meta itemprop="description" content="안드로이드에 액티비티 생명 주기는 3가지의 기본 상태를 가집니다.">
+
+
+<meta itemprop="datePublished" content="2017-02-25T00:00:00&#43;00:00" />
+<meta itemprop="dateModified" content="2017-02-25T00:00:00&#43;00:00" />
+<meta itemprop="wordCount" content="311">
+
+
+
+<meta itemprop="keywords" content="Android,Activity,LifeCycle," />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="[Android] Activity 생명주기 (Activity LifeCycle)"/>
+<meta name="twitter:description" content="안드로이드에 액티비티 생명 주기는 3가지의 기본 상태를 가집니다."/>
+
+
+
+<meta property="article:section" content="Android" />
+
+<meta property="article:published_time" content="2017-02-25 00:00:00 &#43;0000 UTC" />
+
+
+
+
+
+
+
+    </head>
+
+    <body class="dark-theme">
+        <div class="container">
+            <header class="header">
+    <span class="header__inner">
+        <a href="/" style="text-decoration: none;">
+    <div class="logo">
+        
+            <span class="logo__mark">></span>
+            <span class="logo__text">cd /home/kiwinam</span>
+            <span class="logo__cursor" style=""></span>
+        
+    </div>
+</a>
+
+
+        <span class="header__right">
+            
+                <nav class="menu">
+    <ul class="menu__inner"><li><a href="https://kiwinam.com/about">About</a></li><li><a href="https://kiwinam.com/categories">categories</a></li><li><a href="https://kiwinam.com/posts">posts</a></li>
+    </ul>
+</nav>
+
+                <span class="menu-trigger">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M0 0h24v24H0z" fill="none"/>
+                        <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+                    </svg>
+                </span>
+            
+
+            <span class="theme-toggle unselectable"><svg class="theme-toggler" width="24" height="24" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M22 41C32.4934 41 41 32.4934 41 22C41 11.5066 32.4934 3 22
+  3C11.5066 3 3 11.5066 3 22C3 32.4934 11.5066 41 22 41ZM7 22C7
+  13.7157 13.7157 7 22 7V37C13.7157 37 7 30.2843 7 22Z"/>
+</svg>
+</span>
+        </span>
+    </span>
+</header>
+
+
+            <div class="content">
+                
+    <main class="post">
+
+        <div class="post-info">
+            <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-clock"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>2 minutes
+
+            
+
+            </p>
+        </div>
+
+        <article>
+            <h1 class="post-title"><a href="https://kiwinam.com/posts/android-activity-%EC%83%9D%EB%AA%85%EC%A3%BC%EA%B8%B0/">[Android] Activity 생명주기 (Activity LifeCycle)</a></h1>
+
+            
+
+            <div class="post-content">
+                
+
+<hr />
+
+<h3 id="액티비티-activity-생명주기">액티비티 (Activity) 생명주기</h3>
+
+<p>액티비티는 액티브 상태, 포즈 상태, 스탑 상태 이렇게 3가지의 기본 상태를 가지는데요.</p>
+
+<p>간단하게 3가지의 기본 상태에 대해 설명해 드리겠습니다.</p>
+
+<ol>
+<li><p>액티브(Active) 상태</p>
+
+<ul>
+<li>화면 맨 앞으로 나와 사용자의 액션 (터치나 데이터 입력)과 상호 작용하는 액티비티.</li>
+</ul></li>
+
+<li><p>포즈(Pause) 상태</p>
+
+<ul>
+<li>다른 액티비티로 가린 상태이지만 액티비티 일부가 사용자에게 여전히 보이는 상태.</li>
+</ul></li>
+
+<li><p>스탑(Stop) 상태</p>
+
+<ul>
+<li><p>다른 액티비티에 완전히 가려져 사용자에게 안보이는 상태.</p></li>
+
+<li><p>이 상태도 살아 있는 상태로 액티비티를 유지하기 위한 정보를 유지.</p></li>
+</ul></li>
+</ol>
+
+<p>포즈 상태와 스탑 상태는 메모리가 부족한 경우 시스템에 의해서 종료될 수 있고,</p>
+
+<p>포즈 상태보다 스탑 상태가 종료될 확률이 더 높습니다.</p>
+
+<p>만약 사용자 시스템에 의해서 종료된 액티비티를 다시 요청한다면 시스템은 액티비티의 이전 상태를 복원시켜 재 시작 합니다.</p>
+
+<p><img src="/img/2/activity_life_cycle.png" alt="Android activity life cycle" /></p>
+
+<ul>
+<li><p><code>onCreate()</code></p>
+
+<p>액티비티가 처음 생성될 때 호출됩니다. 보통 해당 메서드에서는 초기화 작업을 수행합니다.</p>
+
+<p>뷰 생성이나 리스트에 데이터를 바인딩하는 동작 등을 수행합니다.</p>
+
+<p>이 메서드는 Bundle 객체를 파라미터로 받는데, 객체는 액티비티의 이전 상태 정보를 갖습니다. 그래서 액티비티가 다른 액티비티에 가렸다가 다시 앞으로 나와도 이전 상태를 유지할 수 있습니다.</p></li>
+</ul>
+
+<p><br/></p>
+
+<ul>
+<li><p><code>onRestart()</code></p>
+
+<p>액티비티가 스탑(Stop) 되었다가 다시 시작될 때 호출됩니다.</p></li>
+</ul>
+
+<p><br/></p>
+
+<ul>
+<li><p><code>onStart()</code></p>
+
+<p>액티비티가 사용자에게 보여지기 전에 호출됩니다.</p></li>
+</ul>
+
+<p><br/></p>
+
+<ul>
+<li><p><code>onResume()</code></p>
+
+<p>사용자와 상호 작용하기 전에 호출됩니다. 이 시점은 액티비티가 화면의 가장 위로 올라온 상태입니다.</p></li>
+</ul>
+
+<p><br/></p>
+
+<ul>
+<li><p><code>onPause()</code></p>
+
+<p>시스템이 다른 액티비티를 실행시키려고 할 때 호출됩니다.</p>
+
+<p>이 메서드에서는 데이터 변화를 저장하거나 애니메이션과 같이 CPU가 지속적으로 일을 처리해야 하는 작업을 중단합니다.</p>
+
+<p>해당 메서드가 종료되어야 다음 액티비티가 실행되므로 처리 시간을 짧게 하는 것이 좋습니다.</p></li>
+</ul>
+
+<p><br/></p>
+
+<ul>
+<li><p><code>onStop()</code></p>
+
+<p>사용자에게 더 이상 액티비티가 보이지 않게 되었을 때 호출됩니다.</p>
+
+<p>액티비티가 종료되기 전이나 다른 액티비티에 의해 액티비티가 전부 가려질 때 호출됩니다.</p></li>
+</ul>
+
+<p><br/></p>
+
+<ul>
+<li><p><code>onDestroy()</code></p>
+
+<p>액티비티가 소멸되기 전에 호출됩니다. 액티비티 객체가 소멸되는 것은 액티비티가 종료되거나 시스템이 메모리 확보를 위해 일시적으로 객체를 소멸시킬 때 일어납니다.</p></li>
+</ul>
+
+<p><br/><br/></p>
+
+<p>이러한 메서드들 중에서 <code>onPause()</code>, <code>onStop()</code>, <code>onDestroy()</code> 는 <em>킬러블(Killable)</em> 메서드입니다.</p>
+
+<p>킬러블(Killable) 메서드는 메서드가 실행 중에 시스템의 자원이 부족한 상황이 되면 액티비티를 강제 종료 시킬 수 있는 상태의 메서입니다.</p>
+
+<p>물론, 실행중인 메서드는 끝까지 실행하고, 리턴 후에 액티비티를 종료시킬 수 있습니다.</p>
+
+<p>이 중 <code>onPause()</code> 메서드만 액티비티 종료 전 호출되는 것이 보장됩니다.</p>
+
+<p>이 세 개의 메서드를 제외한 나머지는 시스템이 액티비티를 강제 종료하는 것에 보호됩니다.</p>
+
+            </div>
+        </article>
+
+        <hr />
+
+        <div class="post-info">
+                <p>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-tag meta-icon"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7" y2="7"></line></svg><span class="tag"><a href="https://kiwinam.com/tags/android">Android</a></span><span class="tag"><a href="https://kiwinam.com/tags/activity">Activity</a></span><span class="tag"><a href="https://kiwinam.com/tags/lifecycle">LifeCycle</a></span>
+                </p>
+
+            <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>311 Words</p>
+
+            <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-calendar"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>2017-02-25 09:00 &#43;0900</p>
+        </div>
+
+        
+            <div class="pagination">
+                <div class="pagination__title">
+                    <span class="pagination__title-h">Read other posts</span>
+                    <hr />
+                </div>
+
+                <div class="pagination__buttons">
+                    
+                        <span class="button previous">
+                            <a href="https://kiwinam.com/posts/%EC%95%88%EB%93%9C%EB%A1%9C%EC%9D%B4%EB%93%9C-%EC%95%88%EB%93%9C%EB%A1%9C%EC%9D%B4%EB%93%9C-%ED%94%8C%EB%9E%AB%ED%8F%BC%EC%9D%98-%ED%8A%B9%EC%A7%95/">
+                                <span class="button__icon">←</span>
+                                <span class="button__text">[안드로이드] 안드로이드 플랫폼의 특징</span>
+                            </a>
+                        </span>
+                    
+
+                    
+                        <span class="button next">
+                            <a href="https://kiwinam.com/posts/%EC%95%88%EB%93%9C%EB%A1%9C%EC%9D%B4%EB%93%9C-%EC%B5%9C%EC%B4%88-%EC%8B%A4%ED%96%89-%ED%99%95%EC%9D%B8-%EB%B2%95-sharedpreferences/">
+                                <span class="button__text">[안드로이드] 최초 실행 확인 법 - SharedPreferences</span>
+                                <span class="button__icon">→</span>
+                            </a>
+                        </span>
+                    
+                </div>
+            </div>
+        
+
+        
+    </main>
+
+            </div>
+
+            
+                <footer class="footer">
+    <div class="footer__inner">
+        <div class="footer__content">
+            <span>&copy; 2019</span>
+            
+            <span></span>
+            <span> <a href="https://kiwinam.com/posts/index.xml" target="_blank" title="rss"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-rss"><path d="M4 11a9 9 0 0 1 9 9"></path><path d="M4 4a16 16 0 0 1 16 16"></path><circle cx="5" cy="19" r="1"></circle></svg></a></span>
+        </div>
+    </div>
+    <div class="footer__inner">
+        <div class="footer__content">
+
+        </div>
+    </div>
+    <div class="footer__inner">
+        <div class="footer__content">
+            <span>Powered by <a href="http://gohugo.io">Hugo</a></span>
+            <span>Made with &#10084; by <a href="https://github.com/rhazdon">rhazdon</a></span>
+        </div>
+    </div>
+</footer>
+
+            
+        </div>
+
+        
+
+
+
+
+<script type="text/javascript" src="/bundle.min.4c3fb12a087ceed4a52cb5d57068a9795c7069617a01ca70f788052ad66e1791779e6c72686e1dc0ca13dc03b0203204b6566bb0dd1ee80de2b7ff4d8fe53db2.js" integrity="sha512-TD&#43;xKgh87tSlLLXVcGipeVxwaWF6Acpw94gFKtZuF5F3nmxyaG4dwMoT3AOwIDIEtlZrsN0e6A3it/9Nj&#43;U9sg=="></script>
+
+
+
+    </body>
+</html>

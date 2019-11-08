@@ -5,7 +5,7 @@
     <link>https://kiwinam.com/tags/%EC%97%90%EB%9F%AC/</link>
     <description>Recent content in 에러 on Kiwinam</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>ko-kr</language>
+    <language>ko</language>
     <lastBuildDate>Thu, 23 Nov 2017 10:35:56 +0900</lastBuildDate>
     
 	<atom:link href="https://kiwinam.com/tags/%EC%97%90%EB%9F%AC/index.xml" rel="self" type="application/rss+xml" />
@@ -13,10 +13,10 @@
     
     <item>
       <title>[안드로이드] - android.content.res.Resources$NotFoundException: String resource ID #0x1</title>
-      <link>https://kiwinam.com/posts/19/</link>
+      <link>https://kiwinam.com/posts/%EC%95%88%EB%93%9C%EB%A1%9C%EC%9D%B4%EB%93%9C-androidcontent.res/</link>
       <pubDate>Thu, 23 Nov 2017 10:35:56 +0900</pubDate>
       
-      <guid>https://kiwinam.com/posts/19/</guid>
+      <guid>https://kiwinam.com/posts/%EC%95%88%EB%93%9C%EB%A1%9C%EC%9D%B4%EB%93%9C-androidcontent.res/</guid>
       <description>[안드로이드] - android.content.res.Resources$NotFoundException: String resource ID #0x1
 FATAL EXCEPTION: main Process: , PID: 4012 android.content.res.Resources$NotFoundException: String resource ID #0x9  안드로이드 개발 중
 android.content.res.Resources$NotFoundException: String resource ID #0x1
@@ -29,10 +29,10 @@ TextView 에 setText 메소드를 사용할 때 Int 타입의 데이터를 넣�
     
     <item>
       <title>[안드로이드] 카카오톡 공유 기능 , 카카오 링크 API 사용법</title>
-      <link>https://kiwinam.com/posts/20/</link>
+      <link>https://kiwinam.com/posts/%EC%95%88%EB%93%9C%EB%A1%9C%EC%9D%B4%EB%93%9C-%EC%B9%B4%EC%B9%B4%EC%98%A4%ED%86%A1-%EA%B3%B5%EC%9C%A0-%EA%B8%B0%EB%88%99-%EC%B9%B4%EC%B9%B4%EC%98%A4%EB%A7%81%ED%81%AC-api-%EC%82%AC%EC%9A%A9%EB%B2%95/</link>
       <pubDate>Thu, 23 Nov 2017 10:35:56 +0900</pubDate>
       
-      <guid>https://kiwinam.com/posts/20/</guid>
+      <guid>https://kiwinam.com/posts/%EC%95%88%EB%93%9C%EB%A1%9C%EC%9D%B4%EB%93%9C-%EC%B9%B4%EC%B9%B4%EC%98%A4%ED%86%A1-%EA%B3%B5%EC%9C%A0-%EA%B8%B0%EB%88%99-%EC%B9%B4%EC%B9%B4%EC%98%A4%EB%A7%81%ED%81%AC-api-%EC%82%AC%EC%9A%A9%EB%B2%95/</guid>
       <description>[안드로이드] 카카오톡 공유 기능 , 카카오 링크 API 사용법
 어플리케이션 기획 중에 콘텐츠 공유 기능이 있는 경우가 많습니다.
 공유할 수 있는 수단이 다양하게 있지만 대한민국에서 카카오 플랫폼이 가장 넓은 플랫폼이라 할 수 있죠.

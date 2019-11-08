@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-99327236-2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-99327236-2');
+</script>
+
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="author"
+    content="키위남">
+<meta name="description"
+    content="[안드로이드] Bottom sheet dialog 사용하기
+머티리얼 디자인에서 바텀 시트는 두 가지의 종류가 있습니다
+영구 바닥 시트
+모달 바텀 시트 (우)
+
+이번 예제에서 만들어볼 것은 모달 바텀 시트입니다.
+모달 바텀 시트는 기존의 콘텐츠와 상호 작용 하거나 다이얼로그의 대체로 사용됩니다.
+먼저 결과물입니다.
+
+1. Result 
+2. Step by Step 2-1. 라이브러리 추가  BottomSheet 를 사용하기 위해선 Design 라이브러리가 필요합니다.  build.gradle (app)
+compile &#39;com.android.support:design:26.&#43;&#39;  
+2-2. 바텀 시트 다이얼로그 레이아웃 생성  다이얼로그 레이아웃은 구성하기 나름입니다." />
+    <meta name="keywords" content="bottom sheet, bottom sheet dialog, 머티리얼 디자인, 바텀 시트, 안드로이드, android"/>
+
+<meta name="robots" content="index" />
+<meta name="robots" content="follow" />
+<link rel="canonical" href="https://kiwinam.com/posts/%EC%95%88%EB%93%9C%EB%A1%9C%EC%9D%B4%EB%93%9C-bottom-sheet-dialog-%EC%82%AC%EC%9A%A9%ED%95%98%EA%B8%B0/" />
+
+
+
+
+<meta property="og:title" content="[안드로이드] Bottom sheet dialog 사용하기 :: Kiwinam  — Just code it">
+
+
+
+<meta property="og:image" content="https://kiwinam.com/img/18/18-1.png">
+
+
+<meta name="og:description"
+    content="[안드로이드] Bottom sheet dialog 사용하기
+머티리얼 디자인에서 바텀 시트는 두 가지의 종류가 있습니다
+영구 바닥 시트
+모달 바텀 시트 (우)
+
+이번 예제에서 만들어볼 것은 모달 바텀 시트입니다.
+모달 바텀 시트는 기존의 콘텐츠와 상호 작용 하거나 다이얼로그의 대체로 사용됩니다.
+먼저 결과물입니다.
+
+1. Result 
+2. Step by Step 2-1. 라이브러리 추가  BottomSheet 를 사용하기 위해선 Design 라이브러리가 필요합니다.  build.gradle (app)
+compile &#39;com.android.support:design:26.&#43;&#39;  
+2-2. 바텀 시트 다이얼로그 레이아웃 생성  다이얼로그 레이아웃은 구성하기 나름입니다." />
+
+<meta property="og:type" content="article">
+<meta property="og:url" content="http://kiwinam.com">
+<meta property="og:locale" content="ko_KR">
+<meta name="content-language" content="ko" />
+
+<title>
+    
+    [안드로이드] Bottom sheet dialog 사용하기 :: Kiwinam  — Just code it
+    
+</title>
+
+
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.2.1/css/flag-icon.min.css" rel="stylesheet"
+    type="text/css">
+
+
+
+<link rel="stylesheet" href="/main.min.2f0d18b84270567c723bff340b09ab08db3a7634237cd9667d052eb6b14669b8.css">
+
+
+
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#252627">
+<link rel="shortcut icon" href="/favicon.ico">
+<meta name="theme-color" content="#252627"><meta itemprop="name" content="[안드로이드] Bottom sheet dialog 사용하기">
+<meta itemprop="description" content="머티리얼 디자인의 바텀 시트를 만들어보겠습니다.">
+
+
+<meta itemprop="datePublished" content="2017-11-22T10:35:56&#43;09:00" />
+<meta itemprop="dateModified" content="2017-11-22T10:35:56&#43;09:00" />
+<meta itemprop="wordCount" content="294">
+
+
+
+<meta itemprop="keywords" content="bottom sheet,bottom sheet dialog,머티리얼 디자인,바텀 시트,안드로이드,android," />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="[안드로이드] Bottom sheet dialog 사용하기"/>
+<meta name="twitter:description" content="머티리얼 디자인의 바텀 시트를 만들어보겠습니다."/>
+
+
+
+<meta property="article:section" content="Android" />
+
+<meta property="article:published_time" content="2017-11-22 10:35:56 &#43;0900 KST" />
+
+
+
+
+
+
+
+    </head>
+
+    <body class="dark-theme">
+        <div class="container">
+            <header class="header">
+    <span class="header__inner">
+        <a href="/" style="text-decoration: none;">
+    <div class="logo">
+        
+            <span class="logo__mark">></span>
+            <span class="logo__text">cd /home/kiwinam</span>
+            <span class="logo__cursor" style=""></span>
+        
+    </div>
+</a>
+
+
+        <span class="header__right">
+            
+                <nav class="menu">
+    <ul class="menu__inner"><li><a href="https://kiwinam.com/about">About</a></li><li><a href="https://kiwinam.com/categories">categories</a></li><li><a href="https://kiwinam.com/posts">posts</a></li>
+    </ul>
+</nav>
+
+                <span class="menu-trigger">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M0 0h24v24H0z" fill="none"/>
+                        <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+                    </svg>
+                </span>
+            
+
+            <span class="theme-toggle unselectable"><svg class="theme-toggler" width="24" height="24" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M22 41C32.4934 41 41 32.4934 41 22C41 11.5066 32.4934 3 22
+  3C11.5066 3 3 11.5066 3 22C3 32.4934 11.5066 41 22 41ZM7 22C7
+  13.7157 13.7157 7 22 7V37C13.7157 37 7 30.2843 7 22Z"/>
+</svg>
+</span>
+        </span>
+    </span>
+</header>
+
+
+            <div class="content">
+                
+    <main class="post">
+
+        <div class="post-info">
+            <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-clock"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>2 minutes
+
+            
+
+            </p>
+        </div>
+
+        <article>
+            <h1 class="post-title"><a href="https://kiwinam.com/posts/%EC%95%88%EB%93%9C%EB%A1%9C%EC%9D%B4%EB%93%9C-bottom-sheet-dialog-%EC%82%AC%EC%9A%A9%ED%95%98%EA%B8%B0/">[안드로이드] Bottom sheet dialog 사용하기</a></h1>
+
+            
+
+            <div class="post-content">
+                
+
+<hr />
+
+<p>[안드로이드] Bottom sheet dialog 사용하기</p>
+
+<hr />
+
+<p>머티리얼 디자인에서 바텀 시트는 두 가지의 종류가 있습니다</p>
+
+<p><img src="/img/18/18-1.png" alt="영구 바닥 시트" /></p>
+
+<p>영구 바닥 시트</p>
+
+<p><img src="/img/18/18-2.png" alt="모달 바텀 시트" /></p>
+
+<p>모달 바텀 시트 (우)</p>
+
+<p><br/></p>
+
+<p>이번 예제에서 만들어볼 것은 모달 바텀 시트입니다.</p>
+
+<p>모달 바텀 시트는 기존의 콘텐츠와 상호 작용 하거나 다이얼로그의 대체로 사용됩니다.</p>
+
+<p>먼저 결과물입니다.</p>
+
+<p><br/></p>
+
+<h3 id="1-result">1. Result</h3>
+
+<p><img src="/img/18/18-3.gif" alt="바텀 시트 결과물" /></p>
+
+<p><br/></p>
+
+<h3 id="2-step-by-step">2. Step by Step</h3>
+
+<h4 id="2-1-라이브러리-추가">2-1. 라이브러리 추가</h4>
+
+<ul>
+<li>BottomSheet 를 사용하기 위해선 Design 라이브러리가 필요합니다.</li>
+</ul>
+
+<p><code>build.gradle (app)</code></p>
+
+<pre><code>compile 'com.android.support:design:26.+'
+</code></pre>
+
+<p><br/></p>
+
+<h4 id="2-2-바텀-시트-다이얼로그-레이아웃-생성">2-2. 바텀 시트 다이얼로그 레이아웃 생성</h4>
+
+<ul>
+<li>다이얼로그 레이아웃은 구성하기 나름입니다. 혹시 필요하신 분은 GitHub 에 전체 소스 올릴 예정이니 확인해주시면 됩니다.</li>
+</ul>
+
+<p><br/></p>
+
+<h4 id="2-3-바텀-시트-다이얼로그-클래스-파일-작성">2-3. 바텀 시트 다이얼로그 클래스 파일 작성</h4>
+
+<ul>
+<li><p>바텀 시트 다이얼로그를 만들기 위해 BottomSheetDialogFragment  를 상속 받아 클래스 파일을 작성하겠습니다. 다른 클래스 파일과 크게 다르지 않습니다.</p>
+
+<pre><code class="language-java">public class BottomSheetDialog extends BottomSheetDialogFragment implements View.OnClickListener{
+
+public static BottomSheetDialog getInstance() { return new BottomSheetDialog(); }
+
+private LinearLayout msgLo;
+private LinearLayout emailLo;
+private LinearLayout cloudLo;
+private LinearLayout bluetoothLo;
+
+@Nullable
+@Override
+public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+    View view = inflater.inflate(R.layout.bottom_sheet_dialog, container,false);
+    msgLo = (LinearLayout) view.findViewById(R.id.msgLo);
+    emailLo = (LinearLayout) view.findViewById(R.id.emailLo);
+    cloudLo = (LinearLayout) view.findViewById(R.id.cloudLo);
+    bluetoothLo = (LinearLayout) view.findViewById(R.id.bluetoothLo);
+
+    msgLo.setOnClickListener(this);
+    emailLo.setOnClickListener(this);
+    cloudLo.setOnClickListener(this);
+    bluetoothLo.setOnClickListener(this);
+    return view;
+}
+
+@Override
+public void onClick(View view) {
+    switch (view.getId()){
+        case R.id.msgLo:
+            Toast.makeText(getContext(),&quot;Message&quot;,Toast.LENGTH_SHORT).show();
+            break;
+        case R.id.emailLo:
+            Toast.makeText(getContext(),&quot;Email&quot;,Toast.LENGTH_SHORT).show();
+            break;
+        case R.id.cloudLo:
+            Toast.makeText(getContext(),&quot;Cloud&quot;,Toast.LENGTH_SHORT).show();
+            break;
+        case R.id.bluetoothLo:
+            Toast.makeText(getContext(),&quot;Bluetooth&quot;,Toast.LENGTH_SHORT).show();
+            break;
+    }
+    dismiss();
+}
+}
+</code></pre></li>
+
+<li><p>항목들이 클릭되면 토스트 메시지를 띄우고 사라지는 간단한 내용입니다.</p></li>
+</ul>
+
+<p><br/></p>
+
+<h4 id="2-3-메인-클래스-작성">2-3. 메인 클래스 작성</h4>
+
+<ul>
+<li><p>마지막으로 메인 클래스에서 다이얼로그를 호출해주기만 하면 됩니다. 예제에선 FAB 클릭하면 바텀 시트가 올라오도록 하였습니다.</p>
+
+<pre><code class="language-java">public class MainActivity extends AppCompatActivity {
+
+@Override
+protected void onCreate(Bundle savedInstanceState) {
+    super.onCreate(savedInstanceState);
+    setContentView(R.layout.activity_main);
+    Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+    setSupportActionBar(toolbar);
+    setTitle(&quot;Bottom Sheet Example&quot;);
+    FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+    fab.setOnClickListener(new View.OnClickListener() {
+        @Override
+        public void onClick(View view) {
+            BottomSheetDialog bottomSheetDialog = BottomSheetDialog.getInstance();
+            bottomSheetDialog.show(getSupportFragmentManager(),&quot;bottomSheet&quot;);
+        }
+    });
+}
+
+}
+</code></pre></li>
+
+<li><p>FAB 가 클릭 될 대 바텀 시트 다이얼로그를 생성해 보여줍니다.</p></li>
+</ul>
+
+<p><br/></p>
+
+<h3 id="3-source-code">3. Source Code</h3>
+
+<p>전체 소스 코드는 <a href="https://github.com/kiwinam/BottomSheetExam" target="_blank">Github</a> 에 연동해놨습니다.</p>
+
+<p><br/></p>
+
+            </div>
+        </article>
+
+        <hr />
+
+        <div class="post-info">
+                <p>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-tag meta-icon"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7" y2="7"></line></svg><span class="tag"><a href="https://kiwinam.com/tags/bottom-sheet">bottom sheet</a></span><span class="tag"><a href="https://kiwinam.com/tags/bottom-sheet-dialog">bottom sheet dialog</a></span><span class="tag"><a href="https://kiwinam.com/tags/%EB%A8%B8%ED%8B%B0%EB%A6%AC%EC%96%BC-%EB%94%94%EC%9E%90%EC%9D%B8">머티리얼 디자인</a></span><span class="tag"><a href="https://kiwinam.com/tags/%EB%B0%94%ED%85%80-%EC%8B%9C%ED%8A%B8">바텀 시트</a></span><span class="tag"><a href="https://kiwinam.com/tags/%EC%95%88%EB%93%9C%EB%A1%9C%EC%9D%B4%EB%93%9C">안드로이드</a></span><span class="tag"><a href="https://kiwinam.com/tags/android">android</a></span>
+                </p>
+
+            <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>294 Words</p>
+
+            <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-calendar"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>2017-11-22 10:35 &#43;0900</p>
+        </div>
+
+        
+            <div class="pagination">
+                <div class="pagination__title">
+                    <span class="pagination__title-h">Read other posts</span>
+                    <hr />
+                </div>
+
+                <div class="pagination__buttons">
+                    
+                        <span class="button previous">
+                            <a href="https://kiwinam.com/posts/%EC%95%88%EB%93%9C%EB%A1%9C%EC%9D%B4%EB%93%9C-%EC%B9%B4%EC%B9%B4%EC%98%A4%ED%86%A1-%EA%B3%B5%EC%9C%A0-%EA%B8%B0%EB%88%99-%EC%B9%B4%EC%B9%B4%EC%98%A4%EB%A7%81%ED%81%AC-api-%EC%82%AC%EC%9A%A9%EB%B2%95/">
+                                <span class="button__icon">←</span>
+                                <span class="button__text">[안드로이드] 카카오톡 공유 기능 , 카카오 링크 API 사용법</span>
+                            </a>
+                        </span>
+                    
+
+                    
+                        <span class="button next">
+                            <a href="https://kiwinam.com/posts/%EC%95%88%EB%93%9C%EB%A1%9C%EC%9D%B4%EB%93%9C-edittext-%ED%99%94%ED%8F%90-%EB%8B%A8%EC%9C%84-%ED%91%9C%EC%8B%9C-%EC%84%B8%EC%9E%90%EB%A6%AC-%EC%BD%A4%EB%A7%88/">
+                                <span class="button__text">[안드로이드] EditText 화폐 단위 표시 (세자리 콤마)</span>
+                                <span class="button__icon">→</span>
+                            </a>
+                        </span>
+                    
+                </div>
+            </div>
+        
+
+        
+    </main>
+
+            </div>
+
+            
+                <footer class="footer">
+    <div class="footer__inner">
+        <div class="footer__content">
+            <span>&copy; 2019</span>
+            
+            <span></span>
+            <span> <a href="https://kiwinam.com/posts/index.xml" target="_blank" title="rss"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-rss"><path d="M4 11a9 9 0 0 1 9 9"></path><path d="M4 4a16 16 0 0 1 16 16"></path><circle cx="5" cy="19" r="1"></circle></svg></a></span>
+        </div>
+    </div>
+    <div class="footer__inner">
+        <div class="footer__content">
+
+        </div>
+    </div>
+    <div class="footer__inner">
+        <div class="footer__content">
+            <span>Powered by <a href="http://gohugo.io">Hugo</a></span>
+            <span>Made with &#10084; by <a href="https://github.com/rhazdon">rhazdon</a></span>
+        </div>
+    </div>
+</footer>
+
+            
+        </div>
+
+        
+
+
+
+
+<script type="text/javascript" src="/bundle.min.4c3fb12a087ceed4a52cb5d57068a9795c7069617a01ca70f788052ad66e1791779e6c72686e1dc0ca13dc03b0203204b6566bb0dd1ee80de2b7ff4d8fe53db2.js" integrity="sha512-TD&#43;xKgh87tSlLLXVcGipeVxwaWF6Acpw94gFKtZuF5F3nmxyaG4dwMoT3AOwIDIEtlZrsN0e6A3it/9Nj&#43;U9sg=="></script>
+
+
+
+    </body>
+</html>

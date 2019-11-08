@@ -5,7 +5,7 @@
     <link>https://kiwinam.com/tags/%EC%95%A1%EC%85%98%EB%B0%94/</link>
     <description>Recent content in 액션바 on Kiwinam</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>ko-kr</language>
+    <language>ko</language>
     <lastBuildDate>Wed, 26 Dec 2018 10:35:56 +0900</lastBuildDate>
     
 	<atom:link href="https://kiwinam.com/tags/%EC%95%A1%EC%85%98%EB%B0%94/index.xml" rel="self" type="application/rss+xml" />
@@ -13,10 +13,10 @@
     
     <item>
       <title>[안드로이드] 툴바 사용법 (버튼 추가) - add button to tool bar</title>
-      <link>https://kiwinam.com/posts/25/</link>
+      <link>https://kiwinam.com/posts/%EC%95%88%EB%93%9C%EB%A1%9C%EC%9D%B4%EB%93%9C-%ED%88%B4%EB%B0%94-%EC%82%AC%EC%9A%A9%EB%B2%95-add-button-to-tool-bar/</link>
       <pubDate>Wed, 26 Dec 2018 10:35:56 +0900</pubDate>
       
-      <guid>https://kiwinam.com/posts/25/</guid>
+      <guid>https://kiwinam.com/posts/%EC%95%88%EB%93%9C%EB%A1%9C%EC%9D%B4%EB%93%9C-%ED%88%B4%EB%B0%94-%EC%82%AC%EC%9A%A9%EB%B2%95-add-button-to-tool-bar/</guid>
       <description>[안드로이드] 툴바 사용법 (버튼 추가) - add button to tool bar
 
 안드로이드 API 21 (롤리팝 5.0) 버전부터 기존 Action bar 를 대체할 tool bar 라는 앱 상단에 표시되는 뷰가 추가되었습니다.

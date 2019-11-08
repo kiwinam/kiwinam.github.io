@@ -4,16 +4,127 @@
         <link>https://kiwinam.com/posts/</link>
         <description>Recent content in Posts on Kiwinam</description>
         <generator>Hugo -- gohugo.io</generator>
-        <language>ko-kr</language>
-        <lastBuildDate>Fri, 15 Feb 2019 10:35:56 +0900</lastBuildDate>
+        <language>ko</language>
+        <lastBuildDate>Thu, 21 Mar 2019 10:35:56 +0900</lastBuildDate>
         <atom:link href="https://kiwinam.com/posts/index.xml" rel="self" type="application/rss+xml" />
         
         <item>
-            <title>[Git] warning: LF will be CRLF</title>
-            <link>https://kiwinam.com/posts/27/</link>
+            <title>[Mac] Mariadb 설치</title>
+            <link>https://kiwinam.com/posts/mac-maridb-%EC%84%A4%EC%B9%98/</link>
+            <pubDate>Thu, 21 Mar 2019 10:35:56 +0900</pubDate>
+            
+            <guid>https://kiwinam.com/posts/mac-maridb-%EC%84%A4%EC%B9%98/</guid>
+            <description>[Mac] Mariadb 설치
+0. Mariadb 란 Mariadb 는 Mysql 의 창업자이자 핵심 개발자인 몬티 와이드니어스가 회사를 2009년에 썬 마이크로즈시스템에 팔고 나온 뒤 다시 만든 RDBMS 입니다.
+Mysql 과 마찬가지로 몬티의 딸 이름을 따와서 MariaDB 라고 이름을 지었습니다.
+Mysql 의 핵심 개발자가 만든 Mariadb 이기 때문에, 대부분의 명령어들이 Mysql 과 유사합니다.
+하지만 Mysql 과 Mariadb 의 핵심적인 차이점은 라이센스에 있습니다.
+오라클이 라이센스를 보유하고 있는 Mysql 과 다르게 MariaDB 는 GPL V2 를 따르는 순수한 오픈 소스이고, 그렇기 때문에 누구든지 커뮤니티 버전을 다운받고 사용할 수 있습니다.</description>
+            <content type="html"><![CDATA[
+
+<hr />
+
+<p>[Mac] Mariadb 설치</p>
+
+<hr />
+
+<p><img src="/img/28/28-0.jpg" alt="Mariadb" /></p>
+
+<h3 id="0-mariadb-란">0. Mariadb 란</h3>
+
+<p>Mariadb 는 Mysql 의 창업자이자 핵심 개발자인 몬티 와이드니어스가 회사를 2009년에 썬 마이크로즈시스템에 팔고 나온 뒤 다시 만든 RDBMS 입니다.</p>
+
+<p>Mysql 과 마찬가지로 몬티의 딸 이름을 따와서 MariaDB 라고 이름을 지었습니다.</p>
+
+<p>Mysql 의 핵심 개발자가 만든 Mariadb 이기 때문에, 대부분의 명령어들이 Mysql 과 유사합니다.</p>
+
+<p>하지만 Mysql 과 Mariadb 의 핵심적인 차이점은 라이센스에 있습니다.</p>
+
+<p>오라클이 라이센스를 보유하고 있는 Mysql 과 다르게 MariaDB 는 GPL V2 를 따르는 순수한 오픈 소스이고, 그렇기 때문에 누구든지 커뮤니티 버전을 다운받고 사용할 수 있습니다.</p>
+
+<p>MariaDB 는 MySQL 에 비해 어플리케이션 부분 속도가 4~5천배 정도 빠르고, 성능적으로도 70% 정도 빠릅니다.</p>
+
+<p>그리고 가장 핵심적으로 MySQL 커뮤니티 버전에서 지원하지 않는 스레드 풀 기능을 MariaDB 커뮤니티 버전에서 제공합니다. 이 점 때문에 저는 주로 MariaDB 를 사용하고 있습니다.</p>
+
+<p><br/></p>
+
+<h3 id="1-install-mariadb-on-os-x">1. Install MariaDB on OS X</h3>
+
+<h4 id="1-1-brew-install">1.1 Brew install</h4>
+
+<p>MariaDB 를 설치하기 전에 HomeBrew 라는 Mac OS X 용 패키지 관리자를 설치하겠습니다.</p>
+
+
+    <img src="/img/28/28-6.png"  alt="HomeBrew"  class="left"  style="width: 500px"  />
+
+
+
+<p>터미널을 열고 아래 명령어를 복사 붙여넣기 해주세요.</p>
+
+<pre><code>/usr/bin/ruby -e &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)&quot;
+</code></pre>
+
+<p>간단하게 HomeBrew 설치가 마무리 됩니다.</p>
+
+<p><br/></p>
+
+<h4 id="1-2-mariadb-install">1.2 Mariadb install</h4>
+
+<ol>
+<li><p>먼저 HomeBrew 업데이트를 진행해주세요.</p>
+
+<p><code>brew update</code>
+
+    <img src="/img/28/28-1.png"  alt="brew update"  class="left"  style="width: 500px"  />
+
+</p></li>
+
+<li><p>HomeBrew 를 통해 MariaDB 를 설치</p>
+
+<p><code>brew install mariadb</code>
+
+    <img src="/img/28/28-2.png"  alt="brew install mariadb"  class="left"  style="width: 500px"  />
+
+</p>
+
+<p>잠시 뒤 설치가 완료 되었다면 아래와 같은 화면이 보입니다.
+
+    <img src="/img/28/28-3.png"  alt="success install"  class="left"  style="width: 500px"  />
+
+</p></li>
+
+<li><p>MariaDB 백그라운드 실행</p>
+
+<p>이제 설치가 다 되었으니 디비를 실행하겠습니다.
+<code>mysql.server start</code>
+
+    <img src="/img/28/28-4.png"  alt="mysql.server start"  class="left"  style="width: 500px"  />
+
+</p></li>
+
+<li><p>MariaDB 접속</p>
+
+<p><code>mysql -u root</code>
+
+    <img src="/img/28/28-5.png"  alt="mysql -u root"  class="left"  style="width: 500px"  />
+
+</p></li>
+</ol>
+
+<p><br/></p>
+
+<p>이상 Mac 에서 MariaDB 설치하는 방법에 대해 포스팅이였습니다.</p>
+
+<p><br/></p>
+]]></content>
+        </item>
+        
+        <item>
+            <title>[Git] warning: LF will be CRLF 해결법</title>
+            <link>https://kiwinam.com/posts/git-warning-lf-will-be-crlf/</link>
             <pubDate>Fri, 15 Feb 2019 10:35:56 +0900</pubDate>
             
-            <guid>https://kiwinam.com/posts/27/</guid>
+            <guid>https://kiwinam.com/posts/git-warning-lf-will-be-crlf/</guid>
             <description>[Git] warning: LF will be CRLF
 
 터미널 or CMD 에서 Git command 를 사용하는데 위 사진 같은 warning 이 나오는 경우가 있습니다.
@@ -37,7 +148,7 @@ Mac user git config --global core.autocrlf true input
 <p><br/></p>
 
 
-    <img src="/27/27-1.png"  alt="CRLF will be replaced"  class="left"  style="width: 600px"  />
+    <img src="/img/27/27-1.png"  alt="CRLF will be replaced"  class="left"  style="width: 600px"  />
 
 
 
@@ -156,10 +267,10 @@ World.
         
         <item>
             <title>[안드로이드] 네비게이션 드로어 (Navigation drawer) 사용법</title>
-            <link>https://kiwinam.com/posts/26/</link>
+            <link>https://kiwinam.com/posts/%EC%95%88%EB%93%9C%EB%A1%9C%EC%9D%B4%EB%93%9C-%EB%84%A4%EB%B9%84%EA%B2%8C%EC%9D%B4%EC%85%98-%EB%93%9C%EB%A1%9C%EC%96%B4-%EC%82%AC%EC%9A%A9%EB%B2%95/</link>
             <pubDate>Sat, 29 Dec 2018 10:35:56 +0900</pubDate>
             
-            <guid>https://kiwinam.com/posts/26/</guid>
+            <guid>https://kiwinam.com/posts/%EC%95%88%EB%93%9C%EB%A1%9C%EC%9D%B4%EB%93%9C-%EB%84%A4%EB%B9%84%EA%B2%8C%EC%9D%B4%EC%85%98-%EB%93%9C%EB%A1%9C%EC%96%B4-%EC%82%AC%EC%9A%A9%EB%B2%95/</guid>
             <description>[안드로이드] 네비게이션 드로어 (Navigation drawer) 사용법
 
 구글 머티리얼 디자인 가이드 중 네비게이션 드로어
@@ -180,7 +291,7 @@ World.
 
 <p><br/></p>
 
-<p><img src="/26/26-1.png" alt="google navigation drawer" />
+<p><img src="/img/26/26-1.png" alt="google navigation drawer" />
 <a href="https://material.io/design/components/navigation-drawer.html" target="_blank">구글 머티리얼 디자인 가이드 중 네비게이션 드로어</a></p>
 
 <p>네비게이션 드로어는 화면 왼쪽 가장자리에 위치해 있고 앱을 탐색할 수 있는 하나의 패널입니다.</p>
@@ -200,7 +311,7 @@ World.
 <!-- ![navigation drawer result](/26/26-2.gif){: width="100" height="100"} -->
 
 <p>
-    <img src="/26/26-2.gif"  alt="navigation drawer result"  class="left"  style="width: 400px"  />
+    <img src="/img/26/26-2.gif"  alt="navigation drawer result"  class="left"  style="width: 400px"  />
 
 
 <em>이번 포스팅에서 진행한 네비게이션 드로어 결과 화면</em></p>
@@ -227,7 +338,7 @@ World.
 
 <h4 id="2-2-네비게이션-메뉴-추가">2-2. 네비게이션 메뉴 추가</h4>
 
-<p><img src="/26/26-3.png" alt="navigation menu" /></p>
+<p><img src="/img/26/26-3.png" alt="navigation menu" /></p>
 
 <ul>
 <li><p>네비게이션 드로어에서 보여줄 메뉴들을 추가합니다.</p></li>
@@ -280,7 +391,7 @@ World.
 
 <h4 id="2-3-네비게이션-헤더-추가-optional">2-3. 네비게이션 헤더 추가 (Optional)</h4>
 
-<p><img src="/26/26-4.png" alt="navigation header" /></p>
+<p><img src="/img/26/26-4.png" alt="navigation header" /></p>
 
 <ul>
 <li><p>네비게이션 헤더 부분은 하셔도 되고, 내가 만들 앱에 필요 없으시면 굳이 안넣으셔도 됩니다.</p></li>
@@ -327,7 +438,7 @@ World.
 
 <h4 id="2-4-메인-레이아웃-수정">2-4. 메인 레이아웃 수정</h4>
 
-<p><img src="/26/26-5.png" alt="main layout" /></p>
+<p><img src="/img/26/26-5.png" alt="main layout" /></p>
 
 <ul>
 <li><p>네비게이션 드로어를 사용할 메인 레이아웃을 수정합니다.</p></li>
@@ -458,7 +569,7 @@ override fun onNavigationItemSelected(item: MenuItem): Boolean {
 
 <h4 id="2-5-뒤로가기-클릭-시-네비게이션-닫기-optional">2-5. 뒤로가기 클릭 시 네비게이션 닫기 (Optional)</h4>
 
-<p><img src="/26/26-6.gif" alt="back click" /></p>
+<p><img src="/img/26/26-6.gif" alt="back click" /></p>
 
 <p>보통 사용자들이 네비게이션 드로어가 열려있을 때 뒤로가기 버튼을 누르면 네비게이션이 닫힐 것을 기대하는데, 이대로 코드를 진행하면 그렇게 동작하지 않습니다.</p>
 
@@ -501,10 +612,10 @@ override fun onBackPressed() {
         
         <item>
             <title>[안드로이드] 툴바 사용법 (버튼 추가) - add button to tool bar</title>
-            <link>https://kiwinam.com/posts/25/</link>
+            <link>https://kiwinam.com/posts/%EC%95%88%EB%93%9C%EB%A1%9C%EC%9D%B4%EB%93%9C-%ED%88%B4%EB%B0%94-%EC%82%AC%EC%9A%A9%EB%B2%95-add-button-to-tool-bar/</link>
             <pubDate>Wed, 26 Dec 2018 10:35:56 +0900</pubDate>
             
-            <guid>https://kiwinam.com/posts/25/</guid>
+            <guid>https://kiwinam.com/posts/%EC%95%88%EB%93%9C%EB%A1%9C%EC%9D%B4%EB%93%9C-%ED%88%B4%EB%B0%94-%EC%82%AC%EC%9A%A9%EB%B2%95-add-button-to-tool-bar/</guid>
             <description>[안드로이드] 툴바 사용법 (버튼 추가) - add button to tool bar
 
 안드로이드 API 21 (롤리팝 5.0) 버전부터 기존 Action bar 를 대체할 tool bar 라는 앱 상단에 표시되는 뷰가 추가되었습니다.
@@ -528,7 +639,7 @@ override fun onBackPressed() {
 
 <p>안드로이드 개발자 뿐만 아니라 일반 사용자들에게도 상당히 익숙한 뷰입니다.</p>
 
-<p><img src="/25/25-1.png" alt="Top App bar" /></p>
+<p><img src="/img/25/25-1.png" alt="Top App bar" /></p>
 
 <p><a href="https://material.io/develop/android/components/app-bar-layout/" target="_blank">머티리얼 디자인 가이드 공식 문서 중 Top App bars</a></p>
 
@@ -546,7 +657,7 @@ override fun onBackPressed() {
 
 <h3 id="1-result">1. Result</h3>
 
-<p><img src="/25/25-2.png" alt="Result" /></p>
+<p><img src="/img/25/25-2.png" alt="Result" /></p>
 
 <p><br/></p>
 
@@ -619,13 +730,13 @@ override fun onBackPressed() {
 <li>툴바에서 메뉴 버튼들을 res 폴더 밑에 추가해보겠습니다.</li>
 </ul>
 
-<p><img src="/25/25-3.png" alt="res folder" /></p>
+<p><img src="/img/25/25-3.png" alt="res folder" /></p>
 
 <ul>
 <li>프로젝트 네비게이션 위에서 우클릭 -&gt; new -&gt; Android Resource file</li>
 </ul>
 
-<p><img src="/25/25-4.png" alt="new android resource" /></p>
+<p><img src="/img/25/25-4.png" alt="new android resource" /></p>
 
 <ul>
 <li>Resource type 을 Menu 로 선택해주고 파일 명을 작성합니다. (저는 main_menu 로 적었습니다.)</li>
@@ -855,7 +966,7 @@ class MainActivity : AppCompatActivity() {
 
 <h3 id="result-gif">Result GIF</h3>
 
-<p><img src="/25/25-5.gif" alt="result gif" /></p>
+<p><img src="/img/25/25-5.gif" alt="result gif" /></p>
 
 <p><br/></p>
 
@@ -872,11 +983,11 @@ class MainActivity : AppCompatActivity() {
         </item>
         
         <item>
-            <title>[Android Studio 3.0 xml layout Preview 오류 해결 방법</title>
-            <link>https://kiwinam.com/posts/24/</link>
+            <title>Android Studio 3.0 xml layout Preview 오류 해결 방법</title>
+            <link>https://kiwinam.com/posts/android-studio-3.0xml-layout-preview/</link>
             <pubDate>Sat, 10 Feb 2018 10:35:56 +0900</pubDate>
             
-            <guid>https://kiwinam.com/posts/24/</guid>
+            <guid>https://kiwinam.com/posts/android-studio-3.0xml-layout-preview/</guid>
             <description>Android Studio 3.0 xml layout Preview 오류 해결 방법
 
 Android Studio 를 2.3.x 버전으로 사용하다 이번에 3.0 버전으로 업데이트 하였습니다.
@@ -897,7 +1008,7 @@ Font.xml 파일을 수정한 적이 있을텐데요.</description>
 
 <p><br/></p>
 
-<p><img src="/24/24-1.png" alt="startActivityForResult" /></p>
+<p><img src="/img/24/24-1.png" alt="startActivityForResult" /></p>
 
 <p>Android Studio 를 2.3.x 버전으로 사용하다 이번에 3.0 버전으로 업데이트 하였습니다.</p>
 
@@ -947,10 +1058,10 @@ Font.xml 파일을 수정한 적이 있을텐데요.</description>
         
         <item>
             <title>[안드로이드] startActivityForResult ,onActivityResult 사용법</title>
-            <link>https://kiwinam.com/posts/23/</link>
+            <link>https://kiwinam.com/posts/%EC%95%88%EB%93%9C%EB%A1%9C%EC%9D%B4%EB%93%9C-startactivityforresult-onactivityresult-%EC%82%AC%EC%9A%A9%EB%B2%95/</link>
             <pubDate>Fri, 09 Feb 2018 10:35:56 +0900</pubDate>
             
-            <guid>https://kiwinam.com/posts/23/</guid>
+            <guid>https://kiwinam.com/posts/%EC%95%88%EB%93%9C%EB%A1%9C%EC%9D%B4%EB%93%9C-startactivityforresult-onactivityresult-%EC%82%AC%EC%9A%A9%EB%B2%95/</guid>
             <description>[안드로이드] startActivityForResult ,onActivityResult 사용법
 
 안드로이드 개발을 진행하다 보면 단순히 액티비티를 전환하고 끝! 이 아니라
@@ -998,7 +1109,7 @@ Font.xml 파일을 수정한 적이 있을텐데요.</description>
 
 <p><br/></p>
 
-<p><img src="/23/23-1.png" alt="startActivityForResult" /></p>
+<p><img src="/img/23/23-1.png" alt="startActivityForResult" /></p>
 
 <p>위 사진처럼</p>
 
@@ -1034,7 +1145,7 @@ Font.xml 파일을 수정한 적이 있을텐데요.</description>
 
 <h3 id="1-result">1. Result</h3>
 
-<p><img src="/23/23-2.png" alt="forResult Screenshot" /></p>
+<p><img src="/img/23/23-2.png" alt="forResult Screenshot" /></p>
 
 <ol>
 <li><p>MainActivity 에서 CalculateActivity 를 호출합니다.</p></li>
@@ -1234,10 +1345,10 @@ public class CalculateActivity extends AppCompatActivity {
         
         <item>
             <title>[Mac] OS X 기능, 맥북 화면 녹화하기</title>
-            <link>https://kiwinam.com/posts/22/</link>
+            <link>https://kiwinam.com/posts/mac-osx-%EA%B8%B0%EB%8A%A5-%EB%A7%A5%EB%B6%81-%ED%99%94%EB%A9%B4-%EB%85%B9%ED%99%94%ED%95%98%EA%B8%B0/</link>
             <pubDate>Tue, 30 Jan 2018 10:35:56 +0900</pubDate>
             
-            <guid>https://kiwinam.com/posts/22/</guid>
+            <guid>https://kiwinam.com/posts/mac-osx-%EA%B8%B0%EB%8A%A5-%EB%A7%A5%EB%B6%81-%ED%99%94%EB%A9%B4-%EB%85%B9%ED%99%94%ED%95%98%EA%B8%B0/</guid>
             <description>[Mac] OS X 기능, 맥북 화면 녹화하기
 OS X 에서 모니터 화면을 캡쳐하고 싶은 경우가 있습니다.
 그럴 때 윈도우에선 화면 녹화 툴이 많이 있어서 편하게 했었는데요.
@@ -1265,7 +1376,7 @@ Finder에서 Application 으로 찾으셔도 되고, 저같은 경우 런치패�
 
 <p>사용할 어플리케이션 이름은 Quick time player 입니다.</p>
 
-<p><img src="/22/22-1.png" alt="Quicktime" /></p>
+<p><img src="/img/22/22-1.png" alt="Quicktime" /></p>
 
 <p><br/></p>
 
@@ -1279,7 +1390,7 @@ Finder에서 Application 으로 찾으셔도 되고, 저같은 경우 런치패�
 
 <h3 id="1-파일-새로운-화면-기록">1. 파일 -&gt; 새로운 화면 기록</h3>
 
-<p><img src="/22/22-2.png" alt="화면 기록" /></p>
+<p><img src="/img/22/22-2.png" alt="화면 기록" /></p>
 
 <p><br/></p>
 
@@ -1289,40 +1400,40 @@ Finder에서 Application 으로 찾으셔도 되고, 저같은 경우 런치패�
 
 <p>어떤 화면을 기록할 건지 선택할 수 있습니다.</p>
 
-<p><img src="/22/22-3.png" alt="기록" /></p>
+<p><img src="/img/22/22-3.png" alt="기록" /></p>
 
 <p>전체 화면을 기록하려면 클릭 한 번만 누르면 녹화가 시작되고, 특정 부분만 기록하려면</p>
 
 <p>화면을 드래그 하면 됩니다.</p>
 
-<p><img src="/22/22-4.png" alt="드래그" /></p>
+<p><img src="/img/22/22-4.png" alt="드래그" /></p>
 
 <p><br/></p>
 
 <p>이번에 저는 일부 화면만 기록해보도록 하겠습니다.</p>
 
-<p><img src="/22/22-5.png" alt="일부 화면 기록" /></p>
+<p><img src="/img/22/22-5.png" alt="일부 화면 기록" /></p>
 
-<p><img src="/22/22-6.png" alt="기록 결과" /></p>
+<p><img src="/img/22/22-6.png" alt="기록 결과" /></p>
 
 <p>화면이 정상적으로 녹화 되었습니다.</p>
 
 <p>전체 화면도 녹화 가능하고 화면 일부도 기록 가능하니 원하시는대로 선택하시면 되겠습니다.</p>
 
-<p><img src="/22/22-7.png" alt="저장" /></p>
+<p><img src="/img/22/22-7.png" alt="저장" /></p>
 
 <p>이후 저장 버튼을 누르면 녹화된 화면이 저장된 것을 볼 수 있습니다.</p>
 
-<p><img src="/22/22-8.jpg" alt="화면 기록 플레이" /></p>
+<p><img src="/img/22/22-8.jpg" alt="화면 기록 플레이" /></p>
 ]]></content>
         </item>
         
         <item>
             <title>[안드로이드] 엑셀 파일 생성, 내보내기</title>
-            <link>https://kiwinam.com/posts/21/</link>
+            <link>https://kiwinam.com/posts/%EC%95%88%EB%93%9C%EB%A1%9C%EC%9D%B4%EB%93%9C-%EC%97%91%EC%85%80-%ED%8C%8C%EC%9D%BC-%EC%83%9D%EC%84%B1-%EB%82%B4%EB%B3%B4%EB%82%B4%EA%B8%B0/</link>
             <pubDate>Thu, 07 Dec 2017 10:35:56 +0900</pubDate>
             
-            <guid>https://kiwinam.com/posts/21/</guid>
+            <guid>https://kiwinam.com/posts/%EC%95%88%EB%93%9C%EB%A1%9C%EC%9D%B4%EB%93%9C-%EC%97%91%EC%85%80-%ED%8C%8C%EC%9D%BC-%EC%83%9D%EC%84%B1-%EB%82%B4%EB%B3%B4%EB%82%B4%EA%B8%B0/</guid>
             <description>[안드로이드] 엑셀 파일 생성, 내보내기
 어플리케이션을 만들다 보면 사용자가 저장한 데이터를 가공하여 내보내 주는 기능을 구현할 때가 있습니다.
 데이터 가공에 가장 적합한 엑셀 파일을 만들어 공유하는 것을 목표로 포스팅하겠습니다.
@@ -1338,7 +1449,7 @@ Finder에서 Application 으로 찾으셔도 되고, 저같은 경우 런치패�
 
 <hr />
 
-<p><img src="/21/21-1.png" alt="엑셀 로고" /></p>
+<p><img src="/img/21/21-1.png" alt="엑셀 로고" /></p>
 
 <p>어플리케이션을 만들다 보면 사용자가 저장한 데이터를 가공하여 내보내 주는 기능을 구현할 때가 있습니다.</p>
 
@@ -1348,9 +1459,9 @@ Finder에서 Application 으로 찾으셔도 되고, 저같은 경우 런치패�
 
 <h3 id="1-result">1. Result</h3>
 
-<p><img src="/21/21-2.jpg" alt="엑셀 결과" /></p>
+<p><img src="/img/21/21-2.jpg" alt="엑셀 결과" /></p>
 
-<p><img src="/21/21-3.jpg" alt="엑셀 결과" /></p>
+<p><img src="/img/21/21-3.jpg" alt="엑셀 결과" /></p>
 
 <p><br/></p>
 
@@ -1370,7 +1481,7 @@ Finder에서 Application 으로 찾으셔도 되고, 저같은 경우 런치패�
 
 <p>위 링크를 클릭해 라이브러리 다운로드 홈페이지로 이동하겠습니다.</p>
 
-<p><img src="/21/21-4.png" alt="poi download" /></p>
+<p><img src="/img/21/21-4.png" alt="poi download" /></p>
 
 <ul>
 <li>홈페이지에서 Binary Distribution 을 보면 가장 최근 안정화된 버전을 배포하고 있습니다. poi-bin 파일을 클릭해주세요.</li>
@@ -1378,7 +1489,7 @@ Finder에서 Application 으로 찾으셔도 되고, 저같은 경우 런치패�
 
 <p><br/></p>
 
-<p><img src="/21/21-5.png" alt="apache download" /></p>
+<p><img src="/img/21/21-5.png" alt="apache download" /></p>
 
 <ul>
 <li>그럼 위 사진과 같은 페이지가 나오는데 어떤 미러링 사이트를 통해 받을지 정합니다.</li>
@@ -1386,7 +1497,7 @@ Finder에서 Application 으로 찾으셔도 되고, 저같은 경우 런치패�
 
 <p><br/></p>
 
-<p><img src="/21/21-6.png" alt="download" /></p>
+<p><img src="/img/21/21-6.png" alt="download" /></p>
 
 <ul>
 <li>다운로드 완료 후 압축을 풀면 위와 같은 파일들이 나옵니다. 이제 이 파일을 안드로이드 프로젝트에 적용 시키도록 하겠습니다.</li>
@@ -1402,7 +1513,7 @@ Finder에서 Application 으로 찾으셔도 되고, 저같은 경우 런치패�
 <li>먼저 파일 탐색기를 프로젝트 단으로 봐주세요</li>
 </ul>
 
-<p><img src="/21/21-7.jpg" alt="android project" /></p>
+<p><img src="/img/21/21-7.jpg" alt="android project" /></p>
 
 <p><br/></p>
 
@@ -1410,9 +1521,9 @@ Finder에서 Application 으로 찾으셔도 되고, 저같은 경우 런치패�
 <li>프로젝트 &gt; app &gt; libs 에 방금 다운로드 받은 POI 라이브러리 파일을 옮겨주세요</li>
 </ul>
 
-<p><img src="/21/21-8.jpg" alt="libs" /></p>
+<p><img src="/img/21/21-8.jpg" alt="libs" /></p>
 
-<p><img src="/21/21-9.jpg" alt="move the files" /></p>
+<p><img src="/img/21/21-9.jpg" alt="move the files" /></p>
 
 <p><br/></p>
 
@@ -1422,7 +1533,7 @@ Finder에서 Application 으로 찾으셔도 되고, 저같은 경우 런치패�
 <li><p>파일을 옮겨지면 안드로이드 스튜디오에서 아래와 같이 라이브러리 파일이 정상적으로 올라온 것을 확인할 수 있습니다.</p></li>
 </ul>
 
-<p><img src="/21/21-10.jpg" alt="poi" /></p>
+<p><img src="/img/21/21-10.jpg" alt="poi" /></p>
 
 <p><br/></p>
 
@@ -1430,7 +1541,7 @@ Finder에서 Application 으로 찾으셔도 되고, 저같은 경우 런치패�
 <li>아래 사진처럼 poi-3.17.jar 파일을 우클릭 한 다음 &lsquo;Add As Library&rsquo; 를 눌러주시면 POI 라이브러리 적용이 완료됩니다.</li>
 </ul>
 
-<p><img src="/21/21-11.jpg" alt="add ad library" /></p>
+<p><img src="/img/21/21-11.jpg" alt="add ad library" /></p>
 
 <p><br/></p>
 
@@ -1471,7 +1582,7 @@ Finder에서 Application 으로 찾으셔도 되고, 저같은 경우 런치패�
 }
 </code></pre>
 
-<p><img src="/21/21-12.png" alt="excel result" /></p>
+<p><img src="/img/21/21-12.png" alt="excel result" /></p>
 
 <ul>
 <li>제가 입력했던 데이터가 엑셀 파일로 만들어 진 것을 확인 할 수 있습니다.</li>
@@ -1494,9 +1605,9 @@ startActivity(Intent.createChooser(shareIntent,&quot;엑셀 내보내기&quot;))
 </code></pre></li>
 </ul>
 
-<p><img src="/21/21-13.jpg" alt="excel send" /></p>
+<p><img src="/img/21/21-13.jpg" alt="excel send" /></p>
 
-<p><img src="/21/21-14.jpg" alt="excel kakao" /></p>
+<p><img src="/img/21/21-14.jpg" alt="excel kakao" /></p>
 
 <p><br/></p>
 
@@ -1510,10 +1621,10 @@ startActivity(Intent.createChooser(shareIntent,&quot;엑셀 내보내기&quot;))
         
         <item>
             <title>[안드로이드] - android.content.res.Resources$NotFoundException: String resource ID #0x1</title>
-            <link>https://kiwinam.com/posts/19/</link>
+            <link>https://kiwinam.com/posts/%EC%95%88%EB%93%9C%EB%A1%9C%EC%9D%B4%EB%93%9C-androidcontent.res/</link>
             <pubDate>Thu, 23 Nov 2017 10:35:56 +0900</pubDate>
             
-            <guid>https://kiwinam.com/posts/19/</guid>
+            <guid>https://kiwinam.com/posts/%EC%95%88%EB%93%9C%EB%A1%9C%EC%9D%B4%EB%93%9C-androidcontent.res/</guid>
             <description>[안드로이드] - android.content.res.Resources$NotFoundException: String resource ID #0x1
 FATAL EXCEPTION: main Process: , PID: 4012 android.content.res.Resources$NotFoundException: String resource ID #0x9  안드로이드 개발 중
 android.content.res.Resources$NotFoundException: String resource ID #0x1
@@ -1547,7 +1658,7 @@ android.content.res.Resources$NotFoundException: String resource ID #0x9
 
 <p>보통 setText 메서드에 숫자를 바로 넣으면 바로 빨간색 밑줄이 생겨서 에러인 것을 알아보기 쉬운데,</p>
 
-<p><img src="/19/19-1.png" alt="int type" /></p>
+<p><img src="/img/19/19-1.png" alt="int type" /></p>
 
 <p><em>( Int type 을 바로 넣는 경우 빨간 줄이 보입니다.)</em></p>
 
@@ -1555,9 +1666,9 @@ android.content.res.Resources$NotFoundException: String resource ID #0x9
 
 <p>다른 메서드에서 리턴되는 값이 안에 들어가 있는 경우는 빨간 줄이 보이지 않아 바로 에러라는 것을 알기 힘듭니다.</p>
 
-<p><img src="/19/19-2.png" alt="값을 리턴하는 메소드" /></p>
+<p><img src="/img/19/19-2.png" alt="값을 리턴하는 메소드" /></p>
 
-<p><img src="/19/19-3.png" alt="리턴 메소드를 호출하면 보이지 않음" /></p>
+<p><img src="/img/19/19-3.png" alt="리턴 메소드를 호출하면 보이지 않음" /></p>
 
 <p><em>( 리턴 값을 넣는 경우 빨간 줄이 보이지 않습니다.)</em></p>
 
@@ -1576,10 +1687,10 @@ android.content.res.Resources$NotFoundException: String resource ID #0x9
         
         <item>
             <title>[안드로이드] 카카오톡 공유 기능 , 카카오 링크 API 사용법</title>
-            <link>https://kiwinam.com/posts/20/</link>
+            <link>https://kiwinam.com/posts/%EC%95%88%EB%93%9C%EB%A1%9C%EC%9D%B4%EB%93%9C-%EC%B9%B4%EC%B9%B4%EC%98%A4%ED%86%A1-%EA%B3%B5%EC%9C%A0-%EA%B8%B0%EB%88%99-%EC%B9%B4%EC%B9%B4%EC%98%A4%EB%A7%81%ED%81%AC-api-%EC%82%AC%EC%9A%A9%EB%B2%95/</link>
             <pubDate>Thu, 23 Nov 2017 10:35:56 +0900</pubDate>
             
-            <guid>https://kiwinam.com/posts/20/</guid>
+            <guid>https://kiwinam.com/posts/%EC%95%88%EB%93%9C%EB%A1%9C%EC%9D%B4%EB%93%9C-%EC%B9%B4%EC%B9%B4%EC%98%A4%ED%86%A1-%EA%B3%B5%EC%9C%A0-%EA%B8%B0%EB%88%99-%EC%B9%B4%EC%B9%B4%EC%98%A4%EB%A7%81%ED%81%AC-api-%EC%82%AC%EC%9A%A9%EB%B2%95/</guid>
             <description>[안드로이드] 카카오톡 공유 기능 , 카카오 링크 API 사용법
 어플리케이션 기획 중에 콘텐츠 공유 기능이 있는 경우가 많습니다.
 공유할 수 있는 수단이 다양하게 있지만 대한민국에서 카카오 플랫폼이 가장 넓은 플랫폼이라 할 수 있죠.
@@ -1602,7 +1713,7 @@ Kakao Developer에 개발자 문서가 아주 상세히 기술 되어 있습니�
 
 <p>그래서 카카오톡 링크 API 를 사용하여 아래 사진과 같이 공유 기능을 구현하는 경우가 많습니다.</p>
 
-<p><img src="/20/20-1.png" alt="카카오 서비스 API 소개" /></p>
+<p><img src="/img/20/20-1.png" alt="카카오 서비스 API 소개" /></p>
 
 <p>(사진 출처 : Kakao Developer , 카카오 서비스 API 소개  )</p>
 
@@ -1620,9 +1731,9 @@ Kakao Developer에 개발자 문서가 아주 상세히 기술 되어 있습니�
 
 <h3 id="1-result">1. Result</h3>
 
-<p><img src="/20/20-2.png" alt="결과 1" /></p>
+<p><img src="/img/20/20-2.png" alt="결과 1" /></p>
 
-<p><img src="/20/20-3.png" alt="결과 2" /></p>
+<p><img src="/img/20/20-3.png" alt="결과 2" /></p>
 
 <p><br/></p>
 
@@ -1634,7 +1745,7 @@ Kakao Developer에 개발자 문서가 아주 상세히 기술 되어 있습니�
 <li>카카오 관련 API 를 구현하기 위해서는 카카오 개발자 센터에서 어플리케이션 등록을 완료 해야합니다. 로그인은 기존 카카오 계정으로 가능합니다.</li>
 </ul>
 
-<p><img src="/20/20-4.png" alt="카카오 데브" /></p>
+<p><img src="/img/20/20-4.png" alt="카카오 데브" /></p>
 
 <ul>
 <li>개발자 센터에서 좌측에 있는 &lsquo;앱 만들기&rsquo; 버튼을 클릭해주세요.</li>
@@ -1642,7 +1753,7 @@ Kakao Developer에 개발자 문서가 아주 상세히 기술 되어 있습니�
 
 <p><br/></p>
 
-<p><img src="20/20-5.png" alt="카카오 앱 만들기" /></p>
+<p><img src="/img/20/20-5.png" alt="카카오 앱 만들기" /></p>
 
 <ul>
 <li><p>다음으로 이름을 입력해주세요. 여기서 작성하는 이름은 카카오 개발자 센터 내에서 보여지는 이름입니다. 입력 하신 다음 &lsquo;앱 만들기&rsquo; 버튼을 클릭해주세요.</p></li>
@@ -1652,7 +1763,7 @@ Kakao Developer에 개발자 문서가 아주 상세히 기술 되어 있습니�
 
 <p><br/></p>
 
-<p><img src="/20/20-6.png" alt="패키지명 등록" /></p>
+<p><img src="/img/20/20-6.png" alt="패키지명 등록" /></p>
 
 <ul>
 <li><p>다음으로 패키지 명을 입력해주시면 됩니다. 아래 마켓 URL 같은 경우는 패키지명을 입력하면 자동으로 입력이 되니 따로 마켓에 안올리신 분들도 괜찮습니다.</p></li>
@@ -1662,7 +1773,7 @@ Kakao Developer에 개발자 문서가 아주 상세히 기술 되어 있습니�
 
 <p><br/></p>
 
-<p><img src="/20/20-7.png" alt="앱 등록 결과" /></p>
+<p><img src="/img/20/20-7.png" alt="앱 등록 결과" /></p>
 
 <ul>
 <li>어플리케이션 등록이 완료되면 위와 같이 생성 되었다는 화면이 나옵니다. 여기에서 아래 &lsquo;설정&rsquo; 버튼을 눌러 계속 진행하도록 하겠습니다.</li>
@@ -1670,7 +1781,7 @@ Kakao Developer에 개발자 문서가 아주 상세히 기술 되어 있습니�
 
 <p><br/></p>
 
-<p><img src="/20/20-8.png" alt="앱 키" /></p>
+<p><img src="/img/20/20-8.png" alt="앱 키" /></p>
 
 <ul>
 <li><p>우측 하단에 &lsquo;플랫폼 추가&rsquo; 버튼을 눌러 &lsquo;안드로이드&rsquo; 플랫폼을 추가해주세요.</p></li>
@@ -1684,7 +1795,7 @@ Kakao Developer에 개발자 문서가 아주 상세히 기술 되어 있습니�
 
 <h5 id="1-build-gradle-project">1. build.gradle (Project)</h5>
 
-<p><img src="/20/20-9.png" alt="빌드 그레이들" /></p>
+<p><img src="/img/20/20-9.png" alt="빌드 그레이들" /></p>
 
 <pre><code>subprojects {
     repositories {
@@ -1698,7 +1809,7 @@ Kakao Developer에 개발자 문서가 아주 상세히 기술 되어 있습니�
 
 <h5 id="2-gradle-properties">2. gradle.properties</h5>
 
-<p><img src="/20/20-11.png" alt="빌드 프로퍼티" /></p>
+<p><img src="/img/20/20-11.png" alt="빌드 프로퍼티" /></p>
 
 <p><code>KAKAO_SDK_VERSION = 1.1.7</code></p>
 
@@ -1710,7 +1821,7 @@ Kakao Developer에 개발자 문서가 아주 상세히 기술 되어 있습니�
 
 <h5 id="3-build-gradle-app">3. build.gradle(App)</h5>
 
-<p><img src="/20/20-12.png" alt="빌드 앱" /></p>
+<p><img src="/img/20/20-12.png" alt="빌드 앱" /></p>
 
 <pre><code>dependencies {
     compile group: 'com.kakao.sdk', name: 'kakaolink', version: project.KAKAO_SDK_VERSION
@@ -1725,7 +1836,7 @@ Kakao Developer에 개발자 문서가 아주 상세히 기술 되어 있습니�
 
 <h5 id="4-kakao-string-xml">4. kakao_string.xml</h5>
 
-<p><img src="/20/20-13.png" alt="카카오 스트링 파일 위치" /></p>
+<p><img src="/img/20/20-13.png" alt="카카오 스트링 파일 위치" /></p>
 
 <ul>
 <li><p>res/values 에 새로운 xml 을 생성해주시고 아래와 같이 입력해줍니다.</p>
@@ -1747,7 +1858,7 @@ Kakao Developer에 개발자 문서가 아주 상세히 기술 되어 있습니�
 
 <h5 id="5-manifests">5. Manifests</h5>
 
-<p><img src="/20/20-10.png" alt="메니페스트" /></p>
+<p><img src="/img/20/20-10.png" alt="메니페스트" /></p>
 
 <ul>
 <li><p>Manifests 에서 카카오 링크를 통해 시작될 Activity 를 지정해줍니다. 예를 들어 제가 보낸 링크를 누를 때 어플리케이션이 시작된다면 시작되는 Activity 를 지정해줍니다.</p></li>
@@ -1765,7 +1876,7 @@ Kakao Developer에 개발자 문서가 아주 상세히 기술 되어 있습니�
 <li><p>예제에서는 간단히 텍스트만 보냈지만 카카오 링크에서는 커스텀 템플릿 뿐만 아니라 아래와 같은 다양한 템플릿을 제공합니다.</p></li>
 </ul>
 
-<p><img src="/20/20-14.png" alt="카카오 링크" /></p>
+<p><img src="/img/20/20-14.png" alt="카카오 링크" /></p>
 
 <ul>
 <li>먼저 카카오 링크를 실행 시킬 버튼을 만들겠습니다.</li>
@@ -1837,7 +1948,7 @@ Kakao Developer에 개발자 문서가 아주 상세히 기술 되어 있습니�
 <li><code>messageBuilder.addText(String message);</code> 메서드를 통해 전달할 메시지를 작성할 수 있습니다.</li>
 </ul>
 
-<p><img src="/20/20-15.png" alt="공유 결과" /></p>
+<p><img src="/img/20/20-15.png" alt="공유 결과" /></p>
 
 <p>여기까지 카카오 링크 API 를 통해 간단한 메시지 보내기를 구현해보았습니다.</p>
 
@@ -1853,10 +1964,10 @@ Kakao Developer에 개발자 문서가 아주 상세히 기술 되어 있습니�
         
         <item>
             <title>[안드로이드] Bottom sheet dialog 사용하기</title>
-            <link>https://kiwinam.com/posts/18/</link>
+            <link>https://kiwinam.com/posts/%EC%95%88%EB%93%9C%EB%A1%9C%EC%9D%B4%EB%93%9C-bottom-sheet-dialog-%EC%82%AC%EC%9A%A9%ED%95%98%EA%B8%B0/</link>
             <pubDate>Wed, 22 Nov 2017 10:35:56 +0900</pubDate>
             
-            <guid>https://kiwinam.com/posts/18/</guid>
+            <guid>https://kiwinam.com/posts/%EC%95%88%EB%93%9C%EB%A1%9C%EC%9D%B4%EB%93%9C-bottom-sheet-dialog-%EC%82%AC%EC%9A%A9%ED%95%98%EA%B8%B0/</guid>
             <description>[안드로이드] Bottom sheet dialog 사용하기
 머티리얼 디자인에서 바텀 시트는 두 가지의 종류가 있습니다
 영구 바닥 시트
@@ -1880,11 +1991,11 @@ compile &#39;com.android.support:design:26.+&#39;
 
 <p>머티리얼 디자인에서 바텀 시트는 두 가지의 종류가 있습니다</p>
 
-<p><img src="/18/18-1.png" alt="영구 바닥 시트" /></p>
+<p><img src="/img/18/18-1.png" alt="영구 바닥 시트" /></p>
 
 <p>영구 바닥 시트</p>
 
-<p><img src="/18/18-2.png" alt="모달 바텀 시트" /></p>
+<p><img src="/img/18/18-2.png" alt="모달 바텀 시트" /></p>
 
 <p>모달 바텀 시트 (우)</p>
 
@@ -1900,7 +2011,7 @@ compile &#39;com.android.support:design:26.+&#39;
 
 <h3 id="1-result">1. Result</h3>
 
-<p><img src="/18/18-3.gif" alt="바텀 시트 결과물" /></p>
+<p><img src="/img/18/18-3.gif" alt="바텀 시트 결과물" /></p>
 
 <p><br/></p>
 
@@ -2025,10 +2136,10 @@ protected void onCreate(Bundle savedInstanceState) {
         
         <item>
             <title>[안드로이드] EditText 화폐 단위 표시 (세자리 콤마)</title>
-            <link>https://kiwinam.com/posts/17/</link>
+            <link>https://kiwinam.com/posts/%EC%95%88%EB%93%9C%EB%A1%9C%EC%9D%B4%EB%93%9C-edittext-%ED%99%94%ED%8F%90-%EB%8B%A8%EC%9C%84-%ED%91%9C%EC%8B%9C-%EC%84%B8%EC%9E%90%EB%A6%AC-%EC%BD%A4%EB%A7%88/</link>
             <pubDate>Tue, 21 Nov 2017 10:35:56 +0900</pubDate>
             
-            <guid>https://kiwinam.com/posts/17/</guid>
+            <guid>https://kiwinam.com/posts/%EC%95%88%EB%93%9C%EB%A1%9C%EC%9D%B4%EB%93%9C-edittext-%ED%99%94%ED%8F%90-%EB%8B%A8%EC%9C%84-%ED%91%9C%EC%8B%9C-%EC%84%B8%EC%9E%90%EB%A6%AC-%EC%BD%A4%EB%A7%88/</guid>
             <description>[안드로이드] EditText 화폐 단위 표시 (세자리 콤마)
 사용자에게 화폐를 입력 받아 표시해줄 경우가 종종 있습니다.
 이럴 때 입력 받은 숫자를 원화 단위 (1,000,000 과 같이 ) 로 바로 바꿔주는 방법입니다.
@@ -2051,7 +2162,7 @@ protected void onCreate(Bundle savedInstanceState) {
 
 <h3 id="1-result">1. Result</h3>
 
-<p><img src="/17/17-1.gif" alt="" /></p>
+<p><img src="/img/17/17-1.gif" alt="" /></p>
 
 <p><br/></p>
 
@@ -2151,10 +2262,10 @@ wonEt.addTextChangedListener(watcher);
         
         <item>
             <title>[안드로이드] 커스텀 다이얼로그 [2] - ClickListener, Callback</title>
-            <link>https://kiwinam.com/posts/16/</link>
+            <link>https://kiwinam.com/posts/%EC%95%88%EB%93%9C%EB%A1%9C%EC%9D%B4%EB%93%9C-%EC%BB%A4%EC%8A%A4%ED%85%80-%EB%8B%A4%EC%9D%B4%EC%96%BC%EB%A1%9C%EA%B7%B8-clicklistener-callback/</link>
             <pubDate>Sun, 15 Oct 2017 10:35:56 +0900</pubDate>
             
-            <guid>https://kiwinam.com/posts/16/</guid>
+            <guid>https://kiwinam.com/posts/%EC%95%88%EB%93%9C%EB%A1%9C%EC%9D%B4%EB%93%9C-%EC%BB%A4%EC%8A%A4%ED%85%80-%EB%8B%A4%EC%9D%B4%EC%96%BC%EB%A1%9C%EA%B7%B8-clicklistener-callback/</guid>
             <description>[안드로이드] 커스텀 다이얼로그 [2] - ClickListener, Callback
 지난 포스팅에선 커스텀 다이얼로그를 생성하고 보여주는 것을 해보았습니다.
 이번엔 커스텀 다이얼로그 안에서의 클릭 이벤트 (ClickListener) 를 어떻게 다루는지에 대해 설명해드리도록 하겠습니다.
@@ -2191,13 +2302,13 @@ wonEt.addTextChangedListener(watcher);
 
 <h3 id="1-result">1. Result</h3>
 
-<p><img src="/16/16-1.png" alt="" /></p>
+<p><img src="/img/16/16-1.png" alt="" /></p>
 
-<p><img src="/16/16-2.png" alt="" /></p>
+<p><img src="/img/16/16-2.png" alt="" /></p>
 
-<p><img src="/16/16-3.png" alt="" /></p>
+<p><img src="/img/16/16-3.png" alt="" /></p>
 
-<p><img src="/16/16-4.png" alt="" /></p>
+<p><img src="/img/16/16-4.png" alt="" /></p>
 
 <h3 id="2-step-by-step">2. Step by Step</h3>
 
@@ -2355,10 +2466,10 @@ break;
         
         <item>
             <title>[안드로이드] 커스텀 다이얼로그 [1] - 생성</title>
-            <link>https://kiwinam.com/posts/15/</link>
+            <link>https://kiwinam.com/posts/%EC%95%88%EB%93%9C%EB%A1%9C%EC%9D%B4%EB%93%9C-%EC%BB%A4%EC%8A%A4%ED%85%80-%EB%8B%A4%EC%9D%B4%EC%96%BC%EB%A1%9C%EA%B7%B8-%EC%83%9D%EC%84%B1/</link>
             <pubDate>Fri, 18 Aug 2017 10:25:38 +0900</pubDate>
             
-            <guid>https://kiwinam.com/posts/15/</guid>
+            <guid>https://kiwinam.com/posts/%EC%95%88%EB%93%9C%EB%A1%9C%EC%9D%B4%EB%93%9C-%EC%BB%A4%EC%8A%A4%ED%85%80-%EB%8B%A4%EC%9D%B4%EC%96%BC%EB%A1%9C%EA%B7%B8-%EC%83%9D%EC%84%B1/</guid>
             <description>[안드로이드] 커스텀 다이얼로그 [1] - 생성
 안드로이드 커스텀 다이얼로그 만드는 법.
 
@@ -2398,7 +2509,7 @@ Dialog 에서 Activity 로 결과 값을 넘겨줄 수도 있습니다.
 
 <h3 id="1-result">1. Result</h3>
 
-<p><img src="/15/15-1.png" alt="" /> <img src="/15/15-2.png" alt="" /></p>
+<p><img src="/img/15/15-1.png" alt="" /> <img src="/img/15/15-2.png" alt="" /></p>
 
 <p><br/></p>
 
@@ -2544,10 +2655,10 @@ public void onClick(View v) {
         
         <item>
             <title>[안드로이드] status bar 색상 변경하기, 아이콘 색상 변경하기</title>
-            <link>https://kiwinam.com/posts/14/</link>
+            <link>https://kiwinam.com/posts/%EC%95%88%EB%93%9C%EB%A1%9C%EC%9D%B4%EB%93%9C-status-bar-%EC%83%89%EC%83%81-%EB%B3%80%EA%B2%BD%ED%95%98%EA%B8%B0/</link>
             <pubDate>Thu, 01 Jun 2017 09:56:28 +0900</pubDate>
             
-            <guid>https://kiwinam.com/posts/14/</guid>
+            <guid>https://kiwinam.com/posts/%EC%95%88%EB%93%9C%EB%A1%9C%EC%9D%B4%EB%93%9C-status-bar-%EC%83%89%EC%83%81-%EB%B3%80%EA%B2%BD%ED%95%98%EA%B8%B0/</guid>
             <description>[안드로이드] status bar 색상 변경하기
 안드로이드 status bar는 최상단에 위치한 기기의 상태를 표시해주는 Bar 입니다.
 API 21 버전 - 롤리팝 버전 이상부터 Status bar (상태바) 색상 변경이 가능하고
@@ -2566,7 +2677,7 @@ if (Build.VERSION.SDK_INT &amp;gt;= 21) { // 21 버전 이상일 때 getWindow()
 
 <p>안드로이드 status bar는 최상단에 위치한 기기의 상태를 표시해주는 Bar 입니다.</p>
 
-<p><img src="/13/13-1.png" alt="" /></p>
+<p><img src="/img/13/13-1.png" alt="" /></p>
 
 <p>API 21 버전 - 롤리팝 버전 이상부터 Status bar (상태바) 색상 변경이 가능하고</p>
 
@@ -2592,7 +2703,7 @@ if (Build.VERSION.SDK_INT &amp;gt;= 21) { // 21 버전 이상일 때 getWindow()
 
 <h4 id="방법-2-value-style-에서-적용하기">방법 2 value/style 에서 적용하기</h4>
 
-<p><img src="/14/14-4.png" alt="" /></p>
+<p><img src="/img/14/14-4.png" alt="" /></p>
 
 <p>styles.xml-v21 파일에서 AppTheme 스타일에</p>
 
@@ -2614,7 +2725,7 @@ if (Build.VERSION.SDK_INT &amp;gt;= 21) { // 21 버전 이상일 때 getWindow()
 
 <h3 id="결과">결과</h3>
 
-<p><img src="/14/14-2.jpg" alt="" /></p>
+<p><img src="/img/14/14-2.jpg" alt="" /></p>
 
 <p><br/></p>
 
@@ -2663,7 +2774,7 @@ if (Build.VERSION.SDK_INT &amp;gt;= 21) { // 21 버전 이상일 때 getWindow()
 
 <h3 id="결과-1">결과</h3>
 
-<p><img src="/14/14-3.jpg" alt="" /></p>
+<p><img src="/img/14/14-3.jpg" alt="" /></p>
 
 <p>API 25 버전으로 빌드했더니 하얀 배경에 회색 아이콘을 가진 상태바가 나왔네요.</p>
 ]]></content>
@@ -2671,10 +2782,10 @@ if (Build.VERSION.SDK_INT &amp;gt;= 21) { // 21 버전 이상일 때 getWindow()
         
         <item>
             <title>[안드로이드] Android Studio 레이아웃 프리뷰(Preview) 한글 깨짐</title>
-            <link>https://kiwinam.com/posts/13/</link>
+            <link>https://kiwinam.com/posts/android-studio-%EB%A0%88%EC%9D%B4%EC%95%84%EC%9B%83-%ED%94%84%EB%A6%AC%EB%B7%B0-%ED%95%9C%EA%B8%80-%EA%B9%A8%EC%A7%90/</link>
             <pubDate>Fri, 19 May 2017 16:54:00 +0900</pubDate>
             
-            <guid>https://kiwinam.com/posts/13/</guid>
+            <guid>https://kiwinam.com/posts/android-studio-%EB%A0%88%EC%9D%B4%EC%95%84%EC%9B%83-%ED%94%84%EB%A6%AC%EB%B7%B0-%ED%95%9C%EA%B8%80-%EA%B9%A8%EC%A7%90/</guid>
             <description>[안드로이드] Android Studio 레이아웃 프리뷰(Preview) 한글 깨짐
 안드로이드 스튜디오 Preview 가 깨지는 현상의 원인은 아이러니 하게도 한글 표시 폰트가 한글을 제대로 표시 처리하지 못하기 때문입니다.
 현재 안드로이드 스튜디오에서 설정된 ko 언어 표시는 &amp;ldquo;NotoSansCJK&amp;rdquo; 로 되어 있습니다.
@@ -2719,10 +2830,10 @@ if (Build.VERSION.SDK_INT &amp;gt;= 21) { // 21 버전 이상일 때 getWindow()
         
         <item>
             <title>[안드로이드] - Pull to refresh 당겨서 새로고침 (SwipeRefreshLayout)</title>
-            <link>https://kiwinam.com/posts/12/</link>
+            <link>https://kiwinam.com/posts/%EC%95%88%EB%93%9C%EB%A1%9C%EC%9D%B4%EB%93%9C-pull-to-refresh-%EB%8B%B9%EA%B2%A8%EC%84%9C-%EC%83%88%EB%A1%9C%EA%B3%A0%EC%B9%A8/</link>
             <pubDate>Tue, 16 May 2017 00:00:00 +0000</pubDate>
             
-            <guid>https://kiwinam.com/posts/12/</guid>
+            <guid>https://kiwinam.com/posts/%EC%95%88%EB%93%9C%EB%A1%9C%EC%9D%B4%EB%93%9C-pull-to-refresh-%EB%8B%B9%EA%B2%A8%EC%84%9C-%EC%83%88%EB%A1%9C%EA%B3%A0%EC%B9%A8/</guid>
             <description>[안드로이드] - Pull to refresh 당겨서 새로고침 (SwipeRefreshLayout)
 당겨서 새로고침 (pull to refresh) 는 많은 APP에서 만날수 있는 친숙한 패턴입니다.
 &amp;lsquo;구글 가이드&amp;rsquo;에도 수동으로 동기화 하는 방법 중 제스처를 통해 내용물 갱신을 시작하도록 요구합니다.
@@ -2737,7 +2848,7 @@ if (Build.VERSION.SDK_INT &amp;gt;= 21) { // 21 버전 이상일 때 getWindow()
 
 <hr />
 
-<p><img src="/12/12-1.gif" alt="" /></p>
+<p><img src="/img/12/12-1.gif" alt="" /></p>
 
 <p>당겨서 새로고침 (pull to refresh) 는 많은 APP에서 만날수 있는 친숙한 패턴입니다.</p>
 
@@ -2747,7 +2858,7 @@ if (Build.VERSION.SDK_INT &amp;gt;= 21) { // 21 버전 이상일 때 getWindow()
 
 <h3 id="1-result">1. Result</h3>
 
-<p><img src="/12/12-1.png" alt="" /></p>
+<p><img src="/img/12/12-1.png" alt="" /></p>
 
 <p><br/></p>
 
@@ -2853,16 +2964,16 @@ public void onRefresh() {
 
 <p>색상 바꿀 때 사용하는 arrays.xml 은 values 폴더 아래 있습니다.</p>
 
-<p><img src="/12/12-3.jpg" alt="" /></p>
+<p><img src="/img/12/12-3.jpg" alt="" /></p>
 ]]></content>
         </item>
         
         <item>
             <title>[Java] JSP - JSON 데이터 주고 받기 - JSONParser</title>
-            <link>https://kiwinam.com/posts/11/</link>
+            <link>https://kiwinam.com/posts/jsp-json-%EB%8D%B0%EC%9D%B4%ED%84%B0-%EC%A3%BC%EA%B3%A0-%EB%B0%9B%EA%B8%B0-jsonparser/</link>
             <pubDate>Wed, 03 May 2017 00:00:00 +0000</pubDate>
             
-            <guid>https://kiwinam.com/posts/11/</guid>
+            <guid>https://kiwinam.com/posts/jsp-json-%EB%8D%B0%EC%9D%B4%ED%84%B0-%EC%A3%BC%EA%B3%A0-%EB%B0%9B%EA%B8%B0-jsonparser/</guid>
             <description>[Java] JSP - JSON 데이터 주고 받기 - JSONParser
 
 json-simple 라이브러리를 이용하여
@@ -3021,10 +3132,10 @@ return result;
         
         <item>
             <title>[안드로이드] RecyclerView [3] Divider 구분선 넣기</title>
-            <link>https://kiwinam.com/posts/10/</link>
+            <link>https://kiwinam.com/posts/%EC%95%88%EB%93%9C%EB%A1%9C%EC%9D%B4%EB%93%9C-recyclerview-divider-%EA%B5%AC%EB%B6%84%EC%84%A0-%EB%84%A3%EA%B8%B0/</link>
             <pubDate>Fri, 28 Apr 2017 00:00:00 +0000</pubDate>
             
-            <guid>https://kiwinam.com/posts/10/</guid>
+            <guid>https://kiwinam.com/posts/%EC%95%88%EB%93%9C%EB%A1%9C%EC%9D%B4%EB%93%9C-recyclerview-divider-%EA%B5%AC%EB%B6%84%EC%84%A0-%EB%84%A3%EA%B8%B0/</guid>
             <description>[안드로이드] RecyclerView [3] Divider 구분선 넣기
 
 ( Divider 가 적용된 RecyclerView 예제, 출저 Google Material Design Guide )
@@ -3044,7 +3155,7 @@ RecyclerView 에서 구분선 혹은 구분자를 추가하는 방법은 다양�
 
 <p><br/></p>
 
-<p><img src="/10/10-1.png" alt="" />
+<p><img src="/img/10/10-1.png" alt="" />
 ( Divider 가 적용된 RecyclerView 예제,  출저 <a href="http://davidlab.net/google-design-ko/components/lists.html#lists-specs" target="">Google Material Design Guide</a> )</p>
 
 <p><br/></p>
@@ -3059,7 +3170,7 @@ RecyclerView 에서 구분선 혹은 구분자를 추가하는 방법은 다양�
 
 <h3 id="1-result">1. Result</h3>
 
-<p><img src="/10/10-2.png" alt="" /></p>
+<p><img src="/img/10/10-2.png" alt="" /></p>
 
 <p>구분선 (Divider) 만 넣는 방법과 구분선 + 공백 넣는 방법에 대해 설명해드리겠습니다.</p>
 
@@ -3137,10 +3248,10 @@ mainBinding.recyclerView.addItemDecoration(dividerItemDecoration);
         
         <item>
             <title>[안드로이드] RecyclerView [2] OnItemClick 리스너 구현</title>
-            <link>https://kiwinam.com/posts/9/</link>
+            <link>https://kiwinam.com/posts/%EC%95%88%EB%93%9C%EB%A1%9C%EC%9D%B4%EB%93%9C-recyclerview-onitemclick-%EB%A6%AC%EC%8A%A4%EB%84%88-%EA%B5%AC%ED%98%84/</link>
             <pubDate>Wed, 26 Apr 2017 00:00:00 +0000</pubDate>
             
-            <guid>https://kiwinam.com/posts/9/</guid>
+            <guid>https://kiwinam.com/posts/%EC%95%88%EB%93%9C%EB%A1%9C%EC%9D%B4%EB%93%9C-recyclerview-onitemclick-%EB%A6%AC%EC%8A%A4%EB%84%88-%EA%B5%AC%ED%98%84/</guid>
             <description>[안드로이드] RecyclerView [2] OnItemClick 리스너 구현
 
 RecyclerView 에서는 ListView에서와는 다르게
@@ -3176,9 +3287,9 @@ public class RecyclerItemClickListener implements RecyclerView.OnItemTouchListen
 
 <h3 id="1-result">1. Result</h3>
 
-<p><img src="/9/9-1.png" alt="" /></p>
+<p><img src="/img/9/9-1.png" alt="" /></p>
 
-<p><img src="/9/9-2.png" alt="" /></p>
+<p><img src="/img/9/9-2.png" alt="" /></p>
 
 <p><br/></p>
 
@@ -3285,10 +3396,10 @@ public class RecyclerItemClickListener implements RecyclerView.OnItemTouchListen
         
         <item>
             <title>[안드로이드] RecyclerView [1] 간단한 사용법</title>
-            <link>https://kiwinam.com/posts/8/</link>
+            <link>https://kiwinam.com/posts/%EC%95%88%EB%93%9C%EB%A1%9C%EC%9D%B4%EB%93%9C-recylerview-%EA%B0%84%EB%8B%A8%ED%95%9C-%EC%82%AC%EC%9A%A9%EB%B2%95/</link>
             <pubDate>Tue, 25 Apr 2017 00:00:00 +0000</pubDate>
             
-            <guid>https://kiwinam.com/posts/8/</guid>
+            <guid>https://kiwinam.com/posts/%EC%95%88%EB%93%9C%EB%A1%9C%EC%9D%B4%EB%93%9C-recylerview-%EA%B0%84%EB%8B%A8%ED%95%9C-%EC%82%AC%EC%9A%A9%EB%B2%95/</guid>
             <description>[안드로이드] RecyclerView 간단한 사용법
 
 안드로이드에서 Recycler View 를 간단하게 사용하는 방법에 대해 포스팅 하겠습니다!
@@ -3323,7 +3434,7 @@ public class RecyclerItemClickListener implements RecyclerView.OnItemTouchListen
 
 <p><br/></p>
 
-<p><img src="/8/8-1.jpg" alt="" /></p>
+<p><img src="/img/8/8-1.jpg" alt="" /></p>
 
 <p>위 사진을 보면 빨간 테두리에 있는 내용들은</p>
 
@@ -3335,7 +3446,7 @@ public class RecyclerItemClickListener implements RecyclerView.OnItemTouchListen
 
 <h3 id="1-result">1. Result</h3>
 
-<p><img src="/8/8-2.png" alt="" /></p>
+<p><img src="/img/8/8-2.png" alt="" /></p>
 
 <p>사람 모양의 아이콘이 나오고, 그 다음에 이름이 나옵니다.</p>
 
@@ -3416,7 +3527,7 @@ public class RecyclerItemClickListener implements RecyclerView.OnItemTouchListen
 
 <pre><code>- 위의 레이아웃 xml 파일은 아래와 같이 보여집니다.
 
-![](/8/8-3.png)
+![](/img/8/8-3.png)
 
 &lt;br/&gt;
 
@@ -3428,7 +3539,7 @@ public class RecyclerItemClickListener implements RecyclerView.OnItemTouchListen
 
 아래 가이드에 맞게 Item Layout 를 작성하였습니다.
 
-![](/8/8-4.png)
+![](/img/8/8-4.png)
 (출처 : http://davidlab.net/google-design-ko/components/lists.html#lists-behavior)
 
 &lt;br/&gt;
@@ -3574,10 +3685,10 @@ public class MainActivity extends AppCompatActivity {
         
         <item>
             <title>[안드로이드] JSON 데이터 주고 받기</title>
-            <link>https://kiwinam.com/posts/7/</link>
+            <link>https://kiwinam.com/posts/%EC%95%88%EB%93%9C%EB%A1%9C%EC%9D%B4%EB%93%9C-json-%EB%8D%B0%EC%9D%B4%ED%84%B0-%EC%A3%BC%EA%B3%A0-%EB%B0%9B%EA%B8%B0/</link>
             <pubDate>Mon, 24 Apr 2017 00:00:00 +0000</pubDate>
             
-            <guid>https://kiwinam.com/posts/7/</guid>
+            <guid>https://kiwinam.com/posts/%EC%95%88%EB%93%9C%EB%A1%9C%EC%9D%B4%EB%93%9C-json-%EB%8D%B0%EC%9D%B4%ED%84%B0-%EC%A3%BC%EA%B3%A0-%EB%B0%9B%EA%B8%B0/</guid>
             <description>[안드로이드] JSON 데이터 주고 받기 1. Result 
 2. Step by step 데이터를 JSON Obejct 로 보내고 받는 방법 2-1. Send Object private void sendObject(){ JSONObject jsonObject = new JSONObject(); try{ jsonObject.put(&amp;quot;nation&amp;quot;, mJsonNationEt.getText().toString()); jsonObject.put(&amp;quot;name&amp;quot;, mJsonNameEt.getText().toString()); jsonObject.put(&amp;quot;address&amp;quot;, mJsonAddressEt.getText().toString()); jsonObject.put(&amp;quot;age&amp;quot;, mJsonAgeEt.getText().toString()); }catch (JSONException e){ e.printStackTrace(); } receiveObject(jsonObject); }  
 2-2. Receive Object private void receiveObject(JSONObject data){ recyclerView.setVisibility(View.GONE); objectResultLo.setVisibility(View.VISIBLE); try{ mReceiveTv.setText(data.toString()); mReceiveNationTv.setText(&amp;quot;nation : &amp;quot;+data.getString(&amp;quot;nation&amp;quot;)); mReceiveNameTv.setText(&amp;quot;name : &amp;quot;+data.getString(&amp;quot;nation&amp;quot;)); mReceiveAddressTv.setText(&amp;quot;address : &amp;quot;+data.getString(&amp;quot;address&amp;quot;)); mReceiveAgeTv.</description>
@@ -3591,11 +3702,11 @@ public class MainActivity extends AppCompatActivity {
 
 <h5 id="1-result">1. Result</h5>
 
-<p><img src="/7/7-1.png" alt="" /></p>
+<p><img src="/img/7/7-1.png" alt="" /></p>
 
-<p><img src="/7/7-2.png" alt="" /></p>
+<p><img src="/img/7/7-2.png" alt="" /></p>
 
-<p><img src="/7/7-2.png" alt="" /></p>
+<p><img src="/img/7/7-2.png" alt="" /></p>
 
 <p><br/></p>
 
@@ -3884,10 +3995,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         
         <item>
             <title>[안드로이드] 현재 시간, 현재 날짜 구하기 (SimpleDateFormat)</title>
-            <link>https://kiwinam.com/posts/6/</link>
+            <link>https://kiwinam.com/posts/%EC%95%88%EB%93%9C%EB%A1%9C%EC%9D%B4%EB%93%9C-%ED%98%84%EC%9E%AC-%EC%8B%9C%EA%B0%84-%ED%98%84%EC%9E%AC-%EB%82%A0%EC%A7%9C-%EA%B5%AC%ED%95%98%EA%B8%B0-simpledateformat/</link>
             <pubDate>Tue, 18 Apr 2017 00:00:00 +0000</pubDate>
             
-            <guid>https://kiwinam.com/posts/6/</guid>
+            <guid>https://kiwinam.com/posts/%EC%95%88%EB%93%9C%EB%A1%9C%EC%9D%B4%EB%93%9C-%ED%98%84%EC%9E%AC-%EC%8B%9C%EA%B0%84-%ED%98%84%EC%9E%AC-%EB%82%A0%EC%A7%9C-%EA%B5%AC%ED%95%98%EA%B8%B0-simpledateformat/</guid>
             <description>[안드로이드] 현재 시간, 현재 날짜 구하기 (SimpleDateFormat) Android 현재 시간, 현재 날짜 구하기
 SimpleDateFormat
 Preview  Step1. 현재 시간 가져오기.
@@ -3939,7 +4050,7 @@ package charlie.myapplication; import android.support.v7.app.AppCompatActivity; 
 
 <h6 id="result">Result</h6>
 
-<p><img src="/6/time-1.png" alt="" /></p>
+<p><img src="/img/6/time-1.png" alt="" /></p>
 
 <p><br/></p>
 
@@ -4028,10 +4139,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         
         <item>
             <title>안드로이드 스튜디오 - GitHub 연동과 add, commit, push 개념</title>
-            <link>https://kiwinam.com/posts/5/</link>
+            <link>https://kiwinam.com/posts/%EC%95%88%EB%93%9C%EB%A1%9C%EC%9D%B4%EB%93%9C-%EC%8A%A4%ED%8A%9C%EB%94%94%EC%98%A4-github-%EC%97%B0%EB%8F%99/</link>
             <pubDate>Tue, 07 Mar 2017 00:00:00 +0000</pubDate>
             
-            <guid>https://kiwinam.com/posts/5/</guid>
+            <guid>https://kiwinam.com/posts/%EC%95%88%EB%93%9C%EB%A1%9C%EC%9D%B4%EB%93%9C-%EC%8A%A4%ED%8A%9C%EB%94%94%EC%98%A4-github-%EC%97%B0%EB%8F%99/</guid>
             <description>안드로이드 스튜디오 - GitHub 연동과 add, commit, push 개념 개발자라면 거역할 수 없는 운명
 GitHub
 자신의 소스코드를 관리하는 측면의 장점도 있지만
@@ -4063,7 +4174,7 @@ Working Directory 에서 깃으로 관리 안되고 있는 파일들을 관리�
 
 <h5 id="0-git-이란">0. Git 이란?</h5>
 
-<p><img src="/5/git-1.png" alt="" /></p>
+<p><img src="/img/5/git-1.png" alt="" /></p>
 
 <p>개략적인 깃의 동작입니다.</p>
 
@@ -4083,7 +4194,7 @@ Working Directory 에서 깃으로 관리 안되고 있는 파일들을 관리�
 
 <p><a href="https://git-scm.com/downloads">https://git-scm.com/downloads</a>  (Git 다운로드 url)</p>
 
-<p><img src="/5/git-2.png" alt="" /></p>
+<p><img src="/img/5/git-2.png" alt="" /></p>
 
 <p>링크를 통해 접속하게 되면 위와 같은 화면이 나옵니다.</p>
 
@@ -4093,13 +4204,13 @@ Working Directory 에서 깃으로 관리 안되고 있는 파일들을 관리�
 
 <p>설치가 정상적으로 완료되면 CMD 창 (OS X는 터미널) 에서 git 이라는 명령어에 아래와 같은 출력이 나오면 정상적으로 설치 된 것입니다.</p>
 
-<p><img src="/5/git-3.png" alt="" /></p>
+<p><img src="/img/5/git-3.png" alt="" /></p>
 
 <h5 id="2-github-계정-생성">2.  GitHub 계정 생성</h5>
 
 <p><a href="https://github.com/join?source=header-home">https://github.com/join?source=header-home</a>   (깃 허브 계정 생성 url)</p>
 
-<p><img src="/5/git-4.png" alt="" /></p>
+<p><img src="/img/5/git-4.png" alt="" /></p>
 
 <p>더블클릭을 하시면 이미지를 수정할 수 있습니다</p>
 
@@ -4117,21 +4228,21 @@ Working Directory 에서 깃으로 관리 안되고 있는 파일들을 관리�
 
 <p>그리고 메뉴 중 <code>[ VCS ] &gt;&gt; [ Import into Version Control ] &gt;&gt; [ Create Git Repository ]</code>  를 선택해 줍니다.</p>
 
-<p><img src="/5/git-5.png" alt="" /></p>
+<p><img src="/img/5/git-5.png" alt="" /></p>
 
 <p>그러면 아래와 같은 화면이 나옵니다.</p>
 
 <p>자신의 프로젝트가 있는 폴더를 선택해 줍니다. ( AndroidStudioProjects &gt; &ldquo;ProjectName&rdquo; )</p>
 
-<p><img src="/5/git-6.png" alt="" /></p>
+<p><img src="/img/5/git-6.png" alt="" /></p>
 
-<p><img src="/5/git-7.png" alt="" /></p>
+<p><img src="/img/5/git-7.png" alt="" /></p>
 
 <p>그 다음 새로운 VCS Root 를 생성할거냐는 질문에 당연히 Yes를 눌러주세요.</p>
 
 <p>방금 작업이 끝난 후에 안드로이드 프로젝트에 있는 파일 이름들이 전부다 <em>빨강색</em>  으로 변한 것을 알 수 있습니다.</p>
 
-<p><img src="/5/git-8.png" alt="" /></p>
+<p><img src="/img/5/git-8.png" alt="" /></p>
 
 <p>이유는 아직 로컬 깃 저장소 (방금 지정한 깃 저장소) 에 저 파일들이 Add 되어 있지 않기 때문입니다.</p>
 
@@ -4147,11 +4258,11 @@ Working Directory 에서 깃으로 관리 안되고 있는 파일들을 관리�
 
 <p>안드로이드 스튜디오 설정으로 들어갑니다. (OS X 는 Preferences 입니다. Window는 안본지 오래되서..아마 Setting..?)</p>
 
-<p><img src="/5/git-9.png" alt="" /></p>
+<p><img src="/img/5/git-9.png" alt="" /></p>
 
 <p>설정에서 [ Version Control ] &gt;&gt; [ GitHub ] 로 이동하면</p>
 
-<p><img src="/5/git-10.png" alt="" /></p>
+<p><img src="/img/5/git-10.png" alt="" /></p>
 
 <p>GitHub 의 아이디와 비밀번호를 요구합니다.</p>
 
@@ -4159,11 +4270,11 @@ Working Directory 에서 깃으로 관리 안되고 있는 파일들을 관리�
 
 <p>Test Button Click!</p>
 
-<p><img src="/5/git-11.png" alt="" /></p>
+<p><img src="/img/5/git-11.png" alt="" /></p>
 
 <p>테스트 성공한 다음 OK 눌러서 빠져나가게 되면</p>
 
-<p><img src="/5/git-12.png" alt="" /></p>
+<p><img src="/img/5/git-12.png" alt="" /></p>
 
 <p>이렇게 이 GitHub 레포지터리의 마스터 (관리자) 비밀번호를 설정하라 합니다.</p>
 
@@ -4175,7 +4286,7 @@ Working Directory 에서 깃으로 관리 안되고 있는 파일들을 관리�
 
 <p>바꾼 뒤 프로젝트 전체 파일을 우클릭 &gt;&gt; Git &gt;&gt; Add</p>
 
-<p><img src="/5/git-13.png" alt="" /></p>
+<p><img src="/img/5/git-13.png" alt="" /></p>
 
 <p>프로젝트의 모든 파일을 Add 하게 되면 Stage area (준비 영역) 으로 이동됩니다.</p>
 
@@ -4183,21 +4294,21 @@ Working Directory 에서 깃으로 관리 안되고 있는 파일들을 관리�
 
 <p>Add 하게 되면 빨강색이였던 이름들이 초록색으로 바뀝니다.</p>
 
-<p><img src="/5/git-14.png" alt="" /></p>
+<p><img src="/img/5/git-14.png" alt="" /></p>
 
 <p>그 다음 메뉴에서 [ VCS ] &gt;&gt; [ Import into Version Control ] &gt;&gt; [ Share Project on GitHub ]  를 선택해서 깃 허브에 프로젝트를 연동합니다.</p>
 
-<p><img src="/5/git-15.png" alt="" /></p>
+<p><img src="/img/5/git-15.png" alt="" /></p>
 
 <p>레포지터리 이름과 리모트 이름도 설정해줍니다.</p>
 
 <p>전 그냥 디폴트 값으로 했습니다.</p>
 
-<p><img src="/5/git-16.png" alt="" /></p>
+<p><img src="/img/5/git-16.png" alt="" /></p>
 
 <p>그 다음 메뉴에 있는 VCS Commit 버튼을 눌러줍니다.</p>
 
-<p><img src="/5/git-17.png" alt="" /></p>
+<p><img src="/img/5/git-17.png" alt="" /></p>
 
 <p>아래와 같이 파일들이 모두 올라온 것을 확인하고</p>
 
@@ -4205,13 +4316,13 @@ Working Directory 에서 깃으로 관리 안되고 있는 파일들을 관리�
 
 <p>Commit 만 할 경우 로컬 저장소에만 저장되고 Push 를 해줘야 GitHub에 발행됩니다.</p>
 
-<p><img src="/5/git-18.png" alt="" /></p>
+<p><img src="/img/5/git-18.png" alt="" /></p>
 
-<p><img src="/5/git-19.png" alt="" /></p>
+<p><img src="/img/5/git-19.png" alt="" /></p>
 
 <p>깃허브에 성공적으로 공유되었다는 메시지를 확인하고</p>
 
-<p><img src="/5/git-20.png" alt="" /></p>
+<p><img src="/img/5/git-20.png" alt="" /></p>
 
 <p>마지막으로 깃허브 홈페이지에서 방금 Push 한 파일을 확인해주시면 됩니다.!</p>
 ]]></content>
@@ -4219,10 +4330,10 @@ Working Directory 에서 깃으로 관리 안되고 있는 파일들을 관리�
         
         <item>
             <title>[Mac] 키노트 이미지 저장하기 (이미지 추출)</title>
-            <link>https://kiwinam.com/posts/4/</link>
+            <link>https://kiwinam.com/posts/mac-%ED%82%A4%EB%85%B8%ED%8A%B8-%EC%9D%B4%EB%AF%B8%EC%A7%80-%EC%A0%80%EC%9E%A5%ED%95%98%EA%B8%B0-%EC%9D%B4%EB%AF%B8%EC%A7%80-%EC%B6%94%EC%B6%9C/</link>
             <pubDate>Mon, 27 Feb 2017 00:00:00 +0000</pubDate>
             
-            <guid>https://kiwinam.com/posts/4/</guid>
+            <guid>https://kiwinam.com/posts/mac-%ED%82%A4%EB%85%B8%ED%8A%B8-%EC%9D%B4%EB%AF%B8%EC%A7%80-%EC%A0%80%EC%9E%A5%ED%95%98%EA%B8%B0-%EC%9D%B4%EB%AF%B8%EC%A7%80-%EC%B6%94%EC%B6%9C/</guid>
             <description>[Mac] 키노트 이미지 저장하기 (이미지 추출) Window OS 에 적응 하신 분이라면
 파워 포인트에서 이미지 만들어서 저장하는 방식 많이 사용 하셨을텐데요.
 Mac Keynote 에서도 객체를 이미지로 추출할 수 있습니다 :)
@@ -4248,7 +4359,7 @@ Mac Keynote 에서도 객체를 이미지로 추출할 수 있습니다 :)
 
 <p>(전 포스팅 하면서 만든 이미지를 사용했어요)</p>
 
-<p><img src="/4/mac-1.png" alt="key note image" /></p>
+<p><img src="/img/4/mac-1.png" alt="key note image" /></p>
 
 <p>이렇게 키노트에서 필요한 객체를 만들어주고</p>
 
@@ -4260,7 +4371,7 @@ Mac Keynote 에서도 객체를 이미지로 추출할 수 있습니다 :)
 
 <p>Spotlight 에서 &lsquo;미리보기&rsquo; 를 검색해서 실행 시켜줍니다.</p>
 
-<p><img src="/4/mac-2.png" alt="맥 미리보기" /></p>
+<p><img src="/img/4/mac-2.png" alt="맥 미리보기" /></p>
 
 <p>미리보기에서</p>
 
@@ -4268,20 +4379,20 @@ Mac Keynote 에서도 객체를 이미지로 추출할 수 있습니다 :)
 
 <p>입력하게 되면 아까 복사해 두었던 객체가 올라옵니다.</p>
 
-<p><img src="/4/mac-3.jpeg" alt="맥 미리보기" /></p>
+<p><img src="/img/4/mac-3.jpeg" alt="맥 미리보기" /></p>
 
 <p>이렇게 올라오면 <code>Command + S</code> 로 저장해주시면 됩니다 :)</p>
 
-<p><img src="/4/mac-4.png" alt="맥 미리보기" /></p>
+<p><img src="/img/4/mac-4.png" alt="맥 미리보기" /></p>
 ]]></content>
         </item>
         
         <item>
             <title>[안드로이드] 안드로이드 플랫폼의 특징</title>
-            <link>https://kiwinam.com/posts/3/</link>
+            <link>https://kiwinam.com/posts/%EC%95%88%EB%93%9C%EB%A1%9C%EC%9D%B4%EB%93%9C-%EC%95%88%EB%93%9C%EB%A1%9C%EC%9D%B4%EB%93%9C-%ED%94%8C%EB%9E%AB%ED%8F%BC%EC%9D%98-%ED%8A%B9%EC%A7%95/</link>
             <pubDate>Sun, 26 Feb 2017 00:00:00 +0000</pubDate>
             
-            <guid>https://kiwinam.com/posts/3/</guid>
+            <guid>https://kiwinam.com/posts/%EC%95%88%EB%93%9C%EB%A1%9C%EC%9D%B4%EB%93%9C-%EC%95%88%EB%93%9C%EB%A1%9C%EC%9D%B4%EB%93%9C-%ED%94%8C%EB%9E%AB%ED%8F%BC%EC%9D%98-%ED%8A%B9%EC%A7%95/</guid>
             <description>안드로이드의 개념  - 안드로이드는 모바일 운영체제의 한 종류로, 어플리케이션이 실행할 때 필요한 자원을 공급해 주고 하드웨어에 대신 명령을 전달하고, 전체 시스템을 보호해주는 역할을 함.
  모바일 어플리케이션을 개발하는 유용한 미들웨어도 제공하는 소프트웨어.
  리눅스 커널과 모바일 플랫폼으로 구성.
@@ -4352,10 +4463,10 @@ Mac Keynote 에서도 객체를 이미지로 추출할 수 있습니다 :)
         
         <item>
             <title>[Android] Activity 생명주기 (Activity LifeCycle)</title>
-            <link>https://kiwinam.com/posts/2/</link>
+            <link>https://kiwinam.com/posts/android-activity-%EC%83%9D%EB%AA%85%EC%A3%BC%EA%B8%B0/</link>
             <pubDate>Sat, 25 Feb 2017 00:00:00 +0000</pubDate>
             
-            <guid>https://kiwinam.com/posts/2/</guid>
+            <guid>https://kiwinam.com/posts/android-activity-%EC%83%9D%EB%AA%85%EC%A3%BC%EA%B8%B0/</guid>
             <description>액티비티 (Activity) 생명주기 액티비티는 액티브 상태, 포즈 상태, 스탑 상태 이렇게 3가지의 기본 상태를 가지는데요.
 간단하게 3가지의 기본 상태에 대해 설명해 드리겠습니다.
  액티브(Active) 상태
@@ -4401,7 +4512,7 @@ Mac Keynote 에서도 객체를 이미지로 추출할 수 있습니다 :)
 
 <p>만약 사용자 시스템에 의해서 종료된 액티비티를 다시 요청한다면 시스템은 액티비티의 이전 상태를 복원시켜 재 시작 합니다.</p>
 
-<p><img src="/2/activity_life_cycle.png" alt="Android activity life cycle" /></p>
+<p><img src="/img/2/activity_life_cycle.png" alt="Android activity life cycle" /></p>
 
 <ul>
 <li><p><code>onCreate()</code></p>
@@ -4483,10 +4594,10 @@ Mac Keynote 에서도 객체를 이미지로 추출할 수 있습니다 :)
         
         <item>
             <title>[안드로이드] 최초 실행 확인 법 - SharedPreferences</title>
-            <link>https://kiwinam.com/posts/1/</link>
+            <link>https://kiwinam.com/posts/%EC%95%88%EB%93%9C%EB%A1%9C%EC%9D%B4%EB%93%9C-%EC%B5%9C%EC%B4%88-%EC%8B%A4%ED%96%89-%ED%99%95%EC%9D%B8-%EB%B2%95-sharedpreferences/</link>
             <pubDate>Thu, 22 Sep 2016 00:00:00 +0000</pubDate>
             
-            <guid>https://kiwinam.com/posts/1/</guid>
+            <guid>https://kiwinam.com/posts/%EC%95%88%EB%93%9C%EB%A1%9C%EC%9D%B4%EB%93%9C-%EC%B5%9C%EC%B4%88-%EC%8B%A4%ED%96%89-%ED%99%95%EC%9D%B8-%EB%B2%95-sharedpreferences/</guid>
             <description>안드로이드 최초 실행 확인 법  안드로이드 최초 실행을 확인하는 방법은
 SharedPreferences 를 사용 하는 것입니다.
 SharedPreferences 는 안드로이드에서 DB를 사용하지 않고 값을 저장할 때 사용합니다.
