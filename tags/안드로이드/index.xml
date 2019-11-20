@@ -13,10 +13,10 @@
     
     <item>
       <title>[안드로이드] 네비게이션 드로어 (Navigation drawer) 사용법</title>
-      <link>https://kiwinam.com/posts/%EC%95%88%EB%93%9C%EB%A1%9C%EC%9D%B4%EB%93%9C-%EB%84%A4%EB%B9%84%EA%B2%8C%EC%9D%B4%EC%85%98-%EB%93%9C%EB%A1%9C%EC%96%B4-%EC%82%AC%EC%9A%A9%EB%B2%95/</link>
+      <link>https://kiwinam.com/posts/26/</link>
       <pubDate>Sat, 29 Dec 2018 10:35:56 +0900</pubDate>
       
-      <guid>https://kiwinam.com/posts/%EC%95%88%EB%93%9C%EB%A1%9C%EC%9D%B4%EB%93%9C-%EB%84%A4%EB%B9%84%EA%B2%8C%EC%9D%B4%EC%85%98-%EB%93%9C%EB%A1%9C%EC%96%B4-%EC%82%AC%EC%9A%A9%EB%B2%95/</guid>
+      <guid>https://kiwinam.com/posts/26/</guid>
       <description>[안드로이드] 네비게이션 드로어 (Navigation drawer) 사용법
 
 구글 머티리얼 디자인 가이드 중 네비게이션 드로어
@@ -26,15 +26,15 @@
 그럼 네비게이션 드로어를 어떻게 구현하는지 알아보겠습니다.
 
 
-1. Result  이번 포스팅에서 진행한 네비게이션 드로어 결과 화면</description>
+1. Result 이번 포스팅에서 진행한 네비게이션 드로어 결과 화면</description>
     </item>
     
     <item>
       <title>[안드로이드] startActivityForResult ,onActivityResult 사용법</title>
-      <link>https://kiwinam.com/posts/%EC%95%88%EB%93%9C%EB%A1%9C%EC%9D%B4%EB%93%9C-startactivityforresult-onactivityresult-%EC%82%AC%EC%9A%A9%EB%B2%95/</link>
+      <link>https://kiwinam.com/posts/23/</link>
       <pubDate>Fri, 09 Feb 2018 10:35:56 +0900</pubDate>
       
-      <guid>https://kiwinam.com/posts/%EC%95%88%EB%93%9C%EB%A1%9C%EC%9D%B4%EB%93%9C-startactivityforresult-onactivityresult-%EC%82%AC%EC%9A%A9%EB%B2%95/</guid>
+      <guid>https://kiwinam.com/posts/23/</guid>
       <description>[안드로이드] startActivityForResult ,onActivityResult 사용법
 
 안드로이드 개발을 진행하다 보면 단순히 액티비티를 전환하고 끝! 이 아니라
@@ -52,10 +52,10 @@
     
     <item>
       <title>[안드로이드] 엑셀 파일 생성, 내보내기</title>
-      <link>https://kiwinam.com/posts/%EC%95%88%EB%93%9C%EB%A1%9C%EC%9D%B4%EB%93%9C-%EC%97%91%EC%85%80-%ED%8C%8C%EC%9D%BC-%EC%83%9D%EC%84%B1-%EB%82%B4%EB%B3%B4%EB%82%B4%EA%B8%B0/</link>
+      <link>https://kiwinam.com/posts/21/</link>
       <pubDate>Thu, 07 Dec 2017 10:35:56 +0900</pubDate>
       
-      <guid>https://kiwinam.com/posts/%EC%95%88%EB%93%9C%EB%A1%9C%EC%9D%B4%EB%93%9C-%EC%97%91%EC%85%80-%ED%8C%8C%EC%9D%BC-%EC%83%9D%EC%84%B1-%EB%82%B4%EB%B3%B4%EB%82%B4%EA%B8%B0/</guid>
+      <guid>https://kiwinam.com/posts/21/</guid>
       <description>[안드로이드] 엑셀 파일 생성, 내보내기
 어플리케이션을 만들다 보면 사용자가 저장한 데이터를 가공하여 내보내 주는 기능을 구현할 때가 있습니다.
 데이터 가공에 가장 적합한 엑셀 파일을 만들어 공유하는 것을 목표로 포스팅하겠습니다.
@@ -67,10 +67,10 @@
     
     <item>
       <title>[안드로이드] - android.content.res.Resources$NotFoundException: String resource ID #0x1</title>
-      <link>https://kiwinam.com/posts/%EC%95%88%EB%93%9C%EB%A1%9C%EC%9D%B4%EB%93%9C-androidcontent.res/</link>
+      <link>https://kiwinam.com/posts/19/</link>
       <pubDate>Thu, 23 Nov 2017 10:35:56 +0900</pubDate>
       
-      <guid>https://kiwinam.com/posts/%EC%95%88%EB%93%9C%EB%A1%9C%EC%9D%B4%EB%93%9C-androidcontent.res/</guid>
+      <guid>https://kiwinam.com/posts/19/</guid>
       <description>[안드로이드] - android.content.res.Resources$NotFoundException: String resource ID #0x1
 FATAL EXCEPTION: main Process: , PID: 4012 android.content.res.Resources$NotFoundException: String resource ID #0x9  안드로이드 개발 중
 android.content.res.Resources$NotFoundException: String resource ID #0x1
@@ -83,10 +83,10 @@ TextView 에 setText 메소드를 사용할 때 Int 타입의 데이터를 넣�
     
     <item>
       <title>[안드로이드] 카카오톡 공유 기능 , 카카오 링크 API 사용법</title>
-      <link>https://kiwinam.com/posts/%EC%95%88%EB%93%9C%EB%A1%9C%EC%9D%B4%EB%93%9C-%EC%B9%B4%EC%B9%B4%EC%98%A4%ED%86%A1-%EA%B3%B5%EC%9C%A0-%EA%B8%B0%EB%88%99-%EC%B9%B4%EC%B9%B4%EC%98%A4%EB%A7%81%ED%81%AC-api-%EC%82%AC%EC%9A%A9%EB%B2%95/</link>
+      <link>https://kiwinam.com/posts/20/</link>
       <pubDate>Thu, 23 Nov 2017 10:35:56 +0900</pubDate>
       
-      <guid>https://kiwinam.com/posts/%EC%95%88%EB%93%9C%EB%A1%9C%EC%9D%B4%EB%93%9C-%EC%B9%B4%EC%B9%B4%EC%98%A4%ED%86%A1-%EA%B3%B5%EC%9C%A0-%EA%B8%B0%EB%88%99-%EC%B9%B4%EC%B9%B4%EC%98%A4%EB%A7%81%ED%81%AC-api-%EC%82%AC%EC%9A%A9%EB%B2%95/</guid>
+      <guid>https://kiwinam.com/posts/20/</guid>
       <description>[안드로이드] 카카오톡 공유 기능 , 카카오 링크 API 사용법
 어플리케이션 기획 중에 콘텐츠 공유 기능이 있는 경우가 많습니다.
 공유할 수 있는 수단이 다양하게 있지만 대한민국에서 카카오 플랫폼이 가장 넓은 플랫폼이라 할 수 있죠.
@@ -99,10 +99,10 @@ Kakao Developer에 개발자 문서가 아주 상세히 기술 되어 있습니�
     
     <item>
       <title>[안드로이드] Bottom sheet dialog 사용하기</title>
-      <link>https://kiwinam.com/posts/%EC%95%88%EB%93%9C%EB%A1%9C%EC%9D%B4%EB%93%9C-bottom-sheet-dialog-%EC%82%AC%EC%9A%A9%ED%95%98%EA%B8%B0/</link>
+      <link>https://kiwinam.com/posts/18/</link>
       <pubDate>Wed, 22 Nov 2017 10:35:56 +0900</pubDate>
       
-      <guid>https://kiwinam.com/posts/%EC%95%88%EB%93%9C%EB%A1%9C%EC%9D%B4%EB%93%9C-bottom-sheet-dialog-%EC%82%AC%EC%9A%A9%ED%95%98%EA%B8%B0/</guid>
+      <guid>https://kiwinam.com/posts/18/</guid>
       <description>[안드로이드] Bottom sheet dialog 사용하기
 머티리얼 디자인에서 바텀 시트는 두 가지의 종류가 있습니다
 영구 바닥 시트
@@ -120,10 +120,10 @@ compile &#39;com.android.support:design:26.+&#39;
     
     <item>
       <title>[안드로이드] EditText 화폐 단위 표시 (세자리 콤마)</title>
-      <link>https://kiwinam.com/posts/%EC%95%88%EB%93%9C%EB%A1%9C%EC%9D%B4%EB%93%9C-edittext-%ED%99%94%ED%8F%90-%EB%8B%A8%EC%9C%84-%ED%91%9C%EC%8B%9C-%EC%84%B8%EC%9E%90%EB%A6%AC-%EC%BD%A4%EB%A7%88/</link>
+      <link>https://kiwinam.com/posts/17/</link>
       <pubDate>Tue, 21 Nov 2017 10:35:56 +0900</pubDate>
       
-      <guid>https://kiwinam.com/posts/%EC%95%88%EB%93%9C%EB%A1%9C%EC%9D%B4%EB%93%9C-edittext-%ED%99%94%ED%8F%90-%EB%8B%A8%EC%9C%84-%ED%91%9C%EC%8B%9C-%EC%84%B8%EC%9E%90%EB%A6%AC-%EC%BD%A4%EB%A7%88/</guid>
+      <guid>https://kiwinam.com/posts/17/</guid>
       <description>[안드로이드] EditText 화폐 단위 표시 (세자리 콤마)
 사용자에게 화폐를 입력 받아 표시해줄 경우가 종종 있습니다.
 이럴 때 입력 받은 숫자를 원화 단위 (1,000,000 과 같이 ) 로 바로 바꿔주는 방법입니다.
@@ -134,10 +134,10 @@ compile &#39;com.android.support:design:26.+&#39;
     
     <item>
       <title>[안드로이드] 커스텀 다이얼로그 [2] - ClickListener, Callback</title>
-      <link>https://kiwinam.com/posts/%EC%95%88%EB%93%9C%EB%A1%9C%EC%9D%B4%EB%93%9C-%EC%BB%A4%EC%8A%A4%ED%85%80-%EB%8B%A4%EC%9D%B4%EC%96%BC%EB%A1%9C%EA%B7%B8-clicklistener-callback/</link>
+      <link>https://kiwinam.com/posts/16/</link>
       <pubDate>Sun, 15 Oct 2017 10:35:56 +0900</pubDate>
       
-      <guid>https://kiwinam.com/posts/%EC%95%88%EB%93%9C%EB%A1%9C%EC%9D%B4%EB%93%9C-%EC%BB%A4%EC%8A%A4%ED%85%80-%EB%8B%A4%EC%9D%B4%EC%96%BC%EB%A1%9C%EA%B7%B8-clicklistener-callback/</guid>
+      <guid>https://kiwinam.com/posts/16/</guid>
       <description>[안드로이드] 커스텀 다이얼로그 [2] - ClickListener, Callback
 지난 포스팅에선 커스텀 다이얼로그를 생성하고 보여주는 것을 해보았습니다.
 이번엔 커스텀 다이얼로그 안에서의 클릭 이벤트 (ClickListener) 를 어떻게 다루는지에 대해 설명해드리도록 하겠습니다.
@@ -152,10 +152,10 @@ compile &#39;com.android.support:design:26.+&#39;
     
     <item>
       <title>[안드로이드] 커스텀 다이얼로그 [1] - 생성</title>
-      <link>https://kiwinam.com/posts/%EC%95%88%EB%93%9C%EB%A1%9C%EC%9D%B4%EB%93%9C-%EC%BB%A4%EC%8A%A4%ED%85%80-%EB%8B%A4%EC%9D%B4%EC%96%BC%EB%A1%9C%EA%B7%B8-%EC%83%9D%EC%84%B1/</link>
+      <link>https://kiwinam.com/posts/15/</link>
       <pubDate>Fri, 18 Aug 2017 10:25:38 +0900</pubDate>
       
-      <guid>https://kiwinam.com/posts/%EC%95%88%EB%93%9C%EB%A1%9C%EC%9D%B4%EB%93%9C-%EC%BB%A4%EC%8A%A4%ED%85%80-%EB%8B%A4%EC%9D%B4%EC%96%BC%EB%A1%9C%EA%B7%B8-%EC%83%9D%EC%84%B1/</guid>
+      <guid>https://kiwinam.com/posts/15/</guid>
       <description>[안드로이드] 커스텀 다이얼로그 [1] - 생성
 안드로이드 커스텀 다이얼로그 만드는 법.
 
@@ -171,10 +171,10 @@ Dialog 에서 Activity 로 결과 값을 넘겨줄 수도 있습니다.
     
     <item>
       <title>[안드로이드] Android Studio 레이아웃 프리뷰(Preview) 한글 깨짐</title>
-      <link>https://kiwinam.com/posts/android-studio-%EB%A0%88%EC%9D%B4%EC%95%84%EC%9B%83-%ED%94%84%EB%A6%AC%EB%B7%B0-%ED%95%9C%EA%B8%80-%EA%B9%A8%EC%A7%90/</link>
+      <link>https://kiwinam.com/posts/13/</link>
       <pubDate>Fri, 19 May 2017 16:54:00 +0900</pubDate>
       
-      <guid>https://kiwinam.com/posts/android-studio-%EB%A0%88%EC%9D%B4%EC%95%84%EC%9B%83-%ED%94%84%EB%A6%AC%EB%B7%B0-%ED%95%9C%EA%B8%80-%EA%B9%A8%EC%A7%90/</guid>
+      <guid>https://kiwinam.com/posts/13/</guid>
       <description>[안드로이드] Android Studio 레이아웃 프리뷰(Preview) 한글 깨짐
 안드로이드 스튜디오 Preview 가 깨지는 현상의 원인은 아이러니 하게도 한글 표시 폰트가 한글을 제대로 표시 처리하지 못하기 때문입니다.
 현재 안드로이드 스튜디오에서 설정된 ko 언어 표시는 &amp;ldquo;NotoSansCJK&amp;rdquo; 로 되어 있습니다.

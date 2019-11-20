@@ -13,10 +13,10 @@
     
     <item>
       <title>[안드로이드] EditText 화폐 단위 표시 (세자리 콤마)</title>
-      <link>https://kiwinam.com/posts/%EC%95%88%EB%93%9C%EB%A1%9C%EC%9D%B4%EB%93%9C-edittext-%ED%99%94%ED%8F%90-%EB%8B%A8%EC%9C%84-%ED%91%9C%EC%8B%9C-%EC%84%B8%EC%9E%90%EB%A6%AC-%EC%BD%A4%EB%A7%88/</link>
+      <link>https://kiwinam.com/posts/17/</link>
       <pubDate>Tue, 21 Nov 2017 10:35:56 +0900</pubDate>
       
-      <guid>https://kiwinam.com/posts/%EC%95%88%EB%93%9C%EB%A1%9C%EC%9D%B4%EB%93%9C-edittext-%ED%99%94%ED%8F%90-%EB%8B%A8%EC%9C%84-%ED%91%9C%EC%8B%9C-%EC%84%B8%EC%9E%90%EB%A6%AC-%EC%BD%A4%EB%A7%88/</guid>
+      <guid>https://kiwinam.com/posts/17/</guid>
       <description>[안드로이드] EditText 화폐 단위 표시 (세자리 콤마)
 사용자에게 화폐를 입력 받아 표시해줄 경우가 종종 있습니다.
 이럴 때 입력 받은 숫자를 원화 단위 (1,000,000 과 같이 ) 로 바로 바꿔주는 방법입니다.

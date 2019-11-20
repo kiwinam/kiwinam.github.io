@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-99327236-2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-99327236-2');
+</script>
+
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="author"
+    content="키위남">
+<meta name="description"
+    content="[Mac] Mariadb 설치
+0. Mariadb 란 Mariadb 는 Mysql 의 창업자이자 핵심 개발자인 몬티 와이드니어스가 회사를 2009년에 썬 마이크로즈시스템에 팔고 나온 뒤 다시 만든 RDBMS 입니다.
+Mysql 과 마찬가지로 몬티의 딸 이름을 따와서 MariaDB 라고 이름을 지었습니다.
+Mysql 의 핵심 개발자가 만든 Mariadb 이기 때문에, 대부분의 명령어들이 Mysql 과 유사합니다.
+하지만 Mysql 과 Mariadb 의 핵심적인 차이점은 라이센스에 있습니다.
+오라클이 라이센스를 보유하고 있는 Mysql 과 다르게 MariaDB 는 GPL V2 를 따르는 순수한 오픈 소스이고, 그렇기 때문에 누구든지 커뮤니티 버전을 다운받고 사용할 수 있습니다." />
+    <meta name="keywords" content="Mac, OSX, maridb, mysql, 설치"/>
+
+<meta name="robots" content="index" />
+<meta name="robots" content="follow" />
+<link rel="canonical" href="https://kiwinam.com/posts/28/" />
+
+
+
+
+<meta property="og:title" content="[Mac] Mariadb 설치 :: Kiwinam  — Just code it">
+
+
+
+<meta property="og:image" content="https://kiwinam.com/img/28/28-0.jpg">
+
+
+<meta name="og:description"
+    content="[Mac] Mariadb 설치
+0. Mariadb 란 Mariadb 는 Mysql 의 창업자이자 핵심 개발자인 몬티 와이드니어스가 회사를 2009년에 썬 마이크로즈시스템에 팔고 나온 뒤 다시 만든 RDBMS 입니다.
+Mysql 과 마찬가지로 몬티의 딸 이름을 따와서 MariaDB 라고 이름을 지었습니다.
+Mysql 의 핵심 개발자가 만든 Mariadb 이기 때문에, 대부분의 명령어들이 Mysql 과 유사합니다.
+하지만 Mysql 과 Mariadb 의 핵심적인 차이점은 라이센스에 있습니다.
+오라클이 라이센스를 보유하고 있는 Mysql 과 다르게 MariaDB 는 GPL V2 를 따르는 순수한 오픈 소스이고, 그렇기 때문에 누구든지 커뮤니티 버전을 다운받고 사용할 수 있습니다." />
+
+<meta property="og:type" content="article">
+<meta property="og:url" content="http://kiwinam.com">
+<meta property="og:locale" content="ko_KR">
+<meta name="content-language" content="ko" />
+
+<title>
+    
+    [Mac] Mariadb 설치 :: Kiwinam  — Just code it
+    
+</title>
+
+
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.2.1/css/flag-icon.min.css" rel="stylesheet"
+    type="text/css">
+
+
+
+<link rel="stylesheet" href="/main.min.2f0d18b84270567c723bff340b09ab08db3a7634237cd9667d052eb6b14669b8.css">
+
+
+
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#252627">
+<link rel="shortcut icon" href="/favicon.ico">
+<meta name="theme-color" content="#252627"><meta itemprop="name" content="[Mac] Mariadb 설치">
+<meta itemprop="description" content="맥에서 HomeBrew 를 통해 Maridb 설치하는 방법">
+
+
+<meta itemprop="datePublished" content="2019-03-21T10:35:56&#43;09:00" />
+<meta itemprop="dateModified" content="2019-03-21T10:35:56&#43;09:00" />
+<meta itemprop="wordCount" content="213">
+
+
+
+<meta itemprop="keywords" content="Mac,OSX,maridb,mysql,설치," />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="[Mac] Mariadb 설치"/>
+<meta name="twitter:description" content="맥에서 HomeBrew 를 통해 Maridb 설치하는 방법"/>
+
+
+
+<meta property="article:section" content="Mac" />
+
+<meta property="article:published_time" content="2019-03-21 10:35:56 &#43;0900 KST" />
+
+
+
+
+
+
+
+    </head>
+
+    <body class="dark-theme">
+        <div class="container">
+            <header class="header">
+    <span class="header__inner">
+        <a href="/" style="text-decoration: none;">
+    <div class="logo">
+        
+            <span class="logo__mark">></span>
+            <span class="logo__text">cd /home/kiwinam</span>
+            <span class="logo__cursor" style=""></span>
+        
+    </div>
+</a>
+
+
+        <span class="header__right">
+            
+                <nav class="menu">
+    <ul class="menu__inner"><li><a href="https://kiwinam.com/about">About</a></li><li><a href="https://kiwinam.com/categories">categories</a></li><li><a href="https://kiwinam.com/posts">posts</a></li>
+    </ul>
+</nav>
+
+                <span class="menu-trigger">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M0 0h24v24H0z" fill="none"/>
+                        <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+                    </svg>
+                </span>
+            
+
+            <span class="theme-toggle unselectable"><svg class="theme-toggler" width="24" height="24" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M22 41C32.4934 41 41 32.4934 41 22C41 11.5066 32.4934 3 22
+  3C11.5066 3 3 11.5066 3 22C3 32.4934 11.5066 41 22 41ZM7 22C7
+  13.7157 13.7157 7 22 7V37C13.7157 37 7 30.2843 7 22Z"/>
+</svg>
+</span>
+        </span>
+    </span>
+</header>
+
+
+            <div class="content">
+                
+    <main class="post">
+
+        <div class="post-info">
+            <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-clock"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>One minute
+
+            
+
+            </p>
+        </div>
+
+        <article>
+            <h1 class="post-title"><a href="https://kiwinam.com/posts/28/">[Mac] Mariadb 설치</a></h1>
+
+            
+
+            <div class="post-content">
+                
+
+<hr />
+
+<p>[Mac] Mariadb 설치</p>
+
+<hr />
+
+<p><img src="/img/28/28-0.jpg" alt="Mariadb" /></p>
+
+<h3 id="0-mariadb-란">0. Mariadb 란</h3>
+
+<p>Mariadb 는 Mysql 의 창업자이자 핵심 개발자인 몬티 와이드니어스가 회사를 2009년에 썬 마이크로즈시스템에 팔고 나온 뒤 다시 만든 RDBMS 입니다.</p>
+
+<p>Mysql 과 마찬가지로 몬티의 딸 이름을 따와서 MariaDB 라고 이름을 지었습니다.</p>
+
+<p>Mysql 의 핵심 개발자가 만든 Mariadb 이기 때문에, 대부분의 명령어들이 Mysql 과 유사합니다.</p>
+
+<p>하지만 Mysql 과 Mariadb 의 핵심적인 차이점은 라이센스에 있습니다.</p>
+
+<p>오라클이 라이센스를 보유하고 있는 Mysql 과 다르게 MariaDB 는 GPL V2 를 따르는 순수한 오픈 소스이고, 그렇기 때문에 누구든지 커뮤니티 버전을 다운받고 사용할 수 있습니다.</p>
+
+<p>MariaDB 는 MySQL 에 비해 어플리케이션 부분 속도가 4~5천배 정도 빠르고, 성능적으로도 70% 정도 빠릅니다.</p>
+
+<p>그리고 가장 핵심적으로 MySQL 커뮤니티 버전에서 지원하지 않는 스레드 풀 기능을 MariaDB 커뮤니티 버전에서 제공합니다. 이 점 때문에 저는 주로 MariaDB 를 사용하고 있습니다.</p>
+
+<p><br/></p>
+
+<h3 id="1-install-mariadb-on-os-x">1. Install MariaDB on OS X</h3>
+
+<h4 id="1-1-brew-install">1.1 Brew install</h4>
+
+<p>MariaDB 를 설치하기 전에 HomeBrew 라는 Mac OS X 용 패키지 관리자를 설치하겠습니다.</p>
+
+
+    <img src="/img/28/28-6.png"  alt="HomeBrew"  class="left"  style="width: 500px"  />
+
+
+
+<p>터미널을 열고 아래 명령어를 복사 붙여넣기 해주세요.</p>
+
+<pre><code>/usr/bin/ruby -e &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)&quot;
+</code></pre>
+
+<p>간단하게 HomeBrew 설치가 마무리 됩니다.</p>
+
+<p><br/></p>
+
+<h4 id="1-2-mariadb-install">1.2 Mariadb install</h4>
+
+<ol>
+<li><p>먼저 HomeBrew 업데이트를 진행해주세요.</p>
+
+<p><code>brew update</code>
+
+    <img src="/img/28/28-1.png"  alt="brew update"  class="left"  style="width: 500px"  />
+
+</p></li>
+
+<li><p>HomeBrew 를 통해 MariaDB 를 설치</p>
+
+<p><code>brew install mariadb</code>
+
+    <img src="/img/28/28-2.png"  alt="brew install mariadb"  class="left"  style="width: 500px"  />
+
+</p>
+
+<p>잠시 뒤 설치가 완료 되었다면 아래와 같은 화면이 보입니다.
+
+    <img src="/img/28/28-3.png"  alt="success install"  class="left"  style="width: 500px"  />
+
+</p></li>
+
+<li><p>MariaDB 백그라운드 실행</p>
+
+<p>이제 설치가 다 되었으니 디비를 실행하겠습니다.
+<code>mysql.server start</code>
+
+    <img src="/img/28/28-4.png"  alt="mysql.server start"  class="left"  style="width: 500px"  />
+
+</p></li>
+
+<li><p>MariaDB 접속</p>
+
+<p><code>mysql -u root</code>
+
+    <img src="/img/28/28-5.png"  alt="mysql -u root"  class="left"  style="width: 500px"  />
+
+</p></li>
+</ol>
+
+<p><br/></p>
+
+<p>이상 Mac 에서 MariaDB 설치하는 방법에 대해 포스팅이였습니다.</p>
+
+<p><br/></p>
+
+            </div>
+        </article>
+
+        <hr />
+
+        <div class="post-info">
+                <p>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-tag meta-icon"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7" y2="7"></line></svg><span class="tag"><a href="https://kiwinam.com/tags/mac">Mac</a></span><span class="tag"><a href="https://kiwinam.com/tags/osx">OSX</a></span><span class="tag"><a href="https://kiwinam.com/tags/maridb">maridb</a></span><span class="tag"><a href="https://kiwinam.com/tags/mysql">mysql</a></span><span class="tag"><a href="https://kiwinam.com/tags/%EC%84%A4%EC%B9%98">설치</a></span>
+                </p>
+
+            <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>213 Words</p>
+
+            <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-calendar"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>2019-03-21 10:35 &#43;0900</p>
+        </div>
+
+        
+            <div class="pagination">
+                <div class="pagination__title">
+                    <span class="pagination__title-h">Read other posts</span>
+                    <hr />
+                </div>
+
+                <div class="pagination__buttons">
+                    
+
+                    
+                        <span class="button next">
+                            <a href="https://kiwinam.com/posts/27/">
+                                <span class="button__text">[Git] warning: LF will be CRLF 해결법</span>
+                                <span class="button__icon">→</span>
+                            </a>
+                        </span>
+                    
+                </div>
+            </div>
+        
+
+        
+    </main>
+
+            </div>
+
+            
+                <footer class="footer">
+    <div class="footer__inner">
+        <div class="footer__content">
+            <span>&copy; 2019</span>
+            
+            <span></span>
+            <span> <a href="https://kiwinam.com/posts/index.xml" target="_blank" title="rss"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-rss"><path d="M4 11a9 9 0 0 1 9 9"></path><path d="M4 4a16 16 0 0 1 16 16"></path><circle cx="5" cy="19" r="1"></circle></svg></a></span>
+        </div>
+    </div>
+    <div class="footer__inner">
+        <div class="footer__content">
+
+        </div>
+    </div>
+    <div class="footer__inner">
+        <div class="footer__content">
+            <span>Powered by <a href="http://gohugo.io">Hugo</a></span>
+            <span>Made with &#10084; by <a href="https://github.com/rhazdon">rhazdon</a></span>
+        </div>
+    </div>
+</footer>
+
+            
+        </div>
+
+        
+
+
+
+
+<script type="text/javascript" src="/bundle.min.4c3fb12a087ceed4a52cb5d57068a9795c7069617a01ca70f788052ad66e1791779e6c72686e1dc0ca13dc03b0203204b6566bb0dd1ee80de2b7ff4d8fe53db2.js" integrity="sha512-TD&#43;xKgh87tSlLLXVcGipeVxwaWF6Acpw94gFKtZuF5F3nmxyaG4dwMoT3AOwIDIEtlZrsN0e6A3it/9Nj&#43;U9sg=="></script>
+
+
+
+    </body>
+</html>
