@@ -17,19 +17,7 @@
 <meta name="author"
     content="키위남">
 <meta name="description"
-    content="[안드로이드] startActivityForResult ,onActivityResult 사용법
-
-안드로이드 개발을 진행하다 보면 단순히 액티비티를 전환하고 끝! 이 아니라
-후속 액티비티에서 작업한 결과물을
-호출한 액티비티에서 사용하고 싶은 경우가 왕왕 있습니다.
-
-예를 들자면 회원가입을 진행할 때 ,
-회원가입 액티비티에서 다이얼로그를 띄우고
-다이얼로그에서 주소를 입력하게 하고, 완료 버튼을 누르면 다시 액티비티로 가져오는 경우나,
-(이 경우는 CallBack 으로도 가능합니다.)
-
-자신의 앱에서 카메라 앱을 호출하고 그 결과를 다시 자신의 앱으로 가져오는 경우가 있습니다.
-이러한 경우 사용하는 방법이 startActivityForResult 입니다." />
+    content="startActivityForResult 와 onActivityResult 의 사용법" />
     <meta name="keywords" content="Intent, onActivityResult, startActivityForResult, 안드로이드, 인텐트"/>
 
 <meta name="robots" content="index" />
@@ -47,22 +35,10 @@
 
 
 <meta name="og:description"
-    content="[안드로이드] startActivityForResult ,onActivityResult 사용법
-
-안드로이드 개발을 진행하다 보면 단순히 액티비티를 전환하고 끝! 이 아니라
-후속 액티비티에서 작업한 결과물을
-호출한 액티비티에서 사용하고 싶은 경우가 왕왕 있습니다.
-
-예를 들자면 회원가입을 진행할 때 ,
-회원가입 액티비티에서 다이얼로그를 띄우고
-다이얼로그에서 주소를 입력하게 하고, 완료 버튼을 누르면 다시 액티비티로 가져오는 경우나,
-(이 경우는 CallBack 으로도 가능합니다.)
-
-자신의 앱에서 카메라 앱을 호출하고 그 결과를 다시 자신의 앱으로 가져오는 경우가 있습니다.
-이러한 경우 사용하는 방법이 startActivityForResult 입니다." />
+    content="startActivityForResult 와 onActivityResult 의 사용법" />
 
 <meta property="og:type" content="article">
-<meta property="og:url" content="http://kiwinam.com">
+<meta property="og:url" content="https://kiwinam.com/posts/23/">
 <meta property="og:locale" content="ko_KR">
 <meta name="content-language" content="ko" />
 
@@ -83,13 +59,13 @@
 
 
 
-<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-<link rel="manifest" href="/site.webmanifest">
-<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#252627">
-<link rel="shortcut icon" href="/favicon.ico">
-<meta name="theme-color" content="#252627"><meta itemprop="name" content="[안드로이드] startActivityForResult ,onActivityResult 사용법">
+<link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+<link rel="manifest" href="/favicon/site.webmanifest">
+<link rel="mask-icon" href="/favicon/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="#ffffff"><meta itemprop="name" content="[안드로이드] startActivityForResult ,onActivityResult 사용법">
 <meta itemprop="description" content="startActivityForResult 와 onActivityResult 의 사용법">
 
 
@@ -486,7 +462,13 @@ public class CalculateActivity extends AppCompatActivity {
                 </div>
             </div>
         
-
+        <script src="https://utteranc.es/client.js"
+            repo="kiwinam/kiwinam-comment"
+            issue-term="pathname"
+            theme="github-dark"
+            crossorigin="anonymous"
+            async>
+    </script>
         
     </main>
 

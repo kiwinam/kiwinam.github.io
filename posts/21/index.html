@@ -17,13 +17,7 @@
 <meta name="author"
     content="키위남">
 <meta name="description"
-    content="[안드로이드] 엑셀 파일 생성, 내보내기
-어플리케이션을 만들다 보면 사용자가 저장한 데이터를 가공하여 내보내 주는 기능을 구현할 때가 있습니다.
-데이터 가공에 가장 적합한 엑셀 파일을 만들어 공유하는 것을 목표로 포스팅하겠습니다.
-
-1. Result 
-
-2. Step by Step 2-1. Apache POI 2-1-1. 라이브러리 다운로드  안드로이드 (자바) 에서 엑셀 파일을 바로 쓰고 읽고 수정 하는 일련의 작업들을 바로 수행할 수는 없습니다. 이러한 작업을 할 수 있도록 도와주는 라이브러리인 Apache 에서 제공하는 POI 라이브러리를 이용하여 엑셀을 다루도록 하겠습니다." />
+    content="안드로이드의 데이터를 엑셀 파일로 어떻게 생성하고, 데이터를 내보낼 수 있는지 알아보겠습니다." />
     <meta name="keywords" content="ACTION_SEND, Excel, 내보내기, 생성, 안드로이드, 엑셀, 파일 보내기"/>
 
 <meta name="robots" content="index" />
@@ -41,16 +35,10 @@
 
 
 <meta name="og:description"
-    content="[안드로이드] 엑셀 파일 생성, 내보내기
-어플리케이션을 만들다 보면 사용자가 저장한 데이터를 가공하여 내보내 주는 기능을 구현할 때가 있습니다.
-데이터 가공에 가장 적합한 엑셀 파일을 만들어 공유하는 것을 목표로 포스팅하겠습니다.
-
-1. Result 
-
-2. Step by Step 2-1. Apache POI 2-1-1. 라이브러리 다운로드  안드로이드 (자바) 에서 엑셀 파일을 바로 쓰고 읽고 수정 하는 일련의 작업들을 바로 수행할 수는 없습니다. 이러한 작업을 할 수 있도록 도와주는 라이브러리인 Apache 에서 제공하는 POI 라이브러리를 이용하여 엑셀을 다루도록 하겠습니다." />
+    content="안드로이드의 데이터를 엑셀 파일로 어떻게 생성하고, 데이터를 내보낼 수 있는지 알아보겠습니다." />
 
 <meta property="og:type" content="article">
-<meta property="og:url" content="http://kiwinam.com">
+<meta property="og:url" content="https://kiwinam.com/posts/21/">
 <meta property="og:locale" content="ko_KR">
 <meta name="content-language" content="ko" />
 
@@ -71,13 +59,13 @@
 
 
 
-<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-<link rel="manifest" href="/site.webmanifest">
-<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#252627">
-<link rel="shortcut icon" href="/favicon.ico">
-<meta name="theme-color" content="#252627"><meta itemprop="name" content="[안드로이드] 엑셀 파일 생성, 내보내기">
+<link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+<link rel="manifest" href="/favicon/site.webmanifest">
+<link rel="mask-icon" href="/favicon/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="#ffffff"><meta itemprop="name" content="[안드로이드] 엑셀 파일 생성, 내보내기">
 <meta itemprop="description" content="안드로이드의 데이터를 엑셀 파일로 어떻게 생성하고, 데이터를 내보낼 수 있는지 알아보겠습니다.">
 
 
@@ -384,7 +372,13 @@ startActivity(Intent.createChooser(shareIntent,&quot;엑셀 내보내기&quot;))
                 </div>
             </div>
         
-
+        <script src="https://utteranc.es/client.js"
+            repo="kiwinam/kiwinam-comment"
+            issue-term="pathname"
+            theme="github-dark"
+            crossorigin="anonymous"
+            async>
+    </script>
         
     </main>
 

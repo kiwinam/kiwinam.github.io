@@ -17,9 +17,7 @@
 <meta name="author"
     content="키위남">
 <meta name="description"
-    content="[안드로이드] JSON 데이터 주고 받기 1. Result 
-2. Step by step 데이터를 JSON Obejct 로 보내고 받는 방법 2-1. Send Object private void sendObject(){ JSONObject jsonObject = new JSONObject(); try{ jsonObject.put(&amp;quot;nation&amp;quot;, mJsonNationEt.getText().toString()); jsonObject.put(&amp;quot;name&amp;quot;, mJsonNameEt.getText().toString()); jsonObject.put(&amp;quot;address&amp;quot;, mJsonAddressEt.getText().toString()); jsonObject.put(&amp;quot;age&amp;quot;, mJsonAgeEt.getText().toString()); }catch (JSONException e){ e.printStackTrace(); } receiveObject(jsonObject); }  
-2-2. Receive Object private void receiveObject(JSONObject data){ recyclerView.setVisibility(View.GONE); objectResultLo.setVisibility(View.VISIBLE); try{ mReceiveTv.setText(data.toString()); mReceiveNationTv.setText(&amp;quot;nation : &amp;quot;&#43;data.getString(&amp;quot;nation&amp;quot;)); mReceiveNameTv.setText(&amp;quot;name : &amp;quot;&#43;data.getString(&amp;quot;nation&amp;quot;)); mReceiveAddressTv.setText(&amp;quot;address : &amp;quot;&#43;data.getString(&amp;quot;address&amp;quot;)); mReceiveAgeTv." />
+    content="안드로이드에서 JSON를 이용하는 방법" />
     <meta name="keywords" content="Android, JSON"/>
 
 <meta name="robots" content="index" />
@@ -37,12 +35,10 @@
 
 
 <meta name="og:description"
-    content="[안드로이드] JSON 데이터 주고 받기 1. Result 
-2. Step by step 데이터를 JSON Obejct 로 보내고 받는 방법 2-1. Send Object private void sendObject(){ JSONObject jsonObject = new JSONObject(); try{ jsonObject.put(&amp;quot;nation&amp;quot;, mJsonNationEt.getText().toString()); jsonObject.put(&amp;quot;name&amp;quot;, mJsonNameEt.getText().toString()); jsonObject.put(&amp;quot;address&amp;quot;, mJsonAddressEt.getText().toString()); jsonObject.put(&amp;quot;age&amp;quot;, mJsonAgeEt.getText().toString()); }catch (JSONException e){ e.printStackTrace(); } receiveObject(jsonObject); }  
-2-2. Receive Object private void receiveObject(JSONObject data){ recyclerView.setVisibility(View.GONE); objectResultLo.setVisibility(View.VISIBLE); try{ mReceiveTv.setText(data.toString()); mReceiveNationTv.setText(&amp;quot;nation : &amp;quot;&#43;data.getString(&amp;quot;nation&amp;quot;)); mReceiveNameTv.setText(&amp;quot;name : &amp;quot;&#43;data.getString(&amp;quot;nation&amp;quot;)); mReceiveAddressTv.setText(&amp;quot;address : &amp;quot;&#43;data.getString(&amp;quot;address&amp;quot;)); mReceiveAgeTv." />
+    content="안드로이드에서 JSON를 이용하는 방법" />
 
 <meta property="og:type" content="article">
-<meta property="og:url" content="http://kiwinam.com">
+<meta property="og:url" content="https://kiwinam.com/posts/7/">
 <meta property="og:locale" content="ko_KR">
 <meta name="content-language" content="ko" />
 
@@ -63,13 +59,13 @@
 
 
 
-<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-<link rel="manifest" href="/site.webmanifest">
-<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#252627">
-<link rel="shortcut icon" href="/favicon.ico">
-<meta name="theme-color" content="#252627"><meta itemprop="name" content="[안드로이드] JSON 데이터 주고 받기">
+<link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+<link rel="manifest" href="/favicon/site.webmanifest">
+<link rel="mask-icon" href="/favicon/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="#ffffff"><meta itemprop="name" content="[안드로이드] JSON 데이터 주고 받기">
 <meta itemprop="description" content="안드로이드에서 JSON를 이용하는 방법">
 
 
@@ -499,7 +495,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 </div>
             </div>
         
-
+        <script src="https://utteranc.es/client.js"
+            repo="kiwinam/kiwinam-comment"
+            issue-term="pathname"
+            theme="github-dark"
+            crossorigin="anonymous"
+            async>
+    </script>
         
     </main>
 

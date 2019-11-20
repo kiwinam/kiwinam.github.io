@@ -1,12 +1,1 @@
 User-agent: *
-Disallow: /tags
-Disallow: /categories
-Allow: /
-
-User-agent: Mediapartners-Google
-Disallow: /tags
-Disallow: /categories
-Allow: /
-
-User-agent: bingbot
-Crawl-delay: 30

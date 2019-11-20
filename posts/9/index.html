@@ -17,19 +17,7 @@
 <meta name="author"
     content="키위남">
 <meta name="description"
-    content="[안드로이드] RecyclerView [2] OnItemClick 리스너 구현
-
-RecyclerView 에서는 ListView에서와는 다르게
-ClickListener 를 따로 구현해서 등록해줘야합니다.
-Adapter에서 OnClick 를 구현해줘도 되고 제가 구현한 방법 처럼 따로 클래스를 만들어서
-ItemTouchListener 를 구현해도 됩니다.
-
-1. Result 
-2. Step by Step 2-1. RecyclerView 구현 안드로이드 RecyclerView 의 간단한 구현 방법은 이전 포스팅 글로 대체 하겠습니다.
-[[안드로이드] RecyclerView 간단한 사용법]
-
-2-2. OnItemTouchListener RecyclerItemClickListener.java
-public class RecyclerItemClickListener implements RecyclerView.OnItemTouchListener { private OnItemClickListener mListener; public interface OnItemClickListener { void onItemClick(View view, int position); void onLongItemClick(View view, int position); } GestureDetector mGestureDetector; public RecyclerItemClickListener(Context context, final RecyclerView recyclerView, OnItemClickListener listener) { mListener = listener; mGestureDetector = new GestureDetector(context, new GestureDetector." />
+    content="RecyclerView 클릭 리스너 구현하는 방법" />
     <meta name="keywords" content="Android, RecyclerView"/>
 
 <meta name="robots" content="index" />
@@ -47,22 +35,10 @@ public class RecyclerItemClickListener implements RecyclerView.OnItemTouchListen
 
 
 <meta name="og:description"
-    content="[안드로이드] RecyclerView [2] OnItemClick 리스너 구현
-
-RecyclerView 에서는 ListView에서와는 다르게
-ClickListener 를 따로 구현해서 등록해줘야합니다.
-Adapter에서 OnClick 를 구현해줘도 되고 제가 구현한 방법 처럼 따로 클래스를 만들어서
-ItemTouchListener 를 구현해도 됩니다.
-
-1. Result 
-2. Step by Step 2-1. RecyclerView 구현 안드로이드 RecyclerView 의 간단한 구현 방법은 이전 포스팅 글로 대체 하겠습니다.
-[[안드로이드] RecyclerView 간단한 사용법]
-
-2-2. OnItemTouchListener RecyclerItemClickListener.java
-public class RecyclerItemClickListener implements RecyclerView.OnItemTouchListener { private OnItemClickListener mListener; public interface OnItemClickListener { void onItemClick(View view, int position); void onLongItemClick(View view, int position); } GestureDetector mGestureDetector; public RecyclerItemClickListener(Context context, final RecyclerView recyclerView, OnItemClickListener listener) { mListener = listener; mGestureDetector = new GestureDetector(context, new GestureDetector." />
+    content="RecyclerView 클릭 리스너 구현하는 방법" />
 
 <meta property="og:type" content="article">
-<meta property="og:url" content="http://kiwinam.com">
+<meta property="og:url" content="https://kiwinam.com/posts/9/">
 <meta property="og:locale" content="ko_KR">
 <meta name="content-language" content="ko" />
 
@@ -83,13 +59,13 @@ public class RecyclerItemClickListener implements RecyclerView.OnItemTouchListen
 
 
 
-<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-<link rel="manifest" href="/site.webmanifest">
-<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#252627">
-<link rel="shortcut icon" href="/favicon.ico">
-<meta name="theme-color" content="#252627"><meta itemprop="name" content="[안드로이드] RecyclerView [2] OnItemClick 리스너 구현">
+<link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+<link rel="manifest" href="/favicon/site.webmanifest">
+<link rel="mask-icon" href="/favicon/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="#ffffff"><meta itemprop="name" content="[안드로이드] RecyclerView [2] OnItemClick 리스너 구현">
 <meta itemprop="description" content="RecyclerView 클릭 리스너 구현하는 방법">
 
 
@@ -347,7 +323,13 @@ public class RecyclerItemClickListener implements RecyclerView.OnItemTouchListen
                 </div>
             </div>
         
-
+        <script src="https://utteranc.es/client.js"
+            repo="kiwinam/kiwinam-comment"
+            issue-term="pathname"
+            theme="github-dark"
+            crossorigin="anonymous"
+            async>
+    </script>
         
     </main>
 
