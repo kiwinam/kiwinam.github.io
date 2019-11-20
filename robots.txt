@@ -1,1 +1,11 @@
 User-agent: *
+Allow: /
+
+User-agent: Mediapartners-Google
+Allow: /
+
+User-agent: Yeti
+Allow:/
+
+User-agent: bingbot
+Crawl-delay: 30
