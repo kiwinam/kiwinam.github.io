@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>android on 키위남</title>
+    <title>Android on 키위남</title>
     <link>https://kiwinam.com/tags/android/</link>
-    <description>Recent content in android on 키위남</description>
+    <description>Recent content in Android on 키위남</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>ko</language>
     <lastBuildDate>Sat, 29 Dec 2018 10:35:56 +0900</lastBuildDate>
     
 	<atom:link href="https://kiwinam.com/tags/android/index.xml" rel="self" type="application/rss+xml" />
