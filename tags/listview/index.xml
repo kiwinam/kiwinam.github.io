@@ -13,10 +13,10 @@
     
     <item>
       <title>[안드로이드] RecyclerView [1] 간단한 사용법</title>
-      <link>https://kiwinam.com/posts/8/</link>
+      <link>https://kiwinam.com/posts/android-recyclerview/</link>
       <pubDate>Tue, 25 Apr 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://kiwinam.com/posts/8/</guid>
+      <guid>https://kiwinam.com/posts/android-recyclerview/</guid>
       <description>[안드로이드] RecyclerView 간단한 사용법
 
 안드로이드에서 Recycler View 를 간단하게 사용하는 방법에 대해 포스팅 하겠습니다!

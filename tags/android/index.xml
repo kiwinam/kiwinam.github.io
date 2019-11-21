@@ -12,11 +12,11 @@
     
     
     <item>
-      <title>[안드로이드] 네비게이션 드로어 (Navigation drawer) 사용법</title>
-      <link>https://kiwinam.com/posts/26/</link>
+      <title>[안드로이드] 네비게이션 드로어 사용법</title>
+      <link>https://kiwinam.com/posts/android-navigation-drawer/</link>
       <pubDate>Sat, 29 Dec 2018 10:35:56 +0900</pubDate>
       
-      <guid>https://kiwinam.com/posts/26/</guid>
+      <guid>https://kiwinam.com/posts/android-navigation-drawer/</guid>
       <description>[안드로이드] 네비게이션 드로어 (Navigation drawer) 사용법
 
 구글 머티리얼 디자인 가이드 중 네비게이션 드로어
@@ -30,11 +30,11 @@
     </item>
     
     <item>
-      <title>[안드로이드] 툴바 사용법 (버튼 추가) - add button to tool bar</title>
-      <link>https://kiwinam.com/posts/25/</link>
+      <title>[안드로이드] 툴바 사용법 - 버튼 추가</title>
+      <link>https://kiwinam.com/posts/android-toolbar-add-button/</link>
       <pubDate>Wed, 26 Dec 2018 10:35:56 +0900</pubDate>
       
-      <guid>https://kiwinam.com/posts/25/</guid>
+      <guid>https://kiwinam.com/posts/android-toolbar-add-button/</guid>
       <description>[안드로이드] 툴바 사용법 (버튼 추가) - add button to tool bar
 
 안드로이드 API 21 (롤리팝 5.0) 버전부터 기존 Action bar 를 대체할 tool bar 라는 앱 상단에 표시되는 뷰가 추가되었습니다.
@@ -48,10 +48,10 @@
     
     <item>
       <title>Android Studio 3.0 xml layout Preview 오류 해결 방법</title>
-      <link>https://kiwinam.com/posts/24/</link>
+      <link>https://kiwinam.com/posts/android-xml-layout-preview/</link>
       <pubDate>Sat, 10 Feb 2018 10:35:56 +0900</pubDate>
       
-      <guid>https://kiwinam.com/posts/24/</guid>
+      <guid>https://kiwinam.com/posts/android-xml-layout-preview/</guid>
       <description>Android Studio 3.0 xml layout Preview 오류 해결 방법
 
 Android Studio 를 2.3.x 버전으로 사용하다 이번에 3.0 버전으로 업데이트 하였습니다.
@@ -66,10 +66,10 @@ Font.xml 파일을 수정한 적이 있을텐데요.</description>
     
     <item>
       <title>[안드로이드] - android.content.res.Resources$NotFoundException: String resource ID #0x1</title>
-      <link>https://kiwinam.com/posts/19/</link>
+      <link>https://kiwinam.com/posts/android-string-resource/</link>
       <pubDate>Thu, 23 Nov 2017 10:35:56 +0900</pubDate>
       
-      <guid>https://kiwinam.com/posts/19/</guid>
+      <guid>https://kiwinam.com/posts/android-string-resource/</guid>
       <description>[안드로이드] - android.content.res.Resources$NotFoundException: String resource ID #0x1
 FATAL EXCEPTION: main Process: , PID: 4012 android.content.res.Resources$NotFoundException: String resource ID #0x9  안드로이드 개발 중
 android.content.res.Resources$NotFoundException: String resource ID #0x1
@@ -82,10 +82,10 @@ TextView 에 setText 메소드를 사용할 때 Int 타입의 데이터를 넣�
     
     <item>
       <title>[안드로이드] 카카오톡 공유 기능 , 카카오 링크 API 사용법</title>
-      <link>https://kiwinam.com/posts/20/</link>
+      <link>https://kiwinam.com/posts/android-share-kakaotalk/</link>
       <pubDate>Thu, 23 Nov 2017 10:35:56 +0900</pubDate>
       
-      <guid>https://kiwinam.com/posts/20/</guid>
+      <guid>https://kiwinam.com/posts/android-share-kakaotalk/</guid>
       <description>[안드로이드] 카카오톡 공유 기능 , 카카오 링크 API 사용법
 어플리케이션 기획 중에 콘텐츠 공유 기능이 있는 경우가 많습니다.
 공유할 수 있는 수단이 다양하게 있지만 대한민국에서 카카오 플랫폼이 가장 넓은 플랫폼이라 할 수 있죠.
@@ -98,10 +98,10 @@ Kakao Developer에 개발자 문서가 아주 상세히 기술 되어 있습니�
     
     <item>
       <title>[안드로이드] Bottom sheet dialog 사용하기</title>
-      <link>https://kiwinam.com/posts/18/</link>
+      <link>https://kiwinam.com/posts/android-bottom-sheet-dialog/</link>
       <pubDate>Wed, 22 Nov 2017 10:35:56 +0900</pubDate>
       
-      <guid>https://kiwinam.com/posts/18/</guid>
+      <guid>https://kiwinam.com/posts/android-bottom-sheet-dialog/</guid>
       <description>[안드로이드] Bottom sheet dialog 사용하기
 머티리얼 디자인에서 바텀 시트는 두 가지의 종류가 있습니다
 영구 바닥 시트
@@ -119,10 +119,10 @@ compile &#39;com.android.support:design:26.+&#39;
     
     <item>
       <title>[안드로이드] 커스텀 다이얼로그 [1] - 생성</title>
-      <link>https://kiwinam.com/posts/15/</link>
+      <link>https://kiwinam.com/posts/android-custom-dialog/</link>
       <pubDate>Fri, 18 Aug 2017 10:25:38 +0900</pubDate>
       
-      <guid>https://kiwinam.com/posts/15/</guid>
+      <guid>https://kiwinam.com/posts/android-custom-dialog/</guid>
       <description>[안드로이드] 커스텀 다이얼로그 [1] - 생성
 안드로이드 커스텀 다이얼로그 만드는 법.
 
@@ -138,10 +138,10 @@ Dialog 에서 Activity 로 결과 값을 넘겨줄 수도 있습니다.
     
     <item>
       <title>[안드로이드] status bar 색상 변경하기, 아이콘 색상 변경하기</title>
-      <link>https://kiwinam.com/posts/14/</link>
+      <link>https://kiwinam.com/posts/android-change-status-bar/</link>
       <pubDate>Thu, 01 Jun 2017 09:56:28 +0900</pubDate>
       
-      <guid>https://kiwinam.com/posts/14/</guid>
+      <guid>https://kiwinam.com/posts/android-change-status-bar/</guid>
       <description>[안드로이드] status bar 색상 변경하기
 안드로이드 status bar는 최상단에 위치한 기기의 상태를 표시해주는 Bar 입니다.
 API 21 버전 - 롤리팝 버전 이상부터 Status bar (상태바) 색상 변경이 가능하고
@@ -153,11 +153,11 @@ if (Build.VERSION.SDK_INT &amp;gt;= 21) { // 21 버전 이상일 때 getWindow()
     </item>
     
     <item>
-      <title>[안드로이드] - Pull to refresh 당겨서 새로고침 (SwipeRefreshLayout)</title>
-      <link>https://kiwinam.com/posts/12/</link>
+      <title>[안드로이드] - 당겨서 새로고침 SwipeRefreshLayout</title>
+      <link>https://kiwinam.com/posts/android-swipe-refresh-layout/</link>
       <pubDate>Tue, 16 May 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://kiwinam.com/posts/12/</guid>
+      <guid>https://kiwinam.com/posts/android-swipe-refresh-layout/</guid>
       <description>[안드로이드] - Pull to refresh 당겨서 새로고침 (SwipeRefreshLayout)
 당겨서 새로고침 (pull to refresh) 는 많은 APP에서 만날수 있는 친숙한 패턴입니다.
 &amp;lsquo;구글 가이드&amp;rsquo;에도 수동으로 동기화 하는 방법 중 제스처를 통해 내용물 갱신을 시작하도록 요구합니다.
@@ -168,10 +168,10 @@ if (Build.VERSION.SDK_INT &amp;gt;= 21) { // 21 버전 이상일 때 getWindow()
     
     <item>
       <title>[안드로이드] RecyclerView [3] Divider 구분선 넣기</title>
-      <link>https://kiwinam.com/posts/10/</link>
+      <link>https://kiwinam.com/posts/android-recyclerview-divider/</link>
       <pubDate>Fri, 28 Apr 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://kiwinam.com/posts/10/</guid>
+      <guid>https://kiwinam.com/posts/android-recyclerview-divider/</guid>
       <description>[안드로이드] RecyclerView [3] Divider 구분선 넣기
 
 ( Divider 가 적용된 RecyclerView 예제, 출저 Google Material Design Guide )

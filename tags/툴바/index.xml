@@ -12,11 +12,11 @@
     
     
     <item>
-      <title>[안드로이드] 툴바 사용법 (버튼 추가) - add button to tool bar</title>
-      <link>https://kiwinam.com/posts/25/</link>
+      <title>[안드로이드] 툴바 사용법 - 버튼 추가</title>
+      <link>https://kiwinam.com/posts/android-toolbar-add-button/</link>
       <pubDate>Wed, 26 Dec 2018 10:35:56 +0900</pubDate>
       
-      <guid>https://kiwinam.com/posts/25/</guid>
+      <guid>https://kiwinam.com/posts/android-toolbar-add-button/</guid>
       <description>[안드로이드] 툴바 사용법 (버튼 추가) - add button to tool bar
 
 안드로이드 API 21 (롤리팝 5.0) 버전부터 기존 Action bar 를 대체할 tool bar 라는 앱 상단에 표시되는 뷰가 추가되었습니다.

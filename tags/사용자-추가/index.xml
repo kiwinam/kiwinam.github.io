@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>사용자 추가 on Kiwinam</title>
+    <link>https://kiwinam.com/tags/%EC%82%AC%EC%9A%A9%EC%9E%90-%EC%B6%94%EA%B0%80/</link>
+    <description>Recent content in 사용자 추가 on Kiwinam</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ko</language>
+    <lastBuildDate>Thu, 02 May 2019 23:35:56 +0900</lastBuildDate>
+    
+	<atom:link href="https://kiwinam.com/tags/%EC%82%AC%EC%9A%A9%EC%9E%90-%EC%B6%94%EA%B0%80/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>[MySQL] 사용자 추가, 권한 설정, 삭제</title>
+      <link>https://kiwinam.com/posts/mysql-add-user/</link>
+      <pubDate>Thu, 02 May 2019 23:35:56 +0900</pubDate>
+      
+      <guid>https://kiwinam.com/posts/mysql-add-user/</guid>
+      <description>0. tl; dr MySQL/MariaDB 계정 생성 MySQL 사용자 생성 문법
+CREATE USER &#39;아이디&#39;@&#39;접속대역&#39; IDENTIFIED BY &#39;패스워드&#39;;  예시
+CREATE USER &#39;kiwinam&#39;@&#39;localhost&#39; IDENTIFIED BY &#39;PassWord123&#39;; GRANT ALL PRIVILEGES ON *.* TO &#39;kiwinam&#39;@&#39;localhost&#39; WITH GRANT OPTION;  
+
+1. MySQL 로그인 mysql -u root -p  사용자 계정을 추가하기 위해서는 root 계정으로 로그인 해야합니다.
+
+
+2. 생성된 계정 확인 이미 생성되어 있는 계정들을 확인하고 싶은 경우 아래와 같이 입력하면 됩니다.</description>
+    </item>
+    
+  </channel>
+</rss>

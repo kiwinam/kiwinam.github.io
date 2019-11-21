@@ -13,10 +13,10 @@
     
     <item>
       <title>[Git] warning: LF will be CRLF 해결법</title>
-      <link>https://kiwinam.com/posts/27/</link>
+      <link>https://kiwinam.com/posts/git-lf-will-be-crlf/</link>
       <pubDate>Fri, 15 Feb 2019 10:35:56 +0900</pubDate>
       
-      <guid>https://kiwinam.com/posts/27/</guid>
+      <guid>https://kiwinam.com/posts/git-lf-will-be-crlf/</guid>
       <description>[Git] warning: LF will be CRLF
 
 터미널 or CMD 에서 Git command 를 사용하는데 위 사진 같은 warning 이 나오는 경우가 있습니다.

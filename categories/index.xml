@@ -6,17 +6,26 @@
     <description>Recent content in Categories on Kiwinam</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ko</language>
-    <lastBuildDate>Thu, 21 Mar 2019 10:35:56 +0900</lastBuildDate>
+    <lastBuildDate>Thu, 02 May 2019 23:35:56 +0900</lastBuildDate>
     
 	<atom:link href="https://kiwinam.com/categories/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Mac</title>
-      <link>https://kiwinam.com/categories/mac/</link>
+      <title>MySQL</title>
+      <link>https://kiwinam.com/categories/mysql/</link>
+      <pubDate>Thu, 02 May 2019 23:35:56 +0900</pubDate>
+      
+      <guid>https://kiwinam.com/categories/mysql/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Mariadb</title>
+      <link>https://kiwinam.com/categories/mariadb/</link>
       <pubDate>Thu, 21 Mar 2019 10:35:56 +0900</pubDate>
       
-      <guid>https://kiwinam.com/categories/mac/</guid>
+      <guid>https://kiwinam.com/categories/mariadb/</guid>
       <description></description>
     </item>
     
@@ -35,6 +44,15 @@
       <pubDate>Sat, 29 Dec 2018 10:35:56 +0900</pubDate>
       
       <guid>https://kiwinam.com/categories/android/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Mac</title>
+      <link>https://kiwinam.com/categories/mac/</link>
+      <pubDate>Tue, 30 Jan 2018 10:35:56 +0900</pubDate>
+      
+      <guid>https://kiwinam.com/categories/mac/</guid>
       <description></description>
     </item>
     
