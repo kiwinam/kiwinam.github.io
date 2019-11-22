@@ -17,7 +17,10 @@
       
       <guid>https://kiwinam.com/posts/install-mariadb-on-mac/</guid>
       <description>[Mac] Mariadb 설치
+<<<<<<< HEAD
 
+=======
+>>>>>>> aa5c8e4f1ee3a2a46ebb6236f6b640c50f839ca2
 0. Mariadb 란 Mariadb 는 Mysql 의 창업자이자 핵심 개발자인 몬티 와이드니어스가 회사를 2009년에 썬 마이크로즈시스템에 팔고 나온 뒤 다시 만든 RDBMS 입니다.
 Mysql 과 마찬가지로 몬티의 딸 이름을 따와서 MariaDB 라고 이름을 지었습니다.
 Mysql 의 핵심 개발자가 만든 Mariadb 이기 때문에, 대부분의 명령어들이 Mysql 과 유사합니다.
