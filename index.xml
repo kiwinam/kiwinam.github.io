@@ -16,12 +16,8 @@
       <pubDate>Fri, 27 Sep 2019 00:00:00 +0000</pubDate>
       
       <guid>https://kiwinam.com/about/</guid>
-<<<<<<< HEAD
       <description> -- 
 
-=======
-      <description> 
->>>>>>> aa5c8e4f1ee3a2a46ebb6236f6b640c50f839ca2
 전 여행을 좋아하는 엔지니어입니다 :)
 스타트업에서 좋은 사람들과 새로운 경험을 하는 것을 좋아합니다.
 Find me  https://github.com/kiwinam https://www.linkedin.com/in/charlie-park-19731b173/ https://www.rocketpunch.com/@mals93  </description>
@@ -93,7 +89,8 @@ Mac user git config --global core.autocrlf true input
 그럼 네비게이션 드로어를 어떻게 구현하는지 알아보겠습니다.
 
 
-1. Result 이번 포스팅에서 진행한 네비게이션 드로어 결과 화면</description>
+1. Result 
+이번 포스팅에서 진행한 네비게이션 드로어 결과 화면</description>
     </item>
     
     <item>

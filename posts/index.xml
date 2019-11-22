@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Posts on 키위남</title>
@@ -14,23 +13,6 @@
             <pubDate>Thu, 02 May 2019 23:35:56 +0900</pubDate>
             
             <guid>https://kiwinam.com/posts/mysql-add-user/</guid>
-=======
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-    <channel>
-        <title>Posts on 키위남</title>
-        <link>https://kiwinam.com/posts/</link>
-        <description>Recent content in Posts on 키위남</description>
-        <generator>Hugo -- gohugo.io</generator>
-        <lastBuildDate>Thu, 02 May 2019 23:35:56 +0900</lastBuildDate>
-        <atom:link href="https://kiwinam.com/posts/index.xml" rel="self" type="application/rss+xml" />
-        
-        <item>
-            <title>[MySQL] 사용자 추가, 권한 설정, 삭제</title>
-            <link>https://kiwinam.com/posts/mysql-add-user/</link>
-            <pubDate>Thu, 02 May 2019 23:35:56 +0900</pubDate>
-            
-            <guid>https://kiwinam.com/posts/mysql-add-user/</guid>
->>>>>>> aa5c8e4f1ee3a2a46ebb6236f6b640c50f839ca2
             <description>0. tl; dr MySQL/MariaDB 계정 생성 MySQL 사용자 생성 문법
 CREATE USER &#39;아이디&#39;@&#39;접속대역&#39; IDENTIFIED BY &#39;패스워드&#39;;  예시
 CREATE USER &#39;kiwinam&#39;@&#39;localhost&#39; IDENTIFIED BY &#39;PassWord123&#39;; GRANT ALL PRIVILEGES ON *.* TO &#39;kiwinam&#39;@&#39;localhost&#39; WITH GRANT OPTION;  
@@ -38,11 +20,7 @@ CREATE USER &#39;kiwinam&#39;@&#39;localhost&#39; IDENTIFIED BY &#39;PassWord123
 1. MySQL 로그인 mysql -u root -p  사용자 계정을 추가하기 위해서는 root 계정으로 로그인 해야합니다.
 
 
-<<<<<<< HEAD
 2. 생성된 계정 확인 이미 생성되어 있는 계정들을 확인하고 싶은 경우 아래와 같이 입력하면 됩니다.</description>
-=======
-2. 생성된 계정 확인 이미 생성되어 있는 계정들을 확인하고 싶은 경우 아래와 같이 입력하면 됩니다.</description>
->>>>>>> aa5c8e4f1ee3a2a46ebb6236f6b640c50f839ca2
             <content type="html"><![CDATA[
 
 <hr />
@@ -89,15 +67,9 @@ GRANT ALL PRIVILEGES ON *.* TO 'kiwinam'@'localhost' WITH GRANT OPTION;
 select user, host from user;
 </code></pre>
 
-<<<<<<< HEAD
 
     <img src="/img/29/29-1.png"  alt="Select user, host from user"  class="left"  style="width: 500px"  />
 
-=======
-
-    <img src="/img/29/29-1.png"  alt="Select user, host from user"  class="left"  style="width: 500px"  />
-
->>>>>>> aa5c8e4f1ee3a2a46ebb6236f6b640c50f839ca2
 
 
 <p>이렇게 MySQL 에 어떤 사용자 계정이 있는지 확인할 수 있습니다.</p>
@@ -112,15 +84,9 @@ select user, host from user;
 CREATE USER 'kiwinam'@'%' IDENTIFIED BY 'PassWord123';
 </code></pre>
 
-<<<<<<< HEAD
 
     <img src="/img/29/29-2.png"  alt="show grants for &#39;kiwinam&#39;@&#39;localhost&#39;"  class="left"  />
 
-=======
-
-    <img src="/img/29/29-2.png"  alt="show grants for &#39;kiwinam&#39;@&#39;localhost&#39;"  class="left"  />
-
->>>>>>> aa5c8e4f1ee3a2a46ebb6236f6b640c50f839ca2
 
 
 <p>호스트가 <code>localhost</code> 인 경우는 로컬에서만 접근 가능한 계정이고,</p>
@@ -167,15 +133,9 @@ SHOW GRANTS FOR '아이디'@'호스트'
 SHOW GRANTS FOR 'kiwinam'@'localhost'
 </code></pre>
 
-<<<<<<< HEAD
 
     <img src="/img/29/29-3.png"  alt="show grants for &#39;kiwinam&#39;@&#39;localhost&#39;"  class="left"  />
 
-=======
-
-    <img src="/img/29/29-3.png"  alt="show grants for &#39;kiwinam&#39;@&#39;localhost&#39;"  class="left"  />
-
->>>>>>> aa5c8e4f1ee3a2a46ebb6236f6b640c50f839ca2
 
 
 <p><br/></p>
@@ -207,7 +167,6 @@ DROP USER 'kiwinam'@'localhost'
 
 <p><br/>
 <br/></p>
-<<<<<<< HEAD
 ]]></content>
         </item>
         
@@ -217,17 +176,6 @@ DROP USER 'kiwinam'@'localhost'
             <pubDate>Thu, 21 Mar 2019 10:35:56 +0900</pubDate>
             
             <guid>https://kiwinam.com/posts/install-mariadb-on-mac/</guid>
-=======
-]]></content>
-        </item>
-        
-        <item>
-            <title>[MariaDB] Mac 에서 Mariadb 설치</title>
-            <link>https://kiwinam.com/posts/install-mariadb-on-mac/</link>
-            <pubDate>Thu, 21 Mar 2019 10:35:56 +0900</pubDate>
-            
-            <guid>https://kiwinam.com/posts/install-mariadb-on-mac/</guid>
->>>>>>> aa5c8e4f1ee3a2a46ebb6236f6b640c50f839ca2
             <description>[Mac] Mariadb 설치
 
 0. Mariadb 란 Mariadb 는 Mysql 의 창업자이자 핵심 개발자인 몬티 와이드니어스가 회사를 2009년에 썬 마이크로즈시스템에 팔고 나온 뒤 다시 만든 RDBMS 입니다.
@@ -303,7 +251,6 @@ Mysql 의 핵심 개발자가 만든 Mariadb 이기 때문에, 대부분의 명�
 <ol>
 <li><p>먼저 HomeBrew 업데이트를 진행해주세요.</p>
 
-<<<<<<< HEAD
 <p><code>brew update</code></p></li>
 </ol>
 
@@ -321,13 +268,6 @@ Mysql 의 핵심 개발자가 만든 Mariadb 이기 때문에, 대부분의 명�
     
     <img src="/img/28/28-1.png"  alt="brew update"  class="left"  style="width: 500px"  />
 
-=======
-<p><code>brew update</code>
-
-    <img src="/img/28/28-1.png"  alt="brew update"  class="left"  style="width: 500px"  />
-
-</p></li>
->>>>>>> aa5c8e4f1ee3a2a46ebb6236f6b640c50f839ca2
 
 </picture></p>
 
@@ -335,7 +275,6 @@ Mysql 의 핵심 개발자가 만든 Mariadb 이기 때문에, 대부분의 명�
 <li><p>HomeBrew 를 통해 MariaDB 를 설치</p>
 
 <p><code>brew install mariadb</code>
-<<<<<<< HEAD
 <picture style="width: 70%">
     <source
         type="image/webp"
@@ -370,23 +309,10 @@ Mysql 의 핵심 개발자가 만든 Mariadb 이기 때문에, 대부분의 명�
 
 
 </picture></p></li>
-=======
-
-    <img src="/img/28/28-2.png"  alt="brew install mariadb"  class="left"  style="width: 500px"  />
-
-</p>
-
-<p>잠시 뒤 설치가 완료 되었다면 아래와 같은 화면이 보입니다.
-
-    <img src="/img/28/28-3.png"  alt="success install"  class="left"  style="width: 500px"  />
-
-</p></li>
->>>>>>> aa5c8e4f1ee3a2a46ebb6236f6b640c50f839ca2
 
 <li><p>MariaDB 백그라운드 실행</p>
 
 <p>이제 설치가 다 되었으니 디비를 실행하겠습니다.
-<<<<<<< HEAD
 <code>mysql.server start</code></p>
 
 <p><picture style="width: 70%">
@@ -405,18 +331,10 @@ Mysql 의 핵심 개발자가 만든 Mariadb 이기 때문에, 대부분의 명�
 
 
 </picture></p></li>
-=======
-<code>mysql.server start</code>
-
-    <img src="/img/28/28-4.png"  alt="mysql.server start"  class="left"  style="width: 500px"  />
-
-</p></li>
->>>>>>> aa5c8e4f1ee3a2a46ebb6236f6b640c50f839ca2
 
 <li><p>MariaDB 접속</p>
 
 <p><code>mysql -u root</code>
-<<<<<<< HEAD
 <picture style="width: 70%">
     <source
         type="image/webp"
@@ -433,12 +351,6 @@ Mysql 의 핵심 개발자가 만든 Mariadb 이기 때문에, 대부분의 명�
 
 
 </picture></p></li>
-=======
-
-    <img src="/img/28/28-5.png"  alt="mysql -u root"  class="left"  style="width: 500px"  />
-
-</p></li>
->>>>>>> aa5c8e4f1ee3a2a46ebb6236f6b640c50f839ca2
 </ol>
 
 <p><br/></p>
@@ -446,7 +358,6 @@ Mysql 의 핵심 개발자가 만든 Mariadb 이기 때문에, 대부분의 명�
 <p>이상 Mac 에서 MariaDB 설치하는 방법에 대해 포스팅이였습니다.</p>
 
 <p><br/></p>
-<<<<<<< HEAD
 ]]></content>
         </item>
         
@@ -456,17 +367,6 @@ Mysql 의 핵심 개발자가 만든 Mariadb 이기 때문에, 대부분의 명�
             <pubDate>Fri, 15 Feb 2019 10:35:56 +0900</pubDate>
             
             <guid>https://kiwinam.com/posts/git-lf-will-be-crlf/</guid>
-=======
-]]></content>
-        </item>
-        
-        <item>
-            <title>[Git] warning: LF will be CRLF 해결법</title>
-            <link>https://kiwinam.com/posts/git-lf-will-be-crlf/</link>
-            <pubDate>Fri, 15 Feb 2019 10:35:56 +0900</pubDate>
-            
-            <guid>https://kiwinam.com/posts/git-lf-will-be-crlf/</guid>
->>>>>>> aa5c8e4f1ee3a2a46ebb6236f6b640c50f839ca2
             <description>[Git] warning: LF will be CRLF
 
 터미널 or CMD 에서 Git command 를 사용하는데 위 사진 같은 warning 이 나오는 경우가 있습니다.
@@ -604,7 +504,6 @@ World.
 <p>도움이 되길 바랄게요.</p>
 
 <p><br/></p>
-<<<<<<< HEAD
 ]]></content>
         </item>
         
@@ -614,17 +513,6 @@ World.
             <pubDate>Sat, 29 Dec 2018 10:35:56 +0900</pubDate>
             
             <guid>https://kiwinam.com/posts/android-navigation-drawer/</guid>
-=======
-]]></content>
-        </item>
-        
-        <item>
-            <title>[안드로이드] 네비게이션 드로어 사용법</title>
-            <link>https://kiwinam.com/posts/android-navigation-drawer/</link>
-            <pubDate>Sat, 29 Dec 2018 10:35:56 +0900</pubDate>
-            
-            <guid>https://kiwinam.com/posts/android-navigation-drawer/</guid>
->>>>>>> aa5c8e4f1ee3a2a46ebb6236f6b640c50f839ca2
             <description>[안드로이드] 네비게이션 드로어 (Navigation drawer) 사용법
 
 구글 머티리얼 디자인 가이드 중 네비게이션 드로어
@@ -634,7 +522,8 @@ World.
 그럼 네비게이션 드로어를 어떻게 구현하는지 알아보겠습니다.
 
 
-1. Result 이번 포스팅에서 진행한 네비게이션 드로어 결과 화면</description>
+1. Result 
+이번 포스팅에서 진행한 네비게이션 드로어 결과 화면</description>
             <content type="html"><![CDATA[
 
 <hr />
@@ -961,7 +850,6 @@ override fun onBackPressed() {
 <p>제 글이 도움 되길 바랄게요.</p>
 
 <p><br/></p>
-<<<<<<< HEAD
 ]]></content>
         </item>
         
@@ -971,17 +859,6 @@ override fun onBackPressed() {
             <pubDate>Wed, 26 Dec 2018 10:35:56 +0900</pubDate>
             
             <guid>https://kiwinam.com/posts/android-toolbar-add-button/</guid>
-=======
-]]></content>
-        </item>
-        
-        <item>
-            <title>[안드로이드] 툴바 사용법 - 버튼 추가</title>
-            <link>https://kiwinam.com/posts/android-toolbar-add-button/</link>
-            <pubDate>Wed, 26 Dec 2018 10:35:56 +0900</pubDate>
-            
-            <guid>https://kiwinam.com/posts/android-toolbar-add-button/</guid>
->>>>>>> aa5c8e4f1ee3a2a46ebb6236f6b640c50f839ca2
             <description>[안드로이드] 툴바 사용법 (버튼 추가) - add button to tool bar
 
 안드로이드 API 21 (롤리팝 5.0) 버전부터 기존 Action bar 를 대체할 tool bar 라는 앱 상단에 표시되는 뷰가 추가되었습니다.
@@ -1345,7 +1222,6 @@ class MainActivity : AppCompatActivity() {
 <p>제 포스팅이 도움이 되었으면 좋겠네요!</p>
 
 <p><br/></p>
-<<<<<<< HEAD
 ]]></content>
         </item>
         
@@ -1355,17 +1231,6 @@ class MainActivity : AppCompatActivity() {
             <pubDate>Sat, 10 Feb 2018 10:35:56 +0900</pubDate>
             
             <guid>https://kiwinam.com/posts/android-xml-layout-preview/</guid>
-=======
-]]></content>
-        </item>
-        
-        <item>
-            <title>Android Studio 3.0 xml layout Preview 오류 해결 방법</title>
-            <link>https://kiwinam.com/posts/android-xml-layout-preview/</link>
-            <pubDate>Sat, 10 Feb 2018 10:35:56 +0900</pubDate>
-            
-            <guid>https://kiwinam.com/posts/android-xml-layout-preview/</guid>
->>>>>>> aa5c8e4f1ee3a2a46ebb6236f6b640c50f839ca2
             <description>Android Studio 3.0 xml layout Preview 오류 해결 방법
 
 Android Studio 를 2.3.x 버전으로 사용하다 이번에 3.0 버전으로 업데이트 하였습니다.
@@ -1431,7 +1296,6 @@ Font.xml 파일을 수정한 적이 있을텐데요.</description>
 <p>옮긴 다음 안드로이드 스튜디오를 다시 켜주면 문제가 해결됩니다.</p>
 
 <p>감사합니다.</p>
-<<<<<<< HEAD
 ]]></content>
         </item>
         
@@ -1441,17 +1305,6 @@ Font.xml 파일을 수정한 적이 있을텐데요.</description>
             <pubDate>Fri, 09 Feb 2018 10:35:56 +0900</pubDate>
             
             <guid>https://kiwinam.com/posts/android-start-activity-for-result/</guid>
-=======
-]]></content>
-        </item>
-        
-        <item>
-            <title>[안드로이드] startActivityForResult ,onActivityResult 사용법</title>
-            <link>https://kiwinam.com/posts/android-start-activity-for-result/</link>
-            <pubDate>Fri, 09 Feb 2018 10:35:56 +0900</pubDate>
-            
-            <guid>https://kiwinam.com/posts/android-start-activity-for-result/</guid>
->>>>>>> aa5c8e4f1ee3a2a46ebb6236f6b640c50f839ca2
             <description>[안드로이드] startActivityForResult ,onActivityResult 사용법
 
 안드로이드 개발을 진행하다 보면 단순히 액티비티를 전환하고 끝! 이 아니라
@@ -1730,7 +1583,6 @@ public class CalculateActivity extends AppCompatActivity {
 <p>전체 소스 코드는 <a href="https://github.com/kiwinam/StartActivityForResultTest" target="_blank">GitHub</a> 에 공유했습니다.</p>
 
 <p><br/></p>
-<<<<<<< HEAD
 ]]></content>
         </item>
         
@@ -1740,17 +1592,6 @@ public class CalculateActivity extends AppCompatActivity {
             <pubDate>Tue, 30 Jan 2018 10:35:56 +0900</pubDate>
             
             <guid>https://kiwinam.com/posts/mac-recording-screen/</guid>
-=======
-]]></content>
-        </item>
-        
-        <item>
-            <title>[Mac] OS X 기능, 맥북 화면 녹화하기</title>
-            <link>https://kiwinam.com/posts/mac-recording-screen/</link>
-            <pubDate>Tue, 30 Jan 2018 10:35:56 +0900</pubDate>
-            
-            <guid>https://kiwinam.com/posts/mac-recording-screen/</guid>
->>>>>>> aa5c8e4f1ee3a2a46ebb6236f6b640c50f839ca2
             <description>[Mac] OS X 기능, 맥북 화면 녹화하기
 OS X 에서 모니터 화면을 캡쳐하고 싶은 경우가 있습니다.
 그럴 때 윈도우에선 화면 녹화 툴이 많이 있어서 편하게 했었는데요.
@@ -1827,7 +1668,6 @@ Finder에서 Application 으로 찾으셔도 되고, 저같은 경우 런치패�
 <p>이후 저장 버튼을 누르면 녹화된 화면이 저장된 것을 볼 수 있습니다.</p>
 
 <p><img src="/img/22/22-8.jpg" alt="화면 기록 플레이" /></p>
-<<<<<<< HEAD
 ]]></content>
         </item>
         
@@ -1837,17 +1677,6 @@ Finder에서 Application 으로 찾으셔도 되고, 저같은 경우 런치패�
             <pubDate>Thu, 07 Dec 2017 10:35:56 +0900</pubDate>
             
             <guid>https://kiwinam.com/posts/android-create-excel/</guid>
-=======
-]]></content>
-        </item>
-        
-        <item>
-            <title>[안드로이드] 엑셀 파일 생성, 내보내기</title>
-            <link>https://kiwinam.com/posts/android-create-excel/</link>
-            <pubDate>Thu, 07 Dec 2017 10:35:56 +0900</pubDate>
-            
-            <guid>https://kiwinam.com/posts/android-create-excel/</guid>
->>>>>>> aa5c8e4f1ee3a2a46ebb6236f6b640c50f839ca2
             <description>[안드로이드] 엑셀 파일 생성, 내보내기
 어플리케이션을 만들다 보면 사용자가 저장한 데이터를 가공하여 내보내 주는 기능을 구현할 때가 있습니다.
 데이터 가공에 가장 적합한 엑셀 파일을 만들어 공유하는 것을 목표로 포스팅하겠습니다.
@@ -2030,7 +1859,6 @@ startActivity(Intent.createChooser(shareIntent,&quot;엑셀 내보내기&quot;))
 <p>전체 소스 코드는 <a href="https://github.com/kiwinam/ExcelExample" target="_blank">GitHub </a>에 공유했습니다.</p>
 
 <p><br/></p>
-<<<<<<< HEAD
 ]]></content>
         </item>
         
@@ -2040,17 +1868,6 @@ startActivity(Intent.createChooser(shareIntent,&quot;엑셀 내보내기&quot;))
             <pubDate>Thu, 23 Nov 2017 10:35:56 +0900</pubDate>
             
             <guid>https://kiwinam.com/posts/android-string-resource/</guid>
-=======
-]]></content>
-        </item>
-        
-        <item>
-            <title>[안드로이드] - android.content.res.Resources$NotFoundException: String resource ID #0x1</title>
-            <link>https://kiwinam.com/posts/android-string-resource/</link>
-            <pubDate>Thu, 23 Nov 2017 10:35:56 +0900</pubDate>
-            
-            <guid>https://kiwinam.com/posts/android-string-resource/</guid>
->>>>>>> aa5c8e4f1ee3a2a46ebb6236f6b640c50f839ca2
             <description>[안드로이드] - android.content.res.Resources$NotFoundException: String resource ID #0x1
 FATAL EXCEPTION: main Process: , PID: 4012 android.content.res.Resources$NotFoundException: String resource ID #0x9  안드로이드 개발 중
 android.content.res.Resources$NotFoundException: String resource ID #0x1
@@ -2108,7 +1925,6 @@ android.content.res.Resources$NotFoundException: String resource ID #0x9
 </code></pre>
 
 <p><br/></p>
-<<<<<<< HEAD
 ]]></content>
         </item>
         
@@ -2118,17 +1934,6 @@ android.content.res.Resources$NotFoundException: String resource ID #0x9
             <pubDate>Thu, 23 Nov 2017 10:35:56 +0900</pubDate>
             
             <guid>https://kiwinam.com/posts/android-share-kakaotalk/</guid>
-=======
-]]></content>
-        </item>
-        
-        <item>
-            <title>[안드로이드] 카카오톡 공유 기능 , 카카오 링크 API 사용법</title>
-            <link>https://kiwinam.com/posts/android-share-kakaotalk/</link>
-            <pubDate>Thu, 23 Nov 2017 10:35:56 +0900</pubDate>
-            
-            <guid>https://kiwinam.com/posts/android-share-kakaotalk/</guid>
->>>>>>> aa5c8e4f1ee3a2a46ebb6236f6b640c50f839ca2
             <description>[안드로이드] 카카오톡 공유 기능 , 카카오 링크 API 사용법
 어플리케이션 기획 중에 콘텐츠 공유 기능이 있는 경우가 많습니다.
 공유할 수 있는 수단이 다양하게 있지만 대한민국에서 카카오 플랫폼이 가장 넓은 플랫폼이라 할 수 있죠.
@@ -2397,7 +2202,6 @@ Kakao Developer에 개발자 문서가 아주 상세히 기술 되어 있습니�
 <h3 id="3-source-code">3. Source Code</h3>
 
 <p>전체 소스 코드는 <a href="https://github.com/kiwinam/KakaoLinkTest" target="_blank">Github</a> 에 연동해놨습니다.</p>
-<<<<<<< HEAD
 ]]></content>
         </item>
         
@@ -2407,17 +2211,6 @@ Kakao Developer에 개발자 문서가 아주 상세히 기술 되어 있습니�
             <pubDate>Wed, 22 Nov 2017 10:35:56 +0900</pubDate>
             
             <guid>https://kiwinam.com/posts/android-bottom-sheet-dialog/</guid>
-=======
-]]></content>
-        </item>
-        
-        <item>
-            <title>[안드로이드] Bottom sheet dialog 사용하기</title>
-            <link>https://kiwinam.com/posts/android-bottom-sheet-dialog/</link>
-            <pubDate>Wed, 22 Nov 2017 10:35:56 +0900</pubDate>
-            
-            <guid>https://kiwinam.com/posts/android-bottom-sheet-dialog/</guid>
->>>>>>> aa5c8e4f1ee3a2a46ebb6236f6b640c50f839ca2
             <description>[안드로이드] Bottom sheet dialog 사용하기
 머티리얼 디자인에서 바텀 시트는 두 가지의 종류가 있습니다
 영구 바닥 시트
@@ -2581,7 +2374,6 @@ protected void onCreate(Bundle savedInstanceState) {
 <p>전체 소스 코드는 <a href="https://github.com/kiwinam/BottomSheetExam" target="_blank">Github</a> 에 연동해놨습니다.</p>
 
 <p><br/></p>
-<<<<<<< HEAD
 ]]></content>
         </item>
         
@@ -2591,17 +2383,6 @@ protected void onCreate(Bundle savedInstanceState) {
             <pubDate>Tue, 21 Nov 2017 10:35:56 +0900</pubDate>
             
             <guid>https://kiwinam.com/posts/android-edittext-comma/</guid>
-=======
-]]></content>
-        </item>
-        
-        <item>
-            <title>[안드로이드] EditText 화폐 단위 표시 (세자리 콤마)</title>
-            <link>https://kiwinam.com/posts/android-edittext-comma/</link>
-            <pubDate>Tue, 21 Nov 2017 10:35:56 +0900</pubDate>
-            
-            <guid>https://kiwinam.com/posts/android-edittext-comma/</guid>
->>>>>>> aa5c8e4f1ee3a2a46ebb6236f6b640c50f839ca2
             <description>[안드로이드] EditText 화폐 단위 표시 (세자리 콤마)
 사용자에게 화폐를 입력 받아 표시해줄 경우가 종종 있습니다.
 이럴 때 입력 받은 숫자를 원화 단위 (1,000,000 과 같이 ) 로 바로 바꿔주는 방법입니다.
@@ -2719,7 +2500,6 @@ wonEt.addTextChangedListener(watcher);
 </ul>
 
 <p><br/></p>
-<<<<<<< HEAD
 ]]></content>
         </item>
         
@@ -2729,17 +2509,6 @@ wonEt.addTextChangedListener(watcher);
             <pubDate>Sun, 15 Oct 2017 10:35:56 +0900</pubDate>
             
             <guid>https://kiwinam.com/posts/android-custom-dialog-click-callback/</guid>
-=======
-]]></content>
-        </item>
-        
-        <item>
-            <title>[안드로이드] 커스텀 다이얼로그 [2] - ClickListener, Callback</title>
-            <link>https://kiwinam.com/posts/android-custom-dialog-click-callback/</link>
-            <pubDate>Sun, 15 Oct 2017 10:35:56 +0900</pubDate>
-            
-            <guid>https://kiwinam.com/posts/android-custom-dialog-click-callback/</guid>
->>>>>>> aa5c8e4f1ee3a2a46ebb6236f6b640c50f839ca2
             <description>[안드로이드] 커스텀 다이얼로그 [2] - ClickListener, Callback
 지난 포스팅에선 커스텀 다이얼로그를 생성하고 보여주는 것을 해보았습니다.
 이번엔 커스텀 다이얼로그 안에서의 클릭 이벤트 (ClickListener) 를 어떻게 다루는지에 대해 설명해드리도록 하겠습니다.
@@ -2935,7 +2704,6 @@ break;
 <li><a href="https://kiwinam.com/posts/15" target="_blank">[안드로이드] 커스텀 다이얼로그 [1] - 생성</a></li>
 <li><a href="https://kiwinam.com/posts/16" target="_blank">[안드로이드] 커스텀 다이얼로그 [2] - ClickListener, Callback</a> - 현재 글</li>
 </ol>
-<<<<<<< HEAD
 ]]></content>
         </item>
         
@@ -2945,17 +2713,6 @@ break;
             <pubDate>Fri, 18 Aug 2017 10:25:38 +0900</pubDate>
             
             <guid>https://kiwinam.com/posts/android-custom-dialog/</guid>
-=======
-]]></content>
-        </item>
-        
-        <item>
-            <title>[안드로이드] 커스텀 다이얼로그 [1] - 생성</title>
-            <link>https://kiwinam.com/posts/android-custom-dialog/</link>
-            <pubDate>Fri, 18 Aug 2017 10:25:38 +0900</pubDate>
-            
-            <guid>https://kiwinam.com/posts/android-custom-dialog/</guid>
->>>>>>> aa5c8e4f1ee3a2a46ebb6236f6b640c50f839ca2
             <description>[안드로이드] 커스텀 다이얼로그 [1] - 생성
 안드로이드 커스텀 다이얼로그 만드는 법.
 
@@ -3136,7 +2893,6 @@ public void onClick(View v) {
 <li><a href="https://kiwinam.com/posts/15" target="_blank">[안드로이드] 커스텀 다이얼로그 [1] - 생성</a> - 현재 글</li>
 <li><a href="https://kiwinam.com/posts/16" target="_blank">[안드로이드] 커스텀 다이얼로그 [2] - ClickListener, Callback</a></li>
 </ol>
-<<<<<<< HEAD
 ]]></content>
         </item>
         
@@ -3146,17 +2902,6 @@ public void onClick(View v) {
             <pubDate>Thu, 01 Jun 2017 09:56:28 +0900</pubDate>
             
             <guid>https://kiwinam.com/posts/android-change-status-bar/</guid>
-=======
-]]></content>
-        </item>
-        
-        <item>
-            <title>[안드로이드] status bar 색상 변경하기, 아이콘 색상 변경하기</title>
-            <link>https://kiwinam.com/posts/android-change-status-bar/</link>
-            <pubDate>Thu, 01 Jun 2017 09:56:28 +0900</pubDate>
-            
-            <guid>https://kiwinam.com/posts/android-change-status-bar/</guid>
->>>>>>> aa5c8e4f1ee3a2a46ebb6236f6b640c50f839ca2
             <description>[안드로이드] status bar 색상 변경하기
 안드로이드 status bar는 최상단에 위치한 기기의 상태를 표시해주는 Bar 입니다.
 API 21 버전 - 롤리팝 버전 이상부터 Status bar (상태바) 색상 변경이 가능하고
@@ -3275,7 +3020,6 @@ if (Build.VERSION.SDK_INT &amp;gt;= 21) { // 21 버전 이상일 때 getWindow()
 <p><img src="/img/14/14-3.jpg" alt="" /></p>
 
 <p>API 25 버전으로 빌드했더니 하얀 배경에 회색 아이콘을 가진 상태바가 나왔네요.</p>
-<<<<<<< HEAD
 ]]></content>
         </item>
         
@@ -3285,17 +3029,6 @@ if (Build.VERSION.SDK_INT &amp;gt;= 21) { // 21 버전 이상일 때 getWindow()
             <pubDate>Fri, 19 May 2017 16:54:00 +0900</pubDate>
             
             <guid>https://kiwinam.com/posts/android-layout-preview-korean/</guid>
-=======
-]]></content>
-        </item>
-        
-        <item>
-            <title>[안드로이드] Android Studio 레이아웃 프리뷰(Preview) 한글 깨짐</title>
-            <link>https://kiwinam.com/posts/android-layout-preview-korean/</link>
-            <pubDate>Fri, 19 May 2017 16:54:00 +0900</pubDate>
-            
-            <guid>https://kiwinam.com/posts/android-layout-preview-korean/</guid>
->>>>>>> aa5c8e4f1ee3a2a46ebb6236f6b640c50f839ca2
             <description>[안드로이드] Android Studio 레이아웃 프리뷰(Preview) 한글 깨짐
 안드로이드 스튜디오 Preview 가 깨지는 현상의 원인은 아이러니 하게도 한글 표시 폰트가 한글을 제대로 표시 처리하지 못하기 때문입니다.
 현재 안드로이드 스튜디오에서 설정된 ko 언어 표시는 &amp;ldquo;NotoSansCJK&amp;rdquo; 로 되어 있습니다.
@@ -3335,7 +3068,6 @@ if (Build.VERSION.SDK_INT &amp;gt;= 21) { // 21 버전 이상일 때 getWindow()
 </code></pre>
 
 <p><code>&quot;NanumGothic.ttf&quot;</code> 이렇게 바꿨습니다.</p>
-<<<<<<< HEAD
 ]]></content>
         </item>
         
@@ -3345,17 +3077,6 @@ if (Build.VERSION.SDK_INT &amp;gt;= 21) { // 21 버전 이상일 때 getWindow()
             <pubDate>Tue, 16 May 2017 00:00:00 +0000</pubDate>
             
             <guid>https://kiwinam.com/posts/android-swipe-refresh-layout/</guid>
-=======
-]]></content>
-        </item>
-        
-        <item>
-            <title>[안드로이드] - 당겨서 새로고침 SwipeRefreshLayout</title>
-            <link>https://kiwinam.com/posts/android-swipe-refresh-layout/</link>
-            <pubDate>Tue, 16 May 2017 00:00:00 +0000</pubDate>
-            
-            <guid>https://kiwinam.com/posts/android-swipe-refresh-layout/</guid>
->>>>>>> aa5c8e4f1ee3a2a46ebb6236f6b640c50f839ca2
             <description>[안드로이드] - Pull to refresh 당겨서 새로고침 (SwipeRefreshLayout)
 당겨서 새로고침 (pull to refresh) 는 많은 APP에서 만날수 있는 친숙한 패턴입니다.
 &amp;lsquo;구글 가이드&amp;rsquo;에도 수동으로 동기화 하는 방법 중 제스처를 통해 내용물 갱신을 시작하도록 요구합니다.
@@ -3487,7 +3208,6 @@ public void onRefresh() {
 <p>색상 바꿀 때 사용하는 arrays.xml 은 values 폴더 아래 있습니다.</p>
 
 <p><img src="/img/12/12-3.jpg" alt="" /></p>
-<<<<<<< HEAD
 ]]></content>
         </item>
         
@@ -3497,17 +3217,6 @@ public void onRefresh() {
             <pubDate>Wed, 03 May 2017 00:00:00 +0000</pubDate>
             
             <guid>https://kiwinam.com/posts/jsp-json-parser/</guid>
-=======
-]]></content>
-        </item>
-        
-        <item>
-            <title>[Java] JSP - JSON 데이터 주고 받기 - JSONParser</title>
-            <link>https://kiwinam.com/posts/jsp-json-parser/</link>
-            <pubDate>Wed, 03 May 2017 00:00:00 +0000</pubDate>
-            
-            <guid>https://kiwinam.com/posts/jsp-json-parser/</guid>
->>>>>>> aa5c8e4f1ee3a2a46ebb6236f6b640c50f839ca2
             <description>[Java] JSP - JSON 데이터 주고 받기 - JSONParser
 
 json-simple 라이브러리를 이용하여
@@ -3661,7 +3370,6 @@ return result;
 <ol>
 <li><a href="https://kiwinam.com/posts/7" target="_blank">[안드로이드] JSON 데이터 주고 받기</a></li>
 </ol>
-<<<<<<< HEAD
 ]]></content>
         </item>
         
@@ -3671,17 +3379,6 @@ return result;
             <pubDate>Fri, 28 Apr 2017 00:00:00 +0000</pubDate>
             
             <guid>https://kiwinam.com/posts/android-recyclerview-divider/</guid>
-=======
-]]></content>
-        </item>
-        
-        <item>
-            <title>[안드로이드] RecyclerView [3] Divider 구분선 넣기</title>
-            <link>https://kiwinam.com/posts/android-recyclerview-divider/</link>
-            <pubDate>Fri, 28 Apr 2017 00:00:00 +0000</pubDate>
-            
-            <guid>https://kiwinam.com/posts/android-recyclerview-divider/</guid>
->>>>>>> aa5c8e4f1ee3a2a46ebb6236f6b640c50f839ca2
             <description>[안드로이드] RecyclerView [3] Divider 구분선 넣기
 
 ( Divider 가 적용된 RecyclerView 예제, 출저 Google Material Design Guide )
@@ -3789,7 +3486,6 @@ mainBinding.recyclerView.addItemDecoration(dividerItemDecoration);
 <li><a href="https://kiwinam.com/posts/9" target="_blank">[안드로이드] RecyclerView [2] OnItemClick 리스너 구현</a></li>
 <li><a href="https://kiwinam.com/posts/10" target="_blank">[안드로이드] RecyclerView [3] Divider 구분선 넣기</a></li>
 </ol>
-<<<<<<< HEAD
 ]]></content>
         </item>
         
@@ -3799,17 +3495,6 @@ mainBinding.recyclerView.addItemDecoration(dividerItemDecoration);
             <pubDate>Wed, 26 Apr 2017 00:00:00 +0000</pubDate>
             
             <guid>https://kiwinam.com/posts/android-recyclerview-click/</guid>
-=======
-]]></content>
-        </item>
-        
-        <item>
-            <title>[안드로이드] RecyclerView [2] OnItemClick 리스너 구현</title>
-            <link>https://kiwinam.com/posts/android-recyclerview-click/</link>
-            <pubDate>Wed, 26 Apr 2017 00:00:00 +0000</pubDate>
-            
-            <guid>https://kiwinam.com/posts/android-recyclerview-click/</guid>
->>>>>>> aa5c8e4f1ee3a2a46ebb6236f6b640c50f839ca2
             <description>[안드로이드] RecyclerView [2] OnItemClick 리스너 구현
 
 RecyclerView 에서는 ListView에서와는 다르게
@@ -3949,7 +3634,6 @@ public class RecyclerItemClickListener implements RecyclerView.OnItemTouchListen
 <li><a href="https://kiwinam.com/posts/9" target="_blank">[안드로이드] RecyclerView [2] OnItemClick 리스너 구현</a></li>
 <li><a href="https://kiwinam.com/posts/10" target="_blank">[안드로이드] RecyclerView [3] Divider 구분선 넣기</a></li>
 </ol>
-<<<<<<< HEAD
 ]]></content>
         </item>
         
@@ -3959,17 +3643,6 @@ public class RecyclerItemClickListener implements RecyclerView.OnItemTouchListen
             <pubDate>Tue, 25 Apr 2017 00:00:00 +0000</pubDate>
             
             <guid>https://kiwinam.com/posts/android-recyclerview/</guid>
-=======
-]]></content>
-        </item>
-        
-        <item>
-            <title>[안드로이드] RecyclerView [1] 간단한 사용법</title>
-            <link>https://kiwinam.com/posts/android-recyclerview/</link>
-            <pubDate>Tue, 25 Apr 2017 00:00:00 +0000</pubDate>
-            
-            <guid>https://kiwinam.com/posts/android-recyclerview/</guid>
->>>>>>> aa5c8e4f1ee3a2a46ebb6236f6b640c50f839ca2
             <description>[안드로이드] RecyclerView 간단한 사용법
 
 안드로이드에서 Recycler View 를 간단하게 사용하는 방법에 대해 포스팅 하겠습니다!
@@ -4256,7 +3929,6 @@ public class MainActivity extends AppCompatActivity {
 </ol>
 
 <p><br/></p>
-<<<<<<< HEAD
 ]]></content>
         </item>
         
@@ -4266,17 +3938,6 @@ public class MainActivity extends AppCompatActivity {
             <pubDate>Mon, 24 Apr 2017 00:00:00 +0000</pubDate>
             
             <guid>https://kiwinam.com/posts/android-json-parse/</guid>
-=======
-]]></content>
-        </item>
-        
-        <item>
-            <title>[안드로이드] JSON 데이터 주고 받기</title>
-            <link>https://kiwinam.com/posts/android-json-parse/</link>
-            <pubDate>Mon, 24 Apr 2017 00:00:00 +0000</pubDate>
-            
-            <guid>https://kiwinam.com/posts/android-json-parse/</guid>
->>>>>>> aa5c8e4f1ee3a2a46ebb6236f6b640c50f839ca2
             <description>[안드로이드] JSON 데이터 주고 받기 1. Result 
 2. Step by step 데이터를 JSON Obejct 로 보내고 받는 방법 2-1. Send Object private void sendObject(){ JSONObject jsonObject = new JSONObject(); try{ jsonObject.put(&amp;quot;nation&amp;quot;, mJsonNationEt.getText().toString()); jsonObject.put(&amp;quot;name&amp;quot;, mJsonNameEt.getText().toString()); jsonObject.put(&amp;quot;address&amp;quot;, mJsonAddressEt.getText().toString()); jsonObject.put(&amp;quot;age&amp;quot;, mJsonAgeEt.getText().toString()); }catch (JSONException e){ e.printStackTrace(); } receiveObject(jsonObject); }  
 2-2. Receive Object private void receiveObject(JSONObject data){ recyclerView.setVisibility(View.GONE); objectResultLo.setVisibility(View.VISIBLE); try{ mReceiveTv.setText(data.toString()); mReceiveNationTv.setText(&amp;quot;nation : &amp;quot;+data.getString(&amp;quot;nation&amp;quot;)); mReceiveNameTv.setText(&amp;quot;name : &amp;quot;+data.getString(&amp;quot;nation&amp;quot;)); mReceiveAddressTv.setText(&amp;quot;address : &amp;quot;+data.getString(&amp;quot;address&amp;quot;)); mReceiveAgeTv.</description>
@@ -4578,7 +4239,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 <p>서버와 JSON 통신은 아래 링크에서 확인해주세요</p>
 
 <p>2017/05/03 - [Java] - [Java] JSP - JSON 데이터 주고 받기 - JSONParser</p>
-<<<<<<< HEAD
 ]]></content>
         </item>
         
@@ -4588,17 +4248,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             <pubDate>Tue, 18 Apr 2017 00:00:00 +0000</pubDate>
             
             <guid>https://kiwinam.com/posts/android-simple-date-format/</guid>
-=======
-]]></content>
-        </item>
-        
-        <item>
-            <title>[안드로이드] 현재 시간, 현재 날짜 구하기 (SimpleDateFormat)</title>
-            <link>https://kiwinam.com/posts/android-simple-date-format/</link>
-            <pubDate>Tue, 18 Apr 2017 00:00:00 +0000</pubDate>
-            
-            <guid>https://kiwinam.com/posts/android-simple-date-format/</guid>
->>>>>>> aa5c8e4f1ee3a2a46ebb6236f6b640c50f839ca2
             <description>[안드로이드] 현재 시간, 현재 날짜 구하기 (SimpleDateFormat) Android 현재 시간, 현재 날짜 구하기
 SimpleDateFormat
 Preview  Step1. 현재 시간 가져오기.
@@ -4734,7 +4383,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         android:layout_height=&quot;wrap_content&quot; /&gt;
 &lt;/LinearLayout&gt;
 </code></pre>
-<<<<<<< HEAD
 ]]></content>
         </item>
         
@@ -4744,17 +4392,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             <pubDate>Tue, 07 Mar 2017 00:00:00 +0000</pubDate>
             
             <guid>https://kiwinam.com/posts/android-studio-github/</guid>
-=======
-]]></content>
-        </item>
-        
-        <item>
-            <title>안드로이드 스튜디오 - GitHub 연동과 add, commit, push 개념</title>
-            <link>https://kiwinam.com/posts/android-studio-github/</link>
-            <pubDate>Tue, 07 Mar 2017 00:00:00 +0000</pubDate>
-            
-            <guid>https://kiwinam.com/posts/android-studio-github/</guid>
->>>>>>> aa5c8e4f1ee3a2a46ebb6236f6b640c50f839ca2
             <description>안드로이드 스튜디오 - GitHub 연동과 add, commit, push 개념 개발자라면 거역할 수 없는 운명
 GitHub
 자신의 소스코드를 관리하는 측면의 장점도 있지만
@@ -4937,7 +4574,6 @@ Working Directory 에서 깃으로 관리 안되고 있는 파일들을 관리�
 <p><img src="/img/5/git-20.png" alt="" /></p>
 
 <p>마지막으로 깃허브 홈페이지에서 방금 Push 한 파일을 확인해주시면 됩니다.!</p>
-<<<<<<< HEAD
 ]]></content>
         </item>
         
@@ -4947,17 +4583,6 @@ Working Directory 에서 깃으로 관리 안되고 있는 파일들을 관리�
             <pubDate>Mon, 27 Feb 2017 00:00:00 +0000</pubDate>
             
             <guid>https://kiwinam.com/posts/mac-save-keynote-image/</guid>
-=======
-]]></content>
-        </item>
-        
-        <item>
-            <title>[Mac] 키노트 이미지 저장하기 (이미지 추출)</title>
-            <link>https://kiwinam.com/posts/mac-save-keynote-image/</link>
-            <pubDate>Mon, 27 Feb 2017 00:00:00 +0000</pubDate>
-            
-            <guid>https://kiwinam.com/posts/mac-save-keynote-image/</guid>
->>>>>>> aa5c8e4f1ee3a2a46ebb6236f6b640c50f839ca2
             <description>[Mac] 키노트 이미지 저장하기 (이미지 추출) Window OS 에 적응 하신 분이라면
 파워 포인트에서 이미지 만들어서 저장하는 방식 많이 사용 하셨을텐데요.
 Mac Keynote 에서도 객체를 이미지로 추출할 수 있습니다 :)
@@ -5008,7 +4633,6 @@ Mac Keynote 에서도 객체를 이미지로 추출할 수 있습니다 :)
 <p>이렇게 올라오면 <code>Command + S</code> 로 저장해주시면 됩니다 :)</p>
 
 <p><img src="/img/4/mac-4.png" alt="맥 미리보기" /></p>
-<<<<<<< HEAD
 ]]></content>
         </item>
         
@@ -5018,17 +4642,6 @@ Mac Keynote 에서도 객체를 이미지로 추출할 수 있습니다 :)
             <pubDate>Sun, 26 Feb 2017 00:00:00 +0000</pubDate>
             
             <guid>https://kiwinam.com/posts/android-platform/</guid>
-=======
-]]></content>
-        </item>
-        
-        <item>
-            <title>[안드로이드] 안드로이드 플랫폼의 특징</title>
-            <link>https://kiwinam.com/posts/android-platform/</link>
-            <pubDate>Sun, 26 Feb 2017 00:00:00 +0000</pubDate>
-            
-            <guid>https://kiwinam.com/posts/android-platform/</guid>
->>>>>>> aa5c8e4f1ee3a2a46ebb6236f6b640c50f839ca2
             <description>안드로이드의 개념  - 안드로이드는 모바일 운영체제의 한 종류로, 어플리케이션이 실행할 때 필요한 자원을 공급해 주고 하드웨어에 대신 명령을 전달하고, 전체 시스템을 보호해주는 역할을 함.
  모바일 어플리케이션을 개발하는 유용한 미들웨어도 제공하는 소프트웨어.
  리눅스 커널과 모바일 플랫폼으로 구성.
@@ -5094,7 +4707,6 @@ Mac Keynote 에서도 객체를 이미지로 추출할 수 있습니다 :)
 <ul>
 <li>다양한 포맷의 오디오, 비디오 파일을 재생할 수 있습니다.</li>
 </ul>
-<<<<<<< HEAD
 ]]></content>
         </item>
         
@@ -5104,17 +4716,6 @@ Mac Keynote 에서도 객체를 이미지로 추출할 수 있습니다 :)
             <pubDate>Sat, 25 Feb 2017 00:00:00 +0000</pubDate>
             
             <guid>https://kiwinam.com/posts/android-activity-life-cycle/</guid>
-=======
-]]></content>
-        </item>
-        
-        <item>
-            <title>[Android] Activity 생명주기 (Activity LifeCycle)</title>
-            <link>https://kiwinam.com/posts/android-activity-life-cycle/</link>
-            <pubDate>Sat, 25 Feb 2017 00:00:00 +0000</pubDate>
-            
-            <guid>https://kiwinam.com/posts/android-activity-life-cycle/</guid>
->>>>>>> aa5c8e4f1ee3a2a46ebb6236f6b640c50f839ca2
             <description>액티비티 (Activity) 생명주기 액티비티는 액티브 상태, 포즈 상태, 스탑 상태 이렇게 3가지의 기본 상태를 가지는데요.
 간단하게 3가지의 기본 상태에 대해 설명해 드리겠습니다.
  액티브(Active) 상태
@@ -5237,7 +4838,6 @@ Mac Keynote 에서도 객체를 이미지로 추출할 수 있습니다 :)
 <p>이 중 <code>onPause()</code> 메서드만 액티비티 종료 전 호출되는 것이 보장됩니다.</p>
 
 <p>이 세 개의 메서드를 제외한 나머지는 시스템이 액티비티를 강제 종료하는 것에 보호됩니다.</p>
-<<<<<<< HEAD
 ]]></content>
         </item>
         
@@ -5247,17 +4847,6 @@ Mac Keynote 에서도 객체를 이미지로 추출할 수 있습니다 :)
             <pubDate>Thu, 22 Sep 2016 00:00:00 +0000</pubDate>
             
             <guid>https://kiwinam.com/posts/android-shared-preferences/</guid>
-=======
-]]></content>
-        </item>
-        
-        <item>
-            <title>[안드로이드] 최초 실행 확인 법 - SharedPreferences</title>
-            <link>https://kiwinam.com/posts/android-shared-preferences/</link>
-            <pubDate>Thu, 22 Sep 2016 00:00:00 +0000</pubDate>
-            
-            <guid>https://kiwinam.com/posts/android-shared-preferences/</guid>
->>>>>>> aa5c8e4f1ee3a2a46ebb6236f6b640c50f839ca2
             <description>안드로이드 최초 실행 확인 법  안드로이드 최초 실행을 확인하는 방법은
 SharedPreferences 를 사용 하는 것입니다.
 SharedPreferences 는 안드로이드에서 DB를 사용하지 않고 값을 저장할 때 사용합니다.
