@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>android on 키위남</title>
+    <title>Android on 키위남</title>
     <link>https://kiwinam.com/tags/android/</link>
-    <description>Recent content in android on 키위남</description>
+    <description>Recent content in Android on 키위남</description>
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Sat, 29 Dec 2018 10:35:56 +0900</lastBuildDate>
     
@@ -25,8 +25,7 @@
 그럼 네비게이션 드로어를 어떻게 구현하는지 알아보겠습니다.
 
 
-1. Result 
-이번 포스팅에서 진행한 네비게이션 드로어 결과 화면</description>
+1. Result  이번 포스팅에서 진행한 네비게이션 드로어 결과 화면</description>
     </item>
     
     <item>
