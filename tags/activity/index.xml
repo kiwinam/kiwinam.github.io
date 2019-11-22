@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Activity on Kiwinam</title>
+    <title>Activity on 키위남</title>
     <link>https://kiwinam.com/tags/activity/</link>
-    <description>Recent content in Activity on Kiwinam</description>
+    <description>Recent content in Activity on 키위남</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>ko</language>
     <lastBuildDate>Sat, 25 Feb 2017 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://kiwinam.com/tags/activity/index.xml" rel="self" type="application/rss+xml" />
@@ -13,10 +12,10 @@
     
     <item>
       <title>[Android] Activity 생명주기 (Activity LifeCycle)</title>
-      <link>https://kiwinam.com/posts/android-activity-%EC%83%9D%EB%AA%85%EC%A3%BC%EA%B8%B0/</link>
+      <link>https://kiwinam.com/posts/android-activity-life-cycle/</link>
       <pubDate>Sat, 25 Feb 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://kiwinam.com/posts/android-activity-%EC%83%9D%EB%AA%85%EC%A3%BC%EA%B8%B0/</guid>
+      <guid>https://kiwinam.com/posts/android-activity-life-cycle/</guid>
       <description>액티비티 (Activity) 생명주기 액티비티는 액티브 상태, 포즈 상태, 스탑 상태 이렇게 3가지의 기본 상태를 가지는데요.
 간단하게 3가지의 기본 상태에 대해 설명해 드리겠습니다.
  액티브(Active) 상태

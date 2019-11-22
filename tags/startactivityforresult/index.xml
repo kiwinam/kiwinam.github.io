@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>startActivityForResult on Kiwinam</title>
+    <title>startActivityForResult on 키위남</title>
     <link>https://kiwinam.com/tags/startactivityforresult/</link>
-    <description>Recent content in startActivityForResult on Kiwinam</description>
+    <description>Recent content in startActivityForResult on 키위남</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>ko</language>
     <lastBuildDate>Fri, 09 Feb 2018 10:35:56 +0900</lastBuildDate>
     
 	<atom:link href="https://kiwinam.com/tags/startactivityforresult/index.xml" rel="self" type="application/rss+xml" />
@@ -13,10 +12,10 @@
     
     <item>
       <title>[안드로이드] startActivityForResult ,onActivityResult 사용법</title>
-      <link>https://kiwinam.com/posts/%EC%95%88%EB%93%9C%EB%A1%9C%EC%9D%B4%EB%93%9C-startactivityforresult-onactivityresult-%EC%82%AC%EC%9A%A9%EB%B2%95/</link>
+      <link>https://kiwinam.com/posts/android-start-activity-for-result/</link>
       <pubDate>Fri, 09 Feb 2018 10:35:56 +0900</pubDate>
       
-      <guid>https://kiwinam.com/posts/%EC%95%88%EB%93%9C%EB%A1%9C%EC%9D%B4%EB%93%9C-startactivityforresult-onactivityresult-%EC%82%AC%EC%9A%A9%EB%B2%95/</guid>
+      <guid>https://kiwinam.com/posts/android-start-activity-for-result/</guid>
       <description>[안드로이드] startActivityForResult ,onActivityResult 사용법
 
 안드로이드 개발을 진행하다 보면 단순히 액티비티를 전환하고 끝! 이 아니라

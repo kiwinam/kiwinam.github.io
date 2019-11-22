@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>상태바 on Kiwinam</title>
+    <title>상태바 on 키위남</title>
     <link>https://kiwinam.com/tags/%EC%83%81%ED%83%9C%EB%B0%94/</link>
-    <description>Recent content in 상태바 on Kiwinam</description>
+    <description>Recent content in 상태바 on 키위남</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>ko</language>
     <lastBuildDate>Thu, 01 Jun 2017 09:56:28 +0900</lastBuildDate>
     
 	<atom:link href="https://kiwinam.com/tags/%EC%83%81%ED%83%9C%EB%B0%94/index.xml" rel="self" type="application/rss+xml" />
@@ -13,10 +12,10 @@
     
     <item>
       <title>[안드로이드] status bar 색상 변경하기, 아이콘 색상 변경하기</title>
-      <link>https://kiwinam.com/posts/%EC%95%88%EB%93%9C%EB%A1%9C%EC%9D%B4%EB%93%9C-status-bar-%EC%83%89%EC%83%81-%EB%B3%80%EA%B2%BD%ED%95%98%EA%B8%B0/</link>
+      <link>https://kiwinam.com/posts/android-change-status-bar/</link>
       <pubDate>Thu, 01 Jun 2017 09:56:28 +0900</pubDate>
       
-      <guid>https://kiwinam.com/posts/%EC%95%88%EB%93%9C%EB%A1%9C%EC%9D%B4%EB%93%9C-status-bar-%EC%83%89%EC%83%81-%EB%B3%80%EA%B2%BD%ED%95%98%EA%B8%B0/</guid>
+      <guid>https://kiwinam.com/posts/android-change-status-bar/</guid>
       <description>[안드로이드] status bar 색상 변경하기
 안드로이드 status bar는 최상단에 위치한 기기의 상태를 표시해주는 Bar 입니다.
 API 21 버전 - 롤리팝 버전 이상부터 Status bar (상태바) 색상 변경이 가능하고

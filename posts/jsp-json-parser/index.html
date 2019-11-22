@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-99327236-2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-99327236-2');
+</script>
+
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="author"
+    content="키위남">
+<meta name="description"
+    content="JSONParser 를 이용하여 데이터 주고 받기" />
+    <meta name="keywords" content="Java, JSON, JSONParser, JSP"/>
+
+<meta name="robots" content="index" />
+<meta name="robots" content="follow" />
+<link rel="canonical" href="https://kiwinam.com/posts/jsp-json-parser/" />
+
+
+
+
+<meta property="og:title" content="[Java] JSP - JSON 데이터 주고 받기 - JSONParser :: 키위남">
+
+
+
+
+<meta name="og:description"
+    content="JSONParser 를 이용하여 데이터 주고 받기" />
+
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://kiwinam.com/posts/jsp-json-parser/">
+
+
+
+<title>[Java] JSP - JSON 데이터 주고 받기 - JSONParser :: 키위남</title>
+
+
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.2.1/css/flag-icon.min.css" rel="stylesheet"
+    type="text/css">
+
+
+
+<link rel="stylesheet" href="/main.min.2f0d18b84270567c723bff340b09ab08db3a7634237cd9667d052eb6b14669b8.css">
+
+
+
+<link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+<link rel="manifest" href="/favicon/site.webmanifest">
+<link rel="mask-icon" href="/favicon/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="#ffffff"><meta itemprop="name" content="[Java] JSP - JSON 데이터 주고 받기 - JSONParser">
+<meta itemprop="description" content="JSONParser 를 이용하여 데이터 주고 받기">
+
+
+<meta itemprop="datePublished" content="2017-05-03T00:00:00&#43;00:00" />
+<meta itemprop="dateModified" content="2017-05-03T00:00:00&#43;00:00" />
+<meta itemprop="wordCount" content="342">
+
+
+
+<meta itemprop="keywords" content="Java,JSON,JSONParser,JSP," />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="[Java] JSP - JSON 데이터 주고 받기 - JSONParser"/>
+<meta name="twitter:description" content="JSONParser 를 이용하여 데이터 주고 받기"/>
+
+
+
+<meta property="article:section" content="Java" />
+
+<meta property="article:published_time" content="2017-05-03 00:00:00 &#43;0000 UTC" />
+
+
+
+
+
+
+
+    </head>
+
+    <body class="dark-theme">
+        <div class="container">
+            <header class="header">
+    <span class="header__inner">
+        <a href="/" style="text-decoration: none;">
+    <div class="logo">
+        
+            <span class="logo__mark">></span>
+            <span class="logo__text">cd /home/kiwinam</span>
+            <span class="logo__cursor" style=""></span>
+        
+    </div>
+</a>
+
+
+        <span class="header__right">
+            
+                <nav class="menu">
+    <ul class="menu__inner"><li><a href="https://kiwinam.com/about">About</a></li><li><a href="https://kiwinam.com/categories">categories</a></li><li><a href="https://kiwinam.com/posts">posts</a></li>
+    </ul>
+</nav>
+
+                <span class="menu-trigger">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M0 0h24v24H0z" fill="none"/>
+                        <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+                    </svg>
+                </span>
+            
+
+            <span class="theme-toggle unselectable"><svg class="theme-toggler" width="24" height="24" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M22 41C32.4934 41 41 32.4934 41 22C41 11.5066 32.4934 3 22
+  3C11.5066 3 3 11.5066 3 22C3 32.4934 11.5066 41 22 41ZM7 22C7
+  13.7157 13.7157 7 22 7V37C13.7157 37 7 30.2843 7 22Z"/>
+</svg>
+</span>
+        </span>
+    </span>
+</header>
+
+
+            <div class="content">
+                
+    <main class="post">
+
+        <div class="post-info">
+            <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-clock"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>2 minutes
+
+            
+
+            </p>
+        </div>
+
+        <article>
+            <h1 class="post-title"><a href="https://kiwinam.com/posts/jsp-json-parser/">[Java] JSP - JSON 데이터 주고 받기 - JSONParser</a></h1>
+
+            
+
+            <div class="post-content">
+                
+
+<hr />
+
+<p>[Java] JSP - JSON 데이터 주고 받기 - JSONParser</p>
+
+<hr />
+
+<p><br/></p>
+
+<p>json-simple 라이브러리를 이용하여</p>
+
+<p>Android - JSP - JAVA</p>
+
+<p>JSON 데이터 처리하는 방법입니다.</p>
+
+<p><br/></p>
+
+<h4 id="step1-json-데이터-생성-android">Step1 . JSON 데이터 생성  (Android)</h4>
+
+<pre><code class="language-Java">JSONObject sendObject = new JSONObject();
+JSONArray sendArray = new JSONArray();
+// 각 정보마다 Object 로 만들어 Array 에 담는 반복문
+try {
+    for(int i = 0; i &lt; 10; i++ ){
+        JSONObject informationObject = new JSONObject();
+        informationObject.put(&quot;name&quot;,&quot;Charlie&quot;+i);
+        informationObject.put(&quot;number&quot;,i+1);
+
+        sendArray.put(informationObject);
+    }
+    sendObject.put(&quot;list&quot;,sendArray);
+} catch (JSONException e) {
+    e.printStackTrace();
+}
+</code></pre>
+
+<p>실제 정보가 담겨있는 JSONObject를 JSONArray 에 담아주고</p>
+
+<p>담긴 Array를 다시 JSONObject에 담아줍니다.</p>
+
+<p>그렇게 되면 데이터 형식은 아래와 같습니다.</p>
+
+<p>{ &ldquo;list&rdquo;<br />
+    {
+        [ &ldquo;name&rdquo;:&ldquo;charlie0&rdquo; , &ldquo;number&rdquo;:&ldquo;0&rdquo; ] ,
+        [ &ldquo;name&rdquo;:&ldquo;charlie1&rdquo; , &ldquo;number&rdquo;:&ldquo;1&rdquo; ] ,
+        [ &ldquo;name&rdquo;:&ldquo;charlie2&rdquo; , &ldquo;number&rdquo;:&ldquo;2&rdquo; ] ,
+        &hellip;
+    }
+}</p>
+
+<p>이렇게 생성된 JSONObject 를 다양한 방법으로 JSP에 전달해주면됩니다.</p>
+
+<p>저의 경우에는 <code>HttpURLConnection</code> 를 이용해서 String 형식으로 전송했습니다.</p>
+
+<pre><code class="language-Java"> &quot;json=&quot;+sendObject.toString()
+</code></pre>
+
+<p>제가 만든 요청 Parameter 입니다.</p>
+
+<p>요청 URL 은 서버의 jsp 파일로 가도록 하였습니다.</p>
+
+<p><br/></p>
+
+<h4 id="step2-jsp-에서-데이터-받기-jsp">Step2 . JSP 에서 데이터 받기 (JSP)</h4>
+
+<p><em>init.Manage 는 java 파일 패키지 명입니다.</em></p>
+
+<pre><code class="language-JSP">&lt;%@ page language=&quot;java&quot; contentType=&quot;text/html; charset=UTF-8&quot;
+    page Encoding=&quot;UTF-8&quot;%&gt;
+
+&lt;%@ page import=&quot;init.Manage&quot;%&gt;
+
+&lt;%
+	request.setCharacterEncoding(&quot;UTF-8&quot;);
+
+	Manage manage = Manage.getInstance();
+
+	String json = request.getParameter(&quot;json&quot;);
+
+	String result = manage.method(json);
+
+	out.print(result);
+%&gt;
+</code></pre>
+
+<p>String으로 날린 데이터를 request 객체에서 post형식으로 받아줍니다.</p>
+
+<p>실제로 JSON 데이터를 처리하는 부분은 java 에서 진행할 것이기 때문에</p>
+
+<p>받은 데이터를 java 메소드에 매개변수로 전달만 해줍니다.</p>
+
+<p><br/></p>
+
+<h4 id="step3-json-데이터-처리하기-java">Step3 . JSON 데이터 처리하기 (Java)</h4>
+
+<pre><code class="language-Java">public String method(String data){
+
+	String result = &quot;&quot;;
+
+	try {
+		JSONParser jsonParser = new JSONParser();
+		JSONObject jsonObject = (JSONObject) jsonParser.parse(data);
+		JSONArray jsonArray = (JSONArray) jsonObject.get(&quot;list&quot;);
+
+		for(int i = 0; i &lt; jsonArray.size(); i++ ){
+			JSONObject jsonObject = (JSONObject) jsonArray.get(i);
+			String name = jsonObject.get(&quot;name&quot;).toString();
+			String number = jsonObject.get(&quot;number&quot;).toString();
+
+            //Do something..
+        }
+		result = &quot;ok&quot;;
+	} catch (Exception e) {
+		result = &quot;fail&quot;;
+}
+return result;
+}
+</code></pre>
+
+<p>Android 에서 JSON 데이터를 만든 순서대로 다시 풀어주면 됩니다.</p>
+
+<p>JSONObject { JSONArray ( JSONObjects&hellip;) }</p>
+
+<p>이런 형태의 JSONObject를 역순으로 풀어줍니다.</p>
+
+<p>JSONObject &gt;&gt; JSONArray &gt;&gt; JSONObject</p>
+
+<p>여기에서 사용하는 가장 중요한 부분은</p>
+
+<p>JSONParser 입니다.</p>
+
+<p>String 으로 되어 있는 데이터를 JSON 형태로 파싱 해주는 parse 메소드를 이용하여 JSONObject를 만듭니다.</p>
+
+<p>그 이후는 만든 순서대로 다시 가져오는 부분입니다.</p>
+
+<hr />
+
+<p><br/></p>
+
+<p><em>[JSON 관련 포스팅]</em></p>
+
+<ol>
+<li><a href="https://kiwinam.com/posts/7" target="_blank">[안드로이드] JSON 데이터 주고 받기</a></li>
+</ol>
+
+            </div>
+        </article>
+
+        <hr />
+
+        <div class="post-info">
+                <p>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-tag meta-icon"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7" y2="7"></line></svg><span class="tag"><a href="https://kiwinam.com/tags/java">Java</a></span><span class="tag"><a href="https://kiwinam.com/tags/json">JSON</a></span><span class="tag"><a href="https://kiwinam.com/tags/jsonparser">JSONParser</a></span><span class="tag"><a href="https://kiwinam.com/tags/jsp">JSP</a></span>
+                </p>
+
+            <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>342 Words</p>
+
+            <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-calendar"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>2017-05-03 09:00 &#43;0900</p>
+        </div>
+
+        
+            <div class="pagination">
+                <div class="pagination__title">
+                    <span class="pagination__title-h">Read other posts</span>
+                    <hr />
+                </div>
+
+                <div class="pagination__buttons">
+                    
+                        <span class="button previous">
+                            <a href="https://kiwinam.com/posts/android-swipe-refresh-layout/">
+                                <span class="button__icon">←</span>
+                                <span class="button__text">[안드로이드] - 당겨서 새로고침 SwipeRefreshLayout</span>
+                            </a>
+                        </span>
+                    
+
+                    
+                        <span class="button next">
+                            <a href="https://kiwinam.com/posts/android-recyclerview-divider/">
+                                <span class="button__text">[안드로이드] RecyclerView [3] Divider 구분선 넣기</span>
+                                <span class="button__icon">→</span>
+                            </a>
+                        </span>
+                    
+                </div>
+            </div>
+        
+        <script src="https://utteranc.es/client.js"
+            repo="kiwinam/kiwinam-comment"
+            issue-term="pathname"
+            theme="github-dark"
+            crossorigin="anonymous"
+            async>
+    </script>
+        
+    </main>
+
+            </div>
+
+            
+                <footer class="footer">
+    <div class="footer__inner">
+        <div class="footer__content">
+            <span>&copy; 2019</span>
+            
+            <span></span>
+            <span> <a href="https://kiwinam.com/posts/index.xml" target="_blank" title="rss"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-rss"><path d="M4 11a9 9 0 0 1 9 9"></path><path d="M4 4a16 16 0 0 1 16 16"></path><circle cx="5" cy="19" r="1"></circle></svg></a></span>
+        </div>
+    </div>
+    <div class="footer__inner">
+        <div class="footer__content">
+
+        </div>
+    </div>
+    <div class="footer__inner">
+        <div class="footer__content">
+            <span>Powered by <a href="http://gohugo.io">Hugo</a></span>
+            <span>Made with &#10084; by <a href="https://github.com/rhazdon">rhazdon</a></span>
+        </div>
+    </div>
+</footer>
+
+            
+        </div>
+
+        
+
+
+
+
+<script type="text/javascript" src="/bundle.min.4c3fb12a087ceed4a52cb5d57068a9795c7069617a01ca70f788052ad66e1791779e6c72686e1dc0ca13dc03b0203204b6566bb0dd1ee80de2b7ff4d8fe53db2.js" integrity="sha512-TD&#43;xKgh87tSlLLXVcGipeVxwaWF6Acpw94gFKtZuF5F3nmxyaG4dwMoT3AOwIDIEtlZrsN0e6A3it/9Nj&#43;U9sg=="></script>
+
+
+
+    </body>
+</html>

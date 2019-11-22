@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Kiwinam</title>
+    <title>키위남</title>
     <link>https://kiwinam.com/</link>
-    <description>Recent content on Kiwinam</description>
+    <description>Recent content on 키위남</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>ko</language>
     <lastBuildDate>Fri, 27 Sep 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://kiwinam.com/index.xml" rel="self" type="application/rss+xml" />
@@ -17,18 +16,37 @@
       <pubDate>Fri, 27 Sep 2019 00:00:00 +0000</pubDate>
       
       <guid>https://kiwinam.com/about/</guid>
-      <description>전 여행을 좋아하는 엔지니어입니다 :)
+      <description> -- 
+
+전 여행을 좋아하는 엔지니어입니다 :)
 스타트업에서 좋은 사람들과 새로운 경험을 하는 것을 좋아합니다.
- https://github.com/kiwinam  </description>
+Find me  https://github.com/kiwinam https://www.linkedin.com/in/charlie-park-19731b173/ https://www.rocketpunch.com/@mals93  </description>
     </item>
     
     <item>
-      <title>[Mac] Mariadb 설치</title>
-      <link>https://kiwinam.com/posts/mac-maridb-%EC%84%A4%EC%B9%98/</link>
+      <title>[MySQL] 사용자 추가, 권한 설정, 삭제</title>
+      <link>https://kiwinam.com/posts/mysql-add-user/</link>
+      <pubDate>Thu, 02 May 2019 23:35:56 +0900</pubDate>
+      
+      <guid>https://kiwinam.com/posts/mysql-add-user/</guid>
+      <description>0. tl; dr MySQL/MariaDB 계정 생성 MySQL 사용자 생성 문법
+CREATE USER &#39;아이디&#39;@&#39;접속대역&#39; IDENTIFIED BY &#39;패스워드&#39;;  예시
+CREATE USER &#39;kiwinam&#39;@&#39;localhost&#39; IDENTIFIED BY &#39;PassWord123&#39;; GRANT ALL PRIVILEGES ON *.* TO &#39;kiwinam&#39;@&#39;localhost&#39; WITH GRANT OPTION;  
+
+1. MySQL 로그인 mysql -u root -p  사용자 계정을 추가하기 위해서는 root 계정으로 로그인 해야합니다.
+
+
+2. 생성된 계정 확인 이미 생성되어 있는 계정들을 확인하고 싶은 경우 아래와 같이 입력하면 됩니다.</description>
+    </item>
+    
+    <item>
+      <title>[MariaDB] Mac 에서 Mariadb 설치</title>
+      <link>https://kiwinam.com/posts/install-mariadb-on-mac/</link>
       <pubDate>Thu, 21 Mar 2019 10:35:56 +0900</pubDate>
       
-      <guid>https://kiwinam.com/posts/mac-maridb-%EC%84%A4%EC%B9%98/</guid>
+      <guid>https://kiwinam.com/posts/install-mariadb-on-mac/</guid>
       <description>[Mac] Mariadb 설치
+
 0. Mariadb 란 Mariadb 는 Mysql 의 창업자이자 핵심 개발자인 몬티 와이드니어스가 회사를 2009년에 썬 마이크로즈시스템에 팔고 나온 뒤 다시 만든 RDBMS 입니다.
 Mysql 과 마찬가지로 몬티의 딸 이름을 따와서 MariaDB 라고 이름을 지었습니다.
 Mysql 의 핵심 개발자가 만든 Mariadb 이기 때문에, 대부분의 명령어들이 Mysql 과 유사합니다.
@@ -38,10 +56,10 @@ Mysql 의 핵심 개발자가 만든 Mariadb 이기 때문에, 대부분의 명�
     
     <item>
       <title>[Git] warning: LF will be CRLF 해결법</title>
-      <link>https://kiwinam.com/posts/git-warning-lf-will-be-crlf/</link>
+      <link>https://kiwinam.com/posts/git-lf-will-be-crlf/</link>
       <pubDate>Fri, 15 Feb 2019 10:35:56 +0900</pubDate>
       
-      <guid>https://kiwinam.com/posts/git-warning-lf-will-be-crlf/</guid>
+      <guid>https://kiwinam.com/posts/git-lf-will-be-crlf/</guid>
       <description>[Git] warning: LF will be CRLF
 
 터미널 or CMD 에서 Git command 를 사용하는데 위 사진 같은 warning 이 나오는 경우가 있습니다.
@@ -57,11 +75,11 @@ Mac user git config --global core.autocrlf true input
     </item>
     
     <item>
-      <title>[안드로이드] 네비게이션 드로어 (Navigation drawer) 사용법</title>
-      <link>https://kiwinam.com/posts/%EC%95%88%EB%93%9C%EB%A1%9C%EC%9D%B4%EB%93%9C-%EB%84%A4%EB%B9%84%EA%B2%8C%EC%9D%B4%EC%85%98-%EB%93%9C%EB%A1%9C%EC%96%B4-%EC%82%AC%EC%9A%A9%EB%B2%95/</link>
+      <title>[안드로이드] 네비게이션 드로어 사용법</title>
+      <link>https://kiwinam.com/posts/android-navigation-drawer/</link>
       <pubDate>Sat, 29 Dec 2018 10:35:56 +0900</pubDate>
       
-      <guid>https://kiwinam.com/posts/%EC%95%88%EB%93%9C%EB%A1%9C%EC%9D%B4%EB%93%9C-%EB%84%A4%EB%B9%84%EA%B2%8C%EC%9D%B4%EC%85%98-%EB%93%9C%EB%A1%9C%EC%96%B4-%EC%82%AC%EC%9A%A9%EB%B2%95/</guid>
+      <guid>https://kiwinam.com/posts/android-navigation-drawer/</guid>
       <description>[안드로이드] 네비게이션 드로어 (Navigation drawer) 사용법
 
 구글 머티리얼 디자인 가이드 중 네비게이션 드로어
@@ -75,11 +93,11 @@ Mac user git config --global core.autocrlf true input
     </item>
     
     <item>
-      <title>[안드로이드] 툴바 사용법 (버튼 추가) - add button to tool bar</title>
-      <link>https://kiwinam.com/posts/%EC%95%88%EB%93%9C%EB%A1%9C%EC%9D%B4%EB%93%9C-%ED%88%B4%EB%B0%94-%EC%82%AC%EC%9A%A9%EB%B2%95-add-button-to-tool-bar/</link>
+      <title>[안드로이드] 툴바 사용법 - 버튼 추가</title>
+      <link>https://kiwinam.com/posts/android-toolbar-add-button/</link>
       <pubDate>Wed, 26 Dec 2018 10:35:56 +0900</pubDate>
       
-      <guid>https://kiwinam.com/posts/%EC%95%88%EB%93%9C%EB%A1%9C%EC%9D%B4%EB%93%9C-%ED%88%B4%EB%B0%94-%EC%82%AC%EC%9A%A9%EB%B2%95-add-button-to-tool-bar/</guid>
+      <guid>https://kiwinam.com/posts/android-toolbar-add-button/</guid>
       <description>[안드로이드] 툴바 사용법 (버튼 추가) - add button to tool bar
 
 안드로이드 API 21 (롤리팝 5.0) 버전부터 기존 Action bar 를 대체할 tool bar 라는 앱 상단에 표시되는 뷰가 추가되었습니다.
@@ -93,10 +111,10 @@ Mac user git config --global core.autocrlf true input
     
     <item>
       <title>Android Studio 3.0 xml layout Preview 오류 해결 방법</title>
-      <link>https://kiwinam.com/posts/android-studio-3.0xml-layout-preview/</link>
+      <link>https://kiwinam.com/posts/android-xml-layout-preview/</link>
       <pubDate>Sat, 10 Feb 2018 10:35:56 +0900</pubDate>
       
-      <guid>https://kiwinam.com/posts/android-studio-3.0xml-layout-preview/</guid>
+      <guid>https://kiwinam.com/posts/android-xml-layout-preview/</guid>
       <description>Android Studio 3.0 xml layout Preview 오류 해결 방법
 
 Android Studio 를 2.3.x 버전으로 사용하다 이번에 3.0 버전으로 업데이트 하였습니다.
@@ -111,10 +129,10 @@ Font.xml 파일을 수정한 적이 있을텐데요.</description>
     
     <item>
       <title>[안드로이드] startActivityForResult ,onActivityResult 사용법</title>
-      <link>https://kiwinam.com/posts/%EC%95%88%EB%93%9C%EB%A1%9C%EC%9D%B4%EB%93%9C-startactivityforresult-onactivityresult-%EC%82%AC%EC%9A%A9%EB%B2%95/</link>
+      <link>https://kiwinam.com/posts/android-start-activity-for-result/</link>
       <pubDate>Fri, 09 Feb 2018 10:35:56 +0900</pubDate>
       
-      <guid>https://kiwinam.com/posts/%EC%95%88%EB%93%9C%EB%A1%9C%EC%9D%B4%EB%93%9C-startactivityforresult-onactivityresult-%EC%82%AC%EC%9A%A9%EB%B2%95/</guid>
+      <guid>https://kiwinam.com/posts/android-start-activity-for-result/</guid>
       <description>[안드로이드] startActivityForResult ,onActivityResult 사용법
 
 안드로이드 개발을 진행하다 보면 단순히 액티비티를 전환하고 끝! 이 아니라
@@ -132,10 +150,10 @@ Font.xml 파일을 수정한 적이 있을텐데요.</description>
     
     <item>
       <title>[Mac] OS X 기능, 맥북 화면 녹화하기</title>
-      <link>https://kiwinam.com/posts/mac-osx-%EA%B8%B0%EB%8A%A5-%EB%A7%A5%EB%B6%81-%ED%99%94%EB%A9%B4-%EB%85%B9%ED%99%94%ED%95%98%EA%B8%B0/</link>
+      <link>https://kiwinam.com/posts/mac-recording-screen/</link>
       <pubDate>Tue, 30 Jan 2018 10:35:56 +0900</pubDate>
       
-      <guid>https://kiwinam.com/posts/mac-osx-%EA%B8%B0%EB%8A%A5-%EB%A7%A5%EB%B6%81-%ED%99%94%EB%A9%B4-%EB%85%B9%ED%99%94%ED%95%98%EA%B8%B0/</guid>
+      <guid>https://kiwinam.com/posts/mac-recording-screen/</guid>
       <description>[Mac] OS X 기능, 맥북 화면 녹화하기
 OS X 에서 모니터 화면을 캡쳐하고 싶은 경우가 있습니다.
 그럴 때 윈도우에선 화면 녹화 툴이 많이 있어서 편하게 했었는데요.
@@ -151,10 +169,10 @@ Finder에서 Application 으로 찾으셔도 되고, 저같은 경우 런치패�
     
     <item>
       <title>[안드로이드] 엑셀 파일 생성, 내보내기</title>
-      <link>https://kiwinam.com/posts/%EC%95%88%EB%93%9C%EB%A1%9C%EC%9D%B4%EB%93%9C-%EC%97%91%EC%85%80-%ED%8C%8C%EC%9D%BC-%EC%83%9D%EC%84%B1-%EB%82%B4%EB%B3%B4%EB%82%B4%EA%B8%B0/</link>
+      <link>https://kiwinam.com/posts/android-create-excel/</link>
       <pubDate>Thu, 07 Dec 2017 10:35:56 +0900</pubDate>
       
-      <guid>https://kiwinam.com/posts/%EC%95%88%EB%93%9C%EB%A1%9C%EC%9D%B4%EB%93%9C-%EC%97%91%EC%85%80-%ED%8C%8C%EC%9D%BC-%EC%83%9D%EC%84%B1-%EB%82%B4%EB%B3%B4%EB%82%B4%EA%B8%B0/</guid>
+      <guid>https://kiwinam.com/posts/android-create-excel/</guid>
       <description>[안드로이드] 엑셀 파일 생성, 내보내기
 어플리케이션을 만들다 보면 사용자가 저장한 데이터를 가공하여 내보내 주는 기능을 구현할 때가 있습니다.
 데이터 가공에 가장 적합한 엑셀 파일을 만들어 공유하는 것을 목표로 포스팅하겠습니다.
@@ -162,22 +180,6 @@ Finder에서 Application 으로 찾으셔도 되고, 저같은 경우 런치패�
 1. Result 
 
 2. Step by Step 2-1. Apache POI 2-1-1. 라이브러리 다운로드  안드로이드 (자바) 에서 엑셀 파일을 바로 쓰고 읽고 수정 하는 일련의 작업들을 바로 수행할 수는 없습니다. 이러한 작업을 할 수 있도록 도와주는 라이브러리인 Apache 에서 제공하는 POI 라이브러리를 이용하여 엑셀을 다루도록 하겠습니다.</description>
-    </item>
-    
-    <item>
-      <title>[안드로이드] - android.content.res.Resources$NotFoundException: String resource ID #0x1</title>
-      <link>https://kiwinam.com/posts/%EC%95%88%EB%93%9C%EB%A1%9C%EC%9D%B4%EB%93%9C-androidcontent.res/</link>
-      <pubDate>Thu, 23 Nov 2017 10:35:56 +0900</pubDate>
-      
-      <guid>https://kiwinam.com/posts/%EC%95%88%EB%93%9C%EB%A1%9C%EC%9D%B4%EB%93%9C-androidcontent.res/</guid>
-      <description>[안드로이드] - android.content.res.Resources$NotFoundException: String resource ID #0x1
-FATAL EXCEPTION: main Process: , PID: 4012 android.content.res.Resources$NotFoundException: String resource ID #0x9  안드로이드 개발 중
-android.content.res.Resources$NotFoundException: String resource ID #0x1
-라는 에러를 보았습니다.
-
-TextView 에 setText 메소드를 사용할 때 Int 타입의 데이터를 넣어서 발생하는 에러입니다.
-보통 setText 메서드에 숫자를 바로 넣으면 바로 빨간색 밑줄이 생겨서 에러인 것을 알아보기 쉬운데,
-( Int type 을 바로 넣는 경우 빨간 줄이 보입니다.)</description>
     </item>
     
   </channel>

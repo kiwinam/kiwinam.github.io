@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>녹화 on Kiwinam</title>
+    <title>녹화 on 키위남</title>
     <link>https://kiwinam.com/tags/%EB%85%B9%ED%99%94/</link>
-    <description>Recent content in 녹화 on Kiwinam</description>
+    <description>Recent content in 녹화 on 키위남</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>ko</language>
     <lastBuildDate>Tue, 30 Jan 2018 10:35:56 +0900</lastBuildDate>
     
 	<atom:link href="https://kiwinam.com/tags/%EB%85%B9%ED%99%94/index.xml" rel="self" type="application/rss+xml" />
@@ -13,10 +12,10 @@
     
     <item>
       <title>[Mac] OS X 기능, 맥북 화면 녹화하기</title>
-      <link>https://kiwinam.com/posts/mac-osx-%EA%B8%B0%EB%8A%A5-%EB%A7%A5%EB%B6%81-%ED%99%94%EB%A9%B4-%EB%85%B9%ED%99%94%ED%95%98%EA%B8%B0/</link>
+      <link>https://kiwinam.com/posts/mac-recording-screen/</link>
       <pubDate>Tue, 30 Jan 2018 10:35:56 +0900</pubDate>
       
-      <guid>https://kiwinam.com/posts/mac-osx-%EA%B8%B0%EB%8A%A5-%EB%A7%A5%EB%B6%81-%ED%99%94%EB%A9%B4-%EB%85%B9%ED%99%94%ED%95%98%EA%B8%B0/</guid>
+      <guid>https://kiwinam.com/posts/mac-recording-screen/</guid>
       <description>[Mac] OS X 기능, 맥북 화면 녹화하기
 OS X 에서 모니터 화면을 캡쳐하고 싶은 경우가 있습니다.
 그럴 때 윈도우에선 화면 녹화 툴이 많이 있어서 편하게 했었는데요.

@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>SimpleDateFormat on Kiwinam</title>
+    <title>SimpleDateFormat on 키위남</title>
     <link>https://kiwinam.com/tags/simpledateformat/</link>
-    <description>Recent content in SimpleDateFormat on Kiwinam</description>
+    <description>Recent content in SimpleDateFormat on 키위남</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>ko</language>
     <lastBuildDate>Tue, 18 Apr 2017 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://kiwinam.com/tags/simpledateformat/index.xml" rel="self" type="application/rss+xml" />
@@ -13,10 +12,10 @@
     
     <item>
       <title>[안드로이드] 현재 시간, 현재 날짜 구하기 (SimpleDateFormat)</title>
-      <link>https://kiwinam.com/posts/%EC%95%88%EB%93%9C%EB%A1%9C%EC%9D%B4%EB%93%9C-%ED%98%84%EC%9E%AC-%EC%8B%9C%EA%B0%84-%ED%98%84%EC%9E%AC-%EB%82%A0%EC%A7%9C-%EA%B5%AC%ED%95%98%EA%B8%B0-simpledateformat/</link>
+      <link>https://kiwinam.com/posts/android-simple-date-format/</link>
       <pubDate>Tue, 18 Apr 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://kiwinam.com/posts/%EC%95%88%EB%93%9C%EB%A1%9C%EC%9D%B4%EB%93%9C-%ED%98%84%EC%9E%AC-%EC%8B%9C%EA%B0%84-%ED%98%84%EC%9E%AC-%EB%82%A0%EC%A7%9C-%EA%B5%AC%ED%95%98%EA%B8%B0-simpledateformat/</guid>
+      <guid>https://kiwinam.com/posts/android-simple-date-format/</guid>
       <description>[안드로이드] 현재 시간, 현재 날짜 구하기 (SimpleDateFormat) Android 현재 시간, 현재 날짜 구하기
 SimpleDateFormat
 Preview  Step1. 현재 시간 가져오기.

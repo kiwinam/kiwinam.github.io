@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>네비게이션 드로어 on 키위남</title>
+    <link>https://kiwinam.com/tags/%EB%84%A4%EB%B9%84%EA%B2%8C%EC%9D%B4%EC%85%98-%EB%93%9C%EB%A1%9C%EC%96%B4/</link>
+    <description>Recent content in 네비게이션 드로어 on 키위남</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Sat, 29 Dec 2018 10:35:56 +0900</lastBuildDate>
+    
+	<atom:link href="https://kiwinam.com/tags/%EB%84%A4%EB%B9%84%EA%B2%8C%EC%9D%B4%EC%85%98-%EB%93%9C%EB%A1%9C%EC%96%B4/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>[안드로이드] 네비게이션 드로어 사용법</title>
+      <link>https://kiwinam.com/posts/android-navigation-drawer/</link>
+      <pubDate>Sat, 29 Dec 2018 10:35:56 +0900</pubDate>
+      
+      <guid>https://kiwinam.com/posts/android-navigation-drawer/</guid>
+      <description>[안드로이드] 네비게이션 드로어 (Navigation drawer) 사용법
+
+구글 머티리얼 디자인 가이드 중 네비게이션 드로어
+네비게이션 드로어는 화면 왼쪽 가장자리에 위치해 있고 앱을 탐색할 수 있는 하나의 패널입니다.
+이걸 잘 활용한다면 특정 메뉴를 찾기 위해 클릭이 많이 일어나는 (Deep depth) 문제를 해결할 수 있습니다.
+평상시에는 화면 밖에 가려져 있지만 왼쪽 스와이프나 왼쪽 상단 메뉴 버튼을 클릭하면 위 사진처럼 나옵니다.
+그럼 네비게이션 드로어를 어떻게 구현하는지 알아보겠습니다.
+
+
+1. Result  이번 포스팅에서 진행한 네비게이션 드로어 결과 화면</description>
+    </item>
+    
+  </channel>
+</rss>

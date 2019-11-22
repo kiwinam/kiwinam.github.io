@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>ACTION_SEND on Kiwinam</title>
+    <title>ACTION_SEND on 키위남</title>
     <link>https://kiwinam.com/tags/action_send/</link>
-    <description>Recent content in ACTION_SEND on Kiwinam</description>
+    <description>Recent content in ACTION_SEND on 키위남</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>ko</language>
     <lastBuildDate>Thu, 07 Dec 2017 10:35:56 +0900</lastBuildDate>
     
 	<atom:link href="https://kiwinam.com/tags/action_send/index.xml" rel="self" type="application/rss+xml" />
@@ -13,10 +12,10 @@
     
     <item>
       <title>[안드로이드] 엑셀 파일 생성, 내보내기</title>
-      <link>https://kiwinam.com/posts/%EC%95%88%EB%93%9C%EB%A1%9C%EC%9D%B4%EB%93%9C-%EC%97%91%EC%85%80-%ED%8C%8C%EC%9D%BC-%EC%83%9D%EC%84%B1-%EB%82%B4%EB%B3%B4%EB%82%B4%EA%B8%B0/</link>
+      <link>https://kiwinam.com/posts/android-create-excel/</link>
       <pubDate>Thu, 07 Dec 2017 10:35:56 +0900</pubDate>
       
-      <guid>https://kiwinam.com/posts/%EC%95%88%EB%93%9C%EB%A1%9C%EC%9D%B4%EB%93%9C-%EC%97%91%EC%85%80-%ED%8C%8C%EC%9D%BC-%EC%83%9D%EC%84%B1-%EB%82%B4%EB%B3%B4%EB%82%B4%EA%B8%B0/</guid>
+      <guid>https://kiwinam.com/posts/android-create-excel/</guid>
       <description>[안드로이드] 엑셀 파일 생성, 내보내기
 어플리케이션을 만들다 보면 사용자가 저장한 데이터를 가공하여 내보내 주는 기능을 구현할 때가 있습니다.
 데이터 가공에 가장 적합한 엑셀 파일을 만들어 공유하는 것을 목표로 포스팅하겠습니다.

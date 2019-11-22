@@ -1,23 +1,39 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>mysql on Kiwinam</title>
+    <title>mysql on 키위남</title>
     <link>https://kiwinam.com/tags/mysql/</link>
-    <description>Recent content in mysql on Kiwinam</description>
+    <description>Recent content in mysql on 키위남</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>ko</language>
-    <lastBuildDate>Thu, 21 Mar 2019 10:35:56 +0900</lastBuildDate>
+    <lastBuildDate>Thu, 02 May 2019 23:35:56 +0900</lastBuildDate>
     
 	<atom:link href="https://kiwinam.com/tags/mysql/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>[Mac] Mariadb 설치</title>
-      <link>https://kiwinam.com/posts/mac-maridb-%EC%84%A4%EC%B9%98/</link>
+      <title>[MySQL] 사용자 추가, 권한 설정, 삭제</title>
+      <link>https://kiwinam.com/posts/mysql-add-user/</link>
+      <pubDate>Thu, 02 May 2019 23:35:56 +0900</pubDate>
+      
+      <guid>https://kiwinam.com/posts/mysql-add-user/</guid>
+      <description>0. tl; dr MySQL/MariaDB 계정 생성 MySQL 사용자 생성 문법
+CREATE USER &#39;아이디&#39;@&#39;접속대역&#39; IDENTIFIED BY &#39;패스워드&#39;;  예시
+CREATE USER &#39;kiwinam&#39;@&#39;localhost&#39; IDENTIFIED BY &#39;PassWord123&#39;; GRANT ALL PRIVILEGES ON *.* TO &#39;kiwinam&#39;@&#39;localhost&#39; WITH GRANT OPTION;  
+
+1. MySQL 로그인 mysql -u root -p  사용자 계정을 추가하기 위해서는 root 계정으로 로그인 해야합니다.
+
+
+2. 생성된 계정 확인 이미 생성되어 있는 계정들을 확인하고 싶은 경우 아래와 같이 입력하면 됩니다.</description>
+    </item>
+    
+    <item>
+      <title>[MariaDB] Mac 에서 Mariadb 설치</title>
+      <link>https://kiwinam.com/posts/install-mariadb-on-mac/</link>
       <pubDate>Thu, 21 Mar 2019 10:35:56 +0900</pubDate>
       
-      <guid>https://kiwinam.com/posts/mac-maridb-%EC%84%A4%EC%B9%98/</guid>
+      <guid>https://kiwinam.com/posts/install-mariadb-on-mac/</guid>
       <description>[Mac] Mariadb 설치
+
 0. Mariadb 란 Mariadb 는 Mysql 의 창업자이자 핵심 개발자인 몬티 와이드니어스가 회사를 2009년에 썬 마이크로즈시스템에 팔고 나온 뒤 다시 만든 RDBMS 입니다.
 Mysql 과 마찬가지로 몬티의 딸 이름을 따와서 MariaDB 라고 이름을 지었습니다.
 Mysql 의 핵심 개발자가 만든 Mariadb 이기 때문에, 대부분의 명령어들이 Mysql 과 유사합니다.

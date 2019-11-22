@@ -1,22 +1,30 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Categories on Kiwinam</title>
+    <title>Categories on 키위남</title>
     <link>https://kiwinam.com/categories/</link>
-    <description>Recent content in Categories on Kiwinam</description>
+    <description>Recent content in Categories on 키위남</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>ko</language>
-    <lastBuildDate>Thu, 21 Mar 2019 10:35:56 +0900</lastBuildDate>
+    <lastBuildDate>Thu, 02 May 2019 23:35:56 +0900</lastBuildDate>
     
 	<atom:link href="https://kiwinam.com/categories/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Mac</title>
-      <link>https://kiwinam.com/categories/mac/</link>
+      <title>MySQL</title>
+      <link>https://kiwinam.com/categories/mysql/</link>
+      <pubDate>Thu, 02 May 2019 23:35:56 +0900</pubDate>
+      
+      <guid>https://kiwinam.com/categories/mysql/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Mariadb</title>
+      <link>https://kiwinam.com/categories/mariadb/</link>
       <pubDate>Thu, 21 Mar 2019 10:35:56 +0900</pubDate>
       
-      <guid>https://kiwinam.com/categories/mac/</guid>
+      <guid>https://kiwinam.com/categories/mariadb/</guid>
       <description></description>
     </item>
     
@@ -35,6 +43,15 @@
       <pubDate>Sat, 29 Dec 2018 10:35:56 +0900</pubDate>
       
       <guid>https://kiwinam.com/categories/android/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Mac</title>
+      <link>https://kiwinam.com/categories/mac/</link>
+      <pubDate>Tue, 30 Jan 2018 10:35:56 +0900</pubDate>
+      
+      <guid>https://kiwinam.com/categories/mac/</guid>
       <description></description>
     </item>
     

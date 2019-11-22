@@ -13,12 +13,47 @@
   </url>
   
   <url>
-    <loc>https://kiwinam.com/posts/mac-maridb-%EC%84%A4%EC%B9%98/</loc>
-    <lastmod>2019-03-21T10:35:56+09:00</lastmod>
+    <loc>https://kiwinam.com/posts/mysql-add-user/</loc>
+    <lastmod>2019-05-02T23:35:56+09:00</lastmod>
   </url>
   
   <url>
     <loc>https://kiwinam.com/categories/</loc>
+    <lastmod>2019-05-02T23:35:56+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kiwinam.com/tags/maridb/</loc>
+    <lastmod>2019-05-02T23:35:56+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kiwinam.com/categories/mysql/</loc>
+    <lastmod>2019-05-02T23:35:56+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kiwinam.com/tags/mysql/</loc>
+    <lastmod>2019-05-02T23:35:56+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kiwinam.com/posts/</loc>
+    <lastmod>2019-05-02T23:35:56+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kiwinam.com/tags/</loc>
+    <lastmod>2019-05-02T23:35:56+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kiwinam.com/tags/%EC%82%AC%EC%9A%A9%EC%9E%90-%EC%B6%94%EA%B0%80/</loc>
+    <lastmod>2019-05-02T23:35:56+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kiwinam.com/posts/install-mariadb-on-mac/</loc>
     <lastmod>2019-03-21T10:35:56+09:00</lastmod>
   </url>
   
@@ -28,17 +63,7 @@
   </url>
   
   <url>
-    <loc>https://kiwinam.com/categories/mac/</loc>
-    <lastmod>2019-03-21T10:35:56+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://kiwinam.com/tags/maridb/</loc>
-    <lastmod>2019-03-21T10:35:56+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://kiwinam.com/tags/mysql/</loc>
+    <loc>https://kiwinam.com/categories/mariadb/</loc>
     <lastmod>2019-03-21T10:35:56+09:00</lastmod>
   </url>
   
@@ -48,22 +73,12 @@
   </url>
   
   <url>
-    <loc>https://kiwinam.com/posts/</loc>
-    <lastmod>2019-03-21T10:35:56+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://kiwinam.com/tags/</loc>
-    <lastmod>2019-03-21T10:35:56+09:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://kiwinam.com/tags/%EC%84%A4%EC%B9%98/</loc>
     <lastmod>2019-03-21T10:35:56+09:00</lastmod>
   </url>
   
   <url>
-    <loc>https://kiwinam.com/posts/git-warning-lf-will-be-crlf/</loc>
+    <loc>https://kiwinam.com/posts/git-lf-will-be-crlf/</loc>
     <lastmod>2019-02-15T10:35:56+09:00</lastmod>
   </url>
   
@@ -93,7 +108,7 @@
   </url>
   
   <url>
-    <loc>https://kiwinam.com/posts/%EC%95%88%EB%93%9C%EB%A1%9C%EC%9D%B4%EB%93%9C-%EB%84%A4%EB%B9%84%EA%B2%8C%EC%9D%B4%EC%85%98-%EB%93%9C%EB%A1%9C%EC%96%B4-%EC%82%AC%EC%9A%A9%EB%B2%95/</loc>
+    <loc>https://kiwinam.com/posts/android-navigation-drawer/</loc>
     <lastmod>2018-12-29T10:35:56+09:00</lastmod>
   </url>
   
@@ -118,7 +133,7 @@
   </url>
   
   <url>
-    <loc>https://kiwinam.com/tags/%EB%84%A4%EB%B9%84%EA%B2%8C%EC%9D%B4%EC%85%98-%EB%93%9C%EB%A1%9C4%EC%96%B4/</loc>
+    <loc>https://kiwinam.com/tags/%EB%84%A4%EB%B9%84%EA%B2%8C%EC%9D%B4%EC%85%98-%EB%93%9C%EB%A1%9C%EC%96%B4/</loc>
     <lastmod>2018-12-29T10:35:56+09:00</lastmod>
   </url>
   
@@ -133,7 +148,7 @@
   </url>
   
   <url>
-    <loc>https://kiwinam.com/posts/%EC%95%88%EB%93%9C%EB%A1%9C%EC%9D%B4%EB%93%9C-%ED%88%B4%EB%B0%94-%EC%82%AC%EC%9A%A9%EB%B2%95-add-button-to-tool-bar/</loc>
+    <loc>https://kiwinam.com/posts/android-toolbar-add-button/</loc>
     <lastmod>2018-12-26T10:35:56+09:00</lastmod>
   </url>
   
@@ -178,7 +193,7 @@
   </url>
   
   <url>
-    <loc>https://kiwinam.com/posts/android-studio-3.0xml-layout-preview/</loc>
+    <loc>https://kiwinam.com/posts/android-xml-layout-preview/</loc>
     <lastmod>2018-02-10T10:35:56+09:00</lastmod>
   </url>
   
@@ -198,7 +213,7 @@
   </url>
   
   <url>
-    <loc>https://kiwinam.com/posts/%EC%95%88%EB%93%9C%EB%A1%9C%EC%9D%B4%EB%93%9C-startactivityforresult-onactivityresult-%EC%82%AC%EC%9A%A9%EB%B2%95/</loc>
+    <loc>https://kiwinam.com/posts/android-start-activity-for-result/</loc>
     <lastmod>2018-02-09T10:35:56+09:00</lastmod>
   </url>
   
@@ -223,7 +238,12 @@
   </url>
   
   <url>
-    <loc>https://kiwinam.com/posts/mac-osx-%EA%B8%B0%EB%8A%A5-%EB%A7%A5%EB%B6%81-%ED%99%94%EB%A9%B4-%EB%85%B9%ED%99%94%ED%95%98%EA%B8%B0/</loc>
+    <loc>https://kiwinam.com/posts/mac-recording-screen/</loc>
+    <lastmod>2018-01-30T10:35:56+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kiwinam.com/categories/mac/</loc>
     <lastmod>2018-01-30T10:35:56+09:00</lastmod>
   </url>
   
@@ -248,7 +268,7 @@
   </url>
   
   <url>
-    <loc>https://kiwinam.com/posts/%EC%95%88%EB%93%9C%EB%A1%9C%EC%9D%B4%EB%93%9C-%EC%97%91%EC%85%80-%ED%8C%8C%EC%9D%BC-%EC%83%9D%EC%84%B1-%EB%82%B4%EB%B3%B4%EB%82%B4%EA%B8%B0/</loc>
+    <loc>https://kiwinam.com/posts/android-create-excel/</loc>
     <lastmod>2017-12-07T10:35:56+09:00</lastmod>
   </url>
   
@@ -283,12 +303,12 @@
   </url>
   
   <url>
-    <loc>https://kiwinam.com/posts/%EC%95%88%EB%93%9C%EB%A1%9C%EC%9D%B4%EB%93%9C-androidcontent.res/</loc>
+    <loc>https://kiwinam.com/posts/android-string-resource/</loc>
     <lastmod>2017-11-23T10:35:56+09:00</lastmod>
   </url>
   
   <url>
-    <loc>https://kiwinam.com/posts/%EC%95%88%EB%93%9C%EB%A1%9C%EC%9D%B4%EB%93%9C-%EC%B9%B4%EC%B9%B4%EC%98%A4%ED%86%A1-%EA%B3%B5%EC%9C%A0-%EA%B8%B0%EB%88%99-%EC%B9%B4%EC%B9%B4%EC%98%A4%EB%A7%81%ED%81%AC-api-%EC%82%AC%EC%9A%A9%EB%B2%95/</loc>
+    <loc>https://kiwinam.com/posts/android-share-kakaotalk/</loc>
     <lastmod>2017-11-23T10:35:56+09:00</lastmod>
   </url>
   
@@ -303,7 +323,7 @@
   </url>
   
   <url>
-    <loc>https://kiwinam.com/posts/%EC%95%88%EB%93%9C%EB%A1%9C%EC%9D%B4%EB%93%9C-bottom-sheet-dialog-%EC%82%AC%EC%9A%A9%ED%95%98%EA%B8%B0/</loc>
+    <loc>https://kiwinam.com/posts/android-bottom-sheet-dialog/</loc>
     <lastmod>2017-11-22T10:35:56+09:00</lastmod>
   </url>
   
@@ -328,7 +348,7 @@
   </url>
   
   <url>
-    <loc>https://kiwinam.com/posts/%EC%95%88%EB%93%9C%EB%A1%9C%EC%9D%B4%EB%93%9C-edittext-%ED%99%94%ED%8F%90-%EB%8B%A8%EC%9C%84-%ED%91%9C%EC%8B%9C-%EC%84%B8%EC%9E%90%EB%A6%AC-%EC%BD%A4%EB%A7%88/</loc>
+    <loc>https://kiwinam.com/posts/android-edittext-comma/</loc>
     <lastmod>2017-11-21T10:35:56+09:00</lastmod>
   </url>
   
@@ -358,7 +378,7 @@
   </url>
   
   <url>
-    <loc>https://kiwinam.com/posts/%EC%95%88%EB%93%9C%EB%A1%9C%EC%9D%B4%EB%93%9C-%EC%BB%A4%EC%8A%A4%ED%85%80-%EB%8B%A4%EC%9D%B4%EC%96%BC%EB%A1%9C%EA%B7%B8-clicklistener-callback/</loc>
+    <loc>https://kiwinam.com/posts/android-custom-dialog-click-callback/</loc>
     <lastmod>2017-10-15T10:35:56+09:00</lastmod>
   </url>
   
@@ -388,7 +408,7 @@
   </url>
   
   <url>
-    <loc>https://kiwinam.com/posts/%EC%95%88%EB%93%9C%EB%A1%9C%EC%9D%B4%EB%93%9C-%EC%BB%A4%EC%8A%A4%ED%85%80-%EB%8B%A4%EC%9D%B4%EC%96%BC%EB%A1%9C%EA%B7%B8-%EC%83%9D%EC%84%B1/</loc>
+    <loc>https://kiwinam.com/posts/android-custom-dialog/</loc>
     <lastmod>2017-08-18T10:25:38+09:00</lastmod>
   </url>
   
@@ -403,7 +423,7 @@
   </url>
   
   <url>
-    <loc>https://kiwinam.com/posts/%EC%95%88%EB%93%9C%EB%A1%9C%EC%9D%B4%EB%93%9C-status-bar-%EC%83%89%EC%83%81-%EB%B3%80%EA%B2%BD%ED%95%98%EA%B8%B0/</loc>
+    <loc>https://kiwinam.com/posts/android-change-status-bar/</loc>
     <lastmod>2017-06-01T09:56:28+09:00</lastmod>
   </url>
   
@@ -423,7 +443,7 @@
   </url>
   
   <url>
-    <loc>https://kiwinam.com/posts/android-studio-%EB%A0%88%EC%9D%B4%EC%95%84%EC%9B%83-%ED%94%84%EB%A6%AC%EB%B7%B0-%ED%95%9C%EA%B8%80-%EA%B9%A8%EC%A7%90/</loc>
+    <loc>https://kiwinam.com/posts/android-layout-preview-korean/</loc>
     <lastmod>2017-05-19T16:54:00+09:00</lastmod>
   </url>
   
@@ -438,7 +458,7 @@
   </url>
   
   <url>
-    <loc>https://kiwinam.com/posts/%EC%95%88%EB%93%9C%EB%A1%9C%EC%9D%B4%EB%93%9C-pull-to-refresh-%EB%8B%B9%EA%B2%A8%EC%84%9C-%EC%83%88%EB%A1%9C%EA%B3%A0%EC%B9%A8/</loc>
+    <loc>https://kiwinam.com/posts/android-swipe-refresh-layout/</loc>
     <lastmod>2017-05-16T00:00:00+00:00</lastmod>
   </url>
   
@@ -453,7 +473,7 @@
   </url>
   
   <url>
-    <loc>https://kiwinam.com/posts/jsp-json-%EB%8D%B0%EC%9D%B4%ED%84%B0-%EC%A3%BC%EA%B3%A0-%EB%B0%9B%EA%B8%B0-jsonparser/</loc>
+    <loc>https://kiwinam.com/posts/jsp-json-parser/</loc>
     <lastmod>2017-05-03T00:00:00+00:00</lastmod>
   </url>
   
@@ -483,7 +503,7 @@
   </url>
   
   <url>
-    <loc>https://kiwinam.com/posts/%EC%95%88%EB%93%9C%EB%A1%9C%EC%9D%B4%EB%93%9C-recyclerview-divider-%EA%B5%AC%EB%B6%84%EC%84%A0-%EB%84%A3%EA%B8%B0/</loc>
+    <loc>https://kiwinam.com/posts/android-recyclerview-divider/</loc>
     <lastmod>2017-04-28T00:00:00+00:00</lastmod>
   </url>
   
@@ -493,12 +513,12 @@
   </url>
   
   <url>
-    <loc>https://kiwinam.com/posts/%EC%95%88%EB%93%9C%EB%A1%9C%EC%9D%B4%EB%93%9C-recyclerview-onitemclick-%EB%A6%AC%EC%8A%A4%EB%84%88-%EA%B5%AC%ED%98%84/</loc>
+    <loc>https://kiwinam.com/posts/android-recyclerview-click/</loc>
     <lastmod>2017-04-26T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://kiwinam.com/posts/%EC%95%88%EB%93%9C%EB%A1%9C%EC%9D%B4%EB%93%9C-recylerview-%EA%B0%84%EB%8B%A8%ED%95%9C-%EC%82%AC%EC%9A%A9%EB%B2%95/</loc>
+    <loc>https://kiwinam.com/posts/android-recyclerview/</loc>
     <lastmod>2017-04-25T00:00:00+00:00</lastmod>
   </url>
   
@@ -508,12 +528,12 @@
   </url>
   
   <url>
-    <loc>https://kiwinam.com/posts/%EC%95%88%EB%93%9C%EB%A1%9C%EC%9D%B4%EB%93%9C-json-%EB%8D%B0%EC%9D%B4%ED%84%B0-%EC%A3%BC%EA%B3%A0-%EB%B0%9B%EA%B8%B0/</loc>
+    <loc>https://kiwinam.com/posts/android-json-parse/</loc>
     <lastmod>2017-04-24T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://kiwinam.com/posts/%EC%95%88%EB%93%9C%EB%A1%9C%EC%9D%B4%EB%93%9C-%ED%98%84%EC%9E%AC-%EC%8B%9C%EA%B0%84-%ED%98%84%EC%9E%AC-%EB%82%A0%EC%A7%9C-%EA%B5%AC%ED%95%98%EA%B8%B0-simpledateformat/</loc>
+    <loc>https://kiwinam.com/posts/android-simple-date-format/</loc>
     <lastmod>2017-04-18T00:00:00+00:00</lastmod>
   </url>
   
@@ -528,12 +548,12 @@
   </url>
   
   <url>
-    <loc>https://kiwinam.com/posts/%EC%95%88%EB%93%9C%EB%A1%9C%EC%9D%B4%EB%93%9C-%EC%8A%A4%ED%8A%9C%EB%94%94%EC%98%A4-github-%EC%97%B0%EB%8F%99/</loc>
+    <loc>https://kiwinam.com/posts/android-studio-github/</loc>
     <lastmod>2017-03-07T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://kiwinam.com/posts/mac-%ED%82%A4%EB%85%B8%ED%8A%B8-%EC%9D%B4%EB%AF%B8%EC%A7%80-%EC%A0%80%EC%9E%A5%ED%95%98%EA%B8%B0-%EC%9D%B4%EB%AF%B8%EC%A7%80-%EC%B6%94%EC%B6%9C/</loc>
+    <loc>https://kiwinam.com/posts/mac-save-keynote-image/</loc>
     <lastmod>2017-02-27T00:00:00+00:00</lastmod>
   </url>
   
@@ -543,12 +563,12 @@
   </url>
   
   <url>
-    <loc>https://kiwinam.com/posts/%EC%95%88%EB%93%9C%EB%A1%9C%EC%9D%B4%EB%93%9C-%EC%95%88%EB%93%9C%EB%A1%9C%EC%9D%B4%EB%93%9C-%ED%94%8C%EB%9E%AB%ED%8F%BC%EC%9D%98-%ED%8A%B9%EC%A7%95/</loc>
+    <loc>https://kiwinam.com/posts/android-platform/</loc>
     <lastmod>2017-02-26T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://kiwinam.com/posts/android-activity-%EC%83%9D%EB%AA%85%EC%A3%BC%EA%B8%B0/</loc>
+    <loc>https://kiwinam.com/posts/android-activity-life-cycle/</loc>
     <lastmod>2017-02-25T00:00:00+00:00</lastmod>
   </url>
   
@@ -563,7 +583,7 @@
   </url>
   
   <url>
-    <loc>https://kiwinam.com/posts/%EC%95%88%EB%93%9C%EB%A1%9C%EC%9D%B4%EB%93%9C-%EC%B5%9C%EC%B4%88-%EC%8B%A4%ED%96%89-%ED%99%95%EC%9D%B8-%EB%B2%95-sharedpreferences/</loc>
+    <loc>https://kiwinam.com/posts/android-shared-preferences/</loc>
     <lastmod>2016-09-22T00:00:00+00:00</lastmod>
   </url>
   

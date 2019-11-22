@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-99327236-2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-99327236-2');
+</script>
+
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="author"
+    content="키위남">
+<meta name="description"
+    content="안드로이드 툴바 사용법" />
+    <meta name="keywords" content="android, Action bar, toolbar, 안드로이드 툴바, 액션바, 툴바, 툴바 버튼 추가, 툴바 사용법"/>
+
+<meta name="robots" content="index" />
+<meta name="robots" content="follow" />
+<link rel="canonical" href="https://kiwinam.com/posts/android-toolbar-add-button/" />
+
+
+
+
+<meta property="og:title" content="[안드로이드] 툴바 사용법 - 버튼 추가 :: 키위남">
+
+
+
+<meta property="og:image" content="https://kiwinam.com/img/25/25-1.png">
+
+
+<meta name="og:description"
+    content="안드로이드 툴바 사용법" />
+
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://kiwinam.com/posts/android-toolbar-add-button/">
+
+
+
+<title>[안드로이드] 툴바 사용법 - 버튼 추가 :: 키위남</title>
+
+
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.2.1/css/flag-icon.min.css" rel="stylesheet"
+    type="text/css">
+
+
+
+<link rel="stylesheet" href="/main.min.2f0d18b84270567c723bff340b09ab08db3a7634237cd9667d052eb6b14669b8.css">
+
+
+
+<link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+<link rel="manifest" href="/favicon/site.webmanifest">
+<link rel="mask-icon" href="/favicon/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="#ffffff"><meta itemprop="name" content="[안드로이드] 툴바 사용법 - 버튼 추가">
+<meta itemprop="description" content="안드로이드 툴바 사용법">
+
+
+<meta itemprop="datePublished" content="2018-12-26T10:35:56&#43;09:00" />
+<meta itemprop="dateModified" content="2018-12-26T10:35:56&#43;09:00" />
+<meta itemprop="wordCount" content="714">
+
+
+
+<meta itemprop="keywords" content="android,Action bar,toolbar,안드로이드 툴바,액션바,툴바,툴바 버튼 추가,툴바 사용법," />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="[안드로이드] 툴바 사용법 - 버튼 추가"/>
+<meta name="twitter:description" content="안드로이드 툴바 사용법"/>
+
+
+
+<meta property="article:section" content="Android" />
+
+<meta property="article:published_time" content="2018-12-26 10:35:56 &#43;0900 KST" />
+
+
+
+
+
+
+
+    </head>
+
+    <body class="dark-theme">
+        <div class="container">
+            <header class="header">
+    <span class="header__inner">
+        <a href="/" style="text-decoration: none;">
+    <div class="logo">
+        
+            <span class="logo__mark">></span>
+            <span class="logo__text">cd /home/kiwinam</span>
+            <span class="logo__cursor" style=""></span>
+        
+    </div>
+</a>
+
+
+        <span class="header__right">
+            
+                <nav class="menu">
+    <ul class="menu__inner"><li><a href="https://kiwinam.com/about">About</a></li><li><a href="https://kiwinam.com/categories">categories</a></li><li><a href="https://kiwinam.com/posts">posts</a></li>
+    </ul>
+</nav>
+
+                <span class="menu-trigger">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M0 0h24v24H0z" fill="none"/>
+                        <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+                    </svg>
+                </span>
+            
+
+            <span class="theme-toggle unselectable"><svg class="theme-toggler" width="24" height="24" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M22 41C32.4934 41 41 32.4934 41 22C41 11.5066 32.4934 3 22
+  3C11.5066 3 3 11.5066 3 22C3 32.4934 11.5066 41 22 41ZM7 22C7
+  13.7157 13.7157 7 22 7V37C13.7157 37 7 30.2843 7 22Z"/>
+</svg>
+</span>
+        </span>
+    </span>
+</header>
+
+
+            <div class="content">
+                
+    <main class="post">
+
+        <div class="post-info">
+            <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-clock"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>4 minutes
+
+            
+
+            </p>
+        </div>
+
+        <article>
+            <h1 class="post-title"><a href="https://kiwinam.com/posts/android-toolbar-add-button/">[안드로이드] 툴바 사용법 - 버튼 추가</a></h1>
+
+            
+
+            <div class="post-content">
+                
+
+<hr />
+
+<p>[안드로이드] 툴바 사용법 (버튼 추가) - add button to tool bar</p>
+
+<hr />
+
+<p><br/></p>
+
+<p>안드로이드 API 21 (롤리팝 5.0) 버전부터 기존 Action bar 를 대체할 tool bar 라는 앱 상단에 표시되는 뷰가 추가되었습니다.</p>
+
+<p>안드로이드 개발자 뿐만 아니라 일반 사용자들에게도 상당히 익숙한 뷰입니다.</p>
+
+<p><img src="/img/25/25-1.png" alt="Top App bar" /></p>
+
+<p><a href="https://material.io/develop/android/components/app-bar-layout/" target="_blank">머티리얼 디자인 가이드 공식 문서 중 Top App bars</a></p>
+
+<p><br/></p>
+
+<p>기존 액션바에서 있던 높이 변경 제약, 액션바 내부 뷰 추가 불가능 등의 문제점을</p>
+
+<p>툴바에서는 유연하게 대처할 수 있습니다.</p>
+
+<p>그럼 이제 기본적인 툴바 사용법과 어떻게 툴바에 버튼을 추가하는지 알려드리겠습니다.</p>
+
+<p><br/></p>
+
+<p><br/></p>
+
+<h3 id="1-result">1. Result</h3>
+
+<p><img src="/img/25/25-2.png" alt="Result" /></p>
+
+<p><br/></p>
+
+<p><br/></p>
+
+<h3 id="2-step-by-step">2. Step by Step</h3>
+
+<h4 id="2-1-기존-actionbar-제거">2-1. 기존 ActionBar 제거</h4>
+
+<ul>
+<li>Toolbar 를 적용하기 전 프로젝트를 생성 시 같이 설정되는 ActionBar 를 제거하겠습니다.</li>
+</ul>
+
+<p><em>res/values/style.xml</em></p>
+
+<pre><code class="language-xml">&lt;style name=&quot;AppTheme&quot; parent=&quot;Theme.AppCompat.Light.NoActionBar&quot;&gt;
+</code></pre>
+
+<ul>
+<li>기존 생성 되어 있는 AppTheme  의 parent 를 NoActionBar 로 변경합니다.</li>
+</ul>
+
+<p><br/></p>
+
+<h4 id="2-2-layout-에-toolbar-추가">2-2. Layout 에 ToolBar 추가</h4>
+
+<ul>
+<li>툴바를 사용하고 싶은 레이아웃에 ToolBar 를 추가해줍니다.</li>
+</ul>
+
+<p>_res/layout/activity<em>main.xml</em></p>
+
+<pre><code class="language-xml">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;
+&lt;android.support.constraint.ConstraintLayout
+        xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;
+        xmlns:tools=&quot;http://schemas.android.com/tools&quot;
+        xmlns:app=&quot;http://schemas.android.com/apk/res-auto&quot;
+        android:layout_width=&quot;match_parent&quot;
+        android:layout_height=&quot;match_parent&quot;
+        tools:context=&quot;.MainActivity&quot;&gt;
+    &lt;android.support.v7.widget.Toolbar
+            android:id=&quot;@+id/toolbar&quot;
+            android:layout_width=&quot;match_parent&quot;
+            android:layout_height=&quot;wrap_content&quot;
+            android:background=&quot;@color/colorPrimary&quot;
+            android:theme=&quot;@style/ThemeOverlay.AppCompat.Dark.ActionBar&quot;
+            app:popupTheme=&quot;@style/ThemeOverlay.AppCompat.Dark.ActionBar&quot;
+        /&gt;
+    &lt;TextView
+            android:layout_width=&quot;wrap_content&quot;
+            android:layout_height=&quot;wrap_content&quot;
+            android:text=&quot;Hello World!&quot;
+            app:layout_constraintBottom_toBottomOf=&quot;parent&quot;
+            app:layout_constraintLeft_toLeftOf=&quot;parent&quot;
+            app:layout_constraintRight_toRightOf=&quot;parent&quot;
+            app:layout_constraintTop_toTopOf=&quot;parent&quot;/&gt;
+
+&lt;/android.support.constraint.ConstraintLayout&gt;
+</code></pre>
+
+<ul>
+<li>android:theme 같은 경우 하얀색 그룹 버튼을 위해 추가하였습니다. 굳이 따라하실 필요는 없습니다.</li>
+</ul>
+
+<p><br/></p>
+
+<h4 id="2-3-toolbar-에서-사용할-menu-추가">2-3. ToolBar 에서 사용할 Menu 추가</h4>
+
+<ul>
+<li>툴바에서 메뉴 버튼들을 res 폴더 밑에 추가해보겠습니다.</li>
+</ul>
+
+<p><img src="/img/25/25-3.png" alt="res folder" /></p>
+
+<ul>
+<li>프로젝트 네비게이션 위에서 우클릭 -&gt; new -&gt; Android Resource file</li>
+</ul>
+
+<p><img src="/img/25/25-4.png" alt="new android resource" /></p>
+
+<ul>
+<li>Resource type 을 Menu 로 선택해주고 파일 명을 작성합니다. (저는 main_menu 로 적었습니다.)</li>
+</ul>
+
+<p><br/></p>
+
+<h4 id="2-4-menu-xml-작성">2-4. Menu.xml 작성</h4>
+
+<ul>
+<li>메뉴에서 어떤 아이템들을 추가할 지 main_menu.xml 파일에 적습니다.</li>
+</ul>
+
+<p>_res/menu/main<em>menu.xml</em></p>
+
+<pre><code class="language-xml">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;
+&lt;menu xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;
+      xmlns:app=&quot;http://schemas.android.com/apk/res-auto&quot;
+&gt;
+    &lt;item
+            android:id=&quot;@+id/menu_search&quot;
+            android:title=&quot;search&quot;
+            android:icon=&quot;@drawable/ic_search_white_24dp&quot;
+            app:showAsAction=&quot;always&quot;
+            /&gt;
+    &lt;group&gt;
+        &lt;item
+                android:id=&quot;@+id/menu_account&quot;
+                android:title=&quot;account&quot;
+                android:icon=&quot;@drawable/ic_account_circle_white_24dp&quot;
+        /&gt;
+        &lt;item
+                android:id=&quot;@+id/menu_logout&quot;
+                android:title=&quot;logout&quot;
+                android:icon=&quot;@drawable/ic_exit_to_app_white_24dp&quot;
+        /&gt;
+    &lt;/group&gt;
+&lt;/menu&gt;
+</code></pre>
+
+<ul>
+<li><p><code>&lt;item/&gt;</code> 은 바로 보이는 메뉴 버튼 이고 <code>&lt;group&gt;</code>  으로 묶인 item 들은 점으로 Result 사진 우상단 처럼 하나의 버튼(오버플로우 메뉴) 밑에 서브 메뉴로 묶이게 됩니다.</p></li>
+
+<li><p>android:icon 속성은 액션 버튼에 보일 아이콘을 설정합니다. drawable 에 있는 이미지 리소스를 사용하면 됩니다.</p></li>
+
+<li><p>app:showAsAction  속성은 메뉴 버튼이 어떻게 보일지를 설정하는 것입니다.</p></li>
+</ul>
+
+<table>
+<thead>
+<tr>
+<th>속성</th>
+<th>설명</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td><code>app:showAsAction=&quot;always&quot;</code></td>
+<td>항상 툴바의 액션으로 보이게 표시</td>
+</tr>
+
+<tr>
+<td><code>app:showAsAction=&quot;never&quot;</code></td>
+<td>항상 오버플로우 메뉴에 포함되게 표시</td>
+</tr>
+
+<tr>
+<td><code>app:showAsAction=&quot;ifRoom&quot;</code></td>
+<td>만약 공간이 있다면 액션, 없다면 오버플로우 메뉴에 표시</td>
+</tr>
+
+<tr>
+<td><code>app:showAsAction=&quot;withText&quot;</code></td>
+<td>툴바의 액션으로 표시할 때 item title 과 같이 표시 (공간이 있는 경우만)</td>
+</tr>
+</tbody>
+</table>
+
+<ul>
+<li>이번 예제에서는 검색 버튼, 계정 버튼, 로그아웃 버튼을 툴바 메뉴로 사용해보겠습니다.</li>
+</ul>
+
+<p><br/></p>
+
+<p><br/></p>
+
+<h4 id="2-5-activity-에서-toolbar-설정">2-5. Activity 에서 ToolBar 설정</h4>
+
+<ul>
+<li>툴바는 레이아웃에서만 설정한다고 적용되지 않습니다. 툴바를 사용할 액티비티에서 설정해줄 것이 몇 가지 있습니다.</li>
+</ul>
+
+<p>2-5-1. 툴바 사용 설정</p>
+
+<p><code>setSupportActionBar(toolbar)</code></p>
+
+<ul>
+<li>이 액티비티에서 툴바를 사용하겠다는 선언입니다.</li>
+</ul>
+
+<p><br/></p>
+
+<p>2-5-2. 툴바 왼쪽 버튼 설정</p>
+
+<pre><code class="language-java">supportActionBar!!.setDisplayHomeAsUpEnabled(true)  // 왼쪽 버튼 사용 여부 true
+supportActionBar!!.setHomeAsUpIndicator(R.drawable.ic_menu_white_24dp)  // 왼쪽 버튼 이미지 설정
+supportActionBar!!.setDisplayShowTitleEnabled(false)    // 타이틀 안보이게 하기
+</code></pre>
+
+<ul>
+<li><p><code>setDisplayHomeAsUpEnabled(true)</code>   으로 왼쪽에 버튼을 사용하겠다 설정합니다.</p></li>
+
+<li><p><code>setHomeAsUpIndicator(R.drawable.ic_menu_white_24dp)</code>   왼쪽 버튼의 아이콘을 설정해줍니다.</p></li>
+
+<li><p><code>setDisplayShowTitleEnabled(false)</code>  툴바의 타이틀을 안보이게 합니다. 타이틀을 사용할 분들은 굳이 안 넣으셔도 됩니다. 타이틀을 변경하는 메소드는 setTitle(title : String?) 입니다.</p></li>
+</ul>
+
+<p><br/></p>
+
+<p>2-5-3. 툴바 메뉴 버튼 설정</p>
+
+<pre><code class="language-kt">override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+    menuInflater.inflate(R.menu.main_menu, menu)       // main_menu 메뉴를 toolbar 메뉴 버튼으로 설정
+    return true
+}
+</code></pre>
+
+<ul>
+<li>res/menu/main_menu 으로 작성한 메뉴 레이아웃을 현재 툴바 메뉴로 사용하는 설정입니다.</li>
+</ul>
+
+<p><br/></p>
+
+<p>2-5-4. 툴바 메뉴 버튼 설정</p>
+
+<pre><code class="language-java">override fun onOptionsItemSelected(item: MenuItem?): Boolean {
+    // 클릭된 메뉴 아이템의 아이디 마다 when 구절로 클릭시 동작을 설정한다.
+    when(item!!.itemId){
+        android.R.id.home-&gt;{ // 메뉴 버튼
+            Snackbar.make(toolbar,&quot;Menu pressed&quot;,Snackbar.LENGTH_SHORT).show()
+        }
+        R.id.menu_search-&gt;{ // 검색 버튼
+            Snackbar.make(toolbar,&quot;Search menu pressed&quot;,Snackbar.LENGTH_SHORT).show()
+        }
+        R.id.menu_account-&gt;{ // 계정 버튼
+            Snackbar.make(toolbar,&quot;Account menu pressed&quot;,Snackbar.LENGTH_SHORT).show()
+        }
+        R.id.menu_logout-&gt;{ // 로그아웃 버튼
+            Snackbar.make(toolbar,&quot;Logout menu pressed&quot;,Snackbar.LENGTH_SHORT).show()
+        }
+    }
+    return super.onOptionsItemSelected(item)
+}
+</code></pre>
+
+<ul>
+<li><p>툴바에 있는 액션 버튼들을 눌렀을 때 어떤 행동을 할 것인지 설정하는 메소드입니다.</p></li>
+
+<li><p>버튼의 ID 값을 통해 어떤 버튼이 눌렸는지 판단합니다.</p></li>
+
+<li><p>왼쪽에 설정된 버튼은 <code>android.R.id.home</code> 이라는 ID 로 구분합니다.</p></li>
+
+<li><p>각 버튼을 누를 때 마다 스낵바가 나오고 스낵바는 따로 라이브러리를 추가해줘야합니다.</p></li>
+</ul>
+
+<p><code>implementation 'com.android.support:design:27.1.1'</code></p>
+
+<p><br/></p>
+
+<p>아래 코드는 MainActivity 의 전체 코드입니다.</p>
+
+<p><em>MainActivity.kt</em></p>
+
+<pre><code class="language-java">import kotlinx.android.synthetic.main.activity_main.*
+
+/**
+ * 툴바 사용법을 연습하는 액티비티
+ * Created by kiwinam - 18.12.26
+ */
+class MainActivity : AppCompatActivity() {
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_main)
+
+        // 1. 툴바 사용 설정
+        setSupportActionBar(toolbar)
+
+        // 2. 툴바 왼쪽 버튼 설정
+        supportActionBar!!.setDisplayHomeAsUpEnabled(true)  // 왼쪽 버튼 사용 여부 true
+        supportActionBar!!.setHomeAsUpIndicator(R.drawable.ic_menu_white_24dp)  // 왼쪽 버튼 아이콘 설정
+        supportActionBar!!.setDisplayShowTitleEnabled(false)    // 타이틀 안보이게 하기
+    }
+
+    // 3.툴바 메뉴 버튼을 설정
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menuInflater.inflate(R.menu.main_menu, menu)       // main_menu 메뉴를 toolbar 메뉴 버튼으로 설정
+        return true
+    }
+
+    // 4.툴바 메뉴 버튼이 클릭 됐을 때 콜백
+    override fun onOptionsItemSelected(item: MenuItem?): Boolean {
+        // 클릭된 메뉴 아이템의 아이디 마다 when 구절로 클릭시 동작을 설정한다.
+        when(item!!.itemId){
+            android.R.id.home-&gt;{ // 메뉴 버튼
+                Snackbar.make(toolbar,&quot;Menu pressed&quot;,Snackbar.LENGTH_SHORT).show()
+            }
+            R.id.menu_search-&gt;{ // 검색 버튼
+                Snackbar.make(toolbar,&quot;Search menu pressed&quot;,Snackbar.LENGTH_SHORT).show()
+            }
+            R.id.menu_account-&gt;{ // 계정 버튼
+                Snackbar.make(toolbar,&quot;Account menu pressed&quot;,Snackbar.LENGTH_SHORT).show()
+            }
+            R.id.menu_logout-&gt;{ // 로그아웃 버튼
+                Snackbar.make(toolbar,&quot;Logout menu pressed&quot;,Snackbar.LENGTH_SHORT).show()
+            }
+        }
+        return super.onOptionsItemSelected(item)
+    }
+}
+</code></pre>
+
+<p><br/></p>
+
+<p><br/></p>
+
+<h3 id="result-gif">Result GIF</h3>
+
+<p><img src="/img/25/25-5.gif" alt="result gif" /></p>
+
+<p><br/></p>
+
+<h3 id="3-source-code">3. Source Code</h3>
+
+<p>전체 소스코드는 <a href="https://github.com/kiwinam/toolbar_test" target="_blank">GitHub</a> 에 연동해놓았습니다.</p>
+
+<p>읽어주셔서 감사합니다.</p>
+
+<p>제 포스팅이 도움이 되었으면 좋겠네요!</p>
+
+<p><br/></p>
+
+            </div>
+        </article>
+
+        <hr />
+
+        <div class="post-info">
+                <p>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-tag meta-icon"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7" y2="7"></line></svg><span class="tag"><a href="https://kiwinam.com/tags/android">android</a></span><span class="tag"><a href="https://kiwinam.com/tags/action-bar">Action bar</a></span><span class="tag"><a href="https://kiwinam.com/tags/toolbar">toolbar</a></span><span class="tag"><a href="https://kiwinam.com/tags/%EC%95%88%EB%93%9C%EB%A1%9C%EC%9D%B4%EB%93%9C-%ED%88%B4%EB%B0%94">안드로이드 툴바</a></span><span class="tag"><a href="https://kiwinam.com/tags/%EC%95%A1%EC%85%98%EB%B0%94">액션바</a></span><span class="tag"><a href="https://kiwinam.com/tags/%ED%88%B4%EB%B0%94">툴바</a></span><span class="tag"><a href="https://kiwinam.com/tags/%ED%88%B4%EB%B0%94-%EB%B2%84%ED%8A%BC-%EC%B6%94%EA%B0%80">툴바 버튼 추가</a></span><span class="tag"><a href="https://kiwinam.com/tags/%ED%88%B4%EB%B0%94-%EC%82%AC%EC%9A%A9%EB%B2%95">툴바 사용법</a></span>
+                </p>
+
+            <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>714 Words</p>
+
+            <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-calendar"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>2018-12-26 10:35 &#43;0900</p>
+        </div>
+
+        
+            <div class="pagination">
+                <div class="pagination__title">
+                    <span class="pagination__title-h">Read other posts</span>
+                    <hr />
+                </div>
+
+                <div class="pagination__buttons">
+                    
+                        <span class="button previous">
+                            <a href="https://kiwinam.com/posts/android-navigation-drawer/">
+                                <span class="button__icon">←</span>
+                                <span class="button__text">[안드로이드] 네비게이션 드로어 사용법</span>
+                            </a>
+                        </span>
+                    
+
+                    
+                        <span class="button next">
+                            <a href="https://kiwinam.com/posts/android-xml-layout-preview/">
+                                <span class="button__text">Android Studio 3.0 xml layout Preview 오류 해결 방법</span>
+                                <span class="button__icon">→</span>
+                            </a>
+                        </span>
+                    
+                </div>
+            </div>
+        
+        <script src="https://utteranc.es/client.js"
+            repo="kiwinam/kiwinam-comment"
+            issue-term="pathname"
+            theme="github-dark"
+            crossorigin="anonymous"
+            async>
+    </script>
+        
+    </main>
+
+            </div>
+
+            
+                <footer class="footer">
+    <div class="footer__inner">
+        <div class="footer__content">
+            <span>&copy; 2019</span>
+            
+            <span></span>
+            <span> <a href="https://kiwinam.com/posts/index.xml" target="_blank" title="rss"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-rss"><path d="M4 11a9 9 0 0 1 9 9"></path><path d="M4 4a16 16 0 0 1 16 16"></path><circle cx="5" cy="19" r="1"></circle></svg></a></span>
+        </div>
+    </div>
+    <div class="footer__inner">
+        <div class="footer__content">
+
+        </div>
+    </div>
+    <div class="footer__inner">
+        <div class="footer__content">
+            <span>Powered by <a href="http://gohugo.io">Hugo</a></span>
+            <span>Made with &#10084; by <a href="https://github.com/rhazdon">rhazdon</a></span>
+        </div>
+    </div>
+</footer>
+
+            
+        </div>
+
+        
+
+
+
+
+<script type="text/javascript" src="/bundle.min.4c3fb12a087ceed4a52cb5d57068a9795c7069617a01ca70f788052ad66e1791779e6c72686e1dc0ca13dc03b0203204b6566bb0dd1ee80de2b7ff4d8fe53db2.js" integrity="sha512-TD&#43;xKgh87tSlLLXVcGipeVxwaWF6Acpw94gFKtZuF5F3nmxyaG4dwMoT3AOwIDIEtlZrsN0e6A3it/9Nj&#43;U9sg=="></script>
+
+
+
+    </body>
+</html>

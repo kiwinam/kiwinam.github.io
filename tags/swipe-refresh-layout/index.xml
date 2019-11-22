@@ -1,22 +1,21 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Swipe Refresh Layout on Kiwinam</title>
+    <title>Swipe Refresh Layout on 키위남</title>
     <link>https://kiwinam.com/tags/swipe-refresh-layout/</link>
-    <description>Recent content in Swipe Refresh Layout on Kiwinam</description>
+    <description>Recent content in Swipe Refresh Layout on 키위남</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>ko</language>
     <lastBuildDate>Tue, 16 May 2017 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://kiwinam.com/tags/swipe-refresh-layout/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>[안드로이드] - Pull to refresh 당겨서 새로고침 (SwipeRefreshLayout)</title>
-      <link>https://kiwinam.com/posts/%EC%95%88%EB%93%9C%EB%A1%9C%EC%9D%B4%EB%93%9C-pull-to-refresh-%EB%8B%B9%EA%B2%A8%EC%84%9C-%EC%83%88%EB%A1%9C%EA%B3%A0%EC%B9%A8/</link>
+      <title>[안드로이드] - 당겨서 새로고침 SwipeRefreshLayout</title>
+      <link>https://kiwinam.com/posts/android-swipe-refresh-layout/</link>
       <pubDate>Tue, 16 May 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://kiwinam.com/posts/%EC%95%88%EB%93%9C%EB%A1%9C%EC%9D%B4%EB%93%9C-pull-to-refresh-%EB%8B%B9%EA%B2%A8%EC%84%9C-%EC%83%88%EB%A1%9C%EA%B3%A0%EC%B9%A8/</guid>
+      <guid>https://kiwinam.com/posts/android-swipe-refresh-layout/</guid>
       <description>[안드로이드] - Pull to refresh 당겨서 새로고침 (SwipeRefreshLayout)
 당겨서 새로고침 (pull to refresh) 는 많은 APP에서 만날수 있는 친숙한 패턴입니다.
 &amp;lsquo;구글 가이드&amp;rsquo;에도 수동으로 동기화 하는 방법 중 제스처를 통해 내용물 갱신을 시작하도록 요구합니다.

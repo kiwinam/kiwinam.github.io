@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>ListView on Kiwinam</title>
+    <title>ListView on 키위남</title>
     <link>https://kiwinam.com/tags/listview/</link>
-    <description>Recent content in ListView on Kiwinam</description>
+    <description>Recent content in ListView on 키위남</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>ko</language>
     <lastBuildDate>Tue, 25 Apr 2017 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://kiwinam.com/tags/listview/index.xml" rel="self" type="application/rss+xml" />
@@ -13,10 +12,10 @@
     
     <item>
       <title>[안드로이드] RecyclerView [1] 간단한 사용법</title>
-      <link>https://kiwinam.com/posts/%EC%95%88%EB%93%9C%EB%A1%9C%EC%9D%B4%EB%93%9C-recylerview-%EA%B0%84%EB%8B%A8%ED%95%9C-%EC%82%AC%EC%9A%A9%EB%B2%95/</link>
+      <link>https://kiwinam.com/posts/android-recyclerview/</link>
       <pubDate>Tue, 25 Apr 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://kiwinam.com/posts/%EC%95%88%EB%93%9C%EB%A1%9C%EC%9D%B4%EB%93%9C-recylerview-%EA%B0%84%EB%8B%A8%ED%95%9C-%EC%82%AC%EC%9A%A9%EB%B2%95/</guid>
+      <guid>https://kiwinam.com/posts/android-recyclerview/</guid>
       <description>[안드로이드] RecyclerView 간단한 사용법
 
 안드로이드에서 Recycler View 를 간단하게 사용하는 방법에 대해 포스팅 하겠습니다!
