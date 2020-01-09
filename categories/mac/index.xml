@@ -5,10 +5,27 @@
     <link>https://kiwinam.com/categories/mac/</link>
     <description>Recent content in Mac on 키위남</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Tue, 30 Jan 2018 10:35:56 +0900</lastBuildDate>
+    <lastBuildDate>Tue, 31 Dec 2019 12:01:32 +0900</lastBuildDate>
     
 	<atom:link href="https://kiwinam.com/categories/mac/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>[Mac] Homebrew 설치 &amp; 사용법</title>
+      <link>https://kiwinam.com/posts/30/install-homebrew/</link>
+      <pubDate>Tue, 31 Dec 2019 12:01:32 +0900</pubDate>
+      
+      <guid>https://kiwinam.com/posts/30/install-homebrew/</guid>
+      <description>Homebrew macOS 의 패키지 관리자인 Homebrew 는 mac 를 많이 사용하는 엔지니어들한테 유용한 커맨드 도구입니다.
+마치 ubuntu 의 apt-get 처럼 필요한 프로그램을 설치하거나 삭제, 업데이트 등의 동작을 손쉽게 하도록 도와줍니다.
+
+설치 방법 /usr/bin/ruby -e &amp;quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)&amp;quot;  터미널에 위 명령어를 복사하고 붙여 넣어 주세요.
+그럼 Homebrew 의 설치가 시작됩니다.
+정말 간단하죠?
+
+Homebrew 사용법 Homebrew 는 설치처럼 사용하는 방법도 간단합니다.
+yum 과 apt-get 에 익숙하신 분들이라면 더 쉽게 사용할 수 있을거에요.</description>
+    </item>
     
     <item>
       <title>[Mac] OS X 기능, 맥북 화면 녹화하기</title>

@@ -5,10 +5,28 @@
     <link>https://kiwinam.com/tags/</link>
     <description>Recent content in Tags on 키위남</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Thu, 02 May 2019 23:35:56 +0900</lastBuildDate>
+    <lastBuildDate>Tue, 31 Dec 2019 12:01:32 +0900</lastBuildDate>
     
 	<atom:link href="https://kiwinam.com/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Homebrew</title>
+      <link>https://kiwinam.com/tags/homebrew/</link>
+      <pubDate>Tue, 31 Dec 2019 12:01:32 +0900</pubDate>
+      
+      <guid>https://kiwinam.com/tags/homebrew/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>macOS</title>
+      <link>https://kiwinam.com/tags/macos/</link>
+      <pubDate>Tue, 31 Dec 2019 12:01:32 +0900</pubDate>
+      
+      <guid>https://kiwinam.com/tags/macos/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>maridb</title>
@@ -79,24 +97,6 @@
       <pubDate>Fri, 15 Feb 2019 10:35:56 +0900</pubDate>
       
       <guid>https://kiwinam.com/tags/git/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>LF</title>
-      <link>https://kiwinam.com/tags/lf/</link>
-      <pubDate>Fri, 15 Feb 2019 10:35:56 +0900</pubDate>
-      
-      <guid>https://kiwinam.com/tags/lf/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>warning</title>
-      <link>https://kiwinam.com/tags/warning/</link>
-      <pubDate>Fri, 15 Feb 2019 10:35:56 +0900</pubDate>
-      
-      <guid>https://kiwinam.com/tags/warning/</guid>
       <description></description>
     </item>
     

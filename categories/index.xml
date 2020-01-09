@@ -5,10 +5,19 @@
     <link>https://kiwinam.com/categories/</link>
     <description>Recent content in Categories on 키위남</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Thu, 02 May 2019 23:35:56 +0900</lastBuildDate>
+    <lastBuildDate>Tue, 31 Dec 2019 12:01:32 +0900</lastBuildDate>
     
 	<atom:link href="https://kiwinam.com/categories/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Mac</title>
+      <link>https://kiwinam.com/categories/mac/</link>
+      <pubDate>Tue, 31 Dec 2019 12:01:32 +0900</pubDate>
+      
+      <guid>https://kiwinam.com/categories/mac/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>MySQL</title>
@@ -43,15 +52,6 @@
       <pubDate>Sat, 29 Dec 2018 10:35:56 +0900</pubDate>
       
       <guid>https://kiwinam.com/categories/android/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Mac</title>
-      <link>https://kiwinam.com/categories/mac/</link>
-      <pubDate>Tue, 30 Jan 2018 10:35:56 +0900</pubDate>
-      
-      <guid>https://kiwinam.com/categories/mac/</guid>
       <description></description>
     </item>
     
