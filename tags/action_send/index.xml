@@ -12,10 +12,10 @@
     
     <item>
       <title>[안드로이드] 엑셀 파일 생성, 내보내기</title>
-      <link>https://kiwinam.com/posts/android-create-excel/</link>
+      <link>https://kiwinam.com/posts/21/android-create-excel/</link>
       <pubDate>Thu, 07 Dec 2017 10:35:56 +0900</pubDate>
       
-      <guid>https://kiwinam.com/posts/android-create-excel/</guid>
+      <guid>https://kiwinam.com/posts/21/android-create-excel/</guid>
       <description>[안드로이드] 엑셀 파일 생성, 내보내기
 어플리케이션을 만들다 보면 사용자가 저장한 데이터를 가공하여 내보내 주는 기능을 구현할 때가 있습니다.
 데이터 가공에 가장 적합한 엑셀 파일을 만들어 공유하는 것을 목표로 포스팅하겠습니다.

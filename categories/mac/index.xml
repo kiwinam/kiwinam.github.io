@@ -12,15 +12,16 @@
     
     <item>
       <title>[Mac] OS X 기능, 맥북 화면 녹화하기</title>
-      <link>https://kiwinam.com/posts/mac-recording-screen/</link>
+      <link>https://kiwinam.com/posts/22/mac-recording-screen/</link>
       <pubDate>Tue, 30 Jan 2018 10:35:56 +0900</pubDate>
       
-      <guid>https://kiwinam.com/posts/mac-recording-screen/</guid>
+      <guid>https://kiwinam.com/posts/22/mac-recording-screen/</guid>
       <description>[Mac] OS X 기능, 맥북 화면 녹화하기
 OS X 에서 모니터 화면을 캡쳐하고 싶은 경우가 있습니다.
 그럴 때 윈도우에선 화면 녹화 툴이 많이 있어서 편하게 했었는데요.
 Mac 에선 자체 어플리케이션으로 제공해 줘서 더 편하게 화면 녹화가 가능합니다.
 사용할 어플리케이션 이름은 Quick time player 입니다.
+ 
 
 이렇게 생긴 녀석입니다.
 Finder에서 Application 으로 찾으셔도 되고, 저같은 경우 런치패드 -&amp;gt; 기타에 있더군요.
@@ -31,10 +32,10 @@ Finder에서 Application 으로 찾으셔도 되고, 저같은 경우 런치패�
     
     <item>
       <title>[Mac] 키노트 이미지 저장하기 (이미지 추출)</title>
-      <link>https://kiwinam.com/posts/mac-save-keynote-image/</link>
+      <link>https://kiwinam.com/posts/4/mac-save-keynote-image/</link>
       <pubDate>Mon, 27 Feb 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://kiwinam.com/posts/mac-save-keynote-image/</guid>
+      <guid>https://kiwinam.com/posts/4/mac-save-keynote-image/</guid>
       <description>[Mac] 키노트 이미지 저장하기 (이미지 추출) Window OS 에 적응 하신 분이라면
 파워 포인트에서 이미지 만들어서 저장하는 방식 많이 사용 하셨을텐데요.
 Mac Keynote 에서도 객체를 이미지로 추출할 수 있습니다 :)

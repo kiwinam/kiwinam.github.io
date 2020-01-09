@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-99327236-2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-99327236-2');
+</script>
+
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="author"
+    content="키위남">
+<meta name="description"
+    content="안드로이드 네비게이션 드로어 (Navigation Drawer) 사용법에 대해 알아보겠습니다." />
+    <meta name="keywords" content="android, Navigation drawer, 네비게이션, 네비게이션 드로어, 안드로이드, 안드로이드 네비게이션 드로어"/>
+
+<meta name="robots" content="index" />
+<meta name="robots" content="follow" />
+<link rel="canonical" href="https://kiwinam.com/posts/26/android-navigation-drawer/" />
+
+
+
+
+<meta property="og:title" content="[안드로이드] 네비게이션 드로어 사용법 :: 키위남">
+
+
+
+<meta property="og:image" content="https://kiwinam.com/img/26/26-1.png">
+
+
+<meta name="og:description"
+    content="안드로이드 네비게이션 드로어 (Navigation Drawer) 사용법에 대해 알아보겠습니다." />
+
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://kiwinam.com/posts/26/android-navigation-drawer/">
+
+
+
+<title>[안드로이드] 네비게이션 드로어 사용법 :: 키위남</title>
+
+
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.2.1/css/flag-icon.min.css" rel="stylesheet"
+    type="text/css">
+
+
+
+<link rel="stylesheet" href="/main.min.2f0d18b84270567c723bff340b09ab08db3a7634237cd9667d052eb6b14669b8.css">
+
+
+
+<link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+<link rel="manifest" href="/favicon/site.webmanifest">
+<link rel="mask-icon" href="/favicon/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="#ffffff"><meta itemprop="name" content="[안드로이드] 네비게이션 드로어 사용법">
+<meta itemprop="description" content="안드로이드 네비게이션 드로어 (Navigation Drawer) 사용법에 대해 알아보겠습니다.">
+
+
+<meta itemprop="datePublished" content="2018-12-29T10:35:56&#43;09:00" />
+<meta itemprop="dateModified" content="2018-12-29T10:35:56&#43;09:00" />
+<meta itemprop="wordCount" content="636">
+
+
+
+<meta itemprop="keywords" content="android,Navigation drawer,네비게이션,네비게이션 드로어,안드로이드,안드로이드 네비게이션 드로어," />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="[안드로이드] 네비게이션 드로어 사용법"/>
+<meta name="twitter:description" content="안드로이드 네비게이션 드로어 (Navigation Drawer) 사용법에 대해 알아보겠습니다."/>
+
+
+
+<meta property="article:section" content="Android" />
+
+<meta property="article:published_time" content="2018-12-29 10:35:56 &#43;0900 KST" />
+
+
+
+
+
+
+
+    </head>
+
+    <body class="dark-theme">
+        <div class="container">
+            <header class="header">
+    <span class="header__inner">
+        <a href="/" style="text-decoration: none;">
+    <div class="logo">
+        
+            <span class="logo__mark">></span>
+            <span class="logo__text">cd /home/kiwinam</span>
+            <span class="logo__cursor" style=""></span>
+        
+    </div>
+</a>
+
+
+        <span class="header__right">
+            
+                <nav class="menu">
+    <ul class="menu__inner"><li><a href="https://kiwinam.com/about">About</a></li><li><a href="https://kiwinam.com/categories">categories</a></li><li><a href="https://kiwinam.com/posts">posts</a></li>
+    </ul>
+</nav>
+
+                <span class="menu-trigger">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M0 0h24v24H0z" fill="none"/>
+                        <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+                    </svg>
+                </span>
+            
+
+            <span class="theme-toggle unselectable"><svg class="theme-toggler" width="24" height="24" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M22 41C32.4934 41 41 32.4934 41 22C41 11.5066 32.4934 3 22
+  3C11.5066 3 3 11.5066 3 22C3 32.4934 11.5066 41 22 41ZM7 22C7
+  13.7157 13.7157 7 22 7V37C13.7157 37 7 30.2843 7 22Z"/>
+</svg>
+</span>
+        </span>
+    </span>
+</header>
+
+
+            <div class="content">
+                
+    <main class="post">
+
+        <div class="post-info">
+            <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-clock"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>3 minutes
+
+            
+
+            </p>
+        </div>
+
+        <article>
+            <h1 class="post-title"><a href="https://kiwinam.com/posts/26/android-navigation-drawer/">[안드로이드] 네비게이션 드로어 사용법</a></h1>
+
+            
+
+            <div class="post-content">
+                
+
+<hr />
+
+<p>[안드로이드] 네비게이션 드로어 (Navigation drawer) 사용법</p>
+
+<hr />
+
+<p><br/></p>
+
+<p><picture>
+    <source
+        type="image/webp"
+        media="(min-width:461px)"
+        srcset="/img/26/26-1-90.webp"
+    />
+    <source
+        type="image/webp"
+        media="(max-width:460px)"
+        srcset="/img/26/26-1-75.webp"
+    />
+    
+    <img src="/img/26/26-1.png"  alt="navigation drawer"  class="left"  style="width: 600px"  />
+
+
+</picture>
+<a href="https://material.io/design/components/navigation-drawer.html" target="_blank">구글 머티리얼 디자인 가이드 중 네비게이션 드로어</a></p>
+
+<p>네비게이션 드로어는 화면 왼쪽 가장자리에 위치해 있고 앱을 탐색할 수 있는 하나의 패널입니다.</p>
+
+<p>이걸 잘 활용한다면 특정 메뉴를 찾기 위해 클릭이 많이 일어나는 (Deep depth)  문제를 해결할 수 있습니다.</p>
+
+<p>평상시에는 화면 밖에 가려져 있지만 왼쪽 스와이프나 왼쪽 상단 메뉴 버튼을 클릭하면 위 사진처럼 나옵니다.</p>
+
+<p>그럼 네비게이션 드로어를 어떻게 구현하는지 알아보겠습니다.</p>
+
+<p><br/></p>
+
+<p><br/></p>
+
+<h3 id="1-result">1. Result</h3>
+
+<p>
+    <img src="/img/26/26-2.gif"  alt="navigation drawer result"  class="left"  style="width: 400px"  />
+
+
+<em>이번 포스팅에서 진행한 네비게이션 드로어 결과 화면</em></p>
+
+<p><br/></p>
+
+<p><br/></p>
+
+<h3 id="2-step-by-step">2. Step by Step</h3>
+
+<h4 id="2-1-안드로이드-서포트-라이브러리-추가">2-1. 안드로이드 서포트 라이브러리 추가</h4>
+
+<ul>
+<li><p>진행에 앞서 네비게이션 드로어는 서포트 라이브러리에 포함되어 있기 때문에 App Gradle 에 의존성 라이브러리를 넣어줘야합니다.</p></li>
+
+<li><p>최근 안드로이드 스튜디오에서 새 프로젝트를 만들면 기본으로 서포트 라이브러리들이 들어가 있지만, 혹시 확인해보고 없으시다면 아래 라이브러리를 Gradle 에 추가해주세요.</p></li>
+</ul>
+
+<p><em>build.gradle (app)</em></p>
+
+<p><code>implementation 'com.android.support:design:27.1.1'</code></p>
+
+<p><br/></p>
+
+<h4 id="2-2-네비게이션-메뉴-추가">2-2. 네비게이션 메뉴 추가</h4>
+
+<p><picture>
+    <source
+        type="image/webp"
+        media="(min-width:461px)"
+        srcset="/img/26/26-3-90.webp"
+    />
+    <source
+        type="image/webp"
+        media="(max-width:460px)"
+        srcset="/img/26/26-3-75.webp"
+    />
+    
+    <img src="/img/26/26-3.png"  alt="navigation menu"  class="left"  />
+
+
+</picture></p>
+
+<ul>
+<li><p>네비게이션 드로어에서 보여줄 메뉴들을 추가합니다.</p></li>
+
+<li><p>메뉴들에 포함되는 아이콘은 미리 /res/drawable/ 에 준비해주세요. ( New &gt; Vector Asset 으로 추가하면 편합니다.)</p></li>
+</ul>
+
+<p>_/res/menu/main_navigation<em>menu.xml</em></p>
+
+<pre><code class="language-xml">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;
+&lt;menu xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;&gt;
+    &lt;group android:checkableBehavior=&quot;single&quot;&gt;
+        &lt;item
+                android:id=&quot;@+id/account&quot;
+                android:icon=&quot;@drawable/ic_account_circle_black_24dp&quot;
+                android:title=&quot;계정&quot;
+        /&gt;
+        &lt;item
+                android:id=&quot;@+id/star&quot;
+                android:icon=&quot;@drawable/ic_star_black_24dp&quot;
+                android:title=&quot;즐겨찾기&quot;
+        /&gt;
+        &lt;item
+                android:id=&quot;@+id/cart&quot;
+                android:icon=&quot;@drawable/ic_shopping_cart_black_24dp&quot;
+                android:title=&quot;장바구니&quot;
+        /&gt;
+    &lt;/group&gt;
+    &lt;group android:checkableBehavior=&quot;single&quot;&gt;
+        &lt;item
+                android:id=&quot;@+id/bug_report&quot;
+                android:icon=&quot;@drawable/ic_bug_report_black_24dp&quot;
+                android:title=&quot;버그 리포트&quot;
+        /&gt;
+        &lt;item
+                android:id=&quot;@+id/setting&quot;
+                android:icon=&quot;@drawable/ic_settings_black_24dp&quot;
+                android:title=&quot;설정&quot;
+        /&gt;
+        &lt;item
+                android:id=&quot;@+id/logout&quot;
+                android:icon=&quot;@drawable/ic_exit_to_app_white_24dp&quot;
+                android:title=&quot;로그아웃&quot;
+        /&gt;
+    &lt;/group&gt;
+&lt;/menu&gt;
+</code></pre>
+
+<p><br/></p>
+
+<h4 id="2-3-네비게이션-헤더-추가-optional">2-3. 네비게이션 헤더 추가 (Optional)</h4>
+
+<p><picture>
+    <source
+        type="image/webp"
+        media="(min-width:461px)"
+        srcset="/img/26/26-4-90.webp"
+    />
+    <source
+        type="image/webp"
+        media="(max-width:460px)"
+        srcset="/img/26/26-4-75.webp"
+    />
+    
+    <img src="/img/26/26-4.png"  alt="navigation header"  class="left"  />
+
+
+</picture></p>
+
+<ul>
+<li><p>네비게이션 헤더 부분은 하셔도 되고, 내가 만들 앱에 필요 없으시면 굳이 안넣으셔도 됩니다.</p></li>
+
+<li><p>헤더는 레이아웃이기 때문에 /res/layout 에 파일을 만들어주시면됩니다.</p></li>
+
+<li><p>나중에 DrawerLayout 에서 헤더를 설정할 때 사용됩니다.</p></li>
+</ul>
+
+<p>_/res/layout/main_nav<em>header.xml</em></p>
+
+<pre><code class="language-xml">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;
+&lt;android.support.constraint.ConstraintLayout
+        xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;
+        xmlns:app=&quot;http://schemas.android.com/apk/res-auto&quot; xmlns:tools=&quot;http://schemas.android.com/tools&quot;
+        android:layout_width=&quot;match_parent&quot;
+        android:layout_height=&quot;230dp&quot;
+        android:background=&quot;@color/colorPrimary&quot;&gt;
+
+    &lt;ImageView
+            android:layout_width=&quot;wrap_content&quot;
+            android:layout_height=&quot;150dp&quot; tools:srcCompat=&quot;@tools:sample/avatars&quot;
+            android:id=&quot;@+id/imageView&quot;
+            app:layout_constraintStart_toStartOf=&quot;parent&quot; android:layout_marginStart=&quot;24dp&quot;
+            android:layout_marginTop=&quot;4dp&quot; app:layout_constraintTop_toTopOf=&quot;parent&quot;/&gt;
+    &lt;TextView
+            android:text=&quot;Charlie Park&quot;
+            android:layout_width=&quot;wrap_content&quot;
+            android:layout_height=&quot;0dp&quot;
+            android:id=&quot;@+id/textView&quot; app:layout_constraintStart_toStartOf=&quot;parent&quot; android:layout_marginStart=&quot;24dp&quot;
+            android:layout_marginTop=&quot;12dp&quot; app:layout_constraintTop_toBottomOf=&quot;@+id/imageView&quot;
+            android:textColor=&quot;#fff&quot;/&gt;
+    &lt;TextView
+            android:text=&quot;kiwinam@test.com&quot;
+            android:layout_width=&quot;wrap_content&quot;
+            android:layout_height=&quot;wrap_content&quot;
+            android:id=&quot;@+id/textView2&quot; android:textSize=&quot;10sp&quot;
+            android:layout_marginTop=&quot;8dp&quot; app:layout_constraintTop_toBottomOf=&quot;@+id/textView&quot;
+            android:layout_marginStart=&quot;24dp&quot; app:layout_constraintStart_toStartOf=&quot;parent&quot; android:textColor=&quot;#fff&quot;/&gt;
+&lt;/android.support.constraint.ConstraintLayout&gt;
+</code></pre>
+
+<p><br/></p>
+
+<h4 id="2-4-메인-레이아웃-수정">2-4. 메인 레이아웃 수정</h4>
+
+<p><picture>
+    <source
+        type="image/webp"
+        media="(min-width:461px)"
+        srcset="/img/26/26-5-90.webp"
+    />
+    <source
+        type="image/webp"
+        media="(max-width:460px)"
+        srcset="/img/26/26-5-75.webp"
+    />
+    
+    <img src="/img/26/26-5.png"  alt="main layout"  class="left"  />
+
+
+</picture></p>
+
+<ul>
+<li><p>네비게이션 드로어를 사용할 메인 레이아웃을 수정합니다.</p></li>
+
+<li><p>여기서 포인트는 메인 레이아웃의 최상단 레이아웃이 DrawerLayout 이여야 네비게이션 드로어 가 정상적으로 동작합니다.</p></li>
+
+<li><p>DrawerLayout 의 자식 레이아웃으로 NavigationView 를 설정해주시면 됩니다.</p></li>
+
+<li><p>NavigationView 에서 방금 만든 메뉴와 헤더를 설정합니다.</p></li>
+</ul>
+
+<p>_/res/layout/activity<em>main.xml</em></p>
+
+<pre><code class="language-xml">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;
+&lt;!--parent layout--&gt;
+&lt;android.support.v4.widget.DrawerLayout
+        xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;
+        xmlns:app=&quot;http://schemas.android.com/apk/res-auto&quot;
+        android:id=&quot;@+id/drawerLayout&quot;
+        android:layout_width=&quot;match_parent&quot;
+        android:layout_height=&quot;match_parent&quot;
+        android:fitsSystemWindows=&quot;true&quot;
+        &gt;
+    &lt;!-- main layout--&gt;
+    &lt;RelativeLayout
+            android:layout_width=&quot;match_parent&quot; android:layout_height=&quot;match_parent&quot;
+            android:background=&quot;#fff&quot;&gt;
+        &lt;android.support.v7.widget.Toolbar
+                android:id=&quot;@+id/toolbar&quot;
+                android:layout_width=&quot;match_parent&quot;
+                android:layout_height=&quot;wrap_content&quot;
+                android:background=&quot;@color/colorPrimary&quot;
+                app:contentInsetStart=&quot;0dp&quot;
+                android:theme=&quot;@style/ThemeOverlay.AppCompat.Dark.ActionBar&quot;
+                app:popupTheme=&quot;@style/ThemeOverlay.AppCompat.Dark.ActionBar&quot;
+        /&gt;
+        &lt;TextView
+                android:layout_width=&quot;wrap_content&quot;
+                android:layout_height=&quot;wrap_content&quot;
+                android:text=&quot;test&quot;
+                android:layout_centerInParent=&quot;true&quot;/&gt;
+    &lt;/RelativeLayout&gt;
+
+    &lt;!--navigation drawer--&gt;
+    &lt;android.support.design.widget.NavigationView
+            android:id=&quot;@+id/navigationView&quot;
+            android:layout_width=&quot;wrap_content&quot;
+            android:layout_height=&quot;match_parent&quot;
+            android:layout_gravity=&quot;start&quot;
+            app:headerLayout=&quot;@layout/main_nav_header&quot;
+            app:menu=&quot;@menu/main_navigation_menu&quot;
+    /&gt;
+
+&lt;/android.support.v4.widget.DrawerLayout&gt;
+</code></pre>
+
+<p><br/></p>
+
+<h4 id="2-4-activity-수정">2-4. Activity 수정</h4>
+
+<ul>
+<li><p>네비게이션 드로어는 레이아웃 설정이 대부분이고 실제 코틀린이나 자바 코드는 많이 사용하지 않아도 구현 가능합니다.</p></li>
+
+<li><p>이번 예제에서도 (1)메뉴 버튼을 눌렀을 때 네비게이션이 나오도록 처리하거나 (2)버튼 클릭 리스너를 설정해주는 코드만 넣어보겠습니다.</p></li>
+</ul>
+
+<p>(1) 메뉴 버튼 클릭 시 네비게이션 드로어 열기</p>
+
+<p><em>MainActivity.kt</em></p>
+
+<pre><code class="language-java">// 툴바 메뉴 버튼이 클릭 됐을 때 콜백
+override fun onOptionsItemSelected(item: MenuItem?): Boolean {
+    // 클릭된 메뉴 아이템의 아이디 마다 when 구절로 클릭시 동작을 설정한다.
+    when(item!!.itemId){
+        android.R.id.home-&gt;{ // 메뉴 버튼
+            drawerLayout.openDrawer(GravityCompat.START)    // 네비게이션 드로어 열기
+        }
+        R.id.menu_search-&gt; Snackbar.make(toolbar,&quot;Search menu pressed&quot;,Snackbar.LENGTH_SHORT).show()
+        R.id.menu_account-&gt; Snackbar.make(toolbar,&quot;Account menu pressed&quot;,Snackbar.LENGTH_SHORT).show()
+        R.id.menu_logout-&gt; Snackbar.make(toolbar,&quot;Logout menu pressed&quot;,Snackbar.LENGTH_SHORT).show()
+    }
+    return super.onOptionsItemSelected(item)
+}
+</code></pre>
+
+<ul>
+<li>메뉴 버튼이 클릭되면  <code>drawerLayout.openDrawer(GravityCompat.START)</code>  를 호출하여 네비게이션 드로어를 열어줍니다.</li>
+</ul>
+
+<p><br/></p>
+
+<p>(2) 네비게이션 메뉴 버튼 클릭 리스너 설정</p>
+
+<ul>
+<li>먼저 네비게이션 메뉴 클릭 리스너를 클래스에 implement 하겠습니다.</li>
+</ul>
+
+<p><em>MainActivity.kt</em></p>
+
+<p><code>class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {</code></p>
+
+<ul>
+<li>그런 다음 onNavigationItemSelected 메서드를 오버라이드하여 클릭 시 어떤 처리를 해줄지 설정합니다.</li>
+</ul>
+
+<p><em>MainActivity.kt</em></p>
+
+<pre><code class="language-java">// 네비게이션 드로어 메뉴 클릭 리스너
+override fun onNavigationItemSelected(item: MenuItem): Boolean {
+    when(item.itemId){  // 네비게이션 메뉴가 클릭되면 스낵바가 나타난다.
+        R.id.account-&gt;Snackbar.make(toolbar,&quot;Navigation Account pressed&quot;,Snackbar.LENGTH_SHORT).show()
+        R.id.setting-&gt;Snackbar.make(toolbar,&quot;Navigation Setting pressed&quot;,Snackbar.LENGTH_SHORT).show()
+    }
+    drawerLayout.closeDrawers() // 기능을 수행하고 네비게이션을 닫아준다.
+    return false
+}
+</code></pre>
+
+<ul>
+<li><p>이번 예제에서는 스낵바만 표시하도록 하였습니다.</p></li>
+
+<li><p>스낵바를 표시한 다음 네비게이션 드로어를 닫아줌으로써 사용자 경험을 매끄럽게 해줍니다.</p></li>
+</ul>
+
+<p>여기까지 구현 하였으면 기본적인 네비게이션 드로어 사용법은 다 알수 있습니다.</p>
+
+<p><br/></p>
+
+<h4 id="2-5-뒤로가기-클릭-시-네비게이션-닫기-optional">2-5. 뒤로가기 클릭 시 네비게이션 닫기 (Optional)</h4>
+
+<p><img src="/img/26/26-6.gif" alt="back click" /></p>
+
+<p>보통 사용자들이 네비게이션 드로어가 열려있을 때 뒤로가기 버튼을 누르면 네비게이션이 닫힐 것을 기대하는데, 이대로 코드를 진행하면 그렇게 동작하지 않습니다.</p>
+
+<p>추가적으로 뒤로가기 버튼을 눌렀을 때 네비게이션 드로어를 닫아보겠습니다.</p>
+
+<p><em>MainActivity.kt</em></p>
+
+<pre><code class="language-java">/*
+ * 뒤로가기 버튼으로 네비게이션 닫기
+ *
+ * 네비게이션 드로어가 열려 있을 때 뒤로가기 버튼을 누르면 네비게이션을 닫고,
+ * 닫혀 있다면 기존 뒤로가기 버튼으로 작동한다.
+ */
+override fun onBackPressed() {
+    if(drawerLayout.isDrawerOpen(GravityCompat.START)){
+        drawerLayout.closeDrawers()
+    }else{
+        super.onBackPressed()
+    }
+}
+</code></pre>
+
+<p>뒤로가기 버튼을 눌렀을 때 닫히는 네비게이션 드로어</p>
+
+<p><br/></p>
+
+<p><br/></p>
+
+<h3 id="3-source-code">3. Source Code</h3>
+
+<p>전체 소스코드는 <a href="https://github.com/kiwinam/toolbar_test" target="_blank">GitHub</a> 에 연동해놓았습니다.</p>
+
+<p>읽어주셔서 감사합니다.</p>
+
+<p>제 글이 도움 되길 바랄게요.</p>
+
+<p><br/></p>
+
+            </div>
+        </article>
+
+        <hr />
+
+        <div class="post-info">
+                <p>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-tag meta-icon"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7" y2="7"></line></svg><span class="tag"><a href="https://kiwinam.com/tags/android">android</a></span><span class="tag"><a href="https://kiwinam.com/tags/navigation-drawer">Navigation drawer</a></span><span class="tag"><a href="https://kiwinam.com/tags/%EB%84%A4%EB%B9%84%EA%B2%8C%EC%9D%B4%EC%85%98">네비게이션</a></span><span class="tag"><a href="https://kiwinam.com/tags/%EB%84%A4%EB%B9%84%EA%B2%8C%EC%9D%B4%EC%85%98-%EB%93%9C%EB%A1%9C%EC%96%B4">네비게이션 드로어</a></span><span class="tag"><a href="https://kiwinam.com/tags/%EC%95%88%EB%93%9C%EB%A1%9C%EC%9D%B4%EB%93%9C">안드로이드</a></span><span class="tag"><a href="https://kiwinam.com/tags/%EC%95%88%EB%93%9C%EB%A1%9C%EC%9D%B4%EB%93%9C-%EB%84%A4%EB%B9%84%EA%B2%8C%EC%9D%B4%EC%85%98-%EB%93%9C%EB%A1%9C%EC%96%B4">안드로이드 네비게이션 드로어</a></span>
+                </p>
+
+            <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>636 Words</p>
+
+            <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-calendar"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>2018-12-29 10:35 &#43;0900</p>
+        </div>
+
+        
+            <div class="pagination">
+                <div class="pagination__title">
+                    <span class="pagination__title-h">Read other posts</span>
+                    <hr />
+                </div>
+
+                <div class="pagination__buttons">
+                    
+                        <span class="button previous">
+                            <a href="https://kiwinam.com/posts/27/git-lf-will-be-crlf/">
+                                <span class="button__icon">←</span>
+                                <span class="button__text">[Git] warning: LF will be CRLF 해결법</span>
+                            </a>
+                        </span>
+                    
+
+                    
+                        <span class="button next">
+                            <a href="https://kiwinam.com/posts/25/android-toolbar-add-button/">
+                                <span class="button__text">[안드로이드] 툴바 사용법 - 버튼 추가</span>
+                                <span class="button__icon">→</span>
+                            </a>
+                        </span>
+                    
+                </div>
+            </div>
+        
+        <script src="https://utteranc.es/client.js"
+            repo="kiwinam/kiwinam-comment"
+            issue-term="pathname"
+            theme="github-dark"
+            crossorigin="anonymous"
+            async>
+    </script>
+        
+    </main>
+
+            </div>
+
+            
+                <footer class="footer">
+    <div class="footer__inner">
+        <div class="footer__content">
+            <span>&copy; 2020</span>
+            
+            <span></span>
+            <span> <a href="https://kiwinam.com/posts/index.xml" target="_blank" title="rss"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-rss"><path d="M4 11a9 9 0 0 1 9 9"></path><path d="M4 4a16 16 0 0 1 16 16"></path><circle cx="5" cy="19" r="1"></circle></svg></a></span>
+        </div>
+    </div>
+    <div class="footer__inner">
+        <div class="footer__content">
+
+        </div>
+    </div>
+    <div class="footer__inner">
+        <div class="footer__content">
+            <span>Powered by <a href="http://gohugo.io">Hugo</a></span>
+            <span>Made with &#10084; by <a href="https://github.com/rhazdon">rhazdon</a></span>
+        </div>
+    </div>
+</footer>
+
+            
+        </div>
+
+        
+
+
+
+
+<script type="text/javascript" src="/bundle.min.4c3fb12a087ceed4a52cb5d57068a9795c7069617a01ca70f788052ad66e1791779e6c72686e1dc0ca13dc03b0203204b6566bb0dd1ee80de2b7ff4d8fe53db2.js" integrity="sha512-TD&#43;xKgh87tSlLLXVcGipeVxwaWF6Acpw94gFKtZuF5F3nmxyaG4dwMoT3AOwIDIEtlZrsN0e6A3it/9Nj&#43;U9sg=="></script>
+
+
+
+    </body>
+</html>

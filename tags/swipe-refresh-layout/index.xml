@@ -12,10 +12,10 @@
     
     <item>
       <title>[안드로이드] - 당겨서 새로고침 SwipeRefreshLayout</title>
-      <link>https://kiwinam.com/posts/android-swipe-refresh-layout/</link>
+      <link>https://kiwinam.com/posts/12/android-swipe-refresh-layout/</link>
       <pubDate>Tue, 16 May 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://kiwinam.com/posts/android-swipe-refresh-layout/</guid>
+      <guid>https://kiwinam.com/posts/12/android-swipe-refresh-layout/</guid>
       <description>[안드로이드] - Pull to refresh 당겨서 새로고침 (SwipeRefreshLayout)
 당겨서 새로고침 (pull to refresh) 는 많은 APP에서 만날수 있는 친숙한 패턴입니다.
 &amp;lsquo;구글 가이드&amp;rsquo;에도 수동으로 동기화 하는 방법 중 제스처를 통해 내용물 갱신을 시작하도록 요구합니다.

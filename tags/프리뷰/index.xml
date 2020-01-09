@@ -12,10 +12,10 @@
     
     <item>
       <title>[안드로이드] Android Studio 레이아웃 프리뷰(Preview) 한글 깨짐</title>
-      <link>https://kiwinam.com/posts/android-layout-preview-korean/</link>
+      <link>https://kiwinam.com/posts/13/android-layout-preview-korean/</link>
       <pubDate>Fri, 19 May 2017 16:54:00 +0900</pubDate>
       
-      <guid>https://kiwinam.com/posts/android-layout-preview-korean/</guid>
+      <guid>https://kiwinam.com/posts/13/android-layout-preview-korean/</guid>
       <description>[안드로이드] Android Studio 레이아웃 프리뷰(Preview) 한글 깨짐
 안드로이드 스튜디오 Preview 가 깨지는 현상의 원인은 아이러니 하게도 한글 표시 폰트가 한글을 제대로 표시 처리하지 못하기 때문입니다.
 현재 안드로이드 스튜디오에서 설정된 ko 언어 표시는 &amp;ldquo;NotoSansCJK&amp;rdquo; 로 되어 있습니다.

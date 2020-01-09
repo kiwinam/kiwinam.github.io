@@ -12,10 +12,10 @@
     
     <item>
       <title>[MySQL] 사용자 추가, 권한 설정, 삭제</title>
-      <link>https://kiwinam.com/posts/mysql-add-user/</link>
+      <link>https://kiwinam.com/posts/29/mysql-add-user/</link>
       <pubDate>Thu, 02 May 2019 23:35:56 +0900</pubDate>
       
-      <guid>https://kiwinam.com/posts/mysql-add-user/</guid>
+      <guid>https://kiwinam.com/posts/29/mysql-add-user/</guid>
       <description>0. tl; dr MySQL/MariaDB 계정 생성 MySQL 사용자 생성 문법
 CREATE USER &#39;아이디&#39;@&#39;접속대역&#39; IDENTIFIED BY &#39;패스워드&#39;;  예시
 CREATE USER &#39;kiwinam&#39;@&#39;localhost&#39; IDENTIFIED BY &#39;PassWord123&#39;; GRANT ALL PRIVILEGES ON *.* TO &#39;kiwinam&#39;@&#39;localhost&#39; WITH GRANT OPTION;  
@@ -28,10 +28,10 @@ CREATE USER &#39;kiwinam&#39;@&#39;localhost&#39; IDENTIFIED BY &#39;PassWord123
     
     <item>
       <title>[MariaDB] Mac 에서 Mariadb 설치</title>
-      <link>https://kiwinam.com/posts/install-mariadb-on-mac/</link>
+      <link>https://kiwinam.com/posts/28/install-mariadb-on-mac/</link>
       <pubDate>Thu, 21 Mar 2019 10:35:56 +0900</pubDate>
       
-      <guid>https://kiwinam.com/posts/install-mariadb-on-mac/</guid>
+      <guid>https://kiwinam.com/posts/28/install-mariadb-on-mac/</guid>
       <description>[Mac] Mariadb 설치
 
 0. Mariadb 란 Mariadb 는 Mysql 의 창업자이자 핵심 개발자인 몬티 와이드니어스가 회사를 2009년에 썬 마이크로즈시스템에 팔고 나온 뒤 다시 만든 RDBMS 입니다.

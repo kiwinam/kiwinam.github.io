@@ -12,10 +12,10 @@
     
     <item>
       <title>[안드로이드] RecyclerView [3] Divider 구분선 넣기</title>
-      <link>https://kiwinam.com/posts/android-recyclerview-divider/</link>
+      <link>https://kiwinam.com/posts/10/android-recyclerview-divider/</link>
       <pubDate>Fri, 28 Apr 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://kiwinam.com/posts/android-recyclerview-divider/</guid>
+      <guid>https://kiwinam.com/posts/10/android-recyclerview-divider/</guid>
       <description>[안드로이드] RecyclerView [3] Divider 구분선 넣기
 
 ( Divider 가 적용된 RecyclerView 예제, 출저 Google Material Design Guide )
@@ -29,10 +29,10 @@ RecyclerView 에서 구분선 혹은 구분자를 추가하는 방법은 다양�
     
     <item>
       <title>[안드로이드] RecyclerView [2] OnItemClick 리스너 구현</title>
-      <link>https://kiwinam.com/posts/android-recyclerview-click/</link>
+      <link>https://kiwinam.com/posts/9/android-recyclerview-click/</link>
       <pubDate>Wed, 26 Apr 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://kiwinam.com/posts/android-recyclerview-click/</guid>
+      <guid>https://kiwinam.com/posts/9/android-recyclerview-click/</guid>
       <description>[안드로이드] RecyclerView [2] OnItemClick 리스너 구현
 
 RecyclerView 에서는 ListView에서와는 다르게
@@ -50,10 +50,10 @@ public class RecyclerItemClickListener implements RecyclerView.OnItemTouchListen
     
     <item>
       <title>[안드로이드] RecyclerView [1] 간단한 사용법</title>
-      <link>https://kiwinam.com/posts/android-recyclerview/</link>
+      <link>https://kiwinam.com/posts/8/android-recyclerview/</link>
       <pubDate>Tue, 25 Apr 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://kiwinam.com/posts/android-recyclerview/</guid>
+      <guid>https://kiwinam.com/posts/8/android-recyclerview/</guid>
       <description>[안드로이드] RecyclerView 간단한 사용법
 
 안드로이드에서 Recycler View 를 간단하게 사용하는 방법에 대해 포스팅 하겠습니다!

@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-99327236-2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-99327236-2');
+</script>
+
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="author"
+    content="키위남">
+<meta name="description"
+    content="startActivityForResult 와 onActivityResult 의 사용법" />
+    <meta name="keywords" content="Intent, onActivityResult, startActivityForResult, 안드로이드, 인텐트"/>
+
+<meta name="robots" content="index" />
+<meta name="robots" content="follow" />
+<link rel="canonical" href="https://kiwinam.com/posts/23/android-start-activity-for-result/" />
+
+
+
+
+<meta property="og:title" content="[안드로이드] startActivityForResult ,onActivityResult 사용법 :: 키위남">
+
+
+
+<meta property="og:image" content="https://kiwinam.com/img/23/23-1.png">
+
+
+<meta name="og:description"
+    content="startActivityForResult 와 onActivityResult 의 사용법" />
+
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://kiwinam.com/posts/23/android-start-activity-for-result/">
+
+
+
+<title>[안드로이드] startActivityForResult ,onActivityResult 사용법 :: 키위남</title>
+
+
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.2.1/css/flag-icon.min.css" rel="stylesheet"
+    type="text/css">
+
+
+
+<link rel="stylesheet" href="/main.min.2f0d18b84270567c723bff340b09ab08db3a7634237cd9667d052eb6b14669b8.css">
+
+
+
+<link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+<link rel="manifest" href="/favicon/site.webmanifest">
+<link rel="mask-icon" href="/favicon/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="#ffffff"><meta itemprop="name" content="[안드로이드] startActivityForResult ,onActivityResult 사용법">
+<meta itemprop="description" content="startActivityForResult 와 onActivityResult 의 사용법">
+
+
+<meta itemprop="datePublished" content="2018-02-09T10:35:56&#43;09:00" />
+<meta itemprop="dateModified" content="2018-02-09T10:35:56&#43;09:00" />
+<meta itemprop="wordCount" content="830">
+
+
+
+<meta itemprop="keywords" content="Intent,onActivityResult,startActivityForResult,안드로이드,인텐트," />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="[안드로이드] startActivityForResult ,onActivityResult 사용법"/>
+<meta name="twitter:description" content="startActivityForResult 와 onActivityResult 의 사용법"/>
+
+
+
+<meta property="article:section" content="Android" />
+
+<meta property="article:published_time" content="2018-02-09 10:35:56 &#43;0900 KST" />
+
+
+
+
+
+
+
+    </head>
+
+    <body class="dark-theme">
+        <div class="container">
+            <header class="header">
+    <span class="header__inner">
+        <a href="/" style="text-decoration: none;">
+    <div class="logo">
+        
+            <span class="logo__mark">></span>
+            <span class="logo__text">cd /home/kiwinam</span>
+            <span class="logo__cursor" style=""></span>
+        
+    </div>
+</a>
+
+
+        <span class="header__right">
+            
+                <nav class="menu">
+    <ul class="menu__inner"><li><a href="https://kiwinam.com/about">About</a></li><li><a href="https://kiwinam.com/categories">categories</a></li><li><a href="https://kiwinam.com/posts">posts</a></li>
+    </ul>
+</nav>
+
+                <span class="menu-trigger">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M0 0h24v24H0z" fill="none"/>
+                        <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+                    </svg>
+                </span>
+            
+
+            <span class="theme-toggle unselectable"><svg class="theme-toggler" width="24" height="24" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M22 41C32.4934 41 41 32.4934 41 22C41 11.5066 32.4934 3 22
+  3C11.5066 3 3 11.5066 3 22C3 32.4934 11.5066 41 22 41ZM7 22C7
+  13.7157 13.7157 7 22 7V37C13.7157 37 7 30.2843 7 22Z"/>
+</svg>
+</span>
+        </span>
+    </span>
+</header>
+
+
+            <div class="content">
+                
+    <main class="post">
+
+        <div class="post-info">
+            <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-clock"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>4 minutes
+
+            
+
+            </p>
+        </div>
+
+        <article>
+            <h1 class="post-title"><a href="https://kiwinam.com/posts/23/android-start-activity-for-result/">[안드로이드] startActivityForResult ,onActivityResult 사용법</a></h1>
+
+            
+
+            <div class="post-content">
+                
+
+<hr />
+
+<p>[안드로이드] startActivityForResult ,onActivityResult 사용법</p>
+
+<hr />
+
+<p><br/></p>
+
+<p>안드로이드 개발을 진행하다 보면 단순히 액티비티를 전환하고 끝! 이 아니라</p>
+
+<p>후속 액티비티에서 작업한 결과물을</p>
+
+<p>호출한 액티비티에서 사용하고 싶은 경우가 왕왕 있습니다.</p>
+
+<p><br/></p>
+
+<p>예를 들자면 회원가입을 진행할 때 ,</p>
+
+<p>회원가입 액티비티에서 다이얼로그를 띄우고</p>
+
+<p>다이얼로그에서 주소를 입력하게 하고, 완료 버튼을 누르면 다시 액티비티로 가져오는 경우나,</p>
+
+<p><em>(이 경우는 CallBack 으로도 가능합니다.)</em></p>
+
+<p><br/></p>
+
+<p>자신의 앱에서 카메라 앱을 호출하고 그 결과를 다시 자신의 앱으로 가져오는 경우가 있습니다.</p>
+
+<p>이러한 경우 사용하는 방법이 <code>startActivityForResult</code> 입니다.</p>
+
+<p><br/></p>
+
+<p><picture>
+    <source
+        type="image/webp"
+        media="(min-width:461px)"
+        srcset="/img/23/23-1-90.webp"
+    />
+    <source
+        type="image/webp"
+        media="(max-width:460px)"
+        srcset="/img/23/23-1-75.webp"
+    />
+    
+    <img src="/img/23/23-1.png"  alt="startActivityForResult"  class="left"  />
+
+
+</picture></p>
+
+<p>위 사진처럼</p>
+
+<ol>
+<li><p>Activity A 에서 B 를 호출</p></li>
+
+<li><p>Activity B 에서 작업 처리.</p></li>
+
+<li><p>처리된 작업 결과 값을 Activity A 로 반환.</p></li>
+</ol>
+
+<p>같은 프로세스로 진행됩니다.</p>
+
+<p><br/></p>
+
+<p>이러한 방식으로 결과를 수신하기 위해 액티비티를 사용할 때는</p>
+
+<p><code>startActivityForResult()</code> 메소드에 추가로 <em>&ldquo;요청 코드&rdquo;</em> 를 전달해야 합니다.</p>
+
+<p>요청 코드를 통해서 결과 값을 반환 받을 때, 내가 요청한 결과를 식별하여 처리할 수 있습니다.</p>
+
+<p><br/></p>
+
+<p>그럼 직접 예제 앱을 만들어보겠습니다.</p>
+
+<p>예제 앱은 간단한 계산기 어플리케이션으로</p>
+
+<p>한 Activity 에서 더하기나 빼기를 선택하고 다음 액티비티에서 연산을 한 후 결과를 리턴 받는 앱입니다.</p>
+
+<p><br/></p>
+
+<p><br/></p>
+
+<h3 id="1-result">1. Result</h3>
+
+<p><picture>
+    <source
+        type="image/webp"
+        media="(min-width:461px)"
+        srcset="/img/23/23-2-90.webp"
+    />
+    <source
+        type="image/webp"
+        media="(max-width:460px)"
+        srcset="/img/23/23-2-75.webp"
+    />
+    
+    <img src="/img/23/23-2.png"  alt="forResult Screenshot"  class="left"  />
+
+
+</picture></p>
+
+<ol>
+<li><p>MainActivity 에서 CalculateActivity 를 호출합니다.</p></li>
+
+<li><p>CalculateActivity 에서 연산한 결과를 MainActivity 로 반환합니다.</p></li>
+
+<li><p>MainActivity 에서 반환 받은 결과 값을 TextView 에 표시합니다.</p></li>
+</ol>
+
+<p><br/></p>
+
+<p><br/></p>
+
+<h3 id="2-step-by-step">2. Step by Step</h3>
+
+<h4 id="2-1-mainactivity">2-1. MainActivity</h4>
+
+<ul>
+<li>메인 액티비티에선 더하기 버튼과 빼기 버튼을 눌러 CalculateActivity 로 이동합니다.</li>
+</ul>
+
+<p>여기에서 CalculateActivity 를 시작할 때 일반적으로 startActivity(Intent) 메소드를 호출한 것이 아니라,</p>
+
+<p>결과 값을 리턴받길 원하기 때문에 <code>startActivityForResult(calIntent,3000);</code> 메소드를 호출한 것을 알 수 있습니다.</p>
+
+<p><code>startActivityForResult</code> 메소드는 전달할 인텐트와 requestCode (여기에선 3000, 아무 값이나 상관 없습니다. ) 를 같이 보내주는데 아래 나오는 onActivityResult 에서 요청한 코드를 구분하기 위해 넘겨줍니다.</p>
+
+<p><br/></p>
+
+<ul>
+<li>다음으로 주의깊게 봐야할 점은 <code>onActivityResult</code>  메소드 입니다. 저 메소드에선 CalculateActivity 에서 계산된 값이 넘어오면 호출 됩니다.</li>
+</ul>
+
+<p><code>onActivityResult</code>  에서 requestCode 는 CalculateActivity 를 호출하는 액티비티가 여러개 있을 경우 구분하기 위해 사용합니다. MainActivity 에선 정수 3000 을 사용했습니다.</p>
+
+<p>처리 결과가 <code>RESULT_OK</code>  라면 텍스트 뷰에 결과를 보이게 하는 간단한 코드입니다.</p>
+
+<p><br/></p>
+
+<pre><code class="language-java">/**
+ * Created by charlie on 2018. 2. 8
+ * startActivityForResult 를 학습하기 위한 Test Application
+ *
+ * MainActivity 에서 더하기 혹은 빼기를 선택하면 CalculateActivity 에서 연산할 숫자를 입력하고 결과를 리턴한다.
+ * 리턴된 결과는 MainActivity 에 표시된다.
+ */
+
+public class MainActivity extends AppCompatActivity implements View.OnClickListener{
+
+    private TextView mainResultTv;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+        // find view 
+        ImageView mainPlusIv = findViewById(R.id.mainPlusIv);
+        ImageView mainMinusIv = findViewById(R.id.mainMinusIv);
+        mainResultTv = findViewById(R.id.mainResultTv);
+
+        // 더하기, 빼기 ClickListener 설정
+        // Override 된 onClick 메소드에서 클릭 처리.
+        mainPlusIv.setOnClickListener(this);
+        mainMinusIv.setOnClickListener(this);
+
+    }
+
+    // 더하기나 빼기를 할 때 CalculateActivity 에서 연산의 구분을 두기 위해 인텐트로 Flag 를 넘겨줍니다.
+    @Override
+    public void onClick(View v) {
+        Intent calIntent = new Intent(this, CalculateActivity.class);
+        switch (v.getId()){
+            case R.id.mainPlusIv:
+                calIntent.putExtra(&quot;isPlus&quot;,true);
+                break;
+            case R.id.mainMinusIv:
+                calIntent.putExtra(&quot;isPlus&quot;,false);
+                break;
+        }
+        startActivityForResult(calIntent,3000);
+    }
+
+
+    // CalculateActivity 에서 처리된 결과를 받는 메소드
+    // 처리된 결과 코드 (resultCode) 가 RESULT_OK 이면 requestCode 를 판별해 결과 처리를 진행한다.
+    // CalculateActivity 에서 처리 결과가 담겨온 데이터를 TextView 에 보여준다.
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        if(resultCode == RESULT_OK){
+            switch (requestCode){
+                // MainActivity 에서 요청할 때 보낸 요청 코드 (3000)
+                case 3000:
+                    mainResultTv.setText(data.getStringExtra(&quot;result&quot;));
+                    break;
+            }
+        }
+    }
+}
+</code></pre>
+
+<p><br/></p>
+
+<h4 id="2-2-calculateactivity">2-2. CalculateActivity</h4>
+
+<ul>
+<li><p>CalculateActivity 에선 MainActivity 에서 선택한 어떤 연산을 선택 했는지 인텐트를 통해 전달 받습니다. ( 더하기 혹은 빼기 )</p></li>
+
+<li><p>전달 받은 뒤 사용자에게 입력받은 두 개의 숫자를 연산하고, 연산한 결과 값을 MainActivity 에게 전달합니다.</p></li>
+</ul>
+
+<p>여기에서 주의깊게 봐야할 코드는 <code>setResult(RESULT_OK,resultIntent)</code> 부분 입니다.</p>
+
+<p><code>setResult</code> 함수를 호출하면 현재 액티비티를 <code>startActivityForResult</code> 로 실행한 호출 액티비티에게 결과 값을 전달하게 됩니다.</p>
+
+<p>여기에서 RESULT_OK 를 결과 상태로 알려줘서 연산이 정상적으로 완료 되었다는 것을 전달해줍니다.</p>
+
+<pre><code class="language-java">/**
+ * Created by charlie on 2018. 2. 8
+ *
+ * EditText 에 입력한 두 정수를 MainActivity 에서 선택한 더하기 혹은 빼기 연산합니다.
+ * 연산이 완료되면 CalculateActivity 를 종료하고 MainActivity 로 결과 값을 되돌려 줍니다.
+ */
+
+public class CalculateActivity extends AppCompatActivity {
+
+    private EditText num1;
+    private EditText num2;
+
+    // MainActivity 에서 선택한 연산이 더하기 연산인지 빼기 연산인지 구분하기 위한 변수
+    // 더하기라면 true 를 빼기라면 false 를 전달 받음.
+    private boolean isPlus;
+    @Override
+    protected void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_calculator);
+
+        // MainActivity 에서 선택한 연산이 어떤 것인지 확인 (더하기 , 빼기)
+        isPlus = getIntent().getBooleanExtra(&quot;isPlus&quot;,false);
+
+        // 숫자 입력하는 EditText 와 연산하는 버튼 뷰 설정
+        num1 = findViewById(R.id.calNum1Et);
+        num2 = findViewById(R.id.calNum2Et);
+
+        // 두 숫연산을 실행하고 MainActivity 로 결과를 리턴함.
+        // 1. 숫자 값 둘 중 하나가 없다면 토스트 메시지를 띄우고 아니라면 연산을 실행함
+        // 2. 인텐트로 넘겨받은 isPlus 의 값의 따라 더하기,빼기 연산을 함.
+        // 3. 연산한 결과 값을 resultIntent 에 담아서 MainActivity 로 전달하고 현재 Activity 는 종료.
+        Button calBtn = findViewById(R.id.calBtn);
+        calBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // 1. 숫자 값 둘 중 하나가 없다면 토스트 메시지를 띄우고 아니라면 연산을 실행함
+                if(num1.getText() == null || num2.getText() == null){
+                    Toast.makeText(CalculateActivity.this,&quot;연산할 값이 없습니다. 확인해주세요.&quot;,Toast.LENGTH_SHORT).show();
+                }else{
+                    int n1 = Integer.parseInt(num1.getText().toString());
+                    int n2 = Integer.parseInt(num2.getText().toString());
+                    int result;
+
+                    // 2. 인텐트로 넘겨받은 isPlus 의 값의 따라 더하기,빼기 연산을 함.
+                    if(isPlus){
+                        result = n1 + n2;
+                    }else{
+                        result = n1 - n2;
+                    }
+
+                    // 3. 연산한 결과 값을 resultIntent 에 담아서 MainActivity 로 전달하고 현재 Activity 는 종료.
+                    Intent resultIntent = new Intent();
+                    resultIntent.putExtra(&quot;result&quot;,&quot;연산 결과는 &quot;+result+&quot; 입니다.&quot;);
+                    setResult(RESULT_OK,resultIntent);
+                    finish();
+                }
+            }
+        });
+    }
+}
+</code></pre>
+
+<p>이상으로 <code>startActivityForResult</code> 와 <code>onActivityResult</code> 사용법을 알아보았습니다.</p>
+
+<p>가장 기본인 Intent 사용만 잘 해도 어플리케이션 구현이 가능합니다!!</p>
+
+<p>다들 개발 공부 화이팅 하세요!!</p>
+
+<p><br/></p>
+
+<p><br/></p>
+
+<h3 id="3-source-code">3. Source Code</h3>
+
+<p>전체 소스 코드는 <a href="https://github.com/kiwinam/StartActivityForResultTest" target="_blank">GitHub</a> 에 공유했습니다.</p>
+
+<p><br/></p>
+
+            </div>
+        </article>
+
+        <hr />
+
+        <div class="post-info">
+                <p>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-tag meta-icon"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7" y2="7"></line></svg><span class="tag"><a href="https://kiwinam.com/tags/intent">Intent</a></span><span class="tag"><a href="https://kiwinam.com/tags/onactivityresult">onActivityResult</a></span><span class="tag"><a href="https://kiwinam.com/tags/startactivityforresult">startActivityForResult</a></span><span class="tag"><a href="https://kiwinam.com/tags/%EC%95%88%EB%93%9C%EB%A1%9C%EC%9D%B4%EB%93%9C">안드로이드</a></span><span class="tag"><a href="https://kiwinam.com/tags/%EC%9D%B8%ED%85%90%ED%8A%B8">인텐트</a></span>
+                </p>
+
+            <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>830 Words</p>
+
+            <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-calendar"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>2018-02-09 10:35 &#43;0900</p>
+        </div>
+
+        
+            <div class="pagination">
+                <div class="pagination__title">
+                    <span class="pagination__title-h">Read other posts</span>
+                    <hr />
+                </div>
+
+                <div class="pagination__buttons">
+                    
+                        <span class="button previous">
+                            <a href="https://kiwinam.com/posts/24/android-xml-layout-preview/">
+                                <span class="button__icon">←</span>
+                                <span class="button__text">Android Studio 3.0 xml layout Preview 오류 해결 방법</span>
+                            </a>
+                        </span>
+                    
+
+                    
+                        <span class="button next">
+                            <a href="https://kiwinam.com/posts/22/mac-recording-screen/">
+                                <span class="button__text">[Mac] OS X 기능, 맥북 화면 녹화하기</span>
+                                <span class="button__icon">→</span>
+                            </a>
+                        </span>
+                    
+                </div>
+            </div>
+        
+        <script src="https://utteranc.es/client.js"
+            repo="kiwinam/kiwinam-comment"
+            issue-term="pathname"
+            theme="github-dark"
+            crossorigin="anonymous"
+            async>
+    </script>
+        
+    </main>
+
+            </div>
+
+            
+                <footer class="footer">
+    <div class="footer__inner">
+        <div class="footer__content">
+            <span>&copy; 2020</span>
+            
+            <span></span>
+            <span> <a href="https://kiwinam.com/posts/index.xml" target="_blank" title="rss"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-rss"><path d="M4 11a9 9 0 0 1 9 9"></path><path d="M4 4a16 16 0 0 1 16 16"></path><circle cx="5" cy="19" r="1"></circle></svg></a></span>
+        </div>
+    </div>
+    <div class="footer__inner">
+        <div class="footer__content">
+
+        </div>
+    </div>
+    <div class="footer__inner">
+        <div class="footer__content">
+            <span>Powered by <a href="http://gohugo.io">Hugo</a></span>
+            <span>Made with &#10084; by <a href="https://github.com/rhazdon">rhazdon</a></span>
+        </div>
+    </div>
+</footer>
+
+            
+        </div>
+
+        
+
+
+
+
+<script type="text/javascript" src="/bundle.min.4c3fb12a087ceed4a52cb5d57068a9795c7069617a01ca70f788052ad66e1791779e6c72686e1dc0ca13dc03b0203204b6566bb0dd1ee80de2b7ff4d8fe53db2.js" integrity="sha512-TD&#43;xKgh87tSlLLXVcGipeVxwaWF6Acpw94gFKtZuF5F3nmxyaG4dwMoT3AOwIDIEtlZrsN0e6A3it/9Nj&#43;U9sg=="></script>
+
+
+
+    </body>
+</html>

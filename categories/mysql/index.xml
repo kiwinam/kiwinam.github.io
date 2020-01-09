@@ -12,10 +12,10 @@
     
     <item>
       <title>[MySQL] 사용자 추가, 권한 설정, 삭제</title>
-      <link>https://kiwinam.com/posts/mysql-add-user/</link>
+      <link>https://kiwinam.com/posts/29/mysql-add-user/</link>
       <pubDate>Thu, 02 May 2019 23:35:56 +0900</pubDate>
       
-      <guid>https://kiwinam.com/posts/mysql-add-user/</guid>
+      <guid>https://kiwinam.com/posts/29/mysql-add-user/</guid>
       <description>0. tl; dr MySQL/MariaDB 계정 생성 MySQL 사용자 생성 문법
 CREATE USER &#39;아이디&#39;@&#39;접속대역&#39; IDENTIFIED BY &#39;패스워드&#39;;  예시
 CREATE USER &#39;kiwinam&#39;@&#39;localhost&#39; IDENTIFIED BY &#39;PassWord123&#39;; GRANT ALL PRIVILEGES ON *.* TO &#39;kiwinam&#39;@&#39;localhost&#39; WITH GRANT OPTION;  

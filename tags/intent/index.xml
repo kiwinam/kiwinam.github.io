@@ -12,10 +12,10 @@
     
     <item>
       <title>[안드로이드] startActivityForResult ,onActivityResult 사용법</title>
-      <link>https://kiwinam.com/posts/android-start-activity-for-result/</link>
+      <link>https://kiwinam.com/posts/23/android-start-activity-for-result/</link>
       <pubDate>Fri, 09 Feb 2018 10:35:56 +0900</pubDate>
       
-      <guid>https://kiwinam.com/posts/android-start-activity-for-result/</guid>
+      <guid>https://kiwinam.com/posts/23/android-start-activity-for-result/</guid>
       <description>[안드로이드] startActivityForResult ,onActivityResult 사용법
 
 안드로이드 개발을 진행하다 보면 단순히 액티비티를 전환하고 끝! 이 아니라

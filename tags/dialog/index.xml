@@ -12,10 +12,10 @@
     
     <item>
       <title>[안드로이드] 커스텀 다이얼로그 [2] - ClickListener, Callback</title>
-      <link>https://kiwinam.com/posts/android-custom-dialog-click-callback/</link>
+      <link>https://kiwinam.com/posts/16/android-custom-dialog-click-callback/</link>
       <pubDate>Sun, 15 Oct 2017 10:35:56 +0900</pubDate>
       
-      <guid>https://kiwinam.com/posts/android-custom-dialog-click-callback/</guid>
+      <guid>https://kiwinam.com/posts/16/android-custom-dialog-click-callback/</guid>
       <description>[안드로이드] 커스텀 다이얼로그 [2] - ClickListener, Callback
 지난 포스팅에선 커스텀 다이얼로그를 생성하고 보여주는 것을 해보았습니다.
 이번엔 커스텀 다이얼로그 안에서의 클릭 이벤트 (ClickListener) 를 어떻게 다루는지에 대해 설명해드리도록 하겠습니다.
@@ -30,10 +30,10 @@
     
     <item>
       <title>[안드로이드] 커스텀 다이얼로그 [1] - 생성</title>
-      <link>https://kiwinam.com/posts/android-custom-dialog/</link>
+      <link>https://kiwinam.com/posts/15/android-custom-dialog/</link>
       <pubDate>Fri, 18 Aug 2017 10:25:38 +0900</pubDate>
       
-      <guid>https://kiwinam.com/posts/android-custom-dialog/</guid>
+      <guid>https://kiwinam.com/posts/15/android-custom-dialog/</guid>
       <description>[안드로이드] 커스텀 다이얼로그 [1] - 생성
 안드로이드 커스텀 다이얼로그 만드는 법.
 
