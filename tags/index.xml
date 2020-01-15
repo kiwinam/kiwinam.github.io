@@ -5,10 +5,28 @@
     <link>https://kiwinam.com/tags/</link>
     <description>Recent content in Tags on 키위남</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Tue, 31 Dec 2019 12:01:32 +0900</lastBuildDate>
+    <lastBuildDate>Wed, 01 Jan 2020 18:00:00 +0900</lastBuildDate>
     
 	<atom:link href="https://kiwinam.com/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>macOS</title>
+      <link>https://kiwinam.com/tags/macos/</link>
+      <pubDate>Wed, 01 Jan 2020 18:00:00 +0900</pubDate>
+      
+      <guid>https://kiwinam.com/tags/macos/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>xcrun</title>
+      <link>https://kiwinam.com/tags/xcrun/</link>
+      <pubDate>Wed, 01 Jan 2020 18:00:00 +0900</pubDate>
+      
+      <guid>https://kiwinam.com/tags/xcrun/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Homebrew</title>
@@ -16,15 +34,6 @@
       <pubDate>Tue, 31 Dec 2019 12:01:32 +0900</pubDate>
       
       <guid>https://kiwinam.com/tags/homebrew/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>macOS</title>
-      <link>https://kiwinam.com/tags/macos/</link>
-      <pubDate>Tue, 31 Dec 2019 12:01:32 +0900</pubDate>
-      
-      <guid>https://kiwinam.com/tags/macos/</guid>
       <description></description>
     </item>
     
@@ -88,15 +97,6 @@
       <pubDate>Fri, 15 Feb 2019 10:35:56 +0900</pubDate>
       
       <guid>https://kiwinam.com/tags/crlf/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Git</title>
-      <link>https://kiwinam.com/tags/git/</link>
-      <pubDate>Fri, 15 Feb 2019 10:35:56 +0900</pubDate>
-      
-      <guid>https://kiwinam.com/tags/git/</guid>
       <description></description>
     </item>
     

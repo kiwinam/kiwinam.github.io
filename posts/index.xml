@@ -4,8 +4,60 @@
         <link>https://kiwinam.com/posts/</link>
         <description>Recent content in Posts on 키위남</description>
         <generator>Hugo -- gohugo.io</generator>
-        <lastBuildDate>Tue, 31 Dec 2019 12:01:32 +0900</lastBuildDate>
+        <lastBuildDate>Wed, 01 Jan 2020 18:00:00 +0900</lastBuildDate>
         <atom:link href="https://kiwinam.com/posts/index.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>[Git] macOS xcrun 에러 해결 방법</title>
+            <link>https://kiwinam.com/posts/31/git-xcrun/</link>
+            <pubDate>Wed, 01 Jan 2020 18:00:00 +0900</pubDate>
+            
+            <guid>https://kiwinam.com/posts/31/git-xcrun/</guid>
+            <description>macOS 의 업데이트 시, 특히 macOS 의 이름이 변경되는 큰 업데이트가 진행 된 다음에 종종 이런 경우가 있습니다.
+지금까지 알려진 해당 이슈가 발생했던 업데이트는
+ macOs High Sierra 업데이트
+ macOS Sierra 업데이트
+ OS X El Capitan 업데이트
+  이정도면 큼직한 업데이트마다 만날 수 있는 에러라고 볼 수 있습니다.
+
+xcrun: error: invalid active developer path (/Library/Developer/CommandLineTools), missing xcrun at: /Library/Developer/CommandLineTools/usr/bin/xcrun  error 내용은 위 처럼 나오고,</description>
+            <content type="html"><![CDATA[
+
+<p><br/></p>
+
+<p>macOS 의 업데이트 시, 특히 macOS 의 이름이 변경되는 큰 업데이트가 진행 된 다음에 종종 이런 경우가 있습니다.</p>
+
+<p>지금까지 알려진 해당 이슈가 발생했던 업데이트는</p>
+
+<ul>
+<li><p><code>macOs High Sierra</code> 업데이트</p></li>
+
+<li><p><code>macOS Sierra</code> 업데이트</p></li>
+
+<li><p><code>OS X El Capitan</code> 업데이트</p></li>
+</ul>
+
+<p>이정도면 큼직한 업데이트마다 만날 수 있는 에러라고 볼 수 있습니다.</p>
+
+<p><br/></p>
+
+<pre><code>xcrun: error: invalid active developer path (/Library/Developer/CommandLineTools), missing xcrun at: /Library/Developer/CommandLineTools/usr/bin/xcrun
+</code></pre>
+
+<p>error 내용은 위 처럼 나오고,</p>
+
+<h3 id="해결법">해결법</h3>
+
+<pre><code># cmd 에서 아래 명령어를 입력합니다.
+
+$ xcode-select --install
+</code></pre>
+
+<p>macOs 에서 형상 관리 툴인 <code>git</code> 은 xcode 에 같이 딸려서 설치가 되는데,</p>
+
+<p>아마도 macOS 의 큰 업데이트 후에 xcode 의 의존성 문제가 생기고, 이 때문에 git 을 실행 시키는데도 위와 같은 문제가 발생하는거 같다.</p>
+]]></content>
+        </item>
         
         <item>
             <title>[Mac] Homebrew 설치 &amp; 사용법</title>

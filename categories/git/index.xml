@@ -5,10 +5,26 @@
     <link>https://kiwinam.com/categories/git/</link>
     <description>Recent content in Git on 키위남</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Fri, 15 Feb 2019 10:35:56 +0900</lastBuildDate>
+    <lastBuildDate>Wed, 01 Jan 2020 18:00:00 +0900</lastBuildDate>
     
 	<atom:link href="https://kiwinam.com/categories/git/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>[Git] macOS xcrun 에러 해결 방법</title>
+      <link>https://kiwinam.com/posts/31/git-xcrun/</link>
+      <pubDate>Wed, 01 Jan 2020 18:00:00 +0900</pubDate>
+      
+      <guid>https://kiwinam.com/posts/31/git-xcrun/</guid>
+      <description>macOS 의 업데이트 시, 특히 macOS 의 이름이 변경되는 큰 업데이트가 진행 된 다음에 종종 이런 경우가 있습니다.
+지금까지 알려진 해당 이슈가 발생했던 업데이트는
+ macOs High Sierra 업데이트
+ macOS Sierra 업데이트
+ OS X El Capitan 업데이트
+  이정도면 큼직한 업데이트마다 만날 수 있는 에러라고 볼 수 있습니다.
+
+xcrun: error: invalid active developer path (/Library/Developer/CommandLineTools), missing xcrun at: /Library/Developer/CommandLineTools/usr/bin/xcrun  error 내용은 위 처럼 나오고,</description>
+    </item>
     
     <item>
       <title>[Git] warning: LF will be CRLF 해결법</title>
