@@ -5,10 +5,28 @@
     <link>https://kiwinam.com/tags/</link>
     <description>Recent content in Tags on 키위남</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Wed, 01 Jan 2020 18:00:00 +0900</lastBuildDate>
+    <lastBuildDate>Sat, 04 Jan 2020 18:00:00 +0900</lastBuildDate>
     
 	<atom:link href="https://kiwinam.com/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>branch</title>
+      <link>https://kiwinam.com/tags/branch/</link>
+      <pubDate>Sat, 04 Jan 2020 18:00:00 +0900</pubDate>
+      
+      <guid>https://kiwinam.com/tags/branch/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>github</title>
+      <link>https://kiwinam.com/tags/github/</link>
+      <pubDate>Sat, 04 Jan 2020 18:00:00 +0900</pubDate>
+      
+      <guid>https://kiwinam.com/tags/github/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>macOS</title>
@@ -79,24 +97,6 @@
       <pubDate>Thu, 21 Mar 2019 10:35:56 +0900</pubDate>
       
       <guid>https://kiwinam.com/tags/osx/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>설치</title>
-      <link>https://kiwinam.com/tags/%EC%84%A4%EC%B9%98/</link>
-      <pubDate>Thu, 21 Mar 2019 10:35:56 +0900</pubDate>
-      
-      <guid>https://kiwinam.com/tags/%EC%84%A4%EC%B9%98/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>CRLF</title>
-      <link>https://kiwinam.com/tags/crlf/</link>
-      <pubDate>Fri, 15 Feb 2019 10:35:56 +0900</pubDate>
-      
-      <guid>https://kiwinam.com/tags/crlf/</guid>
       <description></description>
     </item>
     

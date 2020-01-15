@@ -17,30 +17,30 @@
 <meta name="author"
     content="키위남">
 <meta name="description"
-    content="맥 업데이트시 발생하는 Git xcrun error 를 해결하는 방법" />
-    <meta name="keywords" content="xcrun"/>
+    content="Git 에서 원격 브랜치를 삭제하는 방법" />
+    <meta name="keywords" content="git delete branch"/>
 
 <meta name="robots" content="index" />
 <meta name="robots" content="follow" />
-<link rel="canonical" href="https://kiwinam.com/posts/31/git-xcrun/" />
+<link rel="canonical" href="https://kiwinam.com/posts/32/git-remove-remote/" />
 
 
 
 
-<meta property="og:title" content="[Git] macOS xcrun 에러 해결 방법 :: 키위남">
+<meta property="og:title" content="[Git] 원격 (remote) 브랜치 삭제 :: 키위남">
 
 
 
 
 <meta name="og:description"
-    content="맥 업데이트시 발생하는 Git xcrun error 를 해결하는 방법" />
+    content="Git 에서 원격 브랜치를 삭제하는 방법" />
 
 <meta property="og:type" content="article">
-<meta property="og:url" content="https://kiwinam.com/posts/31/git-xcrun/">
+<meta property="og:url" content="https://kiwinam.com/posts/32/git-remove-remote/">
 
 
 
-<title>[Git] macOS xcrun 에러 해결 방법 :: 키위남</title>
+<title>[Git] 원격 (remote) 브랜치 삭제 :: 키위남</title>
 
 
 
@@ -59,26 +59,26 @@
 <link rel="manifest" href="/favicon/site.webmanifest">
 <link rel="mask-icon" href="/favicon/safari-pinned-tab.svg" color="#5bbad5">
 <meta name="msapplication-TileColor" content="#da532c">
-<meta name="theme-color" content="#ffffff"><meta itemprop="name" content="[Git] macOS xcrun 에러 해결 방법">
-<meta itemprop="description" content="맥 업데이트시 발생하는 Git xcrun error 를 해결하는 방법">
+<meta name="theme-color" content="#ffffff"><meta itemprop="name" content="[Git] 원격 (remote) 브랜치 삭제">
+<meta itemprop="description" content="Git 에서 원격 브랜치를 삭제하는 방법">
 
 
-<meta itemprop="datePublished" content="2020-01-01T18:00:00&#43;09:00" />
-<meta itemprop="dateModified" content="2020-01-01T18:00:00&#43;09:00" />
-<meta itemprop="wordCount" content="107">
+<meta itemprop="datePublished" content="2020-01-04T18:00:00&#43;09:00" />
+<meta itemprop="dateModified" content="2020-01-04T18:00:00&#43;09:00" />
+<meta itemprop="wordCount" content="76">
 
 
 
-<meta itemprop="keywords" content="macOS,xcrun," />
+<meta itemprop="keywords" content="branch,github," />
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="[Git] macOS xcrun 에러 해결 방법"/>
-<meta name="twitter:description" content="맥 업데이트시 발생하는 Git xcrun error 를 해결하는 방법"/>
+<meta name="twitter:title" content="[Git] 원격 (remote) 브랜치 삭제"/>
+<meta name="twitter:description" content="Git 에서 원격 브랜치를 삭제하는 방법"/>
 
 
 
 <meta property="article:section" content="Git" />
 
-<meta property="article:published_time" content="2020-01-01 18:00:00 &#43;0900 KST" />
+<meta property="article:published_time" content="2020-01-04 18:00:00 &#43;0900 KST" />
 
 
 
@@ -142,46 +142,43 @@
         </div>
 
         <article>
-            <h1 class="post-title"><a href="https://kiwinam.com/posts/31/git-xcrun/">[Git] macOS xcrun 에러 해결 방법</a></h1>
+            <h1 class="post-title"><a href="https://kiwinam.com/posts/32/git-remove-remote/">[Git] 원격 (remote) 브랜치 삭제</a></h1>
 
             
 
             <div class="post-content">
                 
 
-<p><br/></p>
+<p>Git (CMD) 에서 원격 브랜치를 삭제하는 방법은 2가지가 있습니다.</p>
 
-<p>macOS 의 업데이트 시, 특히 macOS 의 이름이 변경되는 큰 업데이트가 진행 된 다음에 종종 이런 경우가 있습니다.</p>
-
-<p>지금까지 알려진 해당 이슈가 발생했던 업데이트는</p>
-
-<ul>
-<li><p><code>macOs High Sierra</code> 업데이트</p></li>
-
-<li><p><code>macOS Sierra</code> 업데이트</p></li>
-
-<li><p><code>OS X El Capitan</code> 업데이트</p></li>
-</ul>
-
-<p>이정도면 큼직한 업데이트마다 만날 수 있는 에러라고 볼 수 있습니다.</p>
+<p>먼저 삭제할 브랜치의 이름을 <code>develop</code> 이라고 가정해보겠습니다.</p>
 
 <p><br/></p>
 
-<pre><code>xcrun: error: invalid active developer path (/Library/Developer/CommandLineTools), missing xcrun at: /Library/Developer/CommandLineTools/usr/bin/xcrun
+<h3 id="방법-1">방법 1</h3>
+
+<pre><code># remote_name 은 원격 저장소의 이름입니다.
+# branch_name 은 삭제할 브랜치의 이름입니다.
+#
+# git push &lt;remote_name&gt; --delete &lt;branch_name&gt;
+
+git push origin --delete develop
 </code></pre>
 
-<p>error 내용은 위 처럼 나오고,</p>
+<p><br/></p>
 
-<h3 id="해결법">해결법</h3>
+<h3 id="방법-2">방법 2</h3>
 
-<pre><code># cmd 에서 아래 명령어를 입력합니다.
+<pre><code># git branch -d &lt;branch_name&gt;
+# git push &lt;remote_name&gt; --delete &lt;branch_name&gt;
 
-$ xcode-select --install
+git branch -d develop
+git push origin develop
 </code></pre>
 
-<p>macOs 에서 형상 관리 툴인 <code>git</code> 은 xcode 에 같이 딸려서 설치가 되는데,</p>
-
-<p>아마도 macOS 의 큰 업데이트 후에 xcode 의 의존성 문제가 생기고, 이 때문에 git 을 실행 시키는데도 위와 같은 문제가 발생하는거 같다.</p>
+<p>참조 (Stack overflow)<br/>
+<u><a href="https://stackoverflow.com/questions/2003505/how-do-i-delete-a-git-branch-locally-and-remotely" target="_blank"> How do I delete a Git branch locally and remotely? </a></u>
+<br/></p>
 
             </div>
         </article>
@@ -190,12 +187,12 @@ $ xcode-select --install
 
         <div class="post-info">
                 <p>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-tag meta-icon"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7" y2="7"></line></svg><span class="tag"><a href="https://kiwinam.com/tags/macos">macOS</a></span><span class="tag"><a href="https://kiwinam.com/tags/xcrun">xcrun</a></span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-tag meta-icon"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7" y2="7"></line></svg><span class="tag"><a href="https://kiwinam.com/tags/branch">branch</a></span><span class="tag"><a href="https://kiwinam.com/tags/github">github</a></span>
                 </p>
 
-            <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>107 Words</p>
+            <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>76 Words</p>
 
-            <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-calendar"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>2020-01-01 18:00 &#43;0900</p>
+            <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-calendar"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>2020-01-04 18:00 &#43;0900</p>
         </div>
 
         
@@ -207,18 +204,11 @@ $ xcode-select --install
 
                 <div class="pagination__buttons">
                     
-                        <span class="button previous">
-                            <a href="https://kiwinam.com/posts/32/git-remove-remote/">
-                                <span class="button__icon">←</span>
-                                <span class="button__text">[Git] 원격 (remote) 브랜치 삭제</span>
-                            </a>
-                        </span>
-                    
 
                     
                         <span class="button next">
-                            <a href="https://kiwinam.com/posts/30/install-homebrew/">
-                                <span class="button__text">[Mac] Homebrew 설치 &amp; 사용법</span>
+                            <a href="https://kiwinam.com/posts/31/git-xcrun/">
+                                <span class="button__text">[Git] macOS xcrun 에러 해결 방법</span>
                                 <span class="button__icon">→</span>
                             </a>
                         </span>

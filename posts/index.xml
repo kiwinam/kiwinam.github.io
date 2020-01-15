@@ -4,8 +4,54 @@
         <link>https://kiwinam.com/posts/</link>
         <description>Recent content in Posts on 키위남</description>
         <generator>Hugo -- gohugo.io</generator>
-        <lastBuildDate>Wed, 01 Jan 2020 18:00:00 +0900</lastBuildDate>
+        <lastBuildDate>Sat, 04 Jan 2020 18:00:00 +0900</lastBuildDate>
         <atom:link href="https://kiwinam.com/posts/index.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>[Git] 원격 (remote) 브랜치 삭제</title>
+            <link>https://kiwinam.com/posts/32/git-remove-remote/</link>
+            <pubDate>Sat, 04 Jan 2020 18:00:00 +0900</pubDate>
+            
+            <guid>https://kiwinam.com/posts/32/git-remove-remote/</guid>
+            <description>Git (CMD) 에서 원격 브랜치를 삭제하는 방법은 2가지가 있습니다.
+먼저 삭제할 브랜치의 이름을 develop 이라고 가정해보겠습니다.
+
+방법 1 # remote_name 은 원격 저장소의 이름입니다. # branch_name 은 삭제할 브랜치의 이름입니다. # # git push &amp;lt;remote_name&amp;gt; --delete &amp;lt;branch_name&amp;gt; git push origin --delete develop  
+방법 2 # git branch -d &amp;lt;branch_name&amp;gt; # git push &amp;lt;remote_name&amp;gt; --delete &amp;lt;branch_name&amp;gt; git branch -d develop git push origin develop  참조 (Stack overflow) How do I delete a Git branch locally and remotely?</description>
+            <content type="html"><![CDATA[
+
+<p>Git (CMD) 에서 원격 브랜치를 삭제하는 방법은 2가지가 있습니다.</p>
+
+<p>먼저 삭제할 브랜치의 이름을 <code>develop</code> 이라고 가정해보겠습니다.</p>
+
+<p><br/></p>
+
+<h3 id="방법-1">방법 1</h3>
+
+<pre><code># remote_name 은 원격 저장소의 이름입니다.
+# branch_name 은 삭제할 브랜치의 이름입니다.
+#
+# git push &lt;remote_name&gt; --delete &lt;branch_name&gt;
+
+git push origin --delete develop
+</code></pre>
+
+<p><br/></p>
+
+<h3 id="방법-2">방법 2</h3>
+
+<pre><code># git branch -d &lt;branch_name&gt;
+# git push &lt;remote_name&gt; --delete &lt;branch_name&gt;
+
+git branch -d develop
+git push origin develop
+</code></pre>
+
+<p>참조 (Stack overflow)<br/>
+<u><a href="https://stackoverflow.com/questions/2003505/how-do-i-delete-a-git-branch-locally-and-remotely" target="_blank"> How do I delete a Git branch locally and remotely? </a></u>
+<br/></p>
+]]></content>
+        </item>
         
         <item>
             <title>[Git] macOS xcrun 에러 해결 방법</title>

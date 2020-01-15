@@ -5,10 +5,23 @@
     <link>https://kiwinam.com/</link>
     <description>Recent content on 키위남</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Wed, 01 Jan 2020 18:00:00 +0900</lastBuildDate>
+    <lastBuildDate>Sat, 04 Jan 2020 18:00:00 +0900</lastBuildDate>
     
 	<atom:link href="https://kiwinam.com/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>[Git] 원격 (remote) 브랜치 삭제</title>
+      <link>https://kiwinam.com/posts/32/git-remove-remote/</link>
+      <pubDate>Sat, 04 Jan 2020 18:00:00 +0900</pubDate>
+      
+      <guid>https://kiwinam.com/posts/32/git-remove-remote/</guid>
+      <description>Git (CMD) 에서 원격 브랜치를 삭제하는 방법은 2가지가 있습니다.
+먼저 삭제할 브랜치의 이름을 develop 이라고 가정해보겠습니다.
+
+방법 1 # remote_name 은 원격 저장소의 이름입니다. # branch_name 은 삭제할 브랜치의 이름입니다. # # git push &amp;lt;remote_name&amp;gt; --delete &amp;lt;branch_name&amp;gt; git push origin --delete develop  
+방법 2 # git branch -d &amp;lt;branch_name&amp;gt; # git push &amp;lt;remote_name&amp;gt; --delete &amp;lt;branch_name&amp;gt; git branch -d develop git push origin develop  참조 (Stack overflow) How do I delete a Git branch locally and remotely?</description>
+    </item>
     
     <item>
       <title>[Git] macOS xcrun 에러 해결 방법</title>
@@ -156,27 +169,6 @@ java.lang.NoClassDefFoundError: Could not initialize class android.graphics.Type
 
 이 에러의 원인은 Font.xml 파일을 변경해서 입니다.
 저희가 Android 2.x 버전을 사용하면서 Layout Preview 에 한글을 표시하기 위해</description>
-    </item>
-    
-    <item>
-      <title>[안드로이드] startActivityForResult ,onActivityResult 사용법</title>
-      <link>https://kiwinam.com/posts/23/android-start-activity-for-result/</link>
-      <pubDate>Fri, 09 Feb 2018 10:35:56 +0900</pubDate>
-      
-      <guid>https://kiwinam.com/posts/23/android-start-activity-for-result/</guid>
-      <description>[안드로이드] startActivityForResult ,onActivityResult 사용법
-
-안드로이드 개발을 진행하다 보면 단순히 액티비티를 전환하고 끝! 이 아니라
-후속 액티비티에서 작업한 결과물을
-호출한 액티비티에서 사용하고 싶은 경우가 왕왕 있습니다.
-
-예를 들자면 회원가입을 진행할 때 ,
-회원가입 액티비티에서 다이얼로그를 띄우고
-다이얼로그에서 주소를 입력하게 하고, 완료 버튼을 누르면 다시 액티비티로 가져오는 경우나,
-(이 경우는 CallBack 으로도 가능합니다.)
-
-자신의 앱에서 카메라 앱을 호출하고 그 결과를 다시 자신의 앱으로 가져오는 경우가 있습니다.
-이러한 경우 사용하는 방법이 startActivityForResult 입니다.</description>
     </item>
     
   </channel>
