@@ -3,6 +3,56 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://kiwinam.com/categories/</loc>
+    <lastmod>2020-02-02T01:30:00+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kiwinam.com/posts/</loc>
+    <lastmod>2020-02-02T01:30:00+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kiwinam.com/tags/semantic-versioning/</loc>
+    <lastmod>2020-02-02T01:30:00+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kiwinam.com/categories/software/</loc>
+    <lastmod>2020-02-02T01:30:00+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kiwinam.com/posts/33/version-naming/</loc>
+    <lastmod>2020-02-02T01:30:00+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kiwinam.com/tags/</loc>
+    <lastmod>2020-02-02T01:30:00+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kiwinam.com/tags/version-naming-rules/</loc>
+    <lastmod>2020-02-02T01:30:00+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kiwinam.com/tags/versioning/</loc>
+    <lastmod>2020-02-02T01:30:00+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kiwinam.com/tags/%EB%B2%84%EC%A0%84-%EA%B4%80%EB%A6%AC-%EA%B7%9C%EC%B9%99/</loc>
+    <lastmod>2020-02-02T01:30:00+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kiwinam.com/</loc>
+    <lastmod>2020-02-02T01:30:00+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://kiwinam.com/posts/32/git-remove-remote/</loc>
     <lastmod>2020-01-04T18:00:00+09:00</lastmod>
   </url>
@@ -13,32 +63,12 @@
   </url>
   
   <url>
-    <loc>https://kiwinam.com/categories/</loc>
-    <lastmod>2020-01-04T18:00:00+09:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://kiwinam.com/categories/git/</loc>
     <lastmod>2020-01-04T18:00:00+09:00</lastmod>
   </url>
   
   <url>
     <loc>https://kiwinam.com/tags/github/</loc>
-    <lastmod>2020-01-04T18:00:00+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://kiwinam.com/posts/</loc>
-    <lastmod>2020-01-04T18:00:00+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://kiwinam.com/tags/</loc>
-    <lastmod>2020-01-04T18:00:00+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://kiwinam.com/</loc>
     <lastmod>2020-01-04T18:00:00+09:00</lastmod>
   </url>
   
@@ -158,12 +188,12 @@
   </url>
   
   <url>
-    <loc>https://kiwinam.com/categories/android/</loc>
+    <loc>https://kiwinam.com/tags/android/</loc>
     <lastmod>2018-12-29T10:35:56+09:00</lastmod>
   </url>
   
   <url>
-    <loc>https://kiwinam.com/tags/android/</loc>
+    <loc>https://kiwinam.com/categories/android/</loc>
     <lastmod>2018-12-29T10:35:56+09:00</lastmod>
   </url>
   
@@ -518,12 +548,12 @@
   </url>
   
   <url>
-    <loc>https://kiwinam.com/categories/java/</loc>
+    <loc>https://kiwinam.com/tags/java/</loc>
     <lastmod>2017-05-03T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://kiwinam.com/tags/java/</loc>
+    <loc>https://kiwinam.com/categories/java/</loc>
     <lastmod>2017-05-03T00:00:00+00:00</lastmod>
   </url>
   

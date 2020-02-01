@@ -4,8 +4,275 @@
         <link>https://kiwinam.com/posts/</link>
         <description>Recent content in Posts on 키위남</description>
         <generator>Hugo -- gohugo.io</generator>
-        <lastBuildDate>Sat, 04 Jan 2020 18:00:00 +0900</lastBuildDate>
+        <lastBuildDate>Sun, 02 Feb 2020 01:30:00 +0900</lastBuildDate>
         <atom:link href="https://kiwinam.com/posts/index.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>Software 버전 관리 규칙, 너만 모르는 Semantic versioning </title>
+            <link>https://kiwinam.com/posts/33/version-naming/</link>
+            <pubDate>Sun, 02 Feb 2020 01:30:00 +0900</pubDate>
+            
+            <guid>https://kiwinam.com/posts/33/version-naming/</guid>
+            <description>소프트웨어를 개발하다보면 정말 수많은 규칙들을 세우고 없애고 수정하는 것 같아요.
+저도 혼자 개발하고 흡&amp;ndash;족 할 때는 이런 규칙과 컨벤션들에 대해 무관심 했었는데,
+이제 프로로 데뷔한지 2년 정도 지났고, 최근 이직한 회사에서 컨벤션 관련된 작업을 진행하면서 함께 정했던 버전 관리 규칙 에 대해 공유하려고 합니다.
+
+
+사실 개발자들 뿐만 아니라 개발자가 아닌 일반인 분들에게도 이 버전명 에 대해서는 익숙한 분이 많을거라 생각해요.
+79.0.3945.130
+  크롬의 최신 버전   어떤가요?</description>
+            <content type="html"><![CDATA[
+
+<p><br/></p>
+
+<p>소프트웨어를 개발하다보면 정말 수많은 규칙들을 세우고 없애고 수정하는 것 같아요.</p>
+
+<p>저도 혼자 개발하고 흡&ndash;족 할 때는 이런 규칙과 컨벤션들에 대해 무관심 했었는데,</p>
+
+<p>이제 프로로 데뷔한지 2년 정도 지났고, 최근 이직한 회사에서 컨벤션 관련된 작업을 진행하면서 함께 정했던 <code>버전 관리 규칙</code> 에 대해 공유하려고 합니다.</p>
+
+<p><br/></p>
+
+<hr />
+
+<p><br/></p>
+
+<p>사실 개발자들 뿐만 아니라 개발자가 아닌 일반인 분들에게도 이 <code>버전명</code> 에 대해서는 익숙한 분이 많을거라 생각해요.</p>
+
+<p><code>79.0.3945.130</code></p>
+
+<figure style="width: 100%">
+    <picture class="center" style="display: block; margin: 0px auto; text-align: center" >
+        <source
+            type="image/webp"
+            media="(min-width:461px)"
+            srcset="/img/33/33-1-90.webp"
+        />
+        <source
+            type="image/webp"
+            media="(max-width:460px)"
+            srcset="/img/33/33-1-75.webp"
+        />
+        
+    <img src="/img/33/33-1.png"  alt="google chrome "  class="center"  />
+
+
+    </picture>
+    <figurecaption>
+        <p style="text-align: center; font-size: 13px">
+            <i>크롬의 최신 버전</i>
+        </p>
+    </figurecaption>
+</figure>
+
+<p>어떤가요? 익숙한가요? 20년 2월 2일 기준 최근 크롬 공식 버전입니다.</p>
+
+<p>크롬의 경우 뭔가 4자리로 구분 되어 있어서 어색할 수 도 있는데요.</p>
+
+<p>우리가 흔히 접하는 모바일 어플리케이션을 살펴 볼까요?</p>
+
+<p><br/></p>
+
+<figure style="width: 100%">
+    <picture class="center" style="display: block; margin: 0px auto; text-align: center" >
+        <source
+            type="image/webp"
+            media="(min-width:461px)"
+            srcset="/img/33/33-2-90.webp"
+        />
+        <source
+            type="image/webp"
+            media="(max-width:460px)"
+            srcset="/img/33/33-2-75.webp"
+        />
+        
+    <img src="/img/33/33-2.png"  alt="google chrome "  class="center"  />
+
+
+    </picture>
+    <figurecaption>
+        <p style="text-align: center; font-size: 13px">
+            <i>목표 관리 앱, 챌린저스의 버전 기록</i>
+        </p>
+    </figurecaption>
+</figure>
+
+<p><code>1.2.6</code></p>
+
+<p>이번엔 어떠신가요? 많이 익숙한 숫자의 모습이죠?</p>
+
+<p>다른 소프트웨어는 어떨까요?</p>
+
+<p><br/></p>
+
+<figure style="width: 100%">
+    <picture class="center" style="display: block; margin: 0px auto; text-align: center" >
+        <source
+            type="image/webp"
+            media="(min-width:461px)"
+            srcset="/img/33/33-3-90.webp"
+        />
+        <source
+            type="image/webp"
+            media="(max-width:460px)"
+            srcset="/img/33/33-3-75.webp"
+        />
+        
+    <img src="/img/33/33-3.png"  alt="google chrome "  class="center"  />
+
+
+    </picture>
+    <figurecaption>
+        <p style="text-align: center; font-size: 13px">
+            <i>모바일 게임 앵그리버드의 최신 버전</i>
+        </p>
+    </figurecaption>
+</figure>
+
+<p><code>8.0.1</code></p>
+
+<p>모바일 게임에서 꾸준히 상위 랭크에 올라가 있는 앵그리 버드의 앱스토어 최신 버전입니다.</p>
+
+<p>여기에서도 익숙한 숫자의 형태가 보이는데요..?!</p>
+
+<p><br/></p>
+
+<p>여러분들이 익숙한 저 형태의 버전은 <code>Semantic versioning</code> 이라는 규칙을 따른 버전 이름이에요.</p>
+
+<p>제가 느끼기엔 대부분의 소프트웨어 버전 관리 규칙은 <code>Semantic versioning</code> 를 기반으로 만들어지는 것 같습니다.</p>
+
+<p>그렇다면 Semantic versioning 은 어떤 규칙들이 있는 걸까요?</p>
+
+<p><br/></p>
+
+<h2 id="semantic-versioning">Semantic versioning</h2>
+
+<hr />
+
+<p>Github 창업하신 분이 기존 Versioning 의 문제점을 해결하고자 만든 제안이라는데..</p>
+
+<p>사실 우리에게 그런 히스토리보단 직접 예를 보는게 더 좋겠죠?</p>
+
+<p><i><del>(이런 히스토리는 따로 찾아보..읍읍)</del></i></p>
+
+<p style="text-align: center; font-size:26px;"><b>Major.Minor.Patch</b></p>
+
+<p>Semantic versioning 은 이렇게 생겼습니다.</p>
+
+<p>간단하죠? 그리고 익숙한 저 모습..!</p>
+
+<p>(그리고 위에서 봤던 크롬의 처럼 Patch 뒤에 Build 라는 자리수가 더 오는 경우도 있다고 하네요.)</p>
+
+<p>그렇다면 Major, Minor, Patch 가 각각 어떨 때 숫자를 올려야 하고, 우리는 어떻게 사용하면 될까요?</p>
+
+<p><br/></p>
+
+<h3 id="일반적인-규칙">일반적인 규칙</h3>
+
+<ol>
+<li>버전 번호는 Major, Minor, Patch 의 형태로 배포하고, Major, Minor, Patch 는 각각 자연수이고 절대 앞에 0이 붙어서는 안된다.</li>
+<li>각 번호의 수는 항상 증가해야 한다.</li>
+<li>특정 버전으로 패키지를 배포하고 나면, 그 버전의 내용은 절대 변경하지 말아야한다. 변경분이 있다면 반드시 새로운 버전으로 배포하도록 한다.</li>
+<li>Major 버전이 변경될 때, Minor, Patch 는 0으로 초기화 된다.</li>
+<li>Minor 버전이 변경될 때, Patch 는 0으로 초기화 된다.</li>
+</ol>
+
+<p><br/></p>
+
+<h3 id="major-버전-증가">Major 버전 증가</h3>
+
+<ul>
+<li>하위 버전과 호환되지 않는 변화가 생겼을 때</li>
+<li>대대적인 변화가 일어났을 때</li>
+<li>클라이언트가 1.0.0 버전의 API 접근 방식으로 2.0.0 버전에 접속할 수 없을 때</li>
+</ul>
+
+<p><br/></p>
+
+<h3 id="minor-버전-증가">Minor 버전 증가</h3>
+
+<ul>
+<li>하위 버전과 호환이 되면서, 새로운 기능이 추가 될 때</li>
+<li>새로운 기능이 추가된 API 가 나왔지만, 기존의 공개된 API 가 하위 호환되고 있을 때</li>
+<li>기존의 기능이 변경되거나 사용 방법이 변경 되었을 때</li>
+</ul>
+
+<p><br/></p>
+
+<h3 id="patch-버전-증가">Patch 버전 증가</h3>
+
+<ul>
+<li>버그 수정</li>
+<li>기존 클라이언트가 알아차리지 못할 정도의 작은 변화가 있을 때</li>
+<li>서버 코드 내부적으로 소스가 수정되었을 때</li>
+<li>당연한 얘기겠지만, 이 모든 것들이 하위 버전과 호환될 때</li>
+</ul>
+
+<p><br/></p>
+
+<p>이렇게 적어놓고 보니, 뭔가 어렵고 복잡한거 같지만 정리해보면</p>
+
+<p>Major -&gt; 다 바뀜
+Minor -&gt; 기능이 추가랑 조금 바뀜
+Patch -&gt; 버그 고쳤음</p>
+
+<p>이렇게 정리할 수 있겠습니다.</p>
+
+<p>정리하고 보니 정말 간단해 보이는군요..!!</p>
+
+<p>그럼 이제 우리도 다른 오픈 소스들이..그리고 많은 제품들이 사용하는 <code>Semantic Versioning</code> 을 사용하는 겁니다!</p>
+
+<p><br/></p>
+
+<p><br/></p>
+
+<p>추가적으로 Semantic Versioning 에는 위에서 언급하지 않은 다른 규칙들도 있습니다.</p>
+
+<p><br/></p>
+
+<ol>
+<li><p>Semantic Versioning을 쓰는 소프트웨어는 반드시 공개 API를 정의해야 한다. 이 API는 코드 자체에 정의되어 있거나 명시적으로 문서화 되어있어야 한다. 이 과정은 포괄적이며 정확해야 한다.</p></li>
+
+<li><p>Major 버전 0 은 초기 개발을 위해서 쓴다. 아무 때나 마음대로 바꿀 수 있다. 이 공개 API 는 안정판으로 보지 않는 것이 좋다.</p></li>
+
+<li><p>1.0.0 버전은 공개 API 를 정의한다. 이후의 버전 번호는 이때 공개 API 에서 어떻게 바뀌는지에 따라 올린다.</p></li>
+
+<li><p>Patch 버전 바로 뒤에 붙임표(-)를 붙이고 마침표(.)로 구분된 식별자를 더해서 정식 배포를 앞둔 (pre-release) 버전을 표기할 수 있다.</p></li>
+</ol>
+
+<p><br/></p>
+
+<p>이런 규칙들도 있으니 참고해주세요!</p>
+
+<p>그리고 Semantic Versioning 은 공식 홈페이지도 있습니다.</p>
+
+<p>그것도 무려&hellip; 27개국의 언어를 지원하는..!!</p>
+
+<p>그 중에 한국어도 있으니 홈페이지 가셔서 살펴보셔도 좋을거 같네요.</p>
+
+<p><a href="https://semver.org/lang/ko/" target="_blank"><a href="https://semver.org/lang/ko/">https://semver.org/lang/ko/</a></a></p>
+
+<p><br/></p>
+
+<p>제 포스팅이 도움이 되었으면 좋겠네요.</p>
+
+<p>다른 질문이 있으신 분은 아래 댓글 적어주세요! 꼭 답변 드리도록 하겠습니다.</p>
+
+<p>긴 글 읽어주셔서 감사합니다!</p>
+
+<p><br/></p>
+
+<p><br/></p>
+
+<h4 id="참고-페이지">참고 페이지</h4>
+
+<p>(새창으로 이동합니다.)</p>
+
+<p><a href="https://semver.org/lang/ko/" target="_blank">Semantic Versioning 공식 홈페이지</a></p>
+
+<p><a href="https://spoqa.github.io/2012/12/18/semantic-versioning.html" target="_blank">Spoqa 기술 블로그</a></p>
+]]></content>
+        </item>
         
         <item>
             <title>[Git] 원격 (remote) 브랜치 삭제</title>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Versioning on 키위남</title>
+    <link>https://kiwinam.com/tags/versioning/</link>
+    <description>Recent content in Versioning on 키위남</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Sun, 02 Feb 2020 01:30:00 +0900</lastBuildDate>
+    
+	<atom:link href="https://kiwinam.com/tags/versioning/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Software 버전 관리 규칙, 너만 모르는 Semantic versioning </title>
+      <link>https://kiwinam.com/posts/33/version-naming/</link>
+      <pubDate>Sun, 02 Feb 2020 01:30:00 +0900</pubDate>
+      
+      <guid>https://kiwinam.com/posts/33/version-naming/</guid>
+      <description>소프트웨어를 개발하다보면 정말 수많은 규칙들을 세우고 없애고 수정하는 것 같아요.
+저도 혼자 개발하고 흡&amp;ndash;족 할 때는 이런 규칙과 컨벤션들에 대해 무관심 했었는데,
+이제 프로로 데뷔한지 2년 정도 지났고, 최근 이직한 회사에서 컨벤션 관련된 작업을 진행하면서 함께 정했던 버전 관리 규칙 에 대해 공유하려고 합니다.
+
+
+사실 개발자들 뿐만 아니라 개발자가 아닌 일반인 분들에게도 이 버전명 에 대해서는 익숙한 분이 많을거라 생각해요.
+79.0.3945.130
+  크롬의 최신 버전   어떤가요?</description>
+    </item>
+    
+  </channel>
+</rss>

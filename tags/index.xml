@@ -5,10 +5,46 @@
     <link>https://kiwinam.com/tags/</link>
     <description>Recent content in Tags on 키위남</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sat, 04 Jan 2020 18:00:00 +0900</lastBuildDate>
+    <lastBuildDate>Sun, 02 Feb 2020 01:30:00 +0900</lastBuildDate>
     
 	<atom:link href="https://kiwinam.com/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Semantic versioning</title>
+      <link>https://kiwinam.com/tags/semantic-versioning/</link>
+      <pubDate>Sun, 02 Feb 2020 01:30:00 +0900</pubDate>
+      
+      <guid>https://kiwinam.com/tags/semantic-versioning/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Version naming rules</title>
+      <link>https://kiwinam.com/tags/version-naming-rules/</link>
+      <pubDate>Sun, 02 Feb 2020 01:30:00 +0900</pubDate>
+      
+      <guid>https://kiwinam.com/tags/version-naming-rules/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Versioning</title>
+      <link>https://kiwinam.com/tags/versioning/</link>
+      <pubDate>Sun, 02 Feb 2020 01:30:00 +0900</pubDate>
+      
+      <guid>https://kiwinam.com/tags/versioning/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>버전 관리 규칙</title>
+      <link>https://kiwinam.com/tags/%EB%B2%84%EC%A0%84-%EA%B4%80%EB%A6%AC-%EA%B7%9C%EC%B9%99/</link>
+      <pubDate>Sun, 02 Feb 2020 01:30:00 +0900</pubDate>
+      
+      <guid>https://kiwinam.com/tags/%EB%B2%84%EC%A0%84-%EA%B4%80%EB%A6%AC-%EA%B7%9C%EC%B9%99/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>branch</title>
@@ -61,42 +97,6 @@
       <pubDate>Thu, 02 May 2019 23:35:56 +0900</pubDate>
       
       <guid>https://kiwinam.com/tags/maridb/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>mysql</title>
-      <link>https://kiwinam.com/tags/mysql/</link>
-      <pubDate>Thu, 02 May 2019 23:35:56 +0900</pubDate>
-      
-      <guid>https://kiwinam.com/tags/mysql/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>사용자 추가</title>
-      <link>https://kiwinam.com/tags/%EC%82%AC%EC%9A%A9%EC%9E%90-%EC%B6%94%EA%B0%80/</link>
-      <pubDate>Thu, 02 May 2019 23:35:56 +0900</pubDate>
-      
-      <guid>https://kiwinam.com/tags/%EC%82%AC%EC%9A%A9%EC%9E%90-%EC%B6%94%EA%B0%80/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Mac</title>
-      <link>https://kiwinam.com/tags/mac/</link>
-      <pubDate>Thu, 21 Mar 2019 10:35:56 +0900</pubDate>
-      
-      <guid>https://kiwinam.com/tags/mac/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>OSX</title>
-      <link>https://kiwinam.com/tags/osx/</link>
-      <pubDate>Thu, 21 Mar 2019 10:35:56 +0900</pubDate>
-      
-      <guid>https://kiwinam.com/tags/osx/</guid>
       <description></description>
     </item>
     
