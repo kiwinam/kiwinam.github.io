@@ -4,8 +4,430 @@
         <link>https://kiwinam.com/posts/</link>
         <description>Recent content in Posts on 키위남</description>
         <generator>Hugo -- gohugo.io</generator>
-        <lastBuildDate>Sun, 02 Feb 2020 01:30:00 +0900</lastBuildDate>
+        <lastBuildDate>Tue, 18 Feb 2020 07:15:00 +0900</lastBuildDate>
         <atom:link href="https://kiwinam.com/posts/index.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>REST API 의 이해 - 1</title>
+            <link>https://kiwinam.com/posts/34/what-is-rest-api/</link>
+            <pubDate>Tue, 18 Feb 2020 07:15:00 +0900</pubDate>
+            
+            <guid>https://kiwinam.com/posts/34/what-is-rest-api/</guid>
+            <description>REST API
+소프트웨어 엔지니링을 공부하다 보면 어느샌가 마주하는 녀석입니다.
+모두가 얘기하고 대부분이 사용하지만 REST API 가 무엇인지, 왜 쓰는지에 대해 알고 설명할 수 있는 사람은 그렇게 많지 않습니다.
+물론 저도 그 중 하나였고, 이 글을 통해 더 명확하게 REST API 에 대해 정의하고자 합니다.
+이 글을 통해 REST API 의 개념과 어떻게 사용해야 하는지에 대해서 알아보고자 합니다.
+
+1. REST API 란? REST (REpresentational State Transfer) 란 웹를 사용할 때 제약 조건들을 정의하는 소프트웨어 아키텍처 스타일입니다.</description>
+            <content type="html"><![CDATA[
+
+<p><br/></p>
+
+<figure style="width: 100%">
+    <picture class="center" style="display: block; margin: 0px auto; text-align: center" >
+        <source
+            type="image/webp"
+            media="(min-width:461px)"
+            srcset="/img/34/34-1-90.webp"
+        />
+        <source
+            type="image/webp"
+            media="(max-width:460px)"
+            srcset="/img/34/34-1-75.webp"
+        />
+        
+    <img src="/img/34/34-1.png"  alt="REST API"  class="center"  />
+
+
+    </picture>
+    <figurecaption>
+        
+    </figurecaption>
+</figure>
+
+<p><code>REST API</code></p>
+
+<p>소프트웨어 엔지니링을 공부하다 보면 어느샌가 마주하는 녀석입니다.</p>
+
+<p>모두가 얘기하고 대부분이 사용하지만 REST API 가 무엇인지, 왜 쓰는지에 대해 알고 설명할 수 있는 사람은 그렇게 많지 않습니다.</p>
+
+<p>물론 저도 그 중 하나였고, 이 글을 통해 더 명확하게 REST API 에 대해 정의하고자 합니다.</p>
+
+<p>이 글을 통해 REST API 의 개념과 어떻게 사용해야 하는지에 대해서 알아보고자 합니다.</p>
+
+<p><br/></p>
+
+<h2 id="1-rest-api-란">1. REST API 란?</h2>
+
+<p><b>REST</b>  (<b>RE</b>presentational <b>S</b>tate <b>T</b>ransfer) 란 웹를 사용할 때 제약 조건들을 정의하는 소프트웨어 아키텍처 스타일입니다.</p>
+
+<p>우리가 흔히 쓰고 있는 월드 와이드 웹 (WWW) 의 창시자 중 한 명인 Roy Fielding 의 2000년 논문에서 소개 되었고, 웹의 장점을 최대한 활용할 수 있는 아키텍처 스타일입니다.</p>
+
+<p>한국말 같지만 무슨 말인지 모르겠는 이 말을 정확하지 않지만, 이해하기 쉽게 설명한다면</p>
+
+<pre><code>HTTP 의 장점을 살리고자 하는 통신 규격
+</code></pre>
+
+<p>이렇게 얘기할 수 있습니다. 아직 감이 잘 안오시나요? 괜찮습니다. 우린 이제 이 글의 시작 지점이니까요. 아래에서 더 자세한 설명을 들어보죠.</p>
+
+<p><br/></p>
+
+<h3 id="1-1-핵심-규칙">1-1. 핵심 규칙</h3>
+
+<p>먼저 REST 에서 가장 핵심이 되는 규칙은</p>
+
+<p><code>- URI 는 자원을 표현한다.</code></p>
+
+<p><code>- 자원에 대한 행위는 HTTP Method 로 표현한다.</code></p>
+
+<p>이 두 가지 규칙입니다. 이 두 가지 규칙만 준수해도 RESTFul 한 API 를 설계할 수 있습니다.</p>
+
+<p>예를 들어 강아지 중 코난 이라는 강아지의 정보를 가져오는 메소드를 만들어 보겠습니다.</p>
+
+<pre><code class="language-json">GET /pets/conan
+Response 
+{
+    &quot;name&quot;: &quot;conan&quot;,
+    &quot;age&quot;: 4,
+    &quot;gender&quot;: &quot;male&quot;
+}
+</code></pre>
+
+<p>첫 번째 규칙인 <b>URI는 모든 자원을 표현한다</b>, 위 예시의 경우 강아지인 코난 이라는 자원을 URI 로 표현했습니다. <code>/pets/conan</code></p>
+
+<p>두 번째 규칙인 <b>자원에 대한 행위는 HTTP method 로 표현한다.</b>, 위 예시에선 정보를 가져오는 행위인 <code>GET</code> 를 사용했습니다.</p>
+
+<p>어떤가요? 이런 핵심 규칙을 통해 REST 하게 API 를 설계할 수 있겠죠?</p>
+
+<p>하지만 우린 좀 더 REST 세계로 딥다이브 해보겠습니다.</p>
+
+<p><br/></p>
+
+<hr />
+
+<h3 id="1-1-rest-의-기본-요소">1-1. REST 의 기본 요소</h3>
+
+<p>REST 를 이루는 기본적인 요소는 다음 3가지입니다.</p>
+
+<ol>
+<li><p>리소스 (Resource)</p></li>
+
+<li><p>메소드 (Methond)</p></li>
+
+<li><p>메세지 (Message)</p></li>
+</ol>
+
+<p><br></p>
+
+<p>세 가지 요소를 하나의 예를 통해 설명 드리겠습니다.</p>
+
+<p><code>코난 이라는 이름을 가진 강아지 정보를 생성합니다.</code> 라는 HTTP 요청이 있을 때,</p>
+
+<ol>
+<li><p>리소스 - 강아지 정보 라는 <b>리소스</b>를 (Resource)</p></li>
+
+<li><p>메소드 - <b>생성</b>합니다. (Method)</p></li>
+
+<li><p>메세지 -  그 이름은 <b>코난</b>..<del>탐정이죠</del> (Message)</p></li>
+</ol>
+
+<p>더 이해하기 쉽게 이를 REST 형식으로 표현해보겠습니다.</p>
+
+<pre><code class="language-JSON">POST  http://mypet/pets
+{
+    &quot;pets&quot;:{
+        &quot;name&quot;: &quot;코난&quot;
+    }
+}
+</code></pre>
+
+<p>이렇게 표현할 수 있겠네요.</p>
+
+<p>어떤 것을 생성한다 (Create) 의 의미를 가진 <b>HTTP POST 요청</b>,</p>
+
+<p>생성하려 하는 대상인 강아지라는 리소스는 <b><a href="http://mypet/pets">http://mypet/pets</a> 라는 URI</b>,</p>
+
+<p>생성하고자 하는 정보인 강아지의 이름은 <b>JSON 방식으로 제공했습니다</b>.</p>
+
+<p><br/></p>
+
+<h3>HTTP 메소드</h3>
+
+<p>위의 예시에서 이 포스팅에서 다루지 않은 개념이 등장하죠.</p>
+
+<p>위 글을 읽는 분들은</p>
+
+<pre><code>HTTP POST 가 뭐에요?
+</code></pre>
+
+<p>라고 질문할 수 있습니다.</p>
+
+<p><br/></p>
+
+<p>먼저 HTTP 는 우리 앞으로 웹에서 통신할 땐 이렇게 통신하자~ 라고 정의한 규칙입니다.</p>
+
+<p>이 규칙 중엔 HTTP 요청을 크게 4가지 방식(Method) 으로 나눕니다.</p>
+
+<table>
+<thead>
+<tr>
+<th align="center">방식 (Method)</th>
+<th align="center">의미</th>
+<th align="center"></th>
+<th align="center">역할</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td align="center">POST</td>
+<td align="center">Create</td>
+<td align="center"></td>
+<td align="center"><a>  POST 를 통해 새로운 리소스를 생성합니다.</td>
+</tr>
+
+<tr>
+<td align="center">GET</td>
+<td align="center">Select</td>
+<td align="center"></td>
+<td align="center">GET 를 통해 해당 리소스를 조회합니다.</td>
+</tr>
+
+<tr>
+<td align="center">PUT</td>
+<td align="center">Update</td>
+<td align="center"></td>
+<td align="center">PUT 를 통해 리소스를 수정합니다.</td>
+</tr>
+
+<tr>
+<td align="center">DELETE</td>
+<td align="center">Delete</td>
+<td align="center"></td>
+<td align="center">DELETE 를 통해 해당 리소스를 삭제합니다.</td>
+</tr>
+
+<tr>
+<td align="center">PATCH</td>
+<td align="center">Update</td>
+<td align="center"></td>
+<td align="center">리소스의 일부를 수정합니다.</td>
+</tr>
+</tbody>
+</table>
+
+<p>위 표에서 처럼 HTTP 요청 방식 (POST, GET, PUT, DELETE)은 각각 CRUD 에 대응됩니다.</p>
+
+<p>표 맨 아래 PATCH HTTP Method 는 PUT 과 비슷하게 Update 라는 의미를 가지고 있지만, PUT 은 해당 자원 전체를 교체하라는 의미를 지녔지만, PATCH 는 자원의 일부를 변경한다는 의미를 가졌습니다.</p>
+
+<p>때문에 최근엔 자원 전체를 업데이트하는 PUT 보다, 일부를 수정하는 PATCH 를 더 많이 사용하기도 합니다.</p>
+
+<p><br/></p>
+
+<h3 id="1-2-rest-api-의-예시">1-2 REST API 의 예시</h3>
+
+<p>이제 모든 기본 요소에 대해 이해 했으니, 하나씩 예시를 만들어 보겠습니다.</p>
+
+<p>오늘 이 포스팅의 주인공인 코난..!</p>
+
+<figure style="width: 100%">
+    <picture class="center" style="display: block; margin: 0px auto; text-align: center" >
+        <source
+            type="image/webp"
+            media="(min-width:461px)"
+            srcset="/img/34/34-2-90.webp"
+        />
+        <source
+            type="image/webp"
+            media="(max-width:460px)"
+            srcset="/img/34/34-2-75.webp"
+        />
+        
+    <img src="/img/34/34-2.jpg"  alt="google chrome "  class="center"  />
+
+
+    </picture>
+    <figurecaption>
+        <p style="text-align: center; font-size: 13px">
+            <i>내 이름은 함정, 코난이죠</i>
+        </p>
+    </figurecaption>
+</figure>
+
+<p>이 코난이 아닌 강아지 코난을 통해 REST API 예시를 설명해 보겠습니다.</p>
+
+<p><br/></p>
+
+<figure style="width: 100%">
+    <picture class="center" style="display: block; margin: 0px auto; text-align: center" >
+        <source
+            type="image/webp"
+            media="(min-width:461px)"
+            srcset="/img/34/34-3-90.webp"
+        />
+        <source
+            type="image/webp"
+            media="(max-width:460px)"
+            srcset="/img/34/34-3-75.webp"
+        />
+        
+    <img src="/img/34/34-3.png"  alt="google chrome "  class="center"  />
+
+
+    </picture>
+    <figurecaption>
+        <p style="text-align: center; font-size: 13px">
+            <i>댕댕이 코난</i>
+        </p>
+    </figurecaption>
+</figure>
+
+<p>그럼 REST 한 CRUD API 를 생성해 볼까요?</p>
+
+<p><br/></p>
+
+<h4>1. 생성</h4>
+
+<p><code>이름이 conan, 나이가 3살 인 강아지 정보를 생성해줘</code></p>
+
+<pre><code class="language-json">POST http://mypet/pets
+{
+    &quot;pets&quot;:{
+        &quot;name&quot;: &quot;conan&quot;,
+        &quot;age&quot;: 3
+    }
+}
+</code></pre>
+
+<p><a href="http://mypet/pets">http://mypet/pets</a> 라는 리소스로 이름은 &ldquo;conan&rdquo;, HTTP POST 를 정의 했습니다.</p>
+
+<p>이 요청은 코난 이라는 강아지 정보를 등록합니다.</p>
+
+<p><br/></p>
+
+<h4>2. 조회</h4>
+
+<p><code>이름이 conan 인 강아지 정보를 가져와줘</code></p>
+
+<pre><code class="language-json">GET http://mypet/pets/conan
+Response
+{
+    &quot;name&quot;: &quot;conan&quot;,
+    &quot;age&quot;: 3
+}
+</code></pre>
+
+<p>이번엔 방금 생성한 코난의 정보를 가져왔습니다.</p>
+
+<p>조회를 해야하기 때문에 HTTP Method 는 GET 방식을 사용 했고, URI 에 가져올 리소스인 강아지 정보 중 conan 를 특정했습니다.</p>
+
+<p><br/></p>
+
+<h4>3. 수정</h4>
+
+<p><code>conan 의 이름을 konan, 나이를 5살로 으로 변경해줘</code></p>
+
+<pre><code class="language-json">PUT http://mypet/pets/conan
+{
+    &quot;name&quot;: &quot;konan&quot;,
+    &quot;age&quot;: 5
+}
+</code></pre>
+
+<p>conan 의 이름을 konan 으로, 나이를 5살로 변경했습니다.</p>
+
+<p>리소스를 수정해야 하기 때문에 HTTP Method 는 PUT 방식을 사용 했습니다.</p>
+
+<p><br/></p>
+
+<h4>4. 삭제</h4>
+
+<p><code>강아지 정보 중 konan 이란 이름을 가진 정보를 삭제해줘</code></p>
+
+<pre><code class="language-json">DELETE http://mypet/pets/konan
+Response 204
+</code></pre>
+
+<p>konan 의 정보를 삭제 했습니다.</p>
+
+<p>이번엔 삭제를 해야하기 때문에 HTTP Method 는 DELETE 를 사용 했습니다.</p>
+
+<p><br/></p>
+
+<p><br/></p>
+
+<h2 id="2-rest-의-특성">2. REST 의 특성</h2>
+
+<p>지금까지 기본적인 개념에 대해 설명 했었는데, 이제 조금 더 상세하게 REST 에 대해 알아 보겠습니다.</p>
+
+<p>상세한 내용은 위키에서 참고해서 가져왔습니다.</p>
+
+<ol>
+<li><p>Client-Server Architecture</p>
+
+<ul>
+<li>REST API 에서 자원을 가지고 제공하는 측이 서버, 자원을 요청하는 쪽이 클라이언트에 해당합니다.</li>
+<li>서버는 API 를 제공하고, 클라이언트는 사용자 인증, 세션, 로그인 정보를 관리하는 등 역할을 구분시킵니다.</li>
+<li>역할 구분을 통해서 서로간의 의존성을 줄입니다.</li>
+</ul></li>
+
+<li><p>Stateless (무상태성)</p>
+
+<ul>
+<li>상태가 없다는 의미는 클라이언트의 Context, 세션과 같은 상태 정보를 서버에 저장하지 않음을 의미합니다.</li>
+<li>서버에 클라이언트의 상태 정보를 저장하지 않으면, 요청에 대해 처리만 하면 되기 때문에 서버 구현이 단순해집니다.</li>
+</ul></li>
+
+<li><p>Cacheable (캐시 가능)</p>
+
+<ul>
+<li>REST 는 HTTP 라는 기존의 웹 표준을 사용하기 때문에, HTTP 에서 사용하는 Last-Modified Tag, E-tag 를 통해 캐싱 구현이 가능합니다.</li>
+<li>캐시를 통해 대량의 요청을 효율적으로 처리할 수 있습니다.</li>
+</ul></li>
+
+<li><p>Layered System</p>
+
+<ul>
+<li>REST API 는 다중 계층으로 구성할 수 있고 LB, 암호화, Proxy 등 계층을 추가해서 구조를 변경할 수 있습니다.</li>
+<li>클라이언트는 대상 서버에 직접 연결되었는지, Proxy 를 통해 연결 되었는지 알 수 없습니다.</li>
+</ul></li>
+
+<li><p>Self-Descriptiveness (자체 표햔 구조)</p>
+
+<ul>
+<li>REST API 는 요청 메세지를 보고 이를 쉽게 이해할 수 있도록 자체 표현 구조로 되어 있습니다.</li>
+</ul></li>
+
+<li><p>Uniform Interface (일관된 인터페이스)</p>
+
+<ul>
+<li>Resource 에 대한 요청으로 통일 되고, 한정적으로 수행하는 아키텍처 스타일을 의미합니다.</li>
+<li>아키텍처를 단순화시키고 분리해 각 부분을 독립적으로 발전할 수 있습니다.</li>
+</ul></li>
+</ol>
+
+<p><br/></p>
+
+<h2 id="마지막으로">마지막으로</h2>
+
+<p>여기까지 REST 에 대해 개념과 예시를 통해 설명 드렸습니다.</p>
+
+<p>REST 는 HTTP 프로토콜의 표준을 최대한 활용하면서 여러가지 장점을 극대화할 수 아키텍쳐 입니다.</p>
+
+<p>다만 RESTFul 한 API 를 만들기 위해선 피해야할 패턴도 있고, 리소스의 정의에 대해 애매 모호한 부분도 있습니다.</p>
+
+<p>다음 포스팅에선 이렇게 어려운 REST 디자인에 대해 실제 사례를 통해 더 실무적으로 설명 드리겠습니다.</p>
+
+<p>이 글이 도움이 되셨으면 좋겠습니다.</p>
+
+<p>감사합니다.</p>
+
+<p><br/></p>
+
+<p><br/></p>
+]]></content>
+        </item>
         
         <item>
             <title>Software 버전 관리 규칙, 너만 모르는 Semantic versioning </title>
