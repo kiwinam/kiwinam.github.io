@@ -5,7 +5,8 @@
     <link>https://kiwinam.com/categories/</link>
     <description>Recent content in Categories on 키위남</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Tue, 18 Feb 2020 07:15:00 +0900</lastBuildDate>
+    <language>ko-kr</language>
+    <lastBuildDate>Sun, 08 Mar 2020 23:22:08 +0900</lastBuildDate>
     
 	<atom:link href="https://kiwinam.com/categories/index.xml" rel="self" type="application/rss+xml" />
     
@@ -13,7 +14,7 @@
     <item>
       <title>REST</title>
       <link>https://kiwinam.com/categories/rest/</link>
-      <pubDate>Tue, 18 Feb 2020 07:15:00 +0900</pubDate>
+      <pubDate>Sun, 08 Mar 2020 23:22:08 +0900</pubDate>
       
       <guid>https://kiwinam.com/categories/rest/</guid>
       <description></description>
