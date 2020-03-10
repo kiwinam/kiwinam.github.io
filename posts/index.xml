@@ -141,6 +141,79 @@
 
 <p><code>POST /user (BAD)</code></p>
 
+<p>여기서 의문이 생길 수도 있습니다.</p>
+
+<blockquote>
+<p>왜 복수형 명사를 써야해?</p>
+</blockquote>
+
+<p>라는 질문이죠.</p>
+
+<p>이 질문에 대한 답은 <code>전체 사용자 리스트를 조회</code> 하는 API 로 해보겠습니다.</p>
+
+<pre><code class="language-json">GET /users
+HTTP Status Code 200
+Response
+
+{
+    &quot;users&quot;: [
+        {
+            &quot;idx&quot;: 29,
+            &quot;name&quot;: &quot;kiwinam&quot;,
+            &quot;email&quot;: &quot;kiwinam@gmail.com&quot;
+        },
+        {
+            &quot;idx&quot;: 30,
+            &quot;name&quot;: &quot;charlie&quot;,
+            &quot;email&quot;: &quot;charlie@kiwinam.com&quot;
+        }
+    ]
+}
+</code></pre>
+
+<p><i>(GET /users 의 HTTP Response 예시)</i></p>
+
+<table>
+<thead>
+<tr>
+<th align="center">/users</th>
+<th align="center">/charlie</th>
+<th align="center">/pets</th>
+<th align="center">/conan</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td align="center">(1)</td>
+<td align="center">(2)</td>
+<td align="center">(3)</td>
+<td align="center">(4)</td>
+</tr>
+</tbody>
+</table>
+
+<p>이렇게 api가 있다면 가장 상위에 있는 1번 users 의 경우</p>
+
+<p>GET /users 를 호출할 때의 API의 의미는 <code>전체 유저들의 정보를 가져와줘</code> 라는 의미입니다.</p>
+
+<p>여기에서 중요한 건 유저<code>들</code>의 정보를 가져오는 것이죠. 네 맞습니다. 가져오는 정보가 복수의 형태를 띄고 있죠.</p>
+
+<p>그래서 복수형 명사를 사용하는 걸 권장합니다.</p>
+
+<p>다른 예를 더 들어보자면</p>
+
+<pre><code class="language-json"># 제품들의 정보를 가져와줘 (Response에 여러 개의 정보가 예상됨, 복수형 리소스 *products 표현)
+GET /products 
+
+# charlie 가 가지고 있는 펫의 정보를 가져와줘 (Response에 여러 개의 정보가 예상됨, , 복수형 리소스 *pets 표현)
+GET /users/charlie/pets
+
+# 유저들의 정보를 가져와줘 (Response에 여러 개의 정보가 예상됨, 복수형 리소스 *users 표현)
+</code></pre>
+
+<p>이렇게 여러 개 (복수 개) 의 정보들이 예상되는 요청에 맞게 복수형 리소스로 표현해줍니다.</p>
+
 <p><br/></p>
 
 <h3 id="4-http-메소드를-올바르게-쓰자">4. HTTP 메소드를 올바르게 쓰자.</h3>
@@ -240,11 +313,13 @@
 
 <p>이를 활용하는 기업은 페이스북이 있다고 하네요.</p>
 
-<p>PC 가 요청한 경우 이름, 전화번호, 이메일, 국적이 필요함.
-<code>GET /products?offset=0&amp;limit=10&amp;filed=name,phone,email,national</code></p>
+<p>PC 가 요청한 경우 이름, 전화번호, 이메일, 국적이 필요함.</p>
 
-<p>모바일에서 요청한 경우 이름과 전화번호만 필요함
-<code>GET /products?offset=0&amp;limit=10&amp;filed=name,email</code></p>
+<p><code>GET /products?offset=0&amp;limit=10&amp;field=name,phone,email,national</code></p>
+
+<p>모바일에서 요청한 경우 이름과 전화번호만 필요함</p>
+
+<p><code>GET /products?offset=0&amp;limit=10&amp;field=name,email</code></p>
 
 <p><br/></p>
 
@@ -920,9 +995,11 @@ Response 204
 
 <p>이렇게 적어놓고 보니, 뭔가 어렵고 복잡한거 같지만 정리해보면</p>
 
-<p>Major -&gt; 다 바뀜
-Minor -&gt; 기능이 추가랑 조금 바뀜
-Patch -&gt; 버그 고쳤음</p>
+<p>Major -&gt; 다 바뀜</p>
+
+<p>Minor -&gt; 기능이 추가랑 조금 바뀜</p>
+
+<p>Patch -&gt; 버그 고쳤음</p>
 
 <p>이렇게 정리할 수 있겠습니다.</p>
 
