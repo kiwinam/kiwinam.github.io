@@ -29,12 +29,11 @@
       <pubDate>Sun, 08 Mar 2020 23:22:08 +0900</pubDate>
       
       <guid>https://kiwinam.com/posts/35/rest-api-guide/</guid>
-      <description>REST Series  REST API #1 - 이해하기 REST API #2 - 디자인 가이드 (현재 글)  지난 포스팅에 이어, REST API 디자인 가이드에 대해 포스팅 해보겠습니다.
+      <description>REST Series  REST API #1 - 이해하기 REST API #2 - 디자인 가이드 (현재 글) REST API #3 - 안티 패턴  지난 포스팅에 이어, REST API 디자인 가이드에 대해 포스팅 해보겠습니다.
 이전 편을 안보신 분이 있다면 위 링크에서 확인해주세요.
 
 우린 소프트웨어 개발자로서 대부분의 시간을 REST API 를 사용하거나 구축하는데 사용하고 있습니다.
-백엔드 개발자건, 안드로이드 개발자건, 프론트엔드 개발자건 다들 REST 한 API 를 사용하고 있죠.
-이전 포스팅에서 우리가 사용하는 REST API 란 어떤 것이라는 걸 말씀드렸습니다.</description>
+백엔드 개발자건, 안드로이드 개발자건, 프론트엔드 개발자건 다들 REST 한 API 를 사용하고 있죠.</description>
     </item>
     
     <item>
@@ -43,12 +42,11 @@
       <pubDate>Tue, 18 Feb 2020 07:15:00 +0900</pubDate>
       
       <guid>https://kiwinam.com/posts/34/what-is-rest-api/</guid>
-      <description>REST Series  REST API #1 - 이해하기 (현재 글) REST API #2 - 디자인 가이드  
+      <description>REST Series  REST API #1 - 이해하기 (현재 글) REST API #2 - 디자인 가이드 REST API #3 - 안티 패턴  
 REST API
 소프트웨어 엔지니링을 공부하다 보면 어느샌가 마주하는 녀석입니다.
 모두가 얘기하고 대부분이 사용하지만 REST API 가 무엇인지, 왜 쓰는지에 대해 알고 설명할 수 있는 사람은 그렇게 많지 않습니다.
-물론 저도 그 중 하나였고, 이 글을 통해 더 명확하게 REST API 에 대해 정의하고자 합니다.
-이 글을 통해 REST API 의 개념과 어떻게 사용해야 하는지에 대해서 알아보고자 합니다.</description>
+물론 저도 그 중 하나였고, 이 글을 통해 더 명확하게 REST API 에 대해 정의하고자 합니다.</description>
     </item>
     
   </channel>
