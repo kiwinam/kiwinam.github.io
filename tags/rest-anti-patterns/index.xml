@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>REST Anti patterns on 키위남</title>
+    <link>https://kiwinam.com/tags/rest-anti-patterns/</link>
+    <description>Recent content in REST Anti patterns on 키위남</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ko-kr</language>
+    <lastBuildDate>Mon, 09 Mar 2020 14:48:01 +0900</lastBuildDate>
+    
+	<atom:link href="https://kiwinam.com/tags/rest-anti-patterns/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>REST API #3 - 안티 패턴</title>
+      <link>https://kiwinam.com/posts/36/rest-anti-patterns/</link>
+      <pubDate>Mon, 09 Mar 2020 14:48:01 +0900</pubDate>
+      
+      <guid>https://kiwinam.com/posts/36/rest-anti-patterns/</guid>
+      <description>REST Series  REST API #1 - 이해하기 REST API #2 - 디자인 가이드 REST API #3 - 안티 패턴 (현재 글)  지난 포스팅에 이어, REST API 안티 패턴에 대해 포스팅 해보겠습니다.
+이전 편을 안보신 분이 있다면 위 링크에서 확인해주세요.
+지난 두 포스팅을 통해 REST API 가 어떤 것이고, 어떻게 디자인 하면 되는지 알아봤습니다.
+우리가 어떤 걸 해야한다고 배울 때, 더 효과적으로 배우려면 어떤 걸 하지 말아야하는지를 배우면 좋습니다.</description>
+    </item>
+    
+  </channel>
+</rss>

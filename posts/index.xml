@@ -5,8 +5,322 @@
         <description>Recent content in Posts on 키위남</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>ko-kr</language>
-        <lastBuildDate>Sun, 08 Mar 2020 23:22:08 +0900</lastBuildDate>
+        <lastBuildDate>Mon, 09 Mar 2020 14:48:01 +0900</lastBuildDate>
         <atom:link href="https://kiwinam.com/posts/index.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>REST API #3 - 안티 패턴</title>
+            <link>https://kiwinam.com/posts/36/rest-anti-patterns/</link>
+            <pubDate>Mon, 09 Mar 2020 14:48:01 +0900</pubDate>
+            
+            <guid>https://kiwinam.com/posts/36/rest-anti-patterns/</guid>
+            <description>REST Series  REST API #1 - 이해하기 REST API #2 - 디자인 가이드 REST API #3 - 안티 패턴 (현재 글)  지난 포스팅에 이어, REST API 안티 패턴에 대해 포스팅 해보겠습니다.
+이전 편을 안보신 분이 있다면 위 링크에서 확인해주세요.
+지난 두 포스팅을 통해 REST API 가 어떤 것이고, 어떻게 디자인 하면 되는지 알아봤습니다.
+우리가 어떤 걸 해야한다고 배울 때, 더 효과적으로 배우려면 어떤 걸 하지 말아야하는지를 배우면 좋습니다.</description>
+            <content type="html"><![CDATA[
+
+<p><br/></p>
+
+<figure style="width: 100%">
+    <picture class="center" style="display: block; margin: 0px auto; text-align: center" >
+        <source
+            type="image/webp"
+            media="(min-width:461px)"
+            srcset="/img/34/34-1-90.webp"
+        />
+        <source
+            type="image/webp"
+            media="(max-width:460px)"
+            srcset="/img/34/34-1-75.webp"
+        />
+        
+    <img src="/img/34/34-1.png"  alt="REST API"  class="center"  />
+
+
+    </picture>
+    <figurecaption>
+        
+    </figurecaption>
+</figure>
+
+<h3 id="rest-series">REST Series</h3>
+
+<ol>
+<li><a href="https://kiwinam.com/posts/34/what-is-rest-api/" target="_blank">REST API #1 - 이해하기</a></li>
+<li><a href="https://kiwinam.com/posts/35/rest-api-guide/" target="_blank">REST API #2 - 디자인 가이드</a></li>
+<li><a href="https://kiwinam.com/posts/36/rest-anti-patterns/" target="_blank">REST API #3 - 안티 패턴</a> (현재 글)</li>
+</ol>
+
+<p>지난 포스팅에 이어, REST API 안티 패턴에 대해 포스팅 해보겠습니다.</p>
+
+<p>이전 편을 안보신 분이 있다면 위 링크에서 확인해주세요.</p>
+
+<hr />
+
+<p>지난 두 포스팅을 통해 REST API 가 어떤 것이고, 어떻게 디자인 하면 되는지 알아봤습니다.</p>
+
+<p>우리가 어떤 걸 해야한다고 배울 때, 더 효과적으로 배우려면 어떤 걸 하지 말아야하는지를 배우면 좋습니다.</p>
+
+<p>그래서 이번 포스팅은 REST API 에서 하지 말아야할 안티 패턴 (REST Anti Patterns) 에 대해 얘기해보자 합니다.</p>
+
+<p><br/></p>
+
+<h2 id="rest-anti-patterns">REST Anti patterns</h2>
+
+
+    <img src="/img/36/36-1.jpg"  alt="REST Anti patterns"  class="center"  />
+
+
+
+<p>인터넷에서 &ldquo;RESTful API&rdquo; 를 찾아보면 많은 블로그, 문서들이 &ldquo;이게 REST 한 API 란다?&rdquo; 라고 얘기합니다.</p>
+
+<p>그렇지만 많은 수의 글들이, 그리고 그 글을 보고 만든 API 들이 REST 하지 않은 경우가 많습니다.</p>
+
+<p>제 생각엔 REST 개념 자체가 어렵기도 하지만, 이걸 제대로 적용하려면 개발자가 챙겨야할 디테일들이 많기 때문이죠.</p>
+
+<p>그래서 저도 급한 경우 REST 의 외관을 표방하지만, 응답에 링크나 하이퍼미디어를 표현하지 않거나 에러 코드를 제공하지 않는 등 디테일을 못챙기는 부분이 많습니다.</p>
+
+<p>늘 그렇지만 개발자, 특히 스타트업 개발자라면 언제나 시간에 쫒기기 마련이고,</p>
+
+<blockquote>
+<p><h2><i>완성 못하는 것보다, 완벽하지 않은 것이 더 쓸만하다</h2> - 키위남</i></p>
+</blockquote>
+
+<p>이라는 말이 있듯이 완벽을 추구하는 것은 개발자에게 위험한 생각일 수도 있기 때문이죠.</p>
+
+<p>그럼 이제 본론으로 넘어가서 REST API Anti pattern 에 대해 알아보도록 하겠습니다.</p>
+
+<p><br/></p>
+
+<h3 id="1-get-post-http-터널링">1. GET,POST HTTP 터널링</h3>
+
+<p>HTTP 터널링은 모든 요청을 하나의 메소드로 처리하는 것을 말합니다.</p>
+
+<p>예를 들어 회원 가입도 GET, 회원 조회도 GET, 회원 삭제도 GET 혹은 POST 로 정보 조회 등이 있습니다.</p>
+
+<pre><code class="language-json"># HTTP 터널링의 예시
+# GET 으로 회원 가입하기
+GET /users?method=create&amp;email=charlie@kiwinam.com
+
+# POST 로 멤버 리스트 가져오기
+POST /users?offset=0&amp;limit=10
+</code></pre>
+
+<p>위 예시처럼 동작과 맞지 않는 메소드를 사용하거나 모든 동작에 하나의 HTTP 메소드를 사용하는 것을 <b>HTTP 터널링</b>이라고 합니다.</p>
+
+<p>이 패턴의 문제점은 이렇습니다.</p>
+
+<ol>
+<li>자원이 URI 에 표현되지 않습니다. URI 보다 쿼리 파라미터에 동작들이 설명됩니다.</li>
+<li>HTTP 메소드가 실제 동작과 일치하지 않습니다.</li>
+<li>크롤러가 의도치 않는 부작용을 일으킬 수도 있습니다. (예를 들어 GET 요청인 줄 알고 크롤러가 시도했지만 실제론 회원 가입이 일어나는 경우)</li>
+</ol>
+
+<p><br/></p>
+
+<h3 id="2-uri-에-행위-method-을-표현">2. URI 에 행위(method)을 표현</h3>
+
+<p>이전 포스팅에서도 언급했던 부분입니다.</p>
+
+<blockquote>
+<p>URI 에 동사를 사용하지 않는다.</p>
+</blockquote>
+
+<p>이 말은 REST 한 API 는 URI 를 명사로만 표현한다 라는 것입니다.</p>
+
+<p>그 의미는 API 가 실제로 하는 동작들, 예를 들어 생성하고, 삭제하고, 수정하고, 검색하고 등의 행위 (method) 는 URI 표현하지 않는다. 라는 의미입니다.</p>
+
+<p>이유는 간단합니다.</p>
+
+<p>REST 는 HTTP 를 어떻게 더 잘 사용할 것인지에 대한 고찰이 담겨 있는 정수 같은 것입니다.</p>
+
+<p>HTTP 에는 이미 4개의 method 로 요청에 대해 정리하였습니다.</p>
+
+<ol>
+<li>GET - 정보를 가져옵니다.</li>
+<li>POST - 정보를 생성합니다.</li>
+<li>PUT - 정보를 수정합니다.</li>
+<li>DELETE - 정보를 삭제합니다.</li>
+</ol>
+
+<p>이미 HTTP 요청을 보내는 순간 API 의 동작을 정의하기 때문에, URI 에 중복해서 표현할 필요가 없습니다.</p>
+
+<p><br/></p>
+
+<h3 id="3-캐시-무시">3. 캐시 무시</h3>
+
+<p>HTTP 에는 속도 증가 그리고 트래픽과 서버의 자원을 아끼기 위한 많은 엔지니어링 테크닉들이 적용되어 있습니다.</p>
+
+<p>그 중 대표적인 것이 여러분들도 익히 들어 알고 계실만한 <code>캐시</code> 입니다.</p>
+
+<p>캐시라는 것은 웹 페이지나 Response 에 대해 내부에 저장하고, 동일한 페이지 혹은 동일한 요청이 있을 때 실제로 서버에 파일을 요청하거나 Request 에 대한 Response 를 받는 게 아니라,</p>
+
+<p>기존에 있는 것을 보여줌으로써 빠르게 + 적은 자원을 사용해 효율적으로 요청을 처리할 수 있습니다.</p>
+
+<p>다만 이런 캐시도 Request Header 에 한 줄을 표시하면 사용하지 못하는데, 그것은</p>
+
+<pre><code class="language-json">Cache-control: no-cache
+</code></pre>
+
+<p>입니다.</p>
+
+<p>이렇게 설정하면 어떤 것도 캐시 내부에 저장할 수 없습니다.</p>
+
+<p>캐시는 RESTful API 에서 중요한 이점 중 하나입니다.</p>
+
+<p><br/></p>
+
+<h3 id="4-하이퍼미디어-무시">4. 하이퍼미디어 무시</h3>
+
+<p>다른 글들에서 HATEOS 라고 표현되는 Hypermedia as the engine of application state 를 무시하지 말자! 라는 내용입니다.</p>
+
+<p>하이퍼미디어의 특징을 이용해서 HTTP Response 에 현재 API 에 관련되어 있는 다른 동작들에 대한 URI 를 함께 제공하는 것을 HATEOS 라고 합니다.</p>
+
+<p>HATEOS 를 잘 활용하면, REST 에서 어려운 개념인, 자기 표현 (Self-DEscriptive) 가 높아져서 API 가독성이 좋아집니다.</p>
+
+<p>하이퍼미디어를 제공하는 API 의 Response 를 예시로 보여드리겠습니다.</p>
+
+<pre><code class="language-json">GET /users?offset=50&amp;limit=50
+HTTP 200
+{
+    &quot;users&quot;: [
+        {
+            &quot;id&quot;: 1,
+            &quot;name&quot;: &quot;kiwinam&quot;
+        },
+        {
+            &quot;id&quot;: 2,
+            &quot;name&quot;: &quot;charlie&quot;
+        }
+    ],
+    &quot;links&quot;:[
+        {
+            &quot;rel&quot;: &quot;self&quot;,
+            &quot;href&quot;: &quot;http://api.kiwinam.com/users&quot;,
+            &quot;method&quot;: &quot;GET&quot;
+        },
+        {
+            &quot;rel&quot;: &quot;prev_list&quot;,
+            &quot;href&quot;: &quot;http://api.kiwinam.com/users?offset=0&amp;limit=50&quot;,
+            &quot;method&quot;: &quot;GET&quot;
+        },
+        {
+            &quot;rel&quot;: &quot;next_list&quot;,
+            &quot;href&quot;: &quot;http://api.kiwinam.com/users/offset=100&amp;limit=50&quot;,
+            &quot;method&quot;: &quot;GET&quot;
+        },
+        {
+            &quot;rel&quot;: &quot;delete_all_users&quot;,
+            &quot;href&quot;: &quot;http://api.kiwinam.com/users&quot;,
+            &quot;method&quot;: &quot;DELETE&quot;
+        },
+        {
+            &quot;rel&quot;: &quot;create_user&quot;,
+            &quot;href&quot;: &quot;http://api.kiwinam.com/users&quot;,
+            &quot;method&quot;: &quot;POST&quot;
+        }
+    ]
+}
+</code></pre>
+
+<p><br/></p>
+
+<h3 id="5-mime-타입-무시">5. MIME 타입 무시</h3>
+
+<p>HTTP 는 요청할 때 내가 보내고자 하는, 받고자하는 컨텐츠의 형식을 사전에 협상할 수 있습니다.</p>
+
+<p>많이 사용하는 컨텐츠 타입은 json, xml, yaml 등이 있는데, 최근 json 형식으로 통일되고 있는 추세입니다.</p>
+
+<p>REST API 를 설계하면서 컨텐츠 타입을 중복해서 제공하거나 제공하지 않는다면, 클라이언트와 소통에 있어 어려움을 겪을 수 있습니다.</p>
+
+<p>예를 들어 json 과 xml 을 동시에 제공하는 경우, 클라이언트는 데이터 파싱을 두 번 해야합니다.</p>
+
+<p>혹은 mime 타입을 설정하지 않는 경우 클라이언트가 어떻게 데이터를 파싱해야할 지 모르는 상황도 생길 수 있습니다.</p>
+
+<p><br/></p>
+
+<h3 id="6-하나의-동작을-위해-여러-번의-api-를-호출하지-말자">6. 하나의 동작을 위해 여러 번의 API 를 호출하지 말자.</h3>
+
+<p>이 부분은 예를 들어 설명하는 것이 더 확실할 것 같아 바로 예시를 보여드리겠습니다.</p>
+
+<pre><code class="language-json"># 회원 가입
+# 1. 동일한 이메일 존재하는지 확인
+GET /users/charlie@kiwinam.com
+
+# 2. 유저 데이터 생성
+POST /users
+{
+    &quot;email&quot;: &quot;charlie@kiwinam.com&quot;
+}
+
+# 3. 유저 데이터에 이름 추가
+PATCH /users/charlie@kiwinam.com
+{
+    &quot;name&quot;: &quot;kiwinam&quot;
+}
+
+# 4. 유저 데이터에 비밀번호 추가
+PATCH /users/charlie@kiwinam.com
+{
+    &quot;password&quot;: &quot;123456&quot;
+}
+</code></pre>
+
+<p>예시를 보여드리기 위해 좀 극단적으로 요청을 많이 보냈지만, 이런 경우가 생길 수 있습니다.</p>
+
+<p>API 는 하나의 동작을 제공하되, 그 안에 여러가지의 기능을 조합해서 하나의 동작을 제공하는 것이 좋습니다.</p>
+
+<pre><code class="language-json"># 회원가입
+POST /users
+{
+    &quot;email&quot;: &quot;charlie@kiwinam.com&quot;,
+    &quot;name&quot;: &quot;kiwinam&quot;,
+    &quot;password&quot;: &quot;123456
+}
+</code></pre>
+
+<h3 id="7-자기-표현-구조를-무시">7. 자기 표현 구조를 무시</h3>
+
+<p>거의 대부분의 REST API 가 REST 하지 않은 증거를 찾는다면, 이 부분에서 찾을 수 있습니다.</p>
+
+<p>자기 표현 구조 (Self-descroptiveness)는 API 표현 자체가 쉽고 직관적이여서 api 만 읽고도 어떤 API 인지 알 수 있는 것을 얘기합니다.</p>
+
+<p>API 의 URI 에서는 자기 표현 구조를 지키려 하는 곳이 많은데, 응답 헤더나 요청 메세지, 응답 메세지에는 자기 표현 구조를 따르지 않는 곳이 많습니다.</p>
+
+<p>위에 언급한 HEATOS 를 지키지 않거나, 헤더에 정보들이 클라이언트, 중개자, 서버에서 API 를 이해하기에 부족한 경우 등이 있습니다.</p>
+
+<p><br/></p>
+
+<hr />
+
+<p>여기까지 REST API 에 대해 자세히 알아봤습니다.</p>
+
+<p>그런데 역시 쉽지 않고, 지켜야할 규칙들과 아직 엔지니어들 사이에도 의견이 분분한 항목 등.. 제대로 된 REST 를 만드는 것은 힘든 일이네요.</p>
+
+<p>규격이 아직 정의 되지 않은 REST 이니, 너무 REST API 가 이렇다, 저렇다 논쟁하지 말고 더 좋은 코드를 위해 고민하는 것도 좋은 방법인 것 같습니다.</p>
+
+<p>이번 포스팅이 여러분들에게 도움이 됐다면 좋겠습니다.</p>
+
+<p>감사합니다.</p>
+
+<p><br/></p>
+
+<h2 id="연관된-글들">연관된 글들</h2>
+
+<h3 id="rest-series-1">REST Series</h3>
+
+<ol>
+<li><a href="https://kiwinam.com/posts/34/what-is-rest-api/" target="_blank">REST API #1 - 이해하기</a></li>
+<li><a href="https://kiwinam.com/posts/35/rest-api-guide/" target="_blank">REST API #2 - 디자인 가이드</a></li>
+<li><a href="https://kiwinam.com/posts/36/rest-anti-patterns/" target="_blank">REST API #3 - 안티 패턴</a> (현재 글)</li>
+</ol>
+
+<p><br/></p>
+
+<p><br/></p>
+]]></content>
+        </item>
         
         <item>
             <title>REST API #2 - 디자인 가이드</title>

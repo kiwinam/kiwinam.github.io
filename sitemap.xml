@@ -4,36 +4,66 @@
   
   <url>
     <loc>https://kiwinam.com/categories/</loc>
-    <lastmod>2020-03-08T23:22:08+09:00</lastmod>
+    <lastmod>2020-03-09T14:48:01+09:00</lastmod>
   </url>
   
   <url>
     <loc>https://kiwinam.com/tags/http/</loc>
-    <lastmod>2020-03-08T23:22:08+09:00</lastmod>
+    <lastmod>2020-03-09T14:48:01+09:00</lastmod>
   </url>
   
   <url>
     <loc>https://kiwinam.com/posts/</loc>
-    <lastmod>2020-03-08T23:22:08+09:00</lastmod>
+    <lastmod>2020-03-09T14:48:01+09:00</lastmod>
   </url>
   
   <url>
     <loc>https://kiwinam.com/categories/rest/</loc>
-    <lastmod>2020-03-08T23:22:08+09:00</lastmod>
+    <lastmod>2020-03-09T14:48:01+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kiwinam.com/tags/rest-anti/</loc>
+    <lastmod>2020-03-09T14:48:01+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kiwinam.com/tags/rest-anti-patterns/</loc>
+    <lastmod>2020-03-09T14:48:01+09:00</lastmod>
   </url>
   
   <url>
     <loc>https://kiwinam.com/tags/rest-api/</loc>
-    <lastmod>2020-03-08T23:22:08+09:00</lastmod>
+    <lastmod>2020-03-09T14:48:01+09:00</lastmod>
   </url>
   
   <url>
-    <loc>https://kiwinam.com/posts/35/rest-api-guide/</loc>
-    <lastmod>2020-03-08T23:22:08+09:00</lastmod>
+    <loc>https://kiwinam.com/posts/36/rest-anti-patterns/</loc>
+    <lastmod>2020-03-09T14:48:01+09:00</lastmod>
   </url>
   
   <url>
     <loc>https://kiwinam.com/tags/rest-api-design/</loc>
+    <lastmod>2020-03-09T14:48:01+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kiwinam.com/tags/restful/</loc>
+    <lastmod>2020-03-09T14:48:01+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kiwinam.com/tags/</loc>
+    <lastmod>2020-03-09T14:48:01+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kiwinam.com/</loc>
+    <lastmod>2020-03-09T14:48:01+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kiwinam.com/posts/35/rest-api-guide/</loc>
     <lastmod>2020-03-08T23:22:08+09:00</lastmod>
   </url>
   
@@ -44,21 +74,6 @@
   
   <url>
     <loc>https://kiwinam.com/tags/rest-design-guide/</loc>
-    <lastmod>2020-03-08T23:22:08+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://kiwinam.com/tags/restful/</loc>
-    <lastmod>2020-03-08T23:22:08+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://kiwinam.com/tags/</loc>
-    <lastmod>2020-03-08T23:22:08+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://kiwinam.com/</loc>
     <lastmod>2020-03-08T23:22:08+09:00</lastmod>
   </url>
   
@@ -233,12 +248,12 @@
   </url>
   
   <url>
-    <loc>https://kiwinam.com/categories/android/</loc>
+    <loc>https://kiwinam.com/tags/android/</loc>
     <lastmod>2018-12-29T10:35:56+09:00</lastmod>
   </url>
   
   <url>
-    <loc>https://kiwinam.com/tags/android/</loc>
+    <loc>https://kiwinam.com/categories/android/</loc>
     <lastmod>2018-12-29T10:35:56+09:00</lastmod>
   </url>
   

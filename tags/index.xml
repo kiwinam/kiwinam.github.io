@@ -6,7 +6,7 @@
     <description>Recent content in Tags on 키위남</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ko-kr</language>
-    <lastBuildDate>Sun, 08 Mar 2020 23:22:08 +0900</lastBuildDate>
+    <lastBuildDate>Mon, 09 Mar 2020 14:48:01 +0900</lastBuildDate>
     
 	<atom:link href="https://kiwinam.com/tags/index.xml" rel="self" type="application/rss+xml" />
     
@@ -14,16 +14,34 @@
     <item>
       <title>HTTP</title>
       <link>https://kiwinam.com/tags/http/</link>
-      <pubDate>Sun, 08 Mar 2020 23:22:08 +0900</pubDate>
+      <pubDate>Mon, 09 Mar 2020 14:48:01 +0900</pubDate>
       
       <guid>https://kiwinam.com/tags/http/</guid>
       <description></description>
     </item>
     
     <item>
+      <title>REST Anti</title>
+      <link>https://kiwinam.com/tags/rest-anti/</link>
+      <pubDate>Mon, 09 Mar 2020 14:48:01 +0900</pubDate>
+      
+      <guid>https://kiwinam.com/tags/rest-anti/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>REST Anti patterns</title>
+      <link>https://kiwinam.com/tags/rest-anti-patterns/</link>
+      <pubDate>Mon, 09 Mar 2020 14:48:01 +0900</pubDate>
+      
+      <guid>https://kiwinam.com/tags/rest-anti-patterns/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>REST API</title>
       <link>https://kiwinam.com/tags/rest-api/</link>
-      <pubDate>Sun, 08 Mar 2020 23:22:08 +0900</pubDate>
+      <pubDate>Mon, 09 Mar 2020 14:48:01 +0900</pubDate>
       
       <guid>https://kiwinam.com/tags/rest-api/</guid>
       <description></description>
@@ -32,9 +50,18 @@
     <item>
       <title>REST API Design</title>
       <link>https://kiwinam.com/tags/rest-api-design/</link>
-      <pubDate>Sun, 08 Mar 2020 23:22:08 +0900</pubDate>
+      <pubDate>Mon, 09 Mar 2020 14:48:01 +0900</pubDate>
       
       <guid>https://kiwinam.com/tags/rest-api-design/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>RESTful</title>
+      <link>https://kiwinam.com/tags/restful/</link>
+      <pubDate>Mon, 09 Mar 2020 14:48:01 +0900</pubDate>
+      
+      <guid>https://kiwinam.com/tags/restful/</guid>
       <description></description>
     </item>
     
@@ -57,15 +84,6 @@
     </item>
     
     <item>
-      <title>RESTful</title>
-      <link>https://kiwinam.com/tags/restful/</link>
-      <pubDate>Sun, 08 Mar 2020 23:22:08 +0900</pubDate>
-      
-      <guid>https://kiwinam.com/tags/restful/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Semantic versioning</title>
       <link>https://kiwinam.com/tags/semantic-versioning/</link>
       <pubDate>Sun, 02 Feb 2020 01:30:00 +0900</pubDate>
@@ -80,24 +98,6 @@
       <pubDate>Sun, 02 Feb 2020 01:30:00 +0900</pubDate>
       
       <guid>https://kiwinam.com/tags/version-naming-rules/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Versioning</title>
-      <link>https://kiwinam.com/tags/versioning/</link>
-      <pubDate>Sun, 02 Feb 2020 01:30:00 +0900</pubDate>
-      
-      <guid>https://kiwinam.com/tags/versioning/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>버전 관리 규칙</title>
-      <link>https://kiwinam.com/tags/%EB%B2%84%EC%A0%84-%EA%B4%80%EB%A6%AC-%EA%B7%9C%EC%B9%99/</link>
-      <pubDate>Sun, 02 Feb 2020 01:30:00 +0900</pubDate>
-      
-      <guid>https://kiwinam.com/tags/%EB%B2%84%EC%A0%84-%EA%B4%80%EB%A6%AC-%EA%B7%9C%EC%B9%99/</guid>
       <description></description>
     </item>
     

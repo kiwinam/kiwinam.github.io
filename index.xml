@@ -6,10 +6,22 @@
     <description>Recent content on 키위남</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ko-kr</language>
-    <lastBuildDate>Sun, 08 Mar 2020 23:22:08 +0900</lastBuildDate>
+    <lastBuildDate>Mon, 09 Mar 2020 14:48:01 +0900</lastBuildDate>
     
 	<atom:link href="https://kiwinam.com/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>REST API #3 - 안티 패턴</title>
+      <link>https://kiwinam.com/posts/36/rest-anti-patterns/</link>
+      <pubDate>Mon, 09 Mar 2020 14:48:01 +0900</pubDate>
+      
+      <guid>https://kiwinam.com/posts/36/rest-anti-patterns/</guid>
+      <description>REST Series  REST API #1 - 이해하기 REST API #2 - 디자인 가이드 REST API #3 - 안티 패턴 (현재 글)  지난 포스팅에 이어, REST API 안티 패턴에 대해 포스팅 해보겠습니다.
+이전 편을 안보신 분이 있다면 위 링크에서 확인해주세요.
+지난 두 포스팅을 통해 REST API 가 어떤 것이고, 어떻게 디자인 하면 되는지 알아봤습니다.
+우리가 어떤 걸 해야한다고 배울 때, 더 효과적으로 배우려면 어떤 걸 하지 말아야하는지를 배우면 좋습니다.</description>
+    </item>
     
     <item>
       <title>REST API #2 - 디자인 가이드</title>
@@ -143,25 +155,6 @@ Mysql 과 마찬가지로 몬티의 딸 이름을 따와서 MariaDB 라고 이�
 Mysql 의 핵심 개발자가 만든 Mariadb 이기 때문에, 대부분의 명령어들이 Mysql 과 유사합니다.
 하지만 Mysql 과 Mariadb 의 핵심적인 차이점은 라이센스에 있습니다.
 오라클이 라이센스를 보유하고 있는 Mysql 과 다르게 MariaDB 는 GPL V2 를 따르는 순수한 오픈 소스이고, 그렇기 때문에 누구든지 커뮤니티 버전을 다운받고 사용할 수 있습니다.</description>
-    </item>
-    
-    <item>
-      <title>[Git] warning: LF will be CRLF 해결법</title>
-      <link>https://kiwinam.com/posts/27/git-lf-will-be-crlf/</link>
-      <pubDate>Fri, 15 Feb 2019 10:35:56 +0900</pubDate>
-      
-      <guid>https://kiwinam.com/posts/27/git-lf-will-be-crlf/</guid>
-      <description>[Git] warning: LF will be CRLF
-
- 
-터미널 or CMD 에서 Git command 를 사용하는데 위 사진 같은 warning 이 나오는 경우가 있습니다.
-왜 이러는 것이고 또 어떻게 해결해야 할까요?
-
-Shutup and code Window user git config --global core.autocrlf true
-Mac user git config --global core.autocrlf true input
-
-
-해당 문제는 OS 별로 엔터키를 입력 했을 때, End line 의 표시 형태가 달라서 발생하는 문제입니다.</description>
     </item>
     
   </channel>
