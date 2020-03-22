@@ -1,0 +1,1011 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-99327236-2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-99327236-2');
+</script>
+
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="author"
+    content="키위남">
+<meta name="description"
+    content="" />
+    <meta name="keywords" content="클린코드"/>
+
+<meta name="robots" content="index" />
+<meta name="robots" content="follow" />
+<link rel="canonical" href="https://kiwinam.com/posts/37/ts-clean-code-guide/" />
+
+
+
+
+<meta property="og:title" content="클린 코드 in TypeScript #1 - 변수와 함수편 :: 키위남">
+
+
+
+<meta property="og:image" content="https://kiwinam.com/img/37/37-1.jpg">
+
+
+<meta name="og:description"
+    content="" />
+
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://kiwinam.com/posts/37/ts-clean-code-guide/">
+
+
+
+<title>클린 코드 in TypeScript #1 - 변수와 함수편 :: 키위남</title>
+
+
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.2.1/css/flag-icon.min.css" rel="stylesheet"
+    type="text/css">
+
+
+
+<link rel="stylesheet" href="/main.min.2f0d18b84270567c723bff340b09ab08db3a7634237cd9667d052eb6b14669b8.css">
+
+
+
+<link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+<link rel="manifest" href="/favicon/site.webmanifest">
+<link rel="mask-icon" href="/favicon/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="#ffffff"><meta itemprop="name" content="클린 코드 in TypeScript #1 - 변수와 함수편">
+<meta itemprop="description" content="정리하자 정리! 코드 정리!
+  https://github.com/ryanmcdermott/clean-code-javascript
+위 링크에 있는 깃헙 ryanmcdermott 의 clean-code-javascript 에서 내용을 참고하여 만든 클린 코드 가이드를 TypeScript 에서 사용할 수 있도록 정리한 글입니다. 
+영어로 된 가이드 글을 번역하고 (고마워요 파파고) 제 생각에 중요하다 느낀 것들만 추려 모아 봤습니다.
+이 곳에 적힌 모든 가이드를 따르긴 힘들겠지만, 이런게 있다라고 읽어보고 코드에 적용해보려는 노력을 하는게 클린 코드로 나아가는 한 걸음이라고 생각합니다!
+이번 편은 변수와 함수에 대해 포스팅하겠습니다.">
+
+
+<meta itemprop="datePublished" content="2020-03-22T14:38:00&#43;09:00" />
+<meta itemprop="dateModified" content="2020-03-22T14:38:00&#43;09:00" />
+<meta itemprop="wordCount" content="1362">
+
+
+
+<meta itemprop="keywords" content="CleanCode,클린코드,코드 컨벤션,Typescript," />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="클린 코드 in TypeScript #1 - 변수와 함수편"/>
+<meta name="twitter:description" content="정리하자 정리! 코드 정리!
+  https://github.com/ryanmcdermott/clean-code-javascript
+위 링크에 있는 깃헙 ryanmcdermott 의 clean-code-javascript 에서 내용을 참고하여 만든 클린 코드 가이드를 TypeScript 에서 사용할 수 있도록 정리한 글입니다. 
+영어로 된 가이드 글을 번역하고 (고마워요 파파고) 제 생각에 중요하다 느낀 것들만 추려 모아 봤습니다.
+이 곳에 적힌 모든 가이드를 따르긴 힘들겠지만, 이런게 있다라고 읽어보고 코드에 적용해보려는 노력을 하는게 클린 코드로 나아가는 한 걸음이라고 생각합니다!
+이번 편은 변수와 함수에 대해 포스팅하겠습니다."/>
+
+
+
+<meta property="article:section" content="Clean Code" />
+
+<meta property="article:published_time" content="2020-03-22 14:38:00 &#43;0900 KST" />
+
+
+
+
+
+
+
+    </head>
+
+    <body class="dark-theme">
+        <div class="container">
+            <header class="header">
+    <span class="header__inner">
+        <a href="/" style="text-decoration: none;">
+    <div class="logo">
+        
+            <span class="logo__mark">></span>
+            <span class="logo__text">cd /home/kiwinam</span>
+            <span class="logo__cursor" style=""></span>
+        
+    </div>
+</a>
+
+
+        <span class="header__right">
+            
+                <nav class="menu">
+    <ul class="menu__inner"><li><a href="https://kiwinam.com/about">about</a></li><li><a href="https://kiwinam.com/categories">categories</a></li><li><a href="https://kiwinam.com/posts">posts</a></li>
+    </ul>
+</nav>
+
+                <span class="menu-trigger">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M0 0h24v24H0z" fill="none"/>
+                        <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+                    </svg>
+                </span>
+            
+
+            <span class="theme-toggle unselectable"><svg class="theme-toggler" width="24" height="24" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M22 41C32.4934 41 41 32.4934 41 22C41 11.5066 32.4934 3 22
+  3C11.5066 3 3 11.5066 3 22C3 32.4934 11.5066 41 22 41ZM7 22C7
+  13.7157 13.7157 7 22 7V37C13.7157 37 7 30.2843 7 22Z"/>
+</svg>
+</span>
+        </span>
+    </span>
+</header>
+
+
+            <div class="content">
+                
+    <main class="post">
+
+        <div class="post-info">
+            <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-clock"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+
+            
+
+            </p>
+        </div>
+
+        <article>
+            <h1 class="post-title"><a href="https://kiwinam.com/posts/37/ts-clean-code-guide/">클린 코드 in TypeScript #1 - 변수와 함수편</a></h1>
+
+            
+
+            <div class="post-content">
+                
+
+<p><br/></p>
+
+<figure class="center" style="width: 80%">
+    <picture class="center" style="display: block; margin: 0px auto; text-align: center" >
+        <source
+            type="image/webp"
+            media="(min-width:461px)"
+            srcset="/img/37/37-1-75.webp"
+        />
+        <source
+            type="image/webp"
+            media="(max-width:460px)"
+            srcset="/img/37/37-1-50.webp"
+        />
+        
+    <img src="/img/37/37-1.jpg"  alt="Clean Code"  class="center"  />
+
+
+    </picture>
+    <figurecaption>
+        <p style="width:100%;text-align: center;">정리하자 정리! 코드 정리!</p>
+    </figurecaption>
+</figure>
+
+<p><a href="https://github.com/ryanmcdermott/clean-code-javascript" target="_blank"><a href="https://github.com/ryanmcdermott/clean-code-javascript">https://github.com/ryanmcdermott/clean-code-javascript</a></a></p>
+
+<p><b>위 링크에 있는 깃헙 ryanmcdermott 의 clean-code-javascript 에서 내용을 참고하여 만든 클린 코드 가이드를 TypeScript 에서 사용할 수 있도록 정리한 글입니다. </b></p>
+
+<p>영어로 된 가이드 글을 번역하고 <del><i>(고마워요 파파고)</i></del> 제 생각에 중요하다 느낀 것들만 추려 모아 봤습니다.</p>
+
+<p>이 곳에 적힌 모든 가이드를 따르긴 힘들겠지만, 이런게 있다라고 읽어보고 코드에 적용해보려는 노력을 하는게 클린 코드로 나아가는 한 걸음이라고 생각합니다!</p>
+
+<p>이번 편은 변수와 함수에 대해 포스팅하겠습니다.</p>
+
+<p><br/></p>
+
+<p><b><em>장문입니다..읽기 전 숨 한 번 쉬고 갈까요?</em></b></p>
+
+<hr />
+
+<h2 id="변수">변수</h2>
+
+<h3 id="의미-있고-발음하기-쉬운-변수-이름">의미 있고 발음하기 쉬운 변수 이름</h3>
+
+<hr />
+
+<p><strong>안좋은 예:</strong></p>
+
+<pre><code class="language-typescript">function between&lt;T&gt;(a1: T, a2: T, a3: T): boolean {
+    return a2 &lt;= a1 &amp;&amp; a1 &lt;= a3;
+}
+</code></pre>
+
+<p><strong>좋은 예:</strong></p>
+
+<pre><code class="language-typescript">function between&lt;T&gt;(value: T, left: T, right: T): boolean {
+    return left &lt;= value &amp;&amp; value &lt;= right;
+}
+</code></pre>
+
+<p>👆<a href="#">맨 위로</a></p>
+
+<p><br/></p>
+
+<h3 id="동일한-유형의-변수에-동일한-어휘를-사용하세요">동일한 유형의 변수에 동일한 어휘를 사용하세요.</h3>
+
+<hr />
+
+<p>안좋은 예:</p>
+
+<pre><code class="language-typescript">function getUserInfo(): User;
+function getUserDetails(): User;
+function getUserData(): User;
+</code></pre>
+
+<p>좋은 예:</p>
+
+<pre><code class="language-typescript">function getUser(): User;
+</code></pre>
+
+<p>👆<a href="#">맨 위로</a></p>
+
+<p><br/></p>
+
+<h3 id="검색-가능한-이름을-사용하세요">검색 가능한 이름을 사용하세요.</h3>
+
+<hr />
+
+<p>안좋은 예:</p>
+
+<pre><code class="language-typescript">// 86400000 의 의미는 뭘까요?
+setTimeout(blastOff, 86400000);
+</code></pre>
+
+<p>좋은 예:</p>
+
+<pre><code class="language-typescript">const MILLISECONDS_IN_A_DAY = 8640000;
+setTimeout(blastOff, MILLISECONDS_IN_A_DAY);
+</code></pre>
+
+<p>👆<a href="#">맨 위로</a></p>
+
+<p><br/></p>
+
+<h3 id="자신만-알아볼-수-있는-작명을-피하세요">자신만 알아볼 수 있는 작명을 피하세요.</h3>
+
+<hr />
+
+<p>안좋은 예:</p>
+
+<pre><code class="language-typescript">declare const users: Map&lt;string, User&gt;;
+
+for (const keyValue of users) {
+    // iterate through users map
+    // keyValue 는 뭘 의미하나요?
+}
+</code></pre>
+
+<p>좋은 예:</p>
+
+<pre><code class="language-typescript">declare const users: Map&lt;string, User&gt;;
+
+for (const [id, user] of users) {
+    // iterate through users map
+}
+</code></pre>
+
+<p>👆<a href="#">맨 위로</a></p>
+
+<p><br/></p>
+
+<h3 id="암시적으로-이름을-짓지-마세요">암시적으로 이름을 짓지 마세요.</h3>
+
+<hr />
+
+<p>안좋은 예:</p>
+
+<pre><code class="language-typescript">const u = getUser();
+const s = getSubscription();
+const t = charge(u, s);
+</code></pre>
+
+<p>좋은 예:</p>
+
+<pre><code class="language-typescript">const user = getUser();
+const subscription = getSubscription();
+const transaction = charge(user, subscription);
+</code></pre>
+
+<p>👆<a href="#">맨 위로</a></p>
+
+<p><br/></p>
+
+<h3 id="문맥상-필요없는-것들을-쓰지-마세요">문맥상 필요없는 것들을 쓰지 마세요.</h3>
+
+<hr />
+
+<p>안좋은 예:</p>
+
+<pre><code class="language-typescript">type Car = {
+    carMake: string;
+    carModel: string;
+    carColor: string;
+}
+
+function print(car: Car): void {
+    console.log(`${car.carMake} ${car.carModel} (${car.carColor})`);
+}
+</code></pre>
+
+<p>좋은 예:</p>
+
+<pre><code class="language-typescript">type Car = {
+    make: string;
+    model: string;
+    color: string;
+}
+
+function print(car: Car): void {
+    console.log(`${car.make} ${car.model} (${car.color})`);
+}
+</code></pre>
+
+<p>👆<a href="#">맨 위로</a></p>
+
+<p><br/></p>
+
+<h3 id="기본-매개변수가-short-circuiting-트릭이나-조건문-보다-깔끔합니다">기본 매개변수가 short circuiting 트릭이나 조건문 보다 깔끔합니다</h3>
+
+<hr />
+
+<p>안좋은 예:</p>
+
+<pre><code class="language-typescript">function loadPages(count?: number) {
+    const loadCount = count !== undefined ? count : 10;
+    // ...
+}
+</code></pre>
+
+<p>좋은 예:</p>
+
+<pre><code class="language-typescript">function loadPages(count: number = 10) {
+    // ...
+}
+</code></pre>
+
+<p>👆<a href="#">맨 위로</a></p>
+
+<p><br/></p>
+
+<h3 id="enum-으로-의도를-코드에-표현해-주세요">enum 으로 의도를 코드에 표현해 주세요.</h3>
+
+<hr />
+
+<p>안좋은 예:</p>
+
+<pre><code class="language-typescript">const GENRE = {
+    ROMANTIC: 'romantic',
+    DRAMA: 'drama',
+    COMEDY: 'comedy',
+    DOCUMENTARY: 'documentary',
+}
+
+projector.configureFilm(GENRE.COMEDY);
+
+class Projector {
+    // delactation of Projector
+    configureFilm(genre) {
+    switch (genre) {
+        case GENRE.ROMANTIC:
+        // some logic to be executed 
+    }
+    }
+}
+</code></pre>
+
+<p>좋은 예:</p>
+
+<pre><code class="language-typescript">enum GENRE {
+    ROMANTIC,
+    DRAMA,
+    COMEDY,
+    DOCUMENTARY,
+}
+
+projector.configureFilm(GENRE.COMEDY);
+
+class Projector {
+    // delactation of Projector
+    configureFilm(genre) {
+    switch (genre) {
+        case GENRE.ROMANTIC:
+        // some logic to be executed 
+    }
+    }
+}
+</code></pre>
+
+<p>👆<a href="#">맨 위로</a></p>
+
+<p><br/></p>
+
+<p><br/></p>
+
+<h2 id="함수">함수</h2>
+
+<hr />
+
+<p><br/></p>
+
+<h3 id="함수-인수를-2개-이하로-줄이세요">함수 인수를 2개 이하로 줄이세요.</h3>
+
+<hr />
+
+<ul>
+<li>매개 변수가 3개 이상이 되면, 테스트 해야하는 경우의 수가 많아집니다.</li>
+<li>1개나 2개의 인자를 가지고 있는 것이 가장 이상적인 케이스입니다.</li>
+<li>2개 이상의 인자를 가진 함수라면 너무 많은 일을 하는 함수일 가능성이 있습니다.</li>
+</ul>
+
+<p>안좋은 예:</p>
+
+<pre><code class="language-typescript">function createMenu(title: string, body: string, buttonText: string, cancellable: boolean) {
+    // ...
+}
+
+createMenu('Foo', 'Bar', 'Baz', true);
+</code></pre>
+
+<p>좋은 예:</p>
+
+<pre><code class="language-typescript">function createMenu(options: { title: string, body: string, buttonText: string, cancellable: boolean }) {
+    // ...
+}
+
+createMenu({
+    title: 'Foo',
+    body: 'Bar',
+    buttonText: 'Baz',
+    cancellable: true
+});
+</code></pre>
+
+<p><strong>Type aliases</strong> 를 사용하면 가독성을 향상 시킬 수 있습니다.</p>
+
+<pre><code class="language-typescript">type MenuOptions = { title: string, body: string, buttonText: string, cancellable: boolean };
+
+function createMenu(options: MenuOptions) {
+    // ...
+}
+
+createMenu({
+    title: 'Foo',
+    body: 'Bar',
+    buttonText: 'Baz',
+    cancellable: true
+});
+</code></pre>
+
+<p>👆<a href="#">맨 위로</a></p>
+
+<p><br/></p>
+
+<h3 id="함수는-한-가지-일을-해야합니다">함수는 한 가지 일을 해야합니다.</h3>
+
+<hr />
+
+<ul>
+<li>소프트웨어 엔지니어링에서 가장 중요한 규칙입니다.</li>
+
+<li><p>함수가 둘 이상의 작업을 수행하면 작성, 테스트 및 추론하기가 더 어렵습니다.</p>
+
+<pre><code class="language-typescript">안좋은 예:
+
+function emailClients(clients: Client[]) {
+clients.forEach((client) =&gt; {
+const clientRecord = database.lookup(client);
+if (clientRecord.isActive()) {
+    email(client);
+}
+});
+}
+</code></pre></li>
+</ul>
+
+<p>좋은 예:</p>
+
+<pre><code class="language-typescript">function emailClients(clients: Client[]) {
+    clients.filter(isActiveClient).forEach(email);
+}
+
+function isActiveClient(client: Client) {
+    const clientRecord = database.lookup(client);
+    return clientRecord.isActive();
+}
+</code></pre>
+
+<p>👆<a href="#">맨 위로</a></p>
+
+<p><br/></p>
+
+<h3 id="함수명은-함수가-무엇을-하는지-알-수-있어야-합니다">함수명은 함수가 무엇을 하는지 알 수 있어야 합니다</h3>
+
+<hr />
+
+<p>안좋은 예:</p>
+
+<pre><code class="language-typescript">function addToDate(date: Date, month: number): Date {
+    // ...
+}
+
+const date = new Date();
+
+// It's hard to tell from the function name what is added
+addToDate(date, 1);
+</code></pre>
+
+<p>좋은 예:</p>
+
+<pre><code class="language-typescript">function addMonthToDate(date: Date, month: number): Date {
+    // ...
+}
+
+const date = new Date();
+addMonthToDate(date, 1);
+</code></pre>
+
+<p>👆<a href="#">맨 위로</a></p>
+
+<p><br/></p>
+
+<h3 id="함수는-단일-행동을-추상화-해야합니다">함수는 단일 행동을 추상화 해야합니다.</h3>
+
+<hr />
+
+<p>안좋은 예:</p>
+
+<pre><code class="language-typescript">function parseCode(code: string) {
+    const REGEXES = [ /* ... */ ];
+    const statements = code.split(' ');
+    const tokens = [];
+
+    REGEXES.forEach((regex) =&gt; {
+    statements.forEach((statement) =&gt; {
+        // ...
+    });
+    });
+
+    const ast = [];
+    tokens.forEach((token) =&gt; {
+    // lex...
+    });
+
+    ast.forEach((node) =&gt; {
+    // parse...
+    });
+}
+</code></pre>
+
+<p>좋은 예:</p>
+
+<pre><code class="language-typescript">const REGEXES = [ /* ... */ ];
+
+function parseCode(code: string) {
+    const tokens = tokenize(code);
+    const syntaxTree = parse(tokens);
+
+    syntaxTree.forEach((node) =&gt; {
+    // parse...
+    });
+}
+
+function tokenize(code: string): Token[] {
+    const statements = code.split(' ');
+    const tokens: Token[] = [];
+
+    REGEXES.forEach((regex) =&gt; {
+    statements.forEach((statement) =&gt; {
+        tokens.push( /* ... */ );
+    });
+    });
+
+    return tokens;
+}
+
+function parse(tokens: Token[]): SyntaxTree {
+    const syntaxTree: SyntaxTree[] = [];
+    tokens.forEach((token) =&gt; {
+    syntaxTree.push( /* ... */ );
+    });
+
+    return syntaxTree;
+}
+</code></pre>
+
+<p>👆<a href="#">맨 위로</a></p>
+
+<p><br/></p>
+
+<h3 id="중복된-코드를-작성하지-마세요">중복된 코드를 작성하지 마세요.</h3>
+
+<hr />
+
+<p>안좋은 예:</p>
+
+<pre><code class="language-typescript">function showDeveloperList(developers: Developer[]) {
+    developers.forEach((developer) =&gt; {
+    const expectedSalary = developer.calculateExpectedSalary();
+    const experience = developer.getExperience();
+    const githubLink = developer.getGithubLink();
+
+    const data = {
+        expectedSalary,
+        experience,
+        githubLink
+    };
+
+    render(data);
+    });
+}
+
+function showManagerList(managers: Manager[]) {
+    managers.forEach((manager) =&gt; {
+    const expectedSalary = manager.calculateExpectedSalary();
+    const experience = manager.getExperience();
+    const portfolio = manager.getMBAProjects();
+
+    const data = {
+        expectedSalary,
+        experience,
+        portfolio
+    };
+
+    render(data);
+    });
+}
+</code></pre>
+
+<p>좋은 예:</p>
+
+<pre><code class="language-typescript">class Developer {
+    // ...
+    getExtraDetails() {
+    return {
+        githubLink: this.githubLink,
+    }
+    }
+}
+
+class Manager {
+    // ...
+    getExtraDetails() {
+    return {
+        portfolio: this.portfolio,
+    }
+    }
+}
+
+function showEmployeeList(employee: Developer | Manager) {
+    employee.forEach((employee) =&gt; {
+    const expectedSalary = employee.calculateExpectedSalary();
+    const experience = employee.getExperience();
+    const extra = employee.getExtraDetails();
+
+    const data = {
+        expectedSalary,
+        experience,
+        extra,
+    };
+
+    render(data);
+    });
+}
+</code></pre>
+
+<p>👆<a href="#">맨 위로</a></p>
+
+<p><br/></p>
+
+<h3 id="object-assign을-사용해-기본-객체를-만드세요">Object.assign을 사용해 기본 객체를 만드세요</h3>
+
+<hr />
+
+<p>안좋은 예:</p>
+
+<pre><code class="language-typescript">type MenuConfig = { title?: string, body?: string, buttonText?: string, cancellable?: boolean };
+
+function createMenu(config: MenuConfig) {
+    config.title = config.title || 'Foo';
+    config.body = config.body || 'Bar';
+    config.buttonText = config.buttonText || 'Baz';
+    config.cancellable = config.cancellable !== undefined ? config.cancellable : true;
+
+    // ...
+}
+
+createMenu({ body: 'Bar' });
+</code></pre>
+
+<p>좋은 예:</p>
+
+<pre><code class="language-typescript">type MenuConfig = { title?: string, body?: string, buttonText?: string, cancellable?: boolean };
+
+function createMenu(config: MenuConfig) {
+    const menuConfig = Object.assign({
+    title: 'Foo',
+    body: 'Bar',
+    buttonText: 'Baz',
+    cancellable: true
+    }, config);
+
+    // ...
+}
+
+createMenu({ body: 'Bar' });
+</code></pre>
+
+<ul>
+<li><p>기본 값을 설정할 수도 있습니다.</p>
+
+<pre><code class="language-typescript">type MenuConfig = { title?: string, body?: string, buttonText?: string, cancellable?: boolean };
+
+function createMenu({ title = 'Foo', body = 'Bar', buttonText = 'Baz', cancellable = true }: MenuConfig) {
+// ...
+}
+
+createMenu({ body: 'Bar' });
+</code></pre></li>
+</ul>
+
+<p>👆<a href="#">맨 위로</a></p>
+
+<p><br/></p>
+
+<h3 id="매개-변수로-플래그를-사용하지-마세요">매개 변수로 플래그를 사용하지 마세요.</h3>
+
+<hr />
+
+<p>안좋은 예:</p>
+
+<pre><code class="language-typescript">function createFile(name: string, temp: boolean) {
+    if (temp) {
+    fs.create(`./temp/${name}`);
+    } else {
+    fs.create(name);
+    }
+}
+</code></pre>
+
+<p>좋은 예:</p>
+
+<pre><code class="language-typescript">function createTempFile(name: string) {
+    createFile(`./temp/${name}`);
+}
+
+function createFile(name: string) {
+    fs.create(name);
+}
+</code></pre>
+
+<p>👆<a href="#">맨 위로</a></p>
+
+<p><br/></p>
+
+<h3 id="전역-함수를-사용하지-마세요">전역 함수를 사용하지 마세요.</h3>
+
+<hr />
+
+<p>안좋은 예:</p>
+
+<pre><code class="language-typescript">declare global {
+    interface Array&lt;T&gt; {
+    diff(other: T[]): Array&lt;T&gt;;
+    }
+}
+
+if (!Array.prototype.diff) {
+    Array.prototype.diff = function &lt;T&gt;(other: T[]): T[] {
+    const hash = new Set(other);
+    return this.filter(elem =&gt; !hash.has(elem));
+    };
+}
+</code></pre>
+
+<p>좋은 예:</p>
+
+<pre><code class="language-typescript">class MyArray&lt;T&gt; extends Array&lt;T&gt; {
+    diff(other: T[]): T[] {
+    const hash = new Set(other);
+    return this.filter(elem =&gt; !hash.has(elem));
+    };
+}
+</code></pre>
+
+<p>👆<a href="#">맨 위로</a></p>
+
+<p><br/></p>
+
+<h3 id="조건문을-캡슐화하세요">조건문을 캡슐화하세요.</h3>
+
+<hr />
+
+<p>안좋은 예:</p>
+
+<pre><code class="language-typescript">if (subscription.isTrial || account.balance &gt; 0) {
+    // ...
+}
+</code></pre>
+
+<p>좋은 예:</p>
+
+<pre><code class="language-typescript">function canActivateService(subscription: Subscription, account: Account) {
+    return subscription.isTrial || account.balance &gt; 0
+}
+
+if (canActivateService(subscription, account)) {
+    // ...
+}
+</code></pre>
+
+<p>👆<a href="#">맨 위로</a></p>
+
+<p><br/></p>
+
+<h3 id="부정적인-조건문을-쓰지-마세요">부정적인 조건문을 쓰지 마세요.</h3>
+
+<hr />
+
+<p>안좋은 예:</p>
+
+<pre><code class="language-typescript">function isEmailNotUsed(email: string): boolean {
+    // ...
+}
+
+if (isEmailNotUsed(email)) {
+    // ...
+}
+</code></pre>
+
+<p>좋은 예:</p>
+
+<pre><code class="language-typescript">function isEmailUsed(email): boolean {
+    // ...
+}
+
+if (!isEmailUsed(node)) {
+    // ...
+}
+</code></pre>
+
+<p>👆<a href="#">맨 위로</a></p>
+
+<p><br/></p>
+
+<h3 id="유형-검사를-하지마세요">유형 검사를 하지마세요.</h3>
+
+<hr />
+
+<ul>
+<li><p>TypeScript 자체가 JS 의 구문적 슈퍼 세트입니다. TS 를 잘 사용하려면 변수와 매개 변수의 유형을 지정하세요.</p>
+
+<pre><code class="language-typescript">안좋은 예:
+
+function travelToTexas(vehicle: Bicycle | Car) {
+if (vehicle instanceof Bicycle) {
+vehicle.pedal(currentLocation, new Location('texas'));
+} else if (vehicle instanceof Car) {
+vehicle.drive(currentLocation, new Location('texas'));
+}
+}
+</code></pre></li>
+</ul>
+
+<p>좋은 예:</p>
+
+<pre><code class="language-typescript">type Vehicle = Bicycle | Car;
+
+function travelToTexas(vehicle: Vehicle) {
+    vehicle.move(currentLocation, new Location('texas'));
+}
+</code></pre>
+
+<p>👆<a href="#">맨 위로</a></p>
+
+<p><br/></p>
+
+<p><br/></p>
+
+<p>여기까지 타입스크립트 클린 코드 가이드, 변수와 함수 편이였습니다.</p>
+
+<p>다음 포스팅은 클래스에 대해 알아보도록 하겠습니다.</p>
+
+<!-- ## 연관된 글들
+### Clean Code Guide Series
+
+1. <a href="https://kiwinam.com/posts/34/what-is-rest-api/" target="_blank">REST API #1 - 이해하기</a>
+2. <a href="https://kiwinam.com/posts/35/rest-api-guide/" target="_blank">REST API #2 - 디자인 가이드</a> 
+3. <a href="https://kiwinam.com/posts/36/rest-anti-patterns/" target="_blank">REST API #3 - 안티 패턴</a> (현재 글) -->
+
+<p><br/></p>
+
+<p><br/></p>
+
+            </div>
+        </article>
+
+        <hr />
+
+        <div class="post-info">
+                <p>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-tag meta-icon"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7" y2="7"></line></svg><span class="tag"><a href="https://kiwinam.com/tags/cleancode">CleanCode</a></span><span class="tag"><a href="https://kiwinam.com/tags/%ED%81%B4%EB%A6%B0%EC%BD%94%EB%93%9C">클린코드</a></span><span class="tag"><a href="https://kiwinam.com/tags/%EC%BD%94%EB%93%9C-%EC%BB%A8%EB%B2%A4%EC%85%98">코드 컨벤션</a></span><span class="tag"><a href="https://kiwinam.com/tags/typescript">Typescript</a></span>
+                </p>
+
+            <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg></p>
+
+            <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-calendar"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>2020-03-22 14:38 &#43;0900</p>
+        </div>
+
+        
+            <div class="pagination">
+                <div class="pagination__title">
+                    <span class="pagination__title-h">Read other posts</span>
+                    <hr />
+                </div>
+
+                <div class="pagination__buttons">
+                    
+
+                    
+                        <span class="button next">
+                            <a href="https://kiwinam.com/posts/36/rest-anti-patterns/">
+                                <span class="button__text">REST API #3 - 안티 패턴</span>
+                                <span class="button__icon">→</span>
+                            </a>
+                        </span>
+                    
+                </div>
+            </div>
+        
+        <script src="https://utteranc.es/client.js"
+            repo="kiwinam/kiwinam-comment"
+            issue-term="pathname"
+            theme="github-dark"
+            crossorigin="anonymous"
+            async>
+    </script>
+        
+    </main>
+
+            </div>
+
+            
+                <footer class="footer">
+    <div class="footer__inner">
+        <div class="footer__content">
+            <span>&copy; 2020</span>
+            
+            <span></span>
+            <span> <a href="https://kiwinam.com/posts/index.xml" target="_blank" title="rss"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-rss"><path d="M4 11a9 9 0 0 1 9 9"></path><path d="M4 4a16 16 0 0 1 16 16"></path><circle cx="5" cy="19" r="1"></circle></svg></a></span>
+        </div>
+    </div>
+    <div class="footer__inner">
+        <div class="footer__content">
+
+        </div>
+    </div>
+    <div class="footer__inner">
+        <div class="footer__content">
+            <span>Powered by <a href="http://gohugo.io">Hugo</a></span>
+            <span>Made with &#10084; by <a href="https://github.com/rhazdon">rhazdon</a></span>
+        </div>
+    </div>
+</footer>
+
+            
+        </div>
+
+        
+
+
+
+
+<script type="text/javascript" src="/bundle.min.4c3fb12a087ceed4a52cb5d57068a9795c7069617a01ca70f788052ad66e1791779e6c72686e1dc0ca13dc03b0203204b6566bb0dd1ee80de2b7ff4d8fe53db2.js" integrity="sha512-TD&#43;xKgh87tSlLLXVcGipeVxwaWF6Acpw94gFKtZuF5F3nmxyaG4dwMoT3AOwIDIEtlZrsN0e6A3it/9Nj&#43;U9sg=="></script>
+
+
+
+    </body>
+</html>

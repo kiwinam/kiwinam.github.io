@@ -4,16 +4,56 @@
   
   <url>
     <loc>https://kiwinam.com/categories/</loc>
-    <lastmod>2020-03-09T14:48:01+09:00</lastmod>
+    <lastmod>2020-03-22T14:38:00+09:00</lastmod>
   </url>
   
   <url>
-    <loc>https://kiwinam.com/tags/http/</loc>
-    <lastmod>2020-03-09T14:48:01+09:00</lastmod>
+    <loc>https://kiwinam.com/categories/clean-code/</loc>
+    <lastmod>2020-03-22T14:38:00+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kiwinam.com/tags/cleancode/</loc>
+    <lastmod>2020-03-22T14:38:00+09:00</lastmod>
   </url>
   
   <url>
     <loc>https://kiwinam.com/posts/</loc>
+    <lastmod>2020-03-22T14:38:00+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kiwinam.com/tags/</loc>
+    <lastmod>2020-03-22T14:38:00+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kiwinam.com/tags/typescript/</loc>
+    <lastmod>2020-03-22T14:38:00+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kiwinam.com/tags/%EC%BD%94%EB%93%9C-%EC%BB%A8%EB%B2%A4%EC%85%98/</loc>
+    <lastmod>2020-03-22T14:38:00+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kiwinam.com/posts/37/ts-clean-code-guide/</loc>
+    <lastmod>2020-03-22T14:38:00+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kiwinam.com/tags/%ED%81%B4%EB%A6%B0%EC%BD%94%EB%93%9C/</loc>
+    <lastmod>2020-03-22T14:38:00+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kiwinam.com/</loc>
+    <lastmod>2020-03-22T14:38:00+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kiwinam.com/tags/http/</loc>
     <lastmod>2020-03-09T14:48:01+09:00</lastmod>
   </url>
   
@@ -49,16 +89,6 @@
   
   <url>
     <loc>https://kiwinam.com/tags/restful/</loc>
-    <lastmod>2020-03-09T14:48:01+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://kiwinam.com/tags/</loc>
-    <lastmod>2020-03-09T14:48:01+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://kiwinam.com/</loc>
     <lastmod>2020-03-09T14:48:01+09:00</lastmod>
   </url>
   
@@ -608,12 +638,12 @@
   </url>
   
   <url>
-    <loc>https://kiwinam.com/categories/java/</loc>
+    <loc>https://kiwinam.com/tags/java/</loc>
     <lastmod>2017-05-03T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://kiwinam.com/tags/java/</loc>
+    <loc>https://kiwinam.com/categories/java/</loc>
     <lastmod>2017-05-03T00:00:00+00:00</lastmod>
   </url>
   

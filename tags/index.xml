@@ -6,10 +6,46 @@
     <description>Recent content in Tags on 키위남</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ko-kr</language>
-    <lastBuildDate>Mon, 09 Mar 2020 14:48:01 +0900</lastBuildDate>
+    <lastBuildDate>Sun, 22 Mar 2020 14:38:00 +0900</lastBuildDate>
     
 	<atom:link href="https://kiwinam.com/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>CleanCode</title>
+      <link>https://kiwinam.com/tags/cleancode/</link>
+      <pubDate>Sun, 22 Mar 2020 14:38:00 +0900</pubDate>
+      
+      <guid>https://kiwinam.com/tags/cleancode/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Typescript</title>
+      <link>https://kiwinam.com/tags/typescript/</link>
+      <pubDate>Sun, 22 Mar 2020 14:38:00 +0900</pubDate>
+      
+      <guid>https://kiwinam.com/tags/typescript/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>코드 컨벤션</title>
+      <link>https://kiwinam.com/tags/%EC%BD%94%EB%93%9C-%EC%BB%A8%EB%B2%A4%EC%85%98/</link>
+      <pubDate>Sun, 22 Mar 2020 14:38:00 +0900</pubDate>
+      
+      <guid>https://kiwinam.com/tags/%EC%BD%94%EB%93%9C-%EC%BB%A8%EB%B2%A4%EC%85%98/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>클린코드</title>
+      <link>https://kiwinam.com/tags/%ED%81%B4%EB%A6%B0%EC%BD%94%EB%93%9C/</link>
+      <pubDate>Sun, 22 Mar 2020 14:38:00 +0900</pubDate>
+      
+      <guid>https://kiwinam.com/tags/%ED%81%B4%EB%A6%B0%EC%BD%94%EB%93%9C/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>HTTP</title>
@@ -62,42 +98,6 @@
       <pubDate>Mon, 09 Mar 2020 14:48:01 +0900</pubDate>
       
       <guid>https://kiwinam.com/tags/restful/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>REST Design</title>
-      <link>https://kiwinam.com/tags/rest-design/</link>
-      <pubDate>Sun, 08 Mar 2020 23:22:08 +0900</pubDate>
-      
-      <guid>https://kiwinam.com/tags/rest-design/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>REST Design Guide</title>
-      <link>https://kiwinam.com/tags/rest-design-guide/</link>
-      <pubDate>Sun, 08 Mar 2020 23:22:08 +0900</pubDate>
-      
-      <guid>https://kiwinam.com/tags/rest-design-guide/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Semantic versioning</title>
-      <link>https://kiwinam.com/tags/semantic-versioning/</link>
-      <pubDate>Sun, 02 Feb 2020 01:30:00 +0900</pubDate>
-      
-      <guid>https://kiwinam.com/tags/semantic-versioning/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Version naming rules</title>
-      <link>https://kiwinam.com/tags/version-naming-rules/</link>
-      <pubDate>Sun, 02 Feb 2020 01:30:00 +0900</pubDate>
-      
-      <guid>https://kiwinam.com/tags/version-naming-rules/</guid>
       <description></description>
     </item>
     
