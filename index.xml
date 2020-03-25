@@ -6,10 +6,24 @@
     <description>Recent content on 키위남</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ko-kr</language>
-    <lastBuildDate>Sun, 22 Mar 2020 14:38:00 +0900</lastBuildDate>
+    <lastBuildDate>Thu, 26 Mar 2020 00:21:00 +0900</lastBuildDate>
     
 	<atom:link href="https://kiwinam.com/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>클린 코드 in TypeScript #2 - 객체와 클래스편</title>
+      <link>https://kiwinam.com/posts/38/ts-clean-code-class/</link>
+      <pubDate>Thu, 26 Mar 2020 00:21:00 +0900</pubDate>
+      
+      <guid>https://kiwinam.com/posts/38/ts-clean-code-class/</guid>
+      <description>Clean code
+  연관된 글들 Clean Code Guide Series  클린 코드 in TypeScript #1 - 변수와 함수편 클린 코드 in TypeScript #2 - 객체와 클래스편 (현재 글)  https://github.com/ryanmcdermott/clean-code-javascript
+위 링크에 있는 깃헙 ryanmcdermott 의 clean-code-javascript 에서 내용을 참고하여 만든 클린 코드 가이드를 TypeScript 에서 사용할 수 있도록 정리한 글입니다. 
+
+이전 편을 안보신 분들이라면 보고 오시는 걸 추천드립니다!
+반복적으로 등장하는 개념, 결국 클린 코드에서 하고자하는 의도를 파악하는데 더 도움이 됩니다.</description>
+    </item>
     
     <item>
       <title>클린 코드 in TypeScript #1 - 변수와 함수편</title>
@@ -136,22 +150,6 @@ yum 과 apt-get 에 익숙하신 분들이라면 더 쉽게 사용할 수 있을
 전 여행을 좋아하는 엔지니어입니다 :)
 스타트업에서 좋은 사람들과 새로운 경험을 하는 것을 좋아합니다.
 Find me  https://github.com/kiwinam https://www.linkedin.com/in/charlie-park-19731b173/ https://www.rocketpunch.com/@mals93  </description>
-    </item>
-    
-    <item>
-      <title>[MySQL] 사용자 추가, 권한 설정, 삭제</title>
-      <link>https://kiwinam.com/posts/29/mysql-add-user/</link>
-      <pubDate>Thu, 02 May 2019 23:35:56 +0900</pubDate>
-      
-      <guid>https://kiwinam.com/posts/29/mysql-add-user/</guid>
-      <description>0. tl; dr MySQL/MariaDB 계정 생성 MySQL 사용자 생성 문법
-CREATE USER &#39;아이디&#39;@&#39;접속대역&#39; IDENTIFIED BY &#39;패스워드&#39;;  예시
-CREATE USER &#39;kiwinam&#39;@&#39;localhost&#39; IDENTIFIED BY &#39;PassWord123&#39;; GRANT ALL PRIVILEGES ON *.* TO &#39;kiwinam&#39;@&#39;localhost&#39; WITH GRANT OPTION;  
-
-1. MySQL 로그인 mysql -u root -p  사용자 계정을 추가하기 위해서는 root 계정으로 로그인 해야합니다.
-
-
-2. 생성된 계정 확인 이미 생성되어 있는 계정들을 확인하고 싶은 경우 아래와 같이 입력하면 됩니다.</description>
     </item>
     
   </channel>

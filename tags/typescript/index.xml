@@ -6,10 +6,24 @@
     <description>Recent content in Typescript on 키위남</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ko-kr</language>
-    <lastBuildDate>Sun, 22 Mar 2020 14:38:00 +0900</lastBuildDate>
+    <lastBuildDate>Thu, 26 Mar 2020 00:21:00 +0900</lastBuildDate>
     
 	<atom:link href="https://kiwinam.com/tags/typescript/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>클린 코드 in TypeScript #2 - 객체와 클래스편</title>
+      <link>https://kiwinam.com/posts/38/ts-clean-code-class/</link>
+      <pubDate>Thu, 26 Mar 2020 00:21:00 +0900</pubDate>
+      
+      <guid>https://kiwinam.com/posts/38/ts-clean-code-class/</guid>
+      <description>Clean code
+  연관된 글들 Clean Code Guide Series  클린 코드 in TypeScript #1 - 변수와 함수편 클린 코드 in TypeScript #2 - 객체와 클래스편 (현재 글)  https://github.com/ryanmcdermott/clean-code-javascript
+위 링크에 있는 깃헙 ryanmcdermott 의 clean-code-javascript 에서 내용을 참고하여 만든 클린 코드 가이드를 TypeScript 에서 사용할 수 있도록 정리한 글입니다. 
+
+이전 편을 안보신 분들이라면 보고 오시는 걸 추천드립니다!
+반복적으로 등장하는 개념, 결국 클린 코드에서 하고자하는 의도를 파악하는데 더 도움이 됩니다.</description>
+    </item>
     
     <item>
       <title>클린 코드 in TypeScript #1 - 변수와 함수편</title>

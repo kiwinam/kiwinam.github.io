@@ -5,8 +5,512 @@
         <description>Recent content in Posts on 키위남</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>ko-kr</language>
-        <lastBuildDate>Sun, 22 Mar 2020 14:38:00 +0900</lastBuildDate>
+        <lastBuildDate>Thu, 26 Mar 2020 00:21:00 +0900</lastBuildDate>
         <atom:link href="https://kiwinam.com/posts/index.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>클린 코드 in TypeScript #2 - 객체와 클래스편</title>
+            <link>https://kiwinam.com/posts/38/ts-clean-code-class/</link>
+            <pubDate>Thu, 26 Mar 2020 00:21:00 +0900</pubDate>
+            
+            <guid>https://kiwinam.com/posts/38/ts-clean-code-class/</guid>
+            <description>Clean code
+  연관된 글들 Clean Code Guide Series  클린 코드 in TypeScript #1 - 변수와 함수편 클린 코드 in TypeScript #2 - 객체와 클래스편 (현재 글)  https://github.com/ryanmcdermott/clean-code-javascript
+위 링크에 있는 깃헙 ryanmcdermott 의 clean-code-javascript 에서 내용을 참고하여 만든 클린 코드 가이드를 TypeScript 에서 사용할 수 있도록 정리한 글입니다. 
+
+이전 편을 안보신 분들이라면 보고 오시는 걸 추천드립니다!
+반복적으로 등장하는 개념, 결국 클린 코드에서 하고자하는 의도를 파악하는데 더 도움이 됩니다.</description>
+            <content type="html"><![CDATA[
+
+<p><br/></p>
+
+<figure class="center" style="width: 80%">
+    <picture class="center" style="display: block; margin: 0px auto; text-align: center" >
+        <source
+            type="image/webp"
+            media="(min-width:461px)"
+            srcset="/img/38/38-1-75.webp"
+        />
+        <source
+            type="image/webp"
+            media="(max-width:460px)"
+            srcset="/img/38/38-1-50.webp"
+        />
+        
+    <img src="/img/38/38-1.jpg"  alt="Clean Code"  class="center"  />
+
+
+    </picture>
+    <figurecaption>
+        <p style="width:100%;text-align: center;">Clean code</p>
+    </figurecaption>
+</figure>
+
+<h2 id="연관된-글들">연관된 글들</h2>
+
+<h3 id="clean-code-guide-series">Clean Code Guide Series</h3>
+
+<ol>
+<li><a href="https://kiwinam.com/posts/37/ts-clean-code-guide/" target="_blank">클린 코드 in TypeScript #1 - 변수와 함수편</a></li>
+<li><a href="https://kiwinam.com/posts/38/ts-clean-code-class/" target="_blank">클린 코드 in TypeScript #2 - 객체와 클래스편</a> (현재 글)</li>
+</ol>
+
+<hr />
+
+<p><a href="https://github.com/ryanmcdermott/clean-code-javascript" target="_blank"><a href="https://github.com/ryanmcdermott/clean-code-javascript">https://github.com/ryanmcdermott/clean-code-javascript</a></a></p>
+
+<p><b>위 링크에 있는 깃헙 ryanmcdermott 의 clean-code-javascript 에서 내용을 참고하여 만든 클린 코드 가이드를 TypeScript 에서 사용할 수 있도록 정리한 글입니다. </b></p>
+
+<p><br/></p>
+
+<p>이전 편을 안보신 분들이라면 보고 오시는 걸 추천드립니다!</p>
+
+<p>반복적으로 등장하는 개념, 결국 클린 코드에서 하고자하는 의도를 파악하는데 더 도움이 됩니다. :)</p>
+
+<p><br/></p>
+
+<h2 id="객체와-데이터-구조">객체와 데이터 구조</h2>
+
+<hr />
+
+<h3 id="getter-setter">Getter &amp; Setter</h3>
+
+<hr />
+
+<ul>
+<li>객체의 캡슐화</li>
+<li>로깅 및 오류 처리가 쉬워짐</li>
+</ul>
+
+<p>안좋은 예:</p>
+
+<pre><code class="language-typescript">type BankAccount = {
+    balance: number;
+    // ...
+}
+
+const value = 100;
+const account: BankAccount = {
+    balance: 0,
+    // ...
+};
+
+if (value &lt; 0) {
+    throw new Error('Cannot set negative balance.');
+}
+
+account.balance = value;
+</code></pre>
+
+<p>좋은 예:</p>
+
+<pre><code class="language-typescript">class BankAccount {
+    private accountBalance: number = 0;
+
+    get balance(): number {
+    return this.accountBalance;
+    }
+
+    set balance(value: number) {
+    if (value &lt; 0) {
+        throw new Error('Cannot set negative balance.');
+    }
+
+    this.accountBalance = value;
+    }
+
+    // ...
+}
+
+// Now `BankAccount` encapsulates the validation logic.
+// If one day the specifications change, and we need extra validation rule,
+// we would have to alter only the `setter` implementation,
+// leaving all dependent code unchanged.
+const account = new BankAccount();
+account.balance = 100;
+</code></pre>
+
+<p>👆<a href="#">맨 위로</a></p>
+
+<p><br/></p>
+
+<h3 id="객체-멤버들의-접근-권한자를-설정하세요">객체 멤버들의 접근 권한자를 설정하세요.</h3>
+
+<hr />
+
+<p>안좋은 예:</p>
+
+<pre><code class="language-typescript">class Circle {
+    radius: number;
+    
+    constructor(radius: number) {
+    this.radius = radius;
+    }
+
+    perimeter() {
+    return 2 * Math.PI * this.radius;
+    }
+
+    surface() {
+    return Math.PI * this.radius * this.radius;
+    }
+}
+</code></pre>
+
+<p>좋은 에:</p>
+
+<pre><code class="language-typescript">class Circle {
+    constructor(private readonly radius: number) {
+    }
+
+    perimeter() {
+    return 2 * Math.PI * this.radius;
+    }
+
+    surface() {
+    return Math.PI * this.radius * this.radius;
+    }
+}
+</code></pre>
+
+<p>👆<a href="#">맨 위로</a></p>
+
+<p><br/></p>
+
+<h3 id="읽기-전용을-활용하세요">읽기 전용을 활용하세요.</h3>
+
+<hr />
+
+<p>안좋은 예:</p>
+
+<pre><code class="language-typescript">interface Config {
+    host: string;
+    port: string;
+    db: string;
+}
+</code></pre>
+
+<p>좋은 예:</p>
+
+<pre><code class="language-typescript">interface Config {
+    readonly host: string;
+    readonly port: string;
+    readonly db: string;
+}
+</code></pre>
+
+<p>👆<a href="#">맨 위로</a></p>
+
+<p><br/></p>
+
+<h2 id="클래스">클래스</h2>
+
+<hr />
+
+<h3 id="클래스는-작게-만들어야합니다">클래스는 작게 만들어야합니다.</h3>
+
+<hr />
+
+<ul>
+<li>클래스이 커지면 의존성이 커집니다.</li>
+<li>단일 책임 원칙의 클래스를 만들도록 노력해야합니다.</li>
+</ul>
+
+<p>안좋은 예:</p>
+
+<pre><code class="language-typescript">class Dashboard {
+    getLanguage(): string { /* ... */ }
+    setLanguage(language: string): void { /* ... */ }
+    showProgress(): void { /* ... */ }
+    hideProgress(): void { /* ... */ }
+    isDirty(): boolean { /* ... */ }
+    disable(): void { /* ... */ }
+    enable(): void { /* ... */ }
+    addSubscription(subscription: Subscription): void { /* ... */ }
+    removeSubscription(subscription: Subscription): void { /* ... */ }
+    addUser(user: User): void { /* ... */ }
+    removeUser(user: User): void { /* ... */ }
+    goToHomePage(): void { /* ... */ }
+    updateProfile(details: UserDetails): void { /* ... */ }
+    getVersion(): string { /* ... */ }
+    // ...
+}
+</code></pre>
+
+<p>좋은 예:</p>
+
+<pre><code class="language-typescript">class Dashboard {
+    disable(): void { /* ... */ }
+    enable(): void { /* ... */ }
+    getVersion(): string { /* ... */ }
+}
+
+// split the responsibilities by moving the remaining methods to other classes
+// ...
+</code></pre>
+
+<p>👆<a href="#">맨 위로</a></p>
+
+<p><br/></p>
+
+<h3 id="높은-응집력과-낮은-결합도를-갖도록-하세요">높은 응집력과 낮은 결합도를 갖도록 하세요.</h3>
+
+<hr />
+
+<ul>
+<li>응집력은 멤버 변수들이 서로 연관 되어 있음을 뜻합니다.</li>
+<li>이상적으로는 모든 멤버 변수가 각자의 메소드를 사용해야합니다.</li>
+<li>하지만 이건 항상 가능한 시나리오는 아니고, 권장하지 않습니다.</li>
+<li>그렇지만 응집력이 높은 클래스를 지향해야합니다.</li>
+<li>결합도는 두 클래스가 서로 연관되어 있거나 의존하는 방식을 나타냅니다.</li>
+<li>A 클래스의 변경이 B 클래스에 영향을 미치지 않으면 A 와 B는 낮은 결합도를 가지고 있다 합니다.</li>
+</ul>
+
+<p>안좋은 예:</p>
+
+<pre><code class="language-typescript">class UserManager {
+    // Bad: each private variable is used by one or another group of methods.
+    // It makes clear evidence that the class is holding more than a single responsibility.
+    // If I need only to create the service to get the transactions for a user,
+    // I'm still forced to pass and instance of `emailSender`.
+    constructor(
+    private readonly db: Database,
+    private readonly emailSender: EmailSender) {
+    }
+
+    async getUser(id: number): Promise&lt;User&gt; {
+    return await db.users.findOne({ id });
+    }
+
+    async getTransactions(userId: number): Promise&lt;Transaction[]&gt; {
+    return await db.transactions.find({ userId });
+    }
+
+    async sendGreeting(): Promise&lt;void&gt; {
+    await emailSender.send('Welcome!');
+    }
+
+    async sendNotification(text: string): Promise&lt;void&gt; {
+    await emailSender.send(text);
+    }
+
+    async sendNewsletter(): Promise&lt;void&gt; {
+    // ...
+    }
+}
+</code></pre>
+
+<p>좋은 예:</p>
+
+<pre><code class="language-typescript">class UserService {
+    constructor(private readonly db: Database) {
+    }
+
+    async getUser(id: number): Promise&lt;User&gt; {
+    return await this.db.users.findOne({ id });
+    }
+
+    async getTransactions(userId: number): Promise&lt;Transaction[]&gt; {
+    return await this.db.transactions.find({ userId });
+    }
+}
+
+class UserNotifier {
+    constructor(private readonly emailSender: EmailSender) {
+    }
+
+    async sendGreeting(): Promise&lt;void&gt; {
+    await this.emailSender.send('Welcome!');
+    }
+
+    async sendNotification(text: string): Promise&lt;void&gt; {
+    await this.emailSender.send(text);
+    }
+
+    async sendNewsletter(): Promise&lt;void&gt; {
+    // ...
+    }
+}
+</code></pre>
+
+<p>👆<a href="#">맨 위로</a></p>
+
+<p><br/></p>
+
+<h3 id="상속보다-구성-composition-을-씁니다">상속보다 구성 (Composition)을 씁니다.</h3>
+
+<hr />
+
+<ul>
+<li>가능한 경우 상속보다 구성을 선호해야 합니다.</li>
+<li>상속은 &ldquo;has-a&rdquo; 관계가 아니라, &ldquo;Is-a&rdquo; 관계를 나타냅니다. (Human is a Animal? OR Human has a Animal?)</li>
+<li>기본 클래스를 변경해서 파생 클래스를 전체적으로 변경할 수 있습니다.</li>
+</ul>
+
+<p>안좋은 예:</p>
+
+<pre><code class="language-typescript">class Employee {
+    constructor(
+    private readonly name: string,
+    private readonly email: string) {
+    }
+
+    // ...
+}
+
+// Bad because Employees &quot;have&quot; tax data. EmployeeTaxData is not a type of Employee
+class EmployeeTaxData extends Employee {
+    constructor(
+    name: string,
+    email: string,
+    private readonly ssn: string,
+    private readonly salary: number) {
+    super(name, email);
+    }
+
+    // ...
+}
+</code></pre>
+
+<p>좋은 예:</p>
+
+<pre><code class="language-typescript">class Employee {
+    private taxData: EmployeeTaxData;
+
+    constructor(
+    private readonly name: string,
+    private readonly email: string) {
+    }
+
+    setTaxData(ssn: string, salary: number): Employee {
+    this.taxData = new EmployeeTaxData(ssn, salary);
+    return this;
+    }
+
+    // ...
+}
+
+class EmployeeTaxData {
+    constructor(
+    public readonly ssn: string,
+    public readonly salary: number) {
+    }
+
+    // ...
+}
+</code></pre>
+
+<p>👆<a href="#">맨 위로</a></p>
+
+<p><br/></p>
+
+<h3 id="메소드-체인을-사용하세요">메소드 체인을 사용하세요.</h3>
+
+<hr />
+
+<ul>
+<li>일반적으로 이 패턴이 유용할 때가 많습니다.</li>
+<li>메소드 체인은 코드를 더 읽기 쉽게 만듭니다.</li>
+</ul>
+
+<p>안좋은 예:</p>
+
+<pre><code class="language-typescript">class QueryBuilder {
+    private collection: string;
+    private pageNumber: number = 1;
+    private itemsPerPage: number = 100;
+    private orderByFields: string[] = [];
+
+    from(collection: string): void {
+    this.collection = collection;
+    }
+
+    page(number: number, itemsPerPage: number = 100): void {
+    this.pageNumber = number;
+    this.itemsPerPage = itemsPerPage;
+    }
+
+    orderBy(...fields: string[]): void {
+    this.orderByFields = fields;
+    }
+
+    build(): Query {
+    // ...
+    }
+}
+
+// ...
+
+const queryBuilder = new QueryBuilder();
+queryBuilder.from('users');
+queryBuilder.page(1, 100);
+queryBuilder.orderBy('firstName', 'lastName');
+
+const query = queryBuilder.build();
+</code></pre>
+
+<p>좋은 예:</p>
+
+<pre><code class="language-typescript">class QueryBuilder {
+    private collection: string;
+    private pageNumber: number = 1;
+    private itemsPerPage: number = 100;
+    private orderByFields: string[] = [];
+
+    from(collection: string): this {
+    this.collection = collection;
+    return this;
+    }
+
+    page(number: number, itemsPerPage: number = 100): this {
+    this.pageNumber = number;
+    this.itemsPerPage = itemsPerPage;
+    return this;
+    }
+
+    orderBy(...fields: string[]): this {
+    this.orderByFields = fields;
+    return this;
+    }
+
+    build(): Query {
+    // ...
+    }
+}
+
+// ...
+
+const query = new QueryBuilder()
+    .from('users')
+    .page(1, 100)
+    .orderBy('firstName', 'lastName')
+    .build();
+</code></pre>
+
+<p>👆<a href="#">맨 위로</a></p>
+
+<p><br/></p>
+
+<p>여기까지 타입스크립트 클린 코드 가이드, 변수와 함수 편이였습니다.</p>
+
+<p>다음 포스팅은 클래스에 대해 알아보도록 하겠습니다.</p>
+
+<p><br/></p>
+
+<h2 id="연관된-글들-1">연관된 글들</h2>
+
+<h3 id="clean-code-guide-series-1">Clean Code Guide Series</h3>
+
+<ol>
+<li><a href="https://kiwinam.com/posts/37/ts-clean-code-guide/" target="_blank">클린 코드 in TypeScript #1 - 변수와 함수편</a></li>
+<li><a href="https://kiwinam.com/posts/38/ts-clean-code-class/" target="_blank">클린 코드 in TypeScript #2 - 객체와 클래스편</a> (현재 글)</li>
+</ol>
+
+<p><br/></p>
+
+<p><br/></p>
+]]></content>
+        </item>
         
         <item>
             <title>클린 코드 in TypeScript #1 - 변수와 함수편</title>
