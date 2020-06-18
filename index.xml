@@ -6,10 +6,23 @@
     <description>Recent content on 키위남</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ko-kr</language>
-    <lastBuildDate>Thu, 26 Mar 2020 00:21:00 +0900</lastBuildDate>
+    <lastBuildDate>Thu, 18 Jun 2020 17:00:00 +0900</lastBuildDate>
     
 	<atom:link href="https://kiwinam.com/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>클린 코드 in TypeScript #3 - 테스트와 주석 편</title>
+      <link>https://kiwinam.com/posts/39/ts-clean-code-test/</link>
+      <pubDate>Thu, 18 Jun 2020 17:00:00 +0900</pubDate>
+      
+      <guid>https://kiwinam.com/posts/39/ts-clean-code-test/</guid>
+      <description>Clean code
+  연관된 글들 Clean Code Guide Series  클린 코드 in TypeScript #1 - 변수와 함수 편 클린 코드 in TypeScript #2 - 객체와 클래스 편 클린 코드 in TypeScript #3 - 테스트와 주석 편 (현재 글)  https://github.com/ryanmcdermott/clean-code-javascript
+위 링크에 있는 깃헙 ryanmcdermott 의 clean-code-javascript 에서 내용을 참고하여 만든 클린 코드 가이드를 TypeScript 에서 사용할 수 있도록 정리한 글입니다. 
+
+이전 편을 안보신 분들이라면 보고 오시는 걸 추천드립니다!</description>
+    </item>
     
     <item>
       <title>클린 코드 in TypeScript #2 - 객체와 클래스편</title>
@@ -137,19 +150,6 @@ xcrun: error: invalid active developer path (/Library/Developer/CommandLineTools
 
 Homebrew 사용법 Homebrew 는 설치처럼 사용하는 방법도 간단합니다.
 yum 과 apt-get 에 익숙하신 분들이라면 더 쉽게 사용할 수 있을거에요.</description>
-    </item>
-    
-    <item>
-      <title>About</title>
-      <link>https://kiwinam.com/about/</link>
-      <pubDate>Fri, 27 Sep 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://kiwinam.com/about/</guid>
-      <description> -- 
-
-전 여행을 좋아하는 엔지니어입니다 :)
-스타트업에서 좋은 사람들과 새로운 경험을 하는 것을 좋아합니다.
-Find me  https://github.com/kiwinam https://www.linkedin.com/in/charlie-park-19731b173/ https://www.rocketpunch.com/@mals93  </description>
     </item>
     
   </channel>

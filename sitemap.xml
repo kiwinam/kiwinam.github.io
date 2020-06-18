@@ -4,51 +4,56 @@
   
   <url>
     <loc>https://kiwinam.com/categories/</loc>
-    <lastmod>2020-03-26T00:21:00+09:00</lastmod>
+    <lastmod>2020-06-18T17:00:00+09:00</lastmod>
   </url>
   
   <url>
     <loc>https://kiwinam.com/categories/clean-code/</loc>
-    <lastmod>2020-03-26T00:21:00+09:00</lastmod>
+    <lastmod>2020-06-18T17:00:00+09:00</lastmod>
   </url>
   
   <url>
     <loc>https://kiwinam.com/tags/cleancode/</loc>
-    <lastmod>2020-03-26T00:21:00+09:00</lastmod>
+    <lastmod>2020-06-18T17:00:00+09:00</lastmod>
   </url>
   
   <url>
     <loc>https://kiwinam.com/posts/</loc>
-    <lastmod>2020-03-26T00:21:00+09:00</lastmod>
+    <lastmod>2020-06-18T17:00:00+09:00</lastmod>
   </url>
   
   <url>
     <loc>https://kiwinam.com/tags/</loc>
-    <lastmod>2020-03-26T00:21:00+09:00</lastmod>
+    <lastmod>2020-06-18T17:00:00+09:00</lastmod>
   </url>
   
   <url>
     <loc>https://kiwinam.com/tags/typescript/</loc>
-    <lastmod>2020-03-26T00:21:00+09:00</lastmod>
+    <lastmod>2020-06-18T17:00:00+09:00</lastmod>
   </url>
   
   <url>
     <loc>https://kiwinam.com/tags/%EC%BD%94%EB%93%9C-%EC%BB%A8%EB%B2%A4%EC%85%98/</loc>
-    <lastmod>2020-03-26T00:21:00+09:00</lastmod>
+    <lastmod>2020-06-18T17:00:00+09:00</lastmod>
   </url>
   
   <url>
-    <loc>https://kiwinam.com/posts/38/ts-clean-code-class/</loc>
-    <lastmod>2020-03-26T00:21:00+09:00</lastmod>
+    <loc>https://kiwinam.com/posts/39/ts-clean-code-test/</loc>
+    <lastmod>2020-06-18T17:00:00+09:00</lastmod>
   </url>
   
   <url>
     <loc>https://kiwinam.com/tags/%ED%81%B4%EB%A6%B0%EC%BD%94%EB%93%9C/</loc>
-    <lastmod>2020-03-26T00:21:00+09:00</lastmod>
+    <lastmod>2020-06-18T17:00:00+09:00</lastmod>
   </url>
   
   <url>
     <loc>https://kiwinam.com/</loc>
+    <lastmod>2020-06-18T17:00:00+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kiwinam.com/posts/38/ts-clean-code-class/</loc>
     <lastmod>2020-03-26T00:21:00+09:00</lastmod>
   </url>
   

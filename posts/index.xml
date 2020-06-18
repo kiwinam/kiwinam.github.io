@@ -5,8 +5,880 @@
         <description>Recent content in Posts on 키위남</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>ko-kr</language>
-        <lastBuildDate>Thu, 26 Mar 2020 00:21:00 +0900</lastBuildDate>
+        <lastBuildDate>Thu, 18 Jun 2020 17:00:00 +0900</lastBuildDate>
         <atom:link href="https://kiwinam.com/posts/index.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>클린 코드 in TypeScript #3 - 테스트와 주석 편</title>
+            <link>https://kiwinam.com/posts/39/ts-clean-code-test/</link>
+            <pubDate>Thu, 18 Jun 2020 17:00:00 +0900</pubDate>
+            
+            <guid>https://kiwinam.com/posts/39/ts-clean-code-test/</guid>
+            <description>Clean code
+  연관된 글들 Clean Code Guide Series  클린 코드 in TypeScript #1 - 변수와 함수 편 클린 코드 in TypeScript #2 - 객체와 클래스 편 클린 코드 in TypeScript #3 - 테스트와 주석 편 (현재 글)  https://github.com/ryanmcdermott/clean-code-javascript
+위 링크에 있는 깃헙 ryanmcdermott 의 clean-code-javascript 에서 내용을 참고하여 만든 클린 코드 가이드를 TypeScript 에서 사용할 수 있도록 정리한 글입니다. 
+
+이전 편을 안보신 분들이라면 보고 오시는 걸 추천드립니다!</description>
+            <content type="html"><![CDATA[
+
+<p><br/></p>
+
+<figure class="center" style="width: 80%">
+    <picture class="center" style="display: block; margin: 0px auto; text-align: center" >
+        <source
+            type="image/webp"
+            media="(min-width:461px)"
+            srcset="/img/38/38-1-75.webp"
+        />
+        <source
+            type="image/webp"
+            media="(max-width:460px)"
+            srcset="/img/38/38-1-50.webp"
+        />
+        
+    <img src="/img/38/38-1.jpg"  alt="Clean Code"  class="center"  />
+
+
+    </picture>
+    <figurecaption>
+        <p style="width:100%;text-align: center;">Clean code</p>
+    </figurecaption>
+</figure>
+
+<h2 id="연관된-글들">연관된 글들</h2>
+
+<h3 id="clean-code-guide-series">Clean Code Guide Series</h3>
+
+<ol>
+<li><a href="https://kiwinam.com/posts/37/ts-clean-code-guide/" target="_blank">클린 코드 in TypeScript #1 - 변수와 함수 편</a></li>
+<li><a href="https://kiwinam.com/posts/38/ts-clean-code-class/" target="_blank">클린 코드 in TypeScript #2 - 객체와 클래스 편</a></li>
+<li><a href="https://kiwinam.com/posts/39/ts-clean-code-test/" target="_blank">클린 코드 in TypeScript #3 - 테스트와 주석 편</a> (현재 글)</li>
+</ol>
+
+<hr />
+
+<p><a href="https://github.com/ryanmcdermott/clean-code-javascript" target="_blank"><a href="https://github.com/ryanmcdermott/clean-code-javascript">https://github.com/ryanmcdermott/clean-code-javascript</a></a></p>
+
+<p><b>위 링크에 있는 깃헙 ryanmcdermott 의 clean-code-javascript 에서 내용을 참고하여 만든 클린 코드 가이드를 TypeScript 에서 사용할 수 있도록 정리한 글입니다. </b></p>
+
+<p><br/></p>
+
+<p>이전 편을 안보신 분들이라면 보고 오시는 걸 추천드립니다!</p>
+
+<p>반복적으로 등장하는 개념, 결국 클린 코드에서 하고자하는 의도를 파악하는데 더 도움이 됩니다. :)</p>
+
+<p><br/></p>
+
+<h2 id="테스트">테스트</h2>
+
+<hr />
+
+<ul>
+<li>테스트는 그 무엇보다 (예를 들면 빠른 개발) 훨씬 중요합니다.</li>
+<li>제품의 모든 코드를 100% 커버하는 테스트를 작성할 필요는 없습니다.</li>
+</ul>
+
+<h3 id="tdd-test-driven-development-의-세-가지-법칙">TDD(Test Driven Development) 의 세 가지 법칙</h3>
+
+<ol>
+<li>실패하는 단위 테스트(Unit test) 를 작성할 때까지 실제 코드를 작성하지 않습니다.</li>
+<li>컴파일은 실패하지 않으면서 실행이 실패하는 정도로만 단위 테스트를 작성합니다.</li>
+<li>현재 실패하는 테스트를 통과할 정도로만 실제 코드를 작성합니다.</li>
+</ol>
+
+<p>위 세 가지 법칙을 준수하면서 개발을 한다면, 이런 일이 생깁니다.</p>
+
+<ul>
+<li>개발과 테스트를 동시에 작성하게 됩니다. 테스트 코드가 작성이 완료된 후 그 테스트를 통과할 정도의 실제 코드가 작성됩니다.</li>
+<li>위 방식으로 모든 팀원이 일하면 매일 수 십개, 수 백개의 테스트 케이스가 나옵니다.</li>
+<li>이렇게 일하면 사실상 실제 코드를 전부 테스트 하는 테스트 케이스가 나옵니다.</li>
+</ul>
+
+<p><br/></p>
+
+<h3 id="첫-번째-그리고-마지막-규칙">첫 번째 그리고 마지막 규칙</h3>
+
+<ul>
+<li>FAST : 테스트는 빨리 실행되어야 합니다. 이유는 테스트를 자주 실행해야 하기 때문입니다.</li>
+<li>Independent : 테스트는 서로 의존해서 안됩니다. 독립적으로 또는 동시에 어떤 순서로 실행하던 동일한 출력을 제공해야합니다.</li>
+<li>Repeatable : 테스트는 모든 환경에서 반복 가능해야 합니다. 실패의 이유에 대해 변명하면 안됩니다.</li>
+<li>Self-Validating : 테스트에 통과한 경우 응답을 위해 로그 파일과 비교할 필요가 없어야 합니다.</li>
+<li>Timely : 단위 테스트는 실제 코드 작성 전에 작성되어야 합니다. 실제 코드를 작성한 다음 테스트 코드를 작성하면 테스트가 너무 어려울 수도 있습니다.</li>
+</ul>
+
+<p><br/></p>
+
+<h3 id="테스트는-하나의-assert-만-가집니다">테스트는 하나의 Assert 만 가집니다.</h3>
+
+<ul>
+<li>테스트는 단일 책임 원칙에 따라야합니다.</li>
+<li>단위 테스트 하나 당 하나의 Assert 만 가집니다.</li>
+</ul>
+
+<p>안좋은 예:</p>
+
+<pre><code class="language-tsx">import { assert } from 'chai';
+
+describe('AwesomeDate', () =&gt; {
+  it('handles date boundaries', () =&gt; {
+    let date: AwesomeDate;
+
+    date = new AwesomeDate('1/1/2015');
+    assert.equal('1/31/2015', date.addDays(30));
+
+    date = new AwesomeDate('2/1/2016');
+    assert.equal('2/29/2016', date.addDays(28));
+
+    date = new AwesomeDate('2/1/2015');
+    assert.equal('3/1/2015', date.addDays(28));
+  });
+});
+</code></pre>
+
+<p>좋은 예:</p>
+
+<pre><code class="language-tsx">import { assert } from 'chai';
+
+describe('AwesomeDate', () =&gt; {
+  it('handles 30-day months', () =&gt; {
+    const date = new AwesomeDate('1/1/2015');
+    assert.equal('1/31/2015', date.addDays(30));
+  });
+
+  it('handles leap year', () =&gt; {
+    const date = new AwesomeDate('2/1/2016');
+    assert.equal('2/29/2016', date.addDays(28));
+  });
+
+  it('handles non-leap year', () =&gt; {
+    const date = new AwesomeDate('2/1/2015');
+    assert.equal('3/1/2015', date.addDays(28));
+  });
+});
+</code></pre>
+
+<p>👆<a href="#">맨 위로</a></p>
+
+<p><br/></p>
+
+<h3 id="테스트의-이름은-의도를-표시해야합니다">테스트의 이름은 의도를 표시해야합니다.</h3>
+
+<p>안좋은 예:</p>
+
+<pre><code class="language-tsx">describe('Calendar', () =&gt; {
+  it('2/29/2020', () =&gt; {
+    // ...
+  });
+
+  it('throws', () =&gt; {
+    // ...
+  });
+});
+</code></pre>
+
+<p>좋은 예:</p>
+
+<pre><code class="language-tsx">describe('Calendar', () =&gt; {
+  it('should handle leap year', () =&gt; {
+    // ...
+  });
+
+  it('should throw when format is invalid', () =&gt; {
+    // ...
+  });
+});
+</code></pre>
+
+<p>👆<a href="#">맨 위로</a></p>
+
+<p><br/></p>
+
+<h2 id="동시성">동시성</h2>
+
+<hr />
+
+<h3 id="callback-대신-promise-가-깔끔합니다">Callback 대신 Promise 가 깔끔합니다.</h3>
+
+<ul>
+<li>콜백은 깔끔하지 않습니다. 또한 과도한 양의 중첩 (이른바 콜백 지옥) 을 유발합니다.</li>
+</ul>
+
+<p>안좋은 예:</p>
+
+<pre><code class="language-tsx">import { get } from 'request';
+import { writeFile } from 'fs';
+
+function downloadPage(url: string, saveTo: string, callback: (error: Error, content?: string) =&gt; void) {
+  get(url, (error, response) =&gt; {
+    if (error) {
+      callback(error);
+    } else {
+      writeFile(saveTo, response.body, (error) =&gt; {
+        if (error) {
+          callback(error);
+        } else {
+          callback(null, response.body);
+        }
+      });
+    }
+  });
+}
+
+downloadPage('https://en.wikipedia.org/wiki/Robert_Cecil_Martin', 'article.html', (error, content) =&gt; {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log(content);
+  }
+});
+</code></pre>
+
+<p>좋은 예:</p>
+
+<pre><code class="language-tsx">import { get } from 'request';
+import { writeFile } from 'fs';
+import { promisify } from 'util';
+
+const write = promisify(writeFile);
+
+function downloadPage(url: string, saveTo: string): Promise&lt;string&gt; {
+  return get(url)
+    .then(response =&gt; write(saveTo, response));
+}
+
+downloadPage('https://en.wikipedia.org/wiki/Robert_Cecil_Martin', 'article.html')
+  .then(content =&gt; console.log(content))
+  .catch(error =&gt; console.error(error));
+</code></pre>
+
+<p>👆<a href="#">맨 위로</a></p>
+
+<p><br/></p>
+
+<h3 id="async-await-가-promise-보다-깔끔합니다">Async / Await 가 Promise 보다 깔끔합니다.</h3>
+
+<ul>
+<li><code>async/await</code> 구문을 사용하면 Promise 보다 이해하기 쉽고 깔끔한 코드를 작성할 수 있습니다.</li>
+</ul>
+
+<p>안좋은 예:</p>
+
+<pre><code class="language-tsx">import { get } from 'request';
+import { writeFile } from 'fs';
+import { promisify } from 'util';
+
+const write = util.promisify(writeFile);
+
+function downloadPage(url: string, saveTo: string): Promise&lt;string&gt; {
+  return get(url).then(response =&gt; write(saveTo, response));
+}
+
+downloadPage('https://en.wikipedia.org/wiki/Robert_Cecil_Martin', 'article.html')
+  .then(content =&gt; console.log(content))
+  .catch(error =&gt; console.error(error));
+</code></pre>
+
+<p>좋은 예:</p>
+
+<pre><code class="language-tsx">import { get } from 'request';
+import { writeFile } from 'fs';
+import { promisify } from 'util';
+
+const write = promisify(writeFile);
+
+async function downloadPage(url: string, saveTo: string): Promise&lt;string&gt; {
+  const response = await get(url);
+  await write(saveTo, response);
+  return response;
+}
+
+// somewhere in an async function
+try {
+  const content = await downloadPage('https://en.wikipedia.org/wiki/Robert_Cecil_Martin', 'article.html');
+  console.log(content);
+} catch (error) {
+  console.error(error);
+}
+</code></pre>
+
+<p>👆<a href="#">맨 위로</a></p>
+
+<p><br/></p>
+
+<h2 id="에러-핸들링">에러 핸들링</h2>
+
+<hr />
+
+<ul>
+<li>타입스크립트에서 에러 발생은 좋은 현상입니다. 런타임에서 무언가가 잘못 되었다는 것을 식별했고, 프로세스를 중지하며, 콘솔에 정확히 어디에서 어떤 이유로 에러가 발생했다고 알려주기 때문이죠.</li>
+</ul>
+
+<h3 id="throw-나-reject-에서는-error-객체를-반환해-주세요">Throw 나 reject 에서는 Error 객체를 반환해 주세요.</h3>
+
+<ul>
+<li>JS 와 TS 에선 throw 구문으로 무엇이든 &ldquo;던질&rdquo; 수 있습니다. 다만 약속된 에러인 Error 객체를 리턴함으로써 상위 코드에서 발생할 수 있는 다른 에러들과 분리될 수 있습니다.</li>
+</ul>
+
+<p>안좋은 예:</p>
+
+<pre><code class="language-tsx">function calculateTotal(items: Item[]): number {
+  throw 'Not implemented.';
+}
+
+function get(): Promise&lt;Item[]&gt; {
+  return Promise.reject('Not implemented.');
+}
+</code></pre>
+
+<p>좋은 예:</p>
+
+<pre><code class="language-tsx">function calculateTotal(items: Item[]): number {
+  throw new Error('Not implemented.');
+}
+
+function get(): Promise&lt;Item[]&gt; {
+  return Promise.reject(new Error('Not implemented.'));
+}
+
+// or equivalent to:
+
+async function get(): Promise&lt;Item[]&gt; {
+  throw new Error('Not implemented.');
+}
+</code></pre>
+
+<p>👆<a href="#">맨 위로</a></p>
+
+<p><br/></p>
+
+<h3 id="catch-된-에러를-무시하지-마세요">catch 된 에러를 무시하지 마세요.</h3>
+
+<ul>
+<li>오류를 catch 문을 통해 인지한 후 아무런 행동을 하지 않고 그저 console.log 로 표시하지 마세요.
+
+<ul>
+<li>console.log 는 수 많은 로그들에 묻혀 못 찾을 가능성이 높습니다.</li>
+<li>에러에 대해 로깅할 수 있는 코드 모듈을 만들고 거기에서 처리하는 것도 좋은 방법입니다.</li>
+</ul></li>
+<li>코드를 작성하면서 무시하고, 추후에 저 코드를 고친다는 건 자동차 키를 눈 속에 묻고 나중에 찾겠다는 것과 다를 바 없습니다.</li>
+</ul>
+
+<p>안좋은 예:</p>
+
+<pre><code class="language-tsx">try {
+  functionThatMightThrow();
+} catch (error) {
+  console.log(error);
+}
+
+// or even worse
+
+try {
+  functionThatMightThrow();
+} catch (error) {
+  // ignore error
+}
+</code></pre>
+
+<p>좋은 예:</p>
+
+<pre><code class="language-tsx">import { logger } from './logging'
+
+try {
+  functionThatMightThrow();
+} catch (error) {
+  logger.log(error);
+}
+</code></pre>
+
+<p>👆<a href="#">맨 위로</a></p>
+
+<p><br/></p>
+
+<h3 id="거절된-promise-를-무시하지-마세요">거절된 Promise 를 무시하지 마세요.</h3>
+
+<ul>
+<li>try/catch 와 비슷한 맥락입니다.</li>
+<li>에러 로깅을 console.log 보단 로깅 라이브러리 혹은 특정 로그 모듈을 만들어서 따로 처리해주세요.</li>
+<li>코드를 작성하면서 reject 된 부분을 무시하지 말고, 꼭 처리 해주세요. 그렇지 않는다면 그 에러가 돌고 돌아 여러분에게 이자가 붙어 찾아옵니다.</li>
+</ul>
+
+<p>안좋은 예:</p>
+
+<pre><code class="language-tsx">getUser()
+  .then((user: User) =&gt; {
+    return sendEmail(user.email, 'Welcome!');
+  })
+  .catch((error) =&gt; {
+    console.log(error);
+  });
+</code></pre>
+
+<p>좋은 예:</p>
+
+<pre><code class="language-tsx">import { logger } from './logging'
+
+getUser()
+  .then((user: User) =&gt; {
+    return sendEmail(user.email, 'Welcome!');
+  })
+  .catch((error) =&gt; {
+    logger.log(error);
+  });
+
+// or using the async/await syntax:
+
+try {
+  const user = await getUser();
+  await sendEmail(user.email, 'Welcome!');
+} catch (error) {
+  logger.log(error);
+}
+</code></pre>
+
+<p>👆<a href="#">맨 위로</a></p>
+
+<p><br/></p>
+
+<h2 id="서식-formatting">서식 (Formatting)</h2>
+
+<hr />
+
+<p>코드 서식 (formatting 혹은 컨벤션으로 이해해도 좋습니다.) 은 정답이 없습니다. 주관적인 영역이고 지켜야할 강력한 법규 같은 건 없습니다. 다만 회사에 따라 정해놓은 코드 규칙이 존재할 수는 있죠.</p>
+
+<p>중요한 것은 정해진 서식이 있다면 그것을 혼자 무시하진 마세요.</p>
+
+<p>그리고 코드 서식은 일반적으로 사용하는 몇 가지 양식이 있습니다. 그 중 하나를 골라 사용하면 됩니다. 앞서 말했듯이 정답이 없기 때문에 어느 것이 더 뛰어나고 좋은 것은 없습니다. 논쟁을 하기보단 하나만 골라서 사용하시면 됩니다.</p>
+
+<p>Typescript 에는 TSLint 라는 강력한 라이브러리가 있습니다. 코드 가독성과 일관성을 정적으로 분석해주는 좋은 툴입니다. TSLint 를 기반으로 하는 다양할 서식 라이브러리들이 있으니 골라서 사용해보세요.</p>
+
+<p>아래에선  대표적으로 통용되는 서식 몇 가지를 소개해 드리겠습니다.</p>
+
+<p><br/></p>
+
+<h3 id="상수에는-대문자를-사용합니다">상수에는 대문자를 사용합니다.</h3>
+
+<p>안좋은 예:</p>
+
+<pre><code class="language-tsx">const DAYS_IN_WEEK = 7;
+const daysInMonth = 30;
+
+const songs = ['Back In Black', 'Stairway to Heaven', 'Hey Jude'];
+const Artists = ['ACDC', 'Led Zeppelin', 'The Beatles'];
+
+function eraseDatabase() {}
+function restore_database() {}
+
+type animal = { /* ... */ }
+type Container = { /* ... */ }
+</code></pre>
+
+<p>좋은 예:</p>
+
+<pre><code class="language-tsx">const DAYS_IN_WEEK = 7;
+const DAYS_IN_MONTH = 30;
+
+const SONGS = ['Back In Black', 'Stairway to Heaven', 'Hey Jude'];
+const ARTISTS = ['ACDC', 'Led Zeppelin', 'The Beatles'];
+
+function eraseDatabase() {}
+function restoreDatabase() {}
+
+type Animal = { /* ... */ }
+type Container = { /* ... */ }
+</code></pre>
+
+<p>👆<a href="#">맨 위로</a></p>
+
+<p><br/></p>
+
+<h3 id="함수가-다른-함수를-호출하는-경우에-서로-가깝게-배치해-주세요">함수가 다른 함수를 호출하는 경우에, 서로 가깝게 배치해 주세요.</h3>
+
+<ul>
+<li>함수 내에서 다른 함수를 다시 호출하는 경우, 두 함수를 세로로 가깝게 배치해 주세요.</li>
+<li>이상적으로는 기존 함수 아래에 피 호출 함수를 두는 것이 좋습니다.</li>
+<li>개발자들은 신문을 읽을 때 처럼 코드를 위에서 아래로 읽는 경향이 있기 때문에 이렇게 배치합니다.</li>
+</ul>
+
+<p>안좋은 예:</p>
+
+<pre><code class="language-tsx">class PerformanceReview {
+  constructor(private readonly employee: Employee) {
+  }
+
+  private lookupPeers() {
+    return db.lookup(this.employee.id, 'peers');
+  }
+
+  private lookupManager() {
+    return db.lookup(this.employee, 'manager');
+  }
+
+  private getPeerReviews() {
+    const peers = this.lookupPeers();
+    // ...
+  }
+
+  review() {
+    this.getPeerReviews();
+    this.getManagerReview();
+    this.getSelfReview();
+
+    // ...
+  }
+
+  private getManagerReview() {
+    const manager = this.lookupManager();
+  }
+
+  private getSelfReview() {
+    // ...
+  }
+}
+
+const review = new PerformanceReview(employee);
+review.review();
+</code></pre>
+
+<p>좋은 예:</p>
+
+<pre><code class="language-tsx">class PerformanceReview {
+  constructor(private readonly employee: Employee) {
+  }
+
+  review() {
+    this.getPeerReviews();
+    this.getManagerReview();
+    this.getSelfReview();
+
+    // ...
+  }
+
+  private getPeerReviews() {
+    const peers = this.lookupPeers();
+    // ...
+  }
+
+  private lookupPeers() {
+    return db.lookup(this.employee.id, 'peers');
+  }
+
+  private getManagerReview() {
+    const manager = this.lookupManager();
+  }
+
+  private lookupManager() {
+    return db.lookup(this.employee, 'manager');
+  }
+
+  private getSelfReview() {
+    // ...
+  }
+}
+
+const review = new PerformanceReview(employee);
+review.review();
+</code></pre>
+
+<p>👆<a href="#">맨 위로</a></p>
+
+<p><br/></p>
+
+<h3 id="import-정리하기">Import 정리하기</h3>
+
+<p>깨끗한 import 문을 보면 코드의 종속성을 파악하기 쉬워집니다.</p>
+
+<ul>
+<li>import 는 알파벳 순으로 정렬해 주세요.</li>
+<li>사용하지 않는 import 는 없애주세요.</li>
+<li>Named import 문은 알파벳 순으로 기재해 주세요. <code>import { A, B, C } from 'foo';</code></li>
+<li>소스를 가져오는 import 도 마찬가지로 알파벳 순으로 기재해 주세요. <code>import * as foo from 'a';</code></li>
+<li>import 의 그룹을 구분할 땐 빈 칸으로 구분합니다.</li>
+<li>그룹의 순서는 아래 형식을 따라 주시면 좋습니다.
+
+<ul>
+<li>Polyfills <code>import 'reflect-metadata';</code></li>
+<li>노드 내장 모듈 (Node builtin modules) <code>import fs from 'fs';</code></li>
+<li>외부 모듈 (external modules) <code>import { query } from 'itiriri';</code></li>
+<li>내부 모듈 (internal modules) <code>import { UserService } from 'src/services/userService';</code></li>
+<li>부모 디렉토리에서 참조하는 모듈 (modules from a parent directory) <code>import foo from '../foo'; import qux from '../../foo/qux';</code></li>
+<li>동일 폴더 혹은 형제 폴더에서 참조하는 모듈 (modules from the same or a sibling&rsquo;s directory) <code>import bar from './bar'; import baz from './bar/baz';</code></li>
+</ul></li>
+</ul>
+
+<p>안좋은 예:</p>
+
+<pre><code class="language-tsx">import { TypeDefinition } from '../types/typeDefinition';
+import { AttributeTypes } from '../model/attribute';
+import { ApiCredentials, Adapters } from './common/api/authorization';
+import fs from 'fs';
+import { ConfigPlugin } from './plugins/config/configPlugin';
+import { BindingScopeEnum, Container } from 'inversify';
+import 'reflect-metadata';
+</code></pre>
+
+<p>좋은 예:</p>
+
+<pre><code class="language-tsx">import 'reflect-metadata';
+
+import fs from 'fs';
+import { BindingScopeEnum, Container } from 'inversify';
+
+import { AttributeTypes } from '../model/attribute';
+import { TypeDefinition } from '../types/typeDefinition';
+
+import { ApiCredentials, Adapters } from './common/api/authorization';
+import { ConfigPlugin } from './plugins/config/configPlugin';
+</code></pre>
+
+<p>👆<a href="#">맨 위로</a></p>
+
+<p><br/></p>
+
+<h3 id="typescript-aliases-를-사용하세요">Typescript aliases 를 사용하세요.</h3>
+
+<ul>
+<li>compilerOptions 에서 baseUrl 의 지정을 통해 더 정리된 import 를 사용할 수 있습니다</li>
+</ul>
+
+<p>안좋은 예:</p>
+
+<pre><code class="language-tsx">import { UserService } from '../../../services/UserService';
+</code></pre>
+
+<p>좋은 예:</p>
+
+<pre><code class="language-tsx">import { UserService } from '@services/UserService';
+
+// tsconfig.json
+...
+  &quot;compilerOptions&quot;: {
+    ...
+    &quot;baseUrl&quot;: &quot;src&quot;,
+    &quot;paths&quot;: {
+      &quot;@services&quot;: [&quot;services/*&quot;]
+    }
+    ...
+  }
+...
+</code></pre>
+
+<p>👆<a href="#">맨 위로</a></p>
+
+<p><br/></p>
+
+<h2 id="주석">주석</h2>
+
+<hr />
+
+<p>주석을 사용할 때는 불가피하게 주석 없이 표현하지 못한 것이 생겼을 때 입니다.</p>
+
+<p>코드는 유일한 온리원 진실과 진리의 원천이여야 합니다.</p>
+
+<p>다시 말해 주석으로 해석하는 것 보다 코드로 얘기해라 라는 것입니다.</p>
+
+<p>안 좋은 코드에 주석을 달지 마라.
+안 좋은 코드를 고쳐라.</p>
+
+<p>— Brian W. Kernighan 및 PJ Plaugher</p>
+
+<p><br/></p>
+
+<h3 id="주석-대신-코드로-설명해라">주석 대신 코드로 설명해라</h3>
+
+<ul>
+<li>좋은 코드는 대부분 코드가 문서 자체입니다.</li>
+</ul>
+
+<p>안좋은 예:</p>
+
+<pre><code class="language-tsx">// Check if subscription is active.
+if (subscription.endDate &gt; Date.now) {  }
+</code></pre>
+
+<p>좋은 예:</p>
+
+<pre><code class="language-tsx">const isSubscriptionActive = subscription.endDate &gt; Date.now;
+if (isSubscriptionActive) { /* ... */ }
+</code></pre>
+
+<p>👆<a href="#">맨 위로</a></p>
+
+<p><br/></p>
+
+<h3 id="코드를-주석-처리해서-남겨두지-마세요">코드를 주석 처리해서 남겨두지 마세요.</h3>
+
+<ul>
+<li>버전 관리 툴이 존재하는 이유입니다. git log 로 확인할 수 있으니 지우세요.</li>
+</ul>
+
+<p>안좋은 예:</p>
+
+<pre><code class="language-tsx">type User = {
+  name: string;
+  email: string;
+  // age: number;
+  // jobPosition: string;
+}
+</code></pre>
+
+<p>좋은 예:</p>
+
+<pre><code class="language-tsx">type User = {
+  name: string;
+  email: string;
+}
+</code></pre>
+
+<p>👆<a href="#">맨 위로</a></p>
+
+<p><br/></p>
+
+<h3 id="저널-주석은-필요-없습니다">저널 주석은 필요 없습니다.</h3>
+
+<ul>
+<li>버전 관리 툴을 쓰세요.</li>
+<li>사용하지 않는 코드, 주석 처리 된 코드, 특히 해당 코드의 타임라인을 설명하는 저널 주석을 필요 없습니다. 다시 한 번 말씀 드리지만, 우리에겐 <code>git log</code> 가 있습니다.</li>
+</ul>
+
+<p>안좋은 예:</p>
+
+<pre><code class="language-tsx">/**
+ * 2016-12-20: Removed monads, didn't understand them (RM)
+ * 2016-10-01: Improved using special monads (JP)
+ * 2016-02-03: Added type-checking (LI)
+ * 2015-03-14: Implemented combine (JR)
+ */
+function combine(a: number, b: number): number {
+  return a + b;
+}
+</code></pre>
+
+<p>좋은 예:</p>
+
+<pre><code class="language-tsx">function combine(a: number, b: number): number {
+  return a + b;
+}
+</code></pre>
+
+<p>👆<a href="#">맨 위로</a></p>
+
+<p><br/></p>
+
+<h3 id="코드의-위치를-표시하려-하지-마세요">코드의 위치를 표시하려 하지 마세요.</h3>
+
+<ul>
+<li>여기서 부터 메소드다~~~ 여기부터 private 메소드가 있다~~ 하는 주석을 없애세요.</li>
+<li>주석 대신 들여 쓰기, 서식, 변수 이름, 함수 이름으로 시각적인 구조를 제공하세요.</li>
+</ul>
+
+<p>안좋은 예:</p>
+
+<pre><code class="language-tsx">////////////////////////////////////////////////////////////////////////////////
+// Client class
+////////////////////////////////////////////////////////////////////////////////
+class Client {
+  id: number;
+  name: string;
+  address: Address;
+  contact: Contact;
+
+  ////////////////////////////////////////////////////////////////////////////////
+  // public methods
+  ////////////////////////////////////////////////////////////////////////////////
+  public describe(): string {
+    // ...
+  }
+
+  ////////////////////////////////////////////////////////////////////////////////
+  // private methods
+  ////////////////////////////////////////////////////////////////////////////////
+  private describeAddress(): string {
+    // ...
+  }
+
+  private describeContact(): string {
+    // ...
+  }
+};
+</code></pre>
+
+<p>좋은 예:</p>
+
+<pre><code class="language-tsx">class Client {
+  id: number;
+  name: string;
+  address: Address;
+  contact: Contact;
+
+  public describe(): string {
+    // ...
+  }
+
+  private describeAddress(): string {
+    // ...
+  }
+
+  private describeContact(): string {
+    // ...
+  }
+};
+</code></pre>
+
+<p>👆<a href="#">맨 위로</a></p>
+
+<p><br/></p>
+
+<h3 id="todo-주석">TODO 주석</h3>
+
+<ul>
+<li>나중에 개선이 필요하다 생각되면, 코드에 <code>// TODO</code> 를 사용해서 메모하세요.</li>
+<li>대부분의 IDE 는 이런 종류의 주석을 컴파일 단계 혹은 커밋할 때 체크 해줍니다.</li>
+<li>단, TODO 주석은 잘못된 코드에 대해 변명을 적는 곳이 아닙니다.</li>
+</ul>
+
+<p>안좋은 예:</p>
+
+<pre><code class="language-tsx">function getActiveSubscriptions(): Promise&lt;Subscription[]&gt; {
+  // ensure `dueDate` is indexed.
+  return db.subscriptions.find({ dueDate: { $lte: new Date() } });
+}
+</code></pre>
+
+<p>좋은 예:</p>
+
+<pre><code class="language-tsx">function getActiveSubscriptions(): Promise&lt;Subscription[]&gt; {
+  // TODO: ensure `dueDate` is indexed.
+  return db.subscriptions.find({ dueDate: { $lte: new Date() } });
+}
+</code></pre>
+
+<p>👆<a href="#">맨 위로</a></p>
+
+<p><br/></p>
+
+<p>여기까지 타입스크립트 클린 코드 가이드, 테스트와 주석 편이였습니다.</p>
+
+<p>정말 길고 긴 클린 코드 가이드였네요.</p>
+
+<p>읽어주신 분들 감사합니다. :)</p>
+
+<p><br/></p>
+
+<h2 id="연관된-글들-1">연관된 글들</h2>
+
+<h3 id="clean-code-guide-series-1">Clean Code Guide Series</h3>
+
+<ol>
+<li><a href="https://kiwinam.com/posts/37/ts-clean-code-guide/" target="_blank">클린 코드 in TypeScript #1 - 변수와 함수편</a></li>
+<li><a href="https://kiwinam.com/posts/38/ts-clean-code-class/" target="_blank">클린 코드 in TypeScript #2 - 객체와 클래스편</a></li>
+<li><a href="https://kiwinam.com/posts/39/ts-clean-code-test/" target="_blank">클린 코드 in TypeScript #3 - 테스트와 주석 편</a> (현재 글)
+<br/></li>
+</ol>
+
+<p><br/></p>
+]]></content>
+        </item>
         
         <item>
             <title>클린 코드 in TypeScript #2 - 객체와 클래스편</title>
