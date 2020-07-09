@@ -2675,10 +2675,11 @@ Response
 <pre><code class="language-json"># 제품들의 정보를 가져와줘 (Response에 여러 개의 정보가 예상됨, 복수형 리소스 *products 표현)
 GET /products 
 
-# charlie 가 가지고 있는 펫의 정보를 가져와줘 (Response에 여러 개의 정보가 예상됨, , 복수형 리소스 *pets 표현)
-GET /users/charlie/pets
-
 # 유저들의 정보를 가져와줘 (Response에 여러 개의 정보가 예상됨, 복수형 리소스 *users 표현)
+GET /users
+
+# charlie 가 가지고 있는 펫의 정보를 가져와줘 (Response에 여러 개의 정보가 예상됨, 복수형 리소스 *pets 표현)
+GET /users/charlie/pets
 </code></pre>
 
 <p>이렇게 여러 개 (복수 개) 의 정보들이 예상되는 요청에 맞게 복수형 리소스로 표현해줍니다.</p>
@@ -2694,7 +2695,7 @@ GET /users/charlie/pets
 
 <li><p>POST &gt; 리소스를 새로 생성합니다.</p></li>
 
-<li><p>PUT/PATCH &gt; 기존 리소스 또는 리소스 전체를 업데이트합니다.</p></li>
+<li><p>PUT/PATCH &gt; 기존 리소스의 일부 또는 전체를 업데이트합니다.</p></li>
 
 <li><p>DELETE &gt; 기존 자원 또는 자원 모음을 삭제합니다.</p></li>
 </ul>
@@ -2716,7 +2717,7 @@ GET /users/charlie/pets
 <ol>
 <li><p>1xx (조건부 응답) - 요청을 받았고, 작업을 계속합니다. (보통 클라이언트와 서버단에선 볼 수 없는 응답 코드입니다.)</p></li>
 
-<li><p>2xx (성공) - 클라이언트가 요청한 동작을 서버가 이해하고 성공적으로 처리했음.</p></li>
+<li><p>2xx (성공) - 클라이언트가 요청한 동작을 서버가 이해하고 성공적으로 처리했습니ㅏ.</p></li>
 
 <li><p>3xx (리다이렉션) - 클라이언트 요청을 마치려면 추가적으로 동작을 행해야합니다.</p></li>
 
@@ -2755,6 +2756,10 @@ GET /users/charlie/pets
 <p><code>/v2/products</code></p>
 
 <p>다만 여기에서 버전 리소스 명을 <code>1.2</code> 처럼 표시하지 마세요. 이는 자주 변경됨을 의미하고, 또한 메이저 버전의 변화가 아닌 점(dot) 이후 버전 명은 이전 버전과 호환됨을 뜻함으로 기존 버전을 유지하는 것이 맞습니다.</p>
+
+<p>버전명에 대한 얘기는 <a href="https://kiwinam.com/posts/33/version-naming/" target="_blank">이 포스팅</a>을 보시면 도움이 될거 같아요.</p>
+
+<p><a href="https://kiwinam.com/posts/33/version-naming/" target="_blank"><a href="https://kiwinam.com/posts/33/version-naming/">https://kiwinam.com/posts/33/version-naming/</a></a></p>
 
 <p><br/></p>
 
