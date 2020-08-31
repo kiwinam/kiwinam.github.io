@@ -5,8 +5,194 @@
         <description>Recent content in Posts on 키위남</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>ko-kr</language>
-        <lastBuildDate>Thu, 18 Jun 2020 17:00:00 +0900</lastBuildDate>
+        <lastBuildDate>Mon, 31 Aug 2020 14:38:00 +0900</lastBuildDate>
         <atom:link href="https://kiwinam.com/posts/index.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>[Android] aab 파일 apk 로 변환하기</title>
+            <link>https://kiwinam.com/posts/40/aab-to-apk/</link>
+            <pubDate>Mon, 31 Aug 2020 14:38:00 +0900</pubDate>
+            
+            <guid>https://kiwinam.com/posts/40/aab-to-apk/</guid>
+            <description>aab to apk
+  
+TL;DR  download bundle tool jar (link 새창)
+ run this code
+java -jar &amp;quot;bundletool-all-1.2.0.jar&amp;quot;(버전은 최신 버전으로 맞추자) build-apks --bundle=&amp;quot;your.aab(변환할 .aab 파일)&amp;quot; --output=&amp;quot;universal.apks(.apk 파일 경로와 파일명&amp;quot; --mode=universal   
+
+aab 가 무엇인가요? 안드로이드 앱 번들 (Android App Bundle)은 지속적으로 증가하는 APK 의 파일 크기를 해결하기 위해 나왔습니다.
+안드로이드는 다양한 플랫폼들을 지원하는게 큰 장점이죠. 확장성이 너무 좋습니다. 하지만 이렇게 다양한 플랫폼을 지원하기 위해 각기 다른 CPU 와 화면 크기, 32bit, 64bit 에 맞는 이진 바이너리 파일들이 APK 에 하나로 뭉쳐져야 합니다.</description>
+            <content type="html"><![CDATA[
+
+<p><br/></p>
+
+<figure class="center" style="width: 80%">
+    <picture class="center" style="display: block; margin: 0px auto; text-align: center" >
+        <source
+            type="image/webp"
+            media="(min-width:461px)"
+            srcset="/img/40/40-1-75.webp"
+        />
+        <source
+            type="image/webp"
+            media="(max-width:460px)"
+            srcset="/img/40/40-1-50.webp"
+        />
+        
+    <img src="/img/40/40-1.png"  alt="aab to apk"  class="center"  />
+
+
+    </picture>
+    <figurecaption>
+        <p style="width:100%;text-align: center;">aab to apk</p>
+    </figurecaption>
+</figure>
+
+<hr />
+
+<p><br/></p>
+
+<h2 id="tl-dr">TL;DR</h2>
+
+<ol>
+<li><p>download bundle tool jar <a href="https://github.com/google/bundletool/releases" target="_blank">(link 새창)</a></p></li>
+
+<li><p>run this code</p>
+
+<pre><code class="language-cmd">java -jar &quot;bundletool-all-1.2.0.jar&quot;(버전은 최신 버전으로 맞추자) build-apks --bundle=&quot;your.aab(변환할 .aab 파일)&quot; --output=&quot;universal.apks(.apk 파일 경로와 파일명&quot; --mode=universal
+</code></pre></li>
+</ol>
+
+<p><br/></p>
+
+<p><br/></p>
+
+<h2 id="aab-가-무엇인가요">aab 가 무엇인가요?</h2>
+
+<p>안드로이드 앱 번들 (Android App Bundle)은 지속적으로 증가하는 APK 의 파일 크기를 해결하기 위해 나왔습니다.</p>
+
+<p>안드로이드는 다양한 플랫폼들을 지원하는게 큰 장점이죠. 확장성이 너무 좋습니다.
+하지만 이렇게 다양한 플랫폼을 지원하기 위해 각기 다른 CPU 와 화면 크기, 32bit, 64bit 에 맞는 이진 바이너리 파일들이 APK 에 하나로 뭉쳐져야 합니다.</p>
+
+<figure class="center" style="width: 80%">
+    <picture class="center" style="display: block; margin: 0px auto; text-align: center" >
+        <source
+            type="image/webp"
+            media="(min-width:461px)"
+            srcset="/img/40/40-2-75.webp"
+        />
+        <source
+            type="image/webp"
+            media="(max-width:460px)"
+            srcset="/img/40/40-2-50.webp"
+        />
+        
+    <img src="/img/40/40-2.png"  alt="increse apk size"  class="center"  />
+
+
+    </picture>
+    <figurecaption>
+        <p style="width:100%;text-align: center;">2013년부터 계속 증가한 APK 사이즈, 현재는 5배가 증가한 상태</p>
+    </figurecaption>
+</figure>
+
+<p>그렇기 때문에 APK는 시간이 지날 수록 점점 더 비대해졌습니다.</p>
+
+<p>문제는 이렇게 비대해진 apk 파일이 앱 다운로드에 좋지 않은 영향을 미친다는 것이였죠.</p>
+
+<figure class="center" style="width: 80%">
+    <picture class="center" style="display: block; margin: 0px auto; text-align: center" >
+        <source
+            type="image/webp"
+            media="(min-width:461px)"
+            srcset="/img/40/40-3-75.webp"
+        />
+        <source
+            type="image/webp"
+            media="(max-width:460px)"
+            srcset="/img/40/40-3-50.webp"
+        />
+        
+    <img src="/img/40/40-3.png"  alt="conversion apk"  class="center"  />
+
+
+    </picture>
+    <figurecaption>
+        <p style="width:100%;text-align: center;">APK 파일 크기에 따른 다운로드 전환율</p>
+    </figurecaption>
+</figure>
+
+<p>사용자들은 APK 의 크기가 커지면 커질수록 다운로드를 꺼려했습니다.</p>
+
+<p><image></p>
+
+<p>그래서 구글에선 앱 번들을 통해 이러한 apk 의 크기를 줄이고자 합니다. 어떻게 그게 가능할까요?</p>
+
+<p><img src="/img/40/40-4.gif" alt="dynamic delivery" /></p>
+
+<p>위 사진 설명처럼, 기존 APK 가 모든 언어, 모든 화면, 모든 CPU 유형을 다 담은 하나의 바이너리 파일이라면,</p>
+
+<p>aab 에서 다이나믹 딜리버리 된 앱은 현재 디바이스에 필요한 정보만 가져와 설치하기 때문에 설치 파일이 작아집니다.</p>
+
+<p><b>그럼 이제 aab 를 apk 로 변환하는 방법을 알아보겠습니다.</b></p>
+
+<p><br/></p>
+
+<h2 id="how-to">How to?</h2>
+
+<h3 id="step-1-download-bundle-tool">Step 1. Download Bundle tool</h3>
+
+<p>가장 먼저 bundle tool 를 다운로드 받아야합니다.</p>
+
+<p>구글에서 제공하고 있는 bundle tool 의 레포지토리에서 다운로드가 가능합니다.</p>
+
+<p><a href="https://github.com/google/bundletool/releases" target="_blank"><a href="https://github.com/google/bundletool/releases">https://github.com/google/bundletool/releases</a> (새창)</a></p>
+
+<p>링크를 들어가신 뒤, jar 압축 파일을 받아주세요.</p>
+
+<figure class="center" style="width: 100%">
+    <picture class="center" style="display: block; margin: 0px auto; text-align: center" >
+        <source
+            type="image/webp"
+            media="(min-width:461px)"
+            srcset="/img/40/40-4-75.webp"
+        />
+        <source
+            type="image/webp"
+            media="(max-width:460px)"
+            srcset="/img/40/40-4-50.webp"
+        />
+        
+    <img src="/img/40/40-4.png"  alt="download"  class="center"  />
+
+
+    </picture>
+</figure>
+
+<p><br/></p>
+
+<h3 id="step-2-run-apk-extra-command">Step 2. Run APK Extra Command</h3>
+
+<p>이제 aab 파일을 apk 파일로 변경할 시간입니다.</p>
+
+<pre><code class="language-cmd">java -jar &quot;bundletool-all-1.2.0.jar&quot;(버전은 최신 버전으로 맞추자) build-apks --bundle=&quot;your.aab(변환할 .aab 파일)&quot; --output=&quot;universal.apks(.apk 파일 경로와 파일명&quot; --mode=universal
+</code></pre>
+
+<p>여기에서 -jar &ldquo;bundletoo..&rdquo; 은 다운로드 받을 때 버전에 따라 버전 명이 변경될 수 있습니다.</p>
+
+<p>위 명령어를 입력해서 aab 파일을 변환 시키면 zip 파일이 반환됩니다.</p>
+
+<p>zip 파일을 열어보면 universal.apk 가 들어 있습니다.</p>
+
+<p><br/></p>
+
+<p>긴 글 읽어주셔서 감사합니다.</p>
+
+<p><br/></p>
+
+<p><br/></p>
+]]></content>
+        </item>
         
         <item>
             <title>클린 코드 in TypeScript #3 - 테스트와 주석 편</title>

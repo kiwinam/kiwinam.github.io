@@ -6,10 +6,26 @@
     <description>Recent content in Android on 키위남</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ko-kr</language>
-    <lastBuildDate>Sat, 29 Dec 2018 10:35:56 +0900</lastBuildDate>
+    <lastBuildDate>Mon, 31 Aug 2020 14:38:00 +0900</lastBuildDate>
     
 	<atom:link href="https://kiwinam.com/tags/android/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>[Android] aab 파일 apk 로 변환하기</title>
+      <link>https://kiwinam.com/posts/40/aab-to-apk/</link>
+      <pubDate>Mon, 31 Aug 2020 14:38:00 +0900</pubDate>
+      
+      <guid>https://kiwinam.com/posts/40/aab-to-apk/</guid>
+      <description>aab to apk
+  
+TL;DR  download bundle tool jar (link 새창)
+ run this code
+java -jar &amp;quot;bundletool-all-1.2.0.jar&amp;quot;(버전은 최신 버전으로 맞추자) build-apks --bundle=&amp;quot;your.aab(변환할 .aab 파일)&amp;quot; --output=&amp;quot;universal.apks(.apk 파일 경로와 파일명&amp;quot; --mode=universal   
+
+aab 가 무엇인가요? 안드로이드 앱 번들 (Android App Bundle)은 지속적으로 증가하는 APK 의 파일 크기를 해결하기 위해 나왔습니다.
+안드로이드는 다양한 플랫폼들을 지원하는게 큰 장점이죠. 확장성이 너무 좋습니다. 하지만 이렇게 다양한 플랫폼을 지원하기 위해 각기 다른 CPU 와 화면 크기, 32bit, 64bit 에 맞는 이진 바이너리 파일들이 APK 에 하나로 뭉쳐져야 합니다.</description>
+    </item>
     
     <item>
       <title>[안드로이드] 네비게이션 드로어 사용법</title>
@@ -163,23 +179,6 @@ if (Build.VERSION.SDK_INT &amp;gt;= 21) { // 21 버전 이상일 때 getWindow()
 이 패턴을 구현한 수많은 라이브러리가 있지만 구글에서 제공하는 가장 간단한 라이브러리를 구현하는 방법에 대해 설명해드리겠습니다.
 1. Result 
 2. Step by Step 2-1. 라이브러리 추가 SwipeRefreshLayout 를 통해 당겨서 새로고침을 구현하기 위해 추가해야할 라이브러리는 &amp;lsquo;com.android.support:design&amp;rsquo; 라이브러리입니다. 예제에서 RecyclerView 위에서 &amp;lsquo; pull to refresh &amp;rsquo; 제스쳐를 실행할거라</description>
-    </item>
-    
-    <item>
-      <title>[안드로이드] RecyclerView [3] Divider 구분선 넣기</title>
-      <link>https://kiwinam.com/posts/10/android-recyclerview-divider/</link>
-      <pubDate>Fri, 28 Apr 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://kiwinam.com/posts/10/android-recyclerview-divider/</guid>
-      <description>[안드로이드] RecyclerView [3] Divider 구분선 넣기
-
-( Divider 가 적용된 RecyclerView 예제, 출저 Google Material Design Guide )
-
-RecyclerView 에서 구분선 혹은 구분자를 추가하는 방법은 다양하게 있습니다.
-하지만 ListView xml 처럼 간단하게 android:divider 로 지정할 수 있는 부분이 아니라 코드적으로 구현 할 수 있습니다.
-그 중 가장 간단한 방법에 대해 설명해드리겠습니다.
-
-1. Result 구분선 (Divider) 만 넣는 방법과 구분선 + 공백 넣는 방법에 대해 설명해드리겠습니다.</description>
     </item>
     
   </channel>

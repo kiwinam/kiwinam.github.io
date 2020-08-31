@@ -1,7 +1,7 @@
 {
 	"version": 3,
 	"file": "main.css",
-	"sourceRoot": "/Users/charlie/Desktop/kiwinam",
+	"sourceRoot": "/Users/charlie/Desktop/projects/project-kiwinam/kiwinam",
 	"sources": [
 		"themes/hello-friend-ng/assets/scss/main.scss",
 		"themes/hello-friend-ng/assets/scss/_normalize.scss",
