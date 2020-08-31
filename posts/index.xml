@@ -20,6 +20,7 @@ TL;DR  download bundle tool jar (link 새창)
  run this code
 java -jar &amp;quot;bundletool-all-1.2.0.jar&amp;quot;(버전은 최신 버전으로 맞추자) build-apks --bundle=&amp;quot;your.aab(변환할 .aab 파일)&amp;quot; --output=&amp;quot;universal.apks(.apk 파일 경로와 파일명&amp;quot; --mode=universal   
 
+
 aab 가 무엇인가요? 안드로이드 앱 번들 (Android App Bundle)은 지속적으로 증가하는 APK 의 파일 크기를 해결하기 위해 나왔습니다.
 안드로이드는 다양한 플랫폼들을 지원하는게 큰 장점이죠. 확장성이 너무 좋습니다. 하지만 이렇게 다양한 플랫폼을 지원하기 위해 각기 다른 CPU 와 화면 크기, 32bit, 64bit 에 맞는 이진 바이너리 파일들이 APK 에 하나로 뭉쳐져야 합니다.</description>
             <content type="html"><![CDATA[
@@ -64,6 +65,10 @@ aab 가 무엇인가요? 안드로이드 앱 번들 (Android App Bundle)은 지�
 </ol>
 
 <p><br/></p>
+
+<p><br/></p>
+
+<hr />
 
 <p><br/></p>
 
