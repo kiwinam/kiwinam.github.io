@@ -5,8 +5,338 @@
         <description>Recent content in Posts on 키위남</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>ko-kr</language>
-        <lastBuildDate>Mon, 31 Aug 2020 14:38:00 +0900</lastBuildDate>
+        <lastBuildDate>Mon, 28 Sep 2020 02:29:00 +0900</lastBuildDate>
         <atom:link href="https://kiwinam.com/posts/index.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>[Javascript] 자바스크립트 호이스팅, 여기서 마무리 짓자.</title>
+            <link>https://kiwinam.com/posts/41/javascript-hoisting/</link>
+            <pubDate>Mon, 28 Sep 2020 02:29:00 +0900</pubDate>
+            
+            <guid>https://kiwinam.com/posts/41/javascript-hoisting/</guid>
+            <description>이번 포스팅에선,
+ 호이스팅이 무엇인가? 변수와 함수에선 어떻게 쓰이는지? 왜 쓰면 안되는지  에 대해서 알아보겠습니다.
+
+1. 안녕 호이스팅(Hoisting) ? 안녕 호이스팅! 1-1. 호이스팅이 뭡니까? 호이스팅(Hoisting) = 선언을 끌어 올린다.
+  자바스크립트에서 호이스팅은 모든 선언문들 (var, let, const, function, class) 을 스코프의 가장 위로 끌어 올립니다.
+Hoisting (명사) 끌어 올리기, 들어올려 나르기 출처 - 네이버 영어 사전  호이스팅이라는 단어의 정의에서도 보이지만, 모든 선언들을 해당 스코프의 {} 제일 위로 끌어 올립니다.</description>
+            <content type="html"><![CDATA[
+
+<p><br/></p>
+
+<p>이번 포스팅에선,</p>
+
+<ul>
+<li>호이스팅이 무엇인가?</li>
+<li>변수와 함수에선 어떻게 쓰이는지?</li>
+<li>왜 쓰면 안되는지</li>
+</ul>
+
+<p>에 대해서 알아보겠습니다.</p>
+
+<hr />
+
+<p><br/></p>
+
+<h2 id="1-안녕-호이스팅-hoisting-안녕-호이스팅">1. 안녕 호이스팅(Hoisting) ? 안녕 호이스팅!</h2>
+
+<h3 id="1-1-호이스팅이-뭡니까">1-1. 호이스팅이 뭡니까?</h3>
+
+<p><code>호이스팅(Hoisting) = 선언을 끌어 올린다.</code></p>
+
+<figure class="center" style="width: 80%">
+    <picture class="center" style="display: block; margin: 0px auto; text-align: center" >
+        <source
+            type="image/webp"
+            media="(min-width:461px)"
+            srcset="/img/41/41-1-75.webp"
+        />
+        <source
+            type="image/webp"
+            media="(max-width:460px)"
+            srcset="/img/41/41-1-50.webp"
+        />
+        
+    <img src="/img/41/41-1.png"  alt="crain"  class="center"  />
+
+
+    </picture>
+</figure>
+
+<p><b>자바스크립트에서 호이스팅은 모든 선언문들 (var, let, const, function, class) 을 스코프의 가장 위로 끌어 올립니다.</b></p>
+
+<pre><code>Hoisting
+(명사) 끌어 올리기, 들어올려 나르기
+
+출처 - 네이버 영어 사전
+</code></pre>
+
+<p>호이스팅이라는 단어의 정의에서도 보이지만, 모든 선언들을 해당 스코프의 <code>{}</code> 제일 위로 끌어 올립니다.</p>
+
+<p>여기서 말하는 <b>선언</b>이란, 자바스크립트에선 변수의 선언과 초기화가 따로 이뤄지고, 이 중에서 <code>선언</code> 을 스코프의 최상단으로 끌어 올리는 것입니다.</p>
+
+<p>이것이 자바스크립트에 변수 선언에서 말하는 호이스팅이죠.</p>
+
+<p><br/></p>
+
+<h3 id="1-2-호이스팅-예제">1-2. 호이스팅 예제</h3>
+
+<p>이렇게 글로만 설명하니 잘 와닿지 않으신다구요? 한 번 코드로 보시죠.</p>
+
+<pre><code class="language-javascript">/// 실제 코드
+console.log(coin); // undefined
+var coin = 10;
+console.log(coin); // 10
+</code></pre>
+
+<p>첫 번째 console.log 는 언뜻 코드 상으로는 에러가 발생할 것 같지만, 에러는 발생하지 않고, undefined 가 나옵니다.</p>
+
+<p>두 번째 console.log 는 결과가 10으로 제대로 나옵니다.</p>
+
+<pre><code class="language-javascript">// 컴파일 단계에서 동작의 이해를 돕기 위한 코드
+var coin; // coin 의 선언문, 스코프의 최상단으로 끌어올림 (호이스팅)
+console.log(coin); // undefined
+coin = 10; // coin 10으로 초기화
+console.log(coin); // 10
+</code></pre>
+
+<p>컴파일 단계에서, <code>var coin = 10</code> 이라는 우리의 코드는</p>
+
+<p>선언문 <code>var coin;</code>, 스코프 최상단 이동,</p>
+
+<p>초기화문 <code>coin = 10;</code> 으로 나뉘어졌습니다. (물론 실제로 코드가 나뉘거나 올라가지 않습니다. 이해를 돕기 위한 설명입니다.)</p>
+
+<p>그렇기 때문에, 실제 코드상에서 아직 선언되지 않았던 coin 의 객체에 접근 하는 것이 가능했고, 아직 값이 없는 변수이기 때문에 undefined 라는 값이 나왔습니다.</p>
+
+<p><br/></p>
+
+<h3 id="1-3-어떻게-호이스팅이-이뤄지나요">1-3. 어떻게 호이스팅이 이뤄지나요?</h3>
+
+<p>자바스크립트 컴파일 단계에서 JS Parser 가 컴파일 할 블록을 먼저 훑어봅니다.</p>
+
+<p>이 과정에서 선언문의 경우, 메모리에 먼저 등록을 하게 됩니다. 메모리에 변수로써 값을 갖지 않고 먼저 등록 되어 있는거죠.</p>
+
+<p>자바스크립트에서 변수 생성 과정을 좀 더 상세하게 과정을 살펴보면,</p>
+
+<ol>
+<li><p>선언 단계 (Declaration phase)</p>
+
+<ul>
+<li>변수 객체 (Variable Object, VO)에 변수를 등록함.</li>
+</ul></li>
+
+<li><p>초기화 단계 (Initialzation phase)</p>
+
+<ul>
+<li>VO 에 등록된 변수를 메모리에 할당, 이 과정에서 변수는 undefined 로 초기화.</li>
+</ul></li>
+
+<li><p>할당 단계 (Assignment phase)</p>
+
+<ul>
+<li>undefined 로 초기화된 변수에 실제 값을 할당</li>
+</ul></li>
+</ol>
+
+<p>이렇게 총 3개의 단계로 이뤄져 있습니다.</p>
+
+<p><code>var</code> 의 경우 선언문에서 선언 단계과 초기화 단계를 동시에 진행합니다. 선언문에서 메모리에 할당되고, 초기 값으로 undefined 까지 설정 되어 있는 것이죠.</p>
+
+<p><code>let</code>, <code>const</code> 같은 경우, 선언문에서 (1. 선언 단계) 만 진행합니다. 이 상태에서 변수에 접근하려 하면 References Error 가 발생하죠. TDZ 에 등록 되었다고 하는데, 이 내용은 다른 포스팅에서 다루도록 하겠습니다.</p>
+
+<p><br/></p>
+
+<p>변수 할당에서 중요한 부분을 차지하는 호이스팅,</p>
+
+<p>우린 그동안 잘 모르고 있었는데, 좀 더 실제 예를 찾아 볼까요?</p>
+
+<pre><code class="language-javascript">var reuslt = add(4, 7); // 아직 선언되지 않은 함수 호출
+
+function add(x, y) {
+  return x + y;
+}
+
+console.log(result); // 정상적으로 11 리턴
+</code></pre>
+
+<p>우리가 흔히 함수가 선언되기 전에 사용하는 경우가 많은데, 꼭 순서에 맞지 않더라도 호출할 수 있습니다.</p>
+
+<p>컴파일 단계에서 이 코드를 해석하자면,</p>
+
+<pre><code class="language-javascript">var result;
+function add(x, y) {
+  return x + y;
+}
+
+result = add(4, 7);
+
+console.log(result);
+</code></pre>
+
+<p>이렇게 우린 잘 알지 못했지만, 호이스팅을 적극적으로 사용 했습니다.</p>
+
+<p><br/></p>
+
+<h2 id="2-변수와-함수에서-호이스팅">2. 변수와 함수에서 호이스팅</h2>
+
+<h3 id="2-1-변수의-경우">2-1. 변수의 경우</h3>
+
+<pre><code class="language-javascript">// 실제 코드
+console.log(myName);
+var myName = &quot;kiwinam&quot;;
+console.log(myName);
+
+// 호이스팅
+var myName;
+console.log(myName);
+myName = &quot;kiwinam&quot;;
+</code></pre>
+
+<p>간단한 변수의 호이스팅입니다.</p>
+
+<p>위에서 봤던 호이스팅과 비슷한 형태입니다.</p>
+
+<pre><code class="language-javascript">// 실제 코드
+function printName(name) {
+  return prefix + name; // undefined+name
+  var prefix = &quot;pre&quot;;
+}
+
+// 호이스팅된 코드
+function printName(name) {
+  var prefix; // 메모리 등록과 undefined 로 초기화
+  return prefix + name;
+  prefix = &quot;pre&quot;; // 리턴 이후 pre 할당
+}
+</code></pre>
+
+<p>함수 내에서도 변수에 대한 호이스팅은 이뤄지고 있습니다</p>
+
+<p>다음 코드에선 좀 다르게 해보겠습니다.</p>
+
+<pre><code class="language-javascript">// 실제 코드
+console.log(name);
+let name = &quot;kiwinam&quot;;
+console.log(name);
+
+// 호이스팅
+let name;
+console.log(name); // Reference Error, TDZ 에 등록되어 보호 중인 변수.
+</code></pre>
+
+<p><b>이렇게 <code>let</code>, <code>const</code> 같은 경우에는 실제 값이 할당되기 전에 호출하게 된다면 Reference Error 가 발생합니다.</b></p>
+
+<p><br/></p>
+
+<h3 id="2-2-함수의-경우">2-2. 함수의 경우</h3>
+
+<p>함수같은 경우는 두 가지 경우가 있습니다. 선언식과 표현식이 있습니다.</p>
+
+<p>선언식은 아래같은 함수를 말합니다.</p>
+
+<pre><code class="language-javascript">// 실제 코드
+console.log(add(2, 3)); // 호이스팅된 함수를 이용해서 정상 결과 출력
+
+function add(x, y) {
+  // 선언식 함수
+  return x + y;
+}
+
+// 호이스팅된 코드
+function add(x, y) {
+  // 선언식 함수
+  return x + y;
+}
+
+console.log(add(2, 3)); // 호이스팅된 함수를 이용해서 정상 결과 출력
+</code></pre>
+
+<p>선언식 함수에선 var 변수처럼 호이스팅이 적용되는 것을 볼 수 있습니다.</p>
+
+<p><br/></p>
+
+<p>표현식 함수는 아래와 같습니다.</p>
+
+<pre><code class="language-javascript">// 실제 코드
+console.log(add(2, 3)); // Error, add is not a function
+
+var add = function (x, y) {
+  // 표현식 함수
+  return x + y;
+};
+
+// 호이스팅 된 코드
+var add; // 변수 add, 최상단으로 끌어올려짐
+add(); // Error, add is not a function
+add = function (x, y) {
+  return x + y;
+};
+</code></pre>
+
+<p>이렇게 표현식 함수에선, 함수가 변수에 할당되기 때문에, 호이스팅이 안되는 것을 알 수 있습니다.</p>
+
+<p><br/></p>
+
+<h3 id="2-3-import-의-경우">2-3. import 의 경우</h3>
+
+<pre><code class="language-javascript">// 실제 코드
+externalAdd();
+import { externalAdd } from &quot;./module&quot;;
+
+// 호이스팅된 코드
+import { externalAdd } from &quot;./module&quot;;
+externalAdd();
+</code></pre>
+
+<p>이렇게 import 구문 같은 경우도 호이스팅 되기 때문에, 스코프의 최상단에 import 구문을 놓는 것이 좋습니다.</p>
+
+<p><br/></p>
+
+<h2 id="3-stop-using-hoisting">3. Stop using Hoisting</h2>
+
+<p>위 설명을 보면, 호이스팅이 개발자에게 편하고 좋은 기능인 것 같은데, 왜 사용하지 말라 할까요?</p>
+
+<p>이유는 간단합니다.</p>
+
+<p><code>Simple is best</code></p>
+
+<p><br/></p>
+
+<p>우린 살아 숨쉬는 제품을 만드는 개발자들입니다.</p>
+
+<p>문제는 이 살아 숨쉬는 제품을 만드는건 우리 팀에서 저 혼자가 아니라는 거죠.</p>
+
+<p>그렇기 때문에 다양한 개발자들과 협업하면서 서로가 이해하기 쉬우면서도 깔끔한 코드를 작성해야 합니다.</p>
+
+<p><br/></p>
+
+<p>그래야만 1년 뒤에 내가 짠 코드가 <code>레거시</code> 라는 이름의 괴물이 되어 돌아오지 않죠.</p>
+
+<p>하지만 변수와 함수 호이스팅을 사용해서 개발을 진행하면, 실제 코드와 컴파일된 코드는 점점 꼬이고 알아보기 힘들게 됩니다.</p>
+
+<p>이런 상황에선 갑자기 이해할 수 없는 에러들이 나오기 시작하죠&hellip;</p>
+
+<p><br/></p>
+
+<p>그 때부턴 우리들은 &ldquo;어라 이럴 일이 없는데, 왜 이러지?&rdquo; 라는 고민을 하게 됩니다.</p>
+
+<p>이런 일을 방지하기 위해 호이스팅 사용을 자제 하는 것이 좋습니다.</p>
+
+<p><br/></p>
+
+<p><br/></p>
+
+<p>여기까지 자바스크립트에서 호이스팅이 변수와 함수에서 어떻게 적용 되는지 정리해봤습니다.</p>
+
+<p>오기입하거나 틀린 내용이 있으면 언제든지 알려주시면 감사하겠습니다.</p>
+
+<p>긴 글 읽어주셔서 감사합니다.</p>
+
+<p><br/></p>
+
+<p><br/></p>
+]]></content>
+        </item>
         
         <item>
             <title>[Android] aab 파일 apk 로 변환하기</title>

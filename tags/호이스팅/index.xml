@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>호이스팅 on 키위남</title>
+    <link>https://kiwinam.com/tags/%ED%98%B8%EC%9D%B4%EC%8A%A4%ED%8C%85/</link>
+    <description>Recent content in 호이스팅 on 키위남</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ko-kr</language>
+    <lastBuildDate>Mon, 28 Sep 2020 02:29:00 +0900</lastBuildDate>
+    
+	<atom:link href="https://kiwinam.com/tags/%ED%98%B8%EC%9D%B4%EC%8A%A4%ED%8C%85/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>[Javascript] 자바스크립트 호이스팅, 여기서 마무리 짓자.</title>
+      <link>https://kiwinam.com/posts/41/javascript-hoisting/</link>
+      <pubDate>Mon, 28 Sep 2020 02:29:00 +0900</pubDate>
+      
+      <guid>https://kiwinam.com/posts/41/javascript-hoisting/</guid>
+      <description>이번 포스팅에선,
+ 호이스팅이 무엇인가? 변수와 함수에선 어떻게 쓰이는지? 왜 쓰면 안되는지  에 대해서 알아보겠습니다.
+
+1. 안녕 호이스팅(Hoisting) ? 안녕 호이스팅! 1-1. 호이스팅이 뭡니까? 호이스팅(Hoisting) = 선언을 끌어 올린다.
+  자바스크립트에서 호이스팅은 모든 선언문들 (var, let, const, function, class) 을 스코프의 가장 위로 끌어 올립니다.
+Hoisting (명사) 끌어 올리기, 들어올려 나르기 출처 - 네이버 영어 사전  호이스팅이라는 단어의 정의에서도 보이지만, 모든 선언들을 해당 스코프의 {} 제일 위로 끌어 올립니다.</description>
+    </item>
+    
+  </channel>
+</rss>
