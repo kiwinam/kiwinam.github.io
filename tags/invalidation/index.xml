@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Invalidation on 키위남</title>
+    <link>https://kiwinam.com/tags/invalidation/</link>
+    <description>Recent content in Invalidation on 키위남</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ko-kr</language>
+    <lastBuildDate>Fri, 13 Nov 2020 22:41:00 +0900</lastBuildDate>
+    
+	<atom:link href="https://kiwinam.com/tags/invalidation/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>[AWS] CloudFront 캐시 삭제, CDN 캐시 무효화</title>
+      <link>https://kiwinam.com/posts/42/remove-cache-cloud-front/</link>
+      <pubDate>Fri, 13 Nov 2020 22:41:00 +0900</pubDate>
+      
+      <guid>https://kiwinam.com/posts/42/remove-cache-cloud-front/</guid>
+      <description>TR;DR  AWS Cloudfront 콘솔 접속 Distribution 중 캐시 무효화 할 것 선택 상단 탭 중 &amp;lsquo;Invalidations&amp;rsquo; 선택 Create Invalidation Object Paths 에 전체 경로 무효화 선언 /*  
+요즘 제가 개발하는 서비스의 홈페이지는 AWS S3 Bucket + Route 53 + Cloudfront 로 개발 되어 있습니다.
+AWS 에서 정적 웹을 호스팅 할 때 흔히 볼 수 있는 조합이죠.
+S3는 파일 스토리지, Route 53은 DNS 의 역할을 하고 있습니다.</description>
+    </item>
+    
+  </channel>
+</rss>

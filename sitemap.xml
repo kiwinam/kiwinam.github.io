@@ -3,12 +3,82 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://kiwinam.com/posts/41/javascript-hoisting/</loc>
-    <lastmod>2020-09-28T02:29:00+09:00</lastmod>
+    <loc>https://kiwinam.com/posts/42/remove-cache-cloud-front/</loc>
+    <lastmod>2020-11-13T22:41:00+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kiwinam.com/categories/aws/</loc>
+    <lastmod>2020-11-13T22:41:00+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kiwinam.com/tags/aws-cloudfront/</loc>
+    <lastmod>2020-11-13T22:41:00+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kiwinam.com/tags/cache/</loc>
+    <lastmod>2020-11-13T22:41:00+09:00</lastmod>
   </url>
   
   <url>
     <loc>https://kiwinam.com/categories/</loc>
+    <lastmod>2020-11-13T22:41:00+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kiwinam.com/tags/cdn/</loc>
+    <lastmod>2020-11-13T22:41:00+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kiwinam.com/tags/cdn-%EB%AC%B4%ED%9A%A8%ED%99%94/</loc>
+    <lastmod>2020-11-13T22:41:00+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kiwinam.com/tags/cloudfront/</loc>
+    <lastmod>2020-11-13T22:41:00+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kiwinam.com/tags/invalidation/</loc>
+    <lastmod>2020-11-13T22:41:00+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kiwinam.com/posts/</loc>
+    <lastmod>2020-11-13T22:41:00+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kiwinam.com/tags/remove/</loc>
+    <lastmod>2020-11-13T22:41:00+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kiwinam.com/tags/</loc>
+    <lastmod>2020-11-13T22:41:00+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kiwinam.com/tags/%EC%BA%90%EC%8B%9C-%EB%AC%B4%ED%9A%A8%ED%99%94/</loc>
+    <lastmod>2020-11-13T22:41:00+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kiwinam.com/tags/%EC%BA%90%EC%8B%9C-%EC%82%AD%EC%A0%9C/</loc>
+    <lastmod>2020-11-13T22:41:00+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kiwinam.com/</loc>
+    <lastmod>2020-11-13T22:41:00+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kiwinam.com/posts/41/javascript-hoisting/</loc>
     <lastmod>2020-09-28T02:29:00+09:00</lastmod>
   </url>
   
@@ -23,27 +93,12 @@
   </url>
   
   <url>
-    <loc>https://kiwinam.com/posts/</loc>
-    <lastmod>2020-09-28T02:29:00+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://kiwinam.com/tags/</loc>
-    <lastmod>2020-09-28T02:29:00+09:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://kiwinam.com/tags/%EB%B3%80%EC%88%98-%ED%98%B8%EC%9D%B4%EC%8A%A4%ED%8C%85/</loc>
     <lastmod>2020-09-28T02:29:00+09:00</lastmod>
   </url>
   
   <url>
     <loc>https://kiwinam.com/tags/%EC%9E%90%EB%B0%94%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8/</loc>
-    <lastmod>2020-09-28T02:29:00+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://kiwinam.com/</loc>
     <lastmod>2020-09-28T02:29:00+09:00</lastmod>
   </url>
   
@@ -68,12 +123,12 @@
   </url>
   
   <url>
-    <loc>https://kiwinam.com/tags/android/</loc>
+    <loc>https://kiwinam.com/categories/android/</loc>
     <lastmod>2020-08-31T14:38:00+09:00</lastmod>
   </url>
   
   <url>
-    <loc>https://kiwinam.com/categories/android/</loc>
+    <loc>https://kiwinam.com/tags/android/</loc>
     <lastmod>2020-08-31T14:38:00+09:00</lastmod>
   </url>
   
@@ -703,12 +758,12 @@
   </url>
   
   <url>
-    <loc>https://kiwinam.com/tags/java/</loc>
+    <loc>https://kiwinam.com/categories/java/</loc>
     <lastmod>2017-05-03T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://kiwinam.com/categories/java/</loc>
+    <loc>https://kiwinam.com/tags/java/</loc>
     <lastmod>2017-05-03T00:00:00+00:00</lastmod>
   </url>
   

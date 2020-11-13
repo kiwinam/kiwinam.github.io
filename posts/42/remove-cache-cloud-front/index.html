@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        
+<script data-ad-client="ca-pub-9507980366459127" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-99327236-2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-99327236-2');
+</script>
+
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="author"
+    content="키위남">
+<meta name="description"
+    content="그리고 오늘 얘기할 CloudFront 는 AWS 에서 제공하는 CDN 으로, 각 엣지에 Origin 파일을 캐시로 들고 있습니다. 엣지에서 캐시된 파일은 TTL 이 있어서 TTL 이 만료되기 전까지 특별한 요청이 없으면..." />
+    <meta name="keywords" content="CloudFront"/>
+
+<meta name="robots" content="index" />
+<meta name="robots" content="follow" />
+<link rel="canonical" href="https://kiwinam.com/posts/42/remove-cache-cloud-front/" />
+
+
+
+
+<meta property="og:title" content="[AWS] CloudFront 캐시 삭제, CDN 캐시 무효화 :: 키위남">
+
+
+
+<meta property="og:image" content="https://kiwinam.com/img/41/41-1.png">
+
+
+<meta name="og:description"
+    content="그리고 오늘 얘기할 CloudFront 는 AWS 에서 제공하는 CDN 으로, 각 엣지에 Origin 파일을 캐시로 들고 있습니다. 엣지에서 캐시된 파일은 TTL 이 있어서 TTL 이 만료되기 전까지 특별한 요청이 없으면..." />
+
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://kiwinam.com/posts/42/remove-cache-cloud-front/">
+
+
+
+<title>[AWS] CloudFront 캐시 삭제, CDN 캐시 무효화 :: 키위남</title>
+
+
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.2.1/css/flag-icon.min.css" rel="stylesheet"
+    type="text/css">
+
+
+
+<link rel="stylesheet" href="/main.min.2f0d18b84270567c723bff340b09ab08db3a7634237cd9667d052eb6b14669b8.css">
+
+
+
+<link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+<link rel="manifest" href="/favicon/site.webmanifest">
+<link rel="mask-icon" href="/favicon/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="#ffffff"><meta itemprop="name" content="[AWS] CloudFront 캐시 삭제, CDN 캐시 무효화">
+<meta itemprop="description" content="그리고 오늘 얘기할 CloudFront 는 AWS 에서 제공하는 CDN 으로, 각 엣지에 Origin 파일을 캐시로 들고 있습니다. 엣지에서 캐시된 파일은 TTL 이 있어서 TTL 이 만료되기 전까지 특별한 요청이 없으면...">
+
+
+<meta itemprop="datePublished" content="2020-11-13T22:41:00&#43;09:00" />
+<meta itemprop="dateModified" content="2020-11-13T22:41:00&#43;09:00" />
+<meta itemprop="wordCount" content="313">
+
+
+
+<meta itemprop="keywords" content="CloudFront,CDN,Cache,Remove,캐시 삭제,캐시 무효화,CDN 무효화,Invalidation,AWS CloudFront," />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="[AWS] CloudFront 캐시 삭제, CDN 캐시 무효화"/>
+<meta name="twitter:description" content="그리고 오늘 얘기할 CloudFront 는 AWS 에서 제공하는 CDN 으로, 각 엣지에 Origin 파일을 캐시로 들고 있습니다. 엣지에서 캐시된 파일은 TTL 이 있어서 TTL 이 만료되기 전까지 특별한 요청이 없으면..."/>
+
+
+
+<meta property="article:section" content="AWS" />
+
+<meta property="article:published_time" content="2020-11-13 22:41:00 &#43;0900 KST" />
+
+
+
+
+
+
+
+    </head>
+
+    <body class="dark-theme">
+        <div class="container">
+            <header class="header">
+    <span class="header__inner">
+        <a href="/" style="text-decoration: none;">
+    <div class="logo">
+        
+            <span class="logo__mark">></span>
+            <span class="logo__text">cd /home/kiwinam</span>
+            <span class="logo__cursor" style=""></span>
+        
+    </div>
+</a>
+
+
+        <span class="header__right">
+            
+                <nav class="menu">
+    <ul class="menu__inner"><li><a href="https://kiwinam.com/about">about</a></li><li><a href="https://kiwinam.com/categories">categories</a></li><li><a href="https://kiwinam.com/posts">posts</a></li>
+    </ul>
+</nav>
+
+                <span class="menu-trigger">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M0 0h24v24H0z" fill="none"/>
+                        <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+                    </svg>
+                </span>
+            
+
+            <span class="theme-toggle unselectable"><svg class="theme-toggler" width="24" height="24" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M22 41C32.4934 41 41 32.4934 41 22C41 11.5066 32.4934 3 22
+  3C11.5066 3 3 11.5066 3 22C3 32.4934 11.5066 41 22 41ZM7 22C7
+  13.7157 13.7157 7 22 7V37C13.7157 37 7 30.2843 7 22Z"/>
+</svg>
+</span>
+        </span>
+    </span>
+</header>
+
+
+            <div class="content">
+                
+    <main class="post">
+
+        <div class="post-info">
+            <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-clock"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+
+            
+
+            </p>
+        </div>
+
+        <article>
+            <h1 class="post-title"><a href="https://kiwinam.com/posts/42/remove-cache-cloud-front/">[AWS] CloudFront 캐시 삭제, CDN 캐시 무효화</a></h1>
+
+            
+
+            <div class="post-content">
+                
+
+<p><br/></p>
+
+<h2 id="tr-dr">TR;DR</h2>
+
+<ol>
+<li>AWS Cloudfront 콘솔 접속</li>
+<li>Distribution 중 캐시 무효화 할 것 선택</li>
+<li>상단 탭 중 <b>&lsquo;Invalidations&rsquo;</b> 선택</li>
+<li>Create Invalidation</li>
+<li>Object Paths 에 전체 경로 무효화 선언 <code>/*</code></li>
+</ol>
+
+<hr />
+
+<p><br/></p>
+
+<p>요즘 제가 개발하는 서비스의 홈페이지는 AWS S3 Bucket + Route 53 + Cloudfront 로 개발 되어 있습니다.</p>
+
+<p>AWS 에서 정적 웹을 호스팅 할 때 흔히 볼 수 있는 조합이죠.</p>
+
+<p>S3는 파일 스토리지, Route 53은 DNS 의 역할을 하고 있습니다.</p>
+
+<p>그리고 오늘 얘기할 <b>CloudFront</b> 는 AWS 에서 제공하는 CDN (Content Delivery Network) 으로, 각 엣지에 Origin 파일을 캐시로 들고 있습니다.
+<i><a target="_blank" href="https://namu.wiki/w/CDN">(CDN 이 뭐죠?)</a></i></p>
+
+<p>엣지에서 캐시된 파일은 TTL 이 있어서 TTL 이 만료되기 전까지 특별한 요청이 없으면 Origin 파일을 요청하지 않습니다.</p>
+
+<figure class="center" style="width: 90%">
+    <picture class="center" style="display: block; margin: 0px auto; text-align: center">
+        
+    <img src="/img/42/42-1.svg"  alt="클라우드 프론트 작동 예시"  class="center"  />
+
+    
+    </picture>
+    <figurecaption>
+        <p style="width:100%;text-align: center;">(CloudFront + Edge location 작동 예시)</p>
+    </figurecaption>
+</figure>
+
+<p>위 설명에서처럼, 캐시가 없는 엣지는 오리진에 있는 파일을 가져오지만, 이미 캐시가 있는 엣지는 요청을 캐시된 파일을 전달하는 걸로 마무리 합니다.</p>
+
+<p>요청 처리 속도에서 캐시된 파일을 바로 전달해주니 훨씬 유리합니다.</p>
+
+<p>하지만 이런 경우가 생깁니다.</p>
+
+<p><b>캐시된 파일의 TTL 이 아직 남아 있는데, 오리진 파일이 변경되는 경우</b></p>
+
+<p>예를 들어 사이트의 이미지가 바뀌거나, 스타일시트를 업데이트 하는 경우가 있습니다. 우린 이 때 어떻게 해야 할까요?</p>
+
+<p>몇 가지 방법이 있겠지만 확실하고 빠른 방법을 알려드리겠습니다.</p>
+
+<p>바로 엣지 CDN 캐시를 삭제 (무효화) 하는 방법입니다.</p>
+
+<p><br/></p>
+
+<h2 id="cloudfront-캐시-삭제하는-법">CloudFront 캐시 삭제하는 법</h2>
+
+<hr />
+
+<ol>
+<li><p>AWS Cloudfront 콘솔 접속</p>
+
+<figure class="center" style="width: 90%">
+    <picture class="center" style="display: block; margin: 0px auto; text-align: center" >
+        <source
+            type="image/webp"
+            media="(min-width:461px)"
+            srcset="/img/42/42-2-75.webp"
+        />
+        <source
+            type="image/webp"
+            media="(max-width:460px)"
+            srcset="/img/42/42-2-50.webp"
+        />
+        
+    <img src="/img/42/42-2.png"  alt="AWS Cloudfront 콘솔 접속"  class="center"  />
+
+
+    </picture>
+</figure></li>
+
+<li><p>Distribution 중 캐시 무효화 할 것 선택</p>
+
+<figure class="center" style="width: 90%">
+    <picture class="center" style="display: block; margin: 0px auto; text-align: center" >
+        <source
+            type="image/webp"
+            media="(min-width:461px)"
+            srcset="/img/42/42-3-75.webp"
+        />
+        <source
+            type="image/webp"
+            media="(max-width:460px)"
+            srcset="/img/42/42-3-50.webp"
+        />
+        
+    <img src="/img/42/42-3.png"  alt="Distribution 선택"  class="center"  />
+
+
+    </picture>
+</figure></li>
+
+<li><p>상단 탭 중 <b>&lsquo;Invalidations&rsquo;</b> 클릭</p>
+
+<figure class="center" style="width: 90%">
+    <picture class="center" style="display: block; margin: 0px auto; text-align: center" >
+        <source
+            type="image/webp"
+            media="(min-width:461px)"
+            srcset="/img/42/42-4-75.webp"
+        />
+        <source
+            type="image/webp"
+            media="(max-width:460px)"
+            srcset="/img/42/42-4-50.webp"
+        />
+        
+    <img src="/img/42/42-4.png"  alt="Invalidation 클릭"  class="center"  />
+
+
+    </picture>
+</figure></li>
+
+<li><p>Create Invalidation</p>
+
+<figure class="center" style="width: 90%">
+    <picture class="center" style="display: block; margin: 0px auto; text-align: center" >
+        <source
+            type="image/webp"
+            media="(min-width:461px)"
+            srcset="/img/42/42-5-75.webp"
+        />
+        <source
+            type="image/webp"
+            media="(max-width:460px)"
+            srcset="/img/42/42-5-50.webp"
+        />
+        
+    <img src="/img/42/42-5.png"  alt="Create Invalidation"  class="center"  />
+
+
+    </picture>
+</figure></li>
+
+<li><p>Object Paths 에 전체 경로 무효화 선언 <code>/*</code></p>
+
+<figure class="center" style="width: 90%">
+    <picture class="center" style="display: block; margin: 0px auto; text-align: center" >
+        <source
+            type="image/webp"
+            media="(min-width:461px)"
+            srcset="/img/42/42-6-75.webp"
+        />
+        <source
+            type="image/webp"
+            media="(max-width:460px)"
+            srcset="/img/42/42-6-50.webp"
+        />
+        
+    <img src="/img/42/42-6.png"  alt="무효화 선언"  class="center"  />
+
+
+    </picture>
+</figure></li>
+</ol>
+
+<p>Object Paths 에서 <code>/*</code> 이 아닌 특정 경로나 특정 파일 포맷만 무효화 하고 싶다면 해당 경로를 지정하거나 파일 포맷을 지정하면 됩니다.</p>
+
+<ul>
+<li><code>/img/*.png</code> -&gt; img 폴더에 있는 png 확장자만 캐시 무효화 처리 한다.</li>
+<li><code>/*.html</code> -&gt; 모든 html 파일의 캐시를 무효화 처리한다.</li>
+</ul>
+
+<p><br/></p>
+
+<p>이렇게 캐시 무효화 작업을 한 뒤 다시 접속하게 되면 엣지에 있는 캐시를 가져오는게 아닌 Origin 에 있는 파일을 불러오게 됩니다.</p>
+
+<p>CloudFront 를 통해 CDN 을 이용하실 때, 웹쿠키를 날리거나 크롬 시크릿 모드에서도 웹 파일의 변경 사항이 적용되지 않을 땐 이 방법을 통해 CDN 엣지들의 캐시를 삭제해 주시면 됩니다.</p>
+
+<p><br/></p>
+
+<hr />
+
+<p>참조 문헌</p>
+
+<ul>
+<li><a href="https://docs.aws.amazon.com/ko_kr/AmazonCloudFront/latest/DeveloperGuide/Invalidation.html" target="_blank">AWS 공식 문서, CloundFront Invalidation</a></li>
+</ul>
+
+<p><br/></p>
+
+            </div>
+        </article>
+
+        <hr />
+
+        <div class="post-info">
+                <p>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-tag meta-icon"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7" y2="7"></line></svg><span class="tag"><a href="https://kiwinam.com/tags/cloudfront">CloudFront</a></span><span class="tag"><a href="https://kiwinam.com/tags/cdn">CDN</a></span><span class="tag"><a href="https://kiwinam.com/tags/cache">Cache</a></span><span class="tag"><a href="https://kiwinam.com/tags/remove">Remove</a></span><span class="tag"><a href="https://kiwinam.com/tags/%EC%BA%90%EC%8B%9C-%EC%82%AD%EC%A0%9C">캐시 삭제</a></span><span class="tag"><a href="https://kiwinam.com/tags/%EC%BA%90%EC%8B%9C-%EB%AC%B4%ED%9A%A8%ED%99%94">캐시 무효화</a></span><span class="tag"><a href="https://kiwinam.com/tags/cdn-%EB%AC%B4%ED%9A%A8%ED%99%94">CDN 무효화</a></span><span class="tag"><a href="https://kiwinam.com/tags/invalidation">Invalidation</a></span><span class="tag"><a href="https://kiwinam.com/tags/aws-cloudfront">AWS CloudFront</a></span>
+                </p>
+
+            <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg></p>
+
+            <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-calendar"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>2020-11-13 22:41 &#43;0900</p>
+        </div>
+
+        
+            <div class="pagination">
+                <div class="pagination__title">
+                    <span class="pagination__title-h">Read other posts</span>
+                    <hr />
+                </div>
+
+                <div class="pagination__buttons">
+                    
+
+                    
+                        <span class="button next">
+                            <a href="https://kiwinam.com/posts/41/javascript-hoisting/">
+                                <span class="button__text">[Javascript] 자바스크립트 호이스팅, 여기서 마무리 짓자.</span>
+                                <span class="button__icon">→</span>
+                            </a>
+                        </span>
+                    
+                </div>
+            </div>
+        
+        <script src="https://utteranc.es/client.js"
+            repo="kiwinam/kiwinam-comment"
+            issue-term="pathname"
+            theme="github-dark"
+            crossorigin="anonymous"
+            async>
+    </script>
+        
+    </main>
+
+            </div>
+
+            
+                <footer class="footer">
+    <div class="footer__inner">
+        <div class="footer__content">
+            <span>&copy; 2020</span>
+            
+            <span></span>
+            <span> <a href="https://kiwinam.com/posts/index.xml" target="_blank" title="rss"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-rss"><path d="M4 11a9 9 0 0 1 9 9"></path><path d="M4 4a16 16 0 0 1 16 16"></path><circle cx="5" cy="19" r="1"></circle></svg></a></span>
+        </div>
+    </div>
+    <div class="footer__inner">
+        <div class="footer__content">
+
+        </div>
+    </div>
+    <div class="footer__inner">
+        <div class="footer__content">
+            <span>Powered by <a href="http://gohugo.io">Hugo</a></span>
+            <span>Made with &#10084; by <a href="https://github.com/rhazdon">rhazdon</a></span>
+        </div>
+    </div>
+</footer>
+
+            
+        </div>
+
+        
+
+
+
+
+<script type="text/javascript" src="/bundle.min.4c3fb12a087ceed4a52cb5d57068a9795c7069617a01ca70f788052ad66e1791779e6c72686e1dc0ca13dc03b0203204b6566bb0dd1ee80de2b7ff4d8fe53db2.js" integrity="sha512-TD&#43;xKgh87tSlLLXVcGipeVxwaWF6Acpw94gFKtZuF5F3nmxyaG4dwMoT3AOwIDIEtlZrsN0e6A3it/9Nj&#43;U9sg=="></script>
+
+
+
+    </body>
+</html>

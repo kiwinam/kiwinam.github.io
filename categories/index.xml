@@ -6,10 +6,19 @@
     <description>Recent content in Categories on 키위남</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ko-kr</language>
-    <lastBuildDate>Mon, 28 Sep 2020 02:29:00 +0900</lastBuildDate>
+    <lastBuildDate>Fri, 13 Nov 2020 22:41:00 +0900</lastBuildDate>
     
 	<atom:link href="https://kiwinam.com/categories/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>AWS</title>
+      <link>https://kiwinam.com/categories/aws/</link>
+      <pubDate>Fri, 13 Nov 2020 22:41:00 +0900</pubDate>
+      
+      <guid>https://kiwinam.com/categories/aws/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Javascript</title>
@@ -89,15 +98,6 @@
       <pubDate>Thu, 21 Mar 2019 10:35:56 +0900</pubDate>
       
       <guid>https://kiwinam.com/categories/mariadb/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Java</title>
-      <link>https://kiwinam.com/categories/java/</link>
-      <pubDate>Wed, 03 May 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://kiwinam.com/categories/java/</guid>
       <description></description>
     </item>
     
